@@ -59,6 +59,10 @@ const CardTitle = styled.a`
   padding: 20px 0px;
   margin-bottom: 0;
   text-transform: capitalize;
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
 `;
 
 const CardSubtitle = styled.span`

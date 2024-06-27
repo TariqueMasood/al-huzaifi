@@ -5,49 +5,33 @@ import styled from "styled-components";
 import PopularCourseCard from "../components/popular-course-card";
 import ExploreCourseCard from "../components/explore-course-card";
 import computerImg from "../../src/images/computer-img.png";
+import AchievementCard from "../components/achievement-card";
+import { PiUsersThreeThin } from "react-icons/pi";
 
-const exploreCardData = [
+const achievementCardData = [
   {
     id: 1,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
+    counter: "36k",
+    title: "Our Happy Students",
+    icon: <PiUsersThreeThin />,
   },
   {
     id: 2,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
+    counter: "16k",
+    title: "Our Happy Students",
+    icon: <PiUsersThreeThin />,
   },
   {
     id: 3,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
+    counter: "12k",
+    title: "Our Happy Students",
+    icon: <PiUsersThreeThin />,
   },
   {
     id: 4,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
-  },
-  {
-    id: 5,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
-  },
-  {
-    id: 6,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
+    counter: "96k",
+    title: "Our Happy Students",
+    icon: <PiUsersThreeThin />,
   },
 ];
 
@@ -99,9 +83,70 @@ const popularCourseCardData = [
   },
 ];
 
+const exploreCardData = [
+  {
+    id: 1,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+  {
+    id: 2,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+  {
+    id: 3,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+  {
+    id: 4,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+  {
+    id: 5,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+  {
+    id: 6,
+    cardImage: computerImg,
+    cardTitle: "data science",
+    cardSubTitlte: "4 course",
+    link: "#",
+  },
+];
+
 const Home = () => {
   return (
     <div className="container">
+      <div>
+        <TitleContainer>
+          <Title title="Trusted by Companies" colorTitle="Achievements" />
+        </TitleContainer>
+        <AchievementCardContainer>
+          {achievementCardData.map((data) => (
+            <AchievementCard
+              key={data.id}
+              counter={data.counter}
+              title={data.title}
+              icon={data.icon}
+            />
+          ))}
+        </AchievementCardContainer>
+      </div>
+
       <TitleContainer>
         <Title
           subTitle="Our Courses List"
@@ -141,6 +186,13 @@ const Home = () => {
 
 export default Home;
 
+const AchievementCardContainer = styled.div`
+  padding: 30px 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+`;
+
 const PopularCardWrapper = styled.div`
   display: flex;
   flex-wrap: no-wrap;
@@ -154,6 +206,7 @@ const ExploreCardSection = styled.div`
 
 const TitleContainer = styled.div`
   padding: 40px 0px;
+  text-align: center;
 `;
 
 const ExploreCardContainer = styled.div`
