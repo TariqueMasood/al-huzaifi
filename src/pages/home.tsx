@@ -63,7 +63,7 @@ const popularCourseCardData = [
     clock: "12:00",
     hour: "hour",
     userImage: userImage,
-    userName: "masum billh",
+    userName: "masum billah",
     designation: "data science",
   },
   {
