@@ -1,17 +1,22 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
+import styled from "styled-components";
 
 const Layout = () => {
   return (
-    <div>
-      {/* <Header /> */}
-      <main>
+    <Wrapper>
+      <Header />
+      <Main>
         <Outlet />
-      </main>
+      </Main>
       <Footer />
-    </div>
+    </Wrapper>
   );
 };
 
 export default Layout;
+
+const Wrapper = styled.div``;
+
+const Main = styled.main``;

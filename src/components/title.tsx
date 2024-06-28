@@ -9,15 +9,29 @@ type TitleProps = {
 
 const Title = (props: TitleProps) => {
   return (
-    <div>
+    <TitleWrapper>
       <h5>{props.subTitle}</h5>
-      <h2 style={props.styles}>
+      <Heading style={props.styles}>
         {props.title} <ColorTitle>{props.colorTitle}</ColorTitle>
-      </h2>
-    </div>
+      </Heading>
+    </TitleWrapper>
   );
 };
 export default Title;
+
+const TitleWrapper = styled.h1`
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+`;
+
+const Heading = styled.h1`
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+`;
 
 const ColorTitle = styled.span`
   color: red;
