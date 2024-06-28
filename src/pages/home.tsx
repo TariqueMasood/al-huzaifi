@@ -7,6 +7,7 @@ import ExploreCourseCard from "../components/explore-course-card";
 import computerImg from "../../src/images/computer-img.png";
 import AchievementCard from "../components/achievement-card";
 import { PiUsersThreeThin } from "react-icons/pi";
+import { Col, Row } from "react-bootstrap";
 
 const achievementCardData = [
   {
@@ -136,14 +137,18 @@ const Home = () => {
           <Title title="Trusted by Companies" colorTitle="Achievements" />
         </TitleContainer>
         <AchievementCardContainer>
-          {achievementCardData.map((data) => (
-            <AchievementCard
-              key={data.id}
-              counter={data.counter}
-              title={data.title}
-              icon={data.icon}
-            />
-          ))}
+          <Row>
+            {achievementCardData.map((data) => (
+              <Col lg="3" md="6" xs="12">
+                <AchievementCard
+                  key={data.id}
+                  counter={data.counter}
+                  title={data.title}
+                  icon={data.icon}
+                />
+              </Col>
+            ))}
+          </Row>
         </AchievementCardContainer>
       </div>
 
@@ -154,11 +159,15 @@ const Home = () => {
           colorTitle="Courses"
         />
       </TitleContainer>
-      <PopularCardWrapper>
+      {/* <PopularCardWrapper> */}
+      <Row>
         {popularCourseCardData.map((item) => (
-          <PopularCourseCard key={item.id} {...item} />
+          <Col lg="4" md="6">
+            <PopularCourseCard key={item.id} {...item} />
+          </Col>
         ))}
-      </PopularCardWrapper>
+      </Row>
+      {/* </PopularCardWrapper> */}
 
       <ExploreCardSection>
         <TitleContainer>
@@ -168,17 +177,21 @@ const Home = () => {
             colorTitle="Courses"
           />
         </TitleContainer>
-        <ExploreCardContainer>
+        {/* <ExploreCardContainer> */}
+        <Row>
           {exploreCardData?.map((data) => (
-            <ExploreCourseCard
-              key={data.id}
-              cardImage={data.cardImage}
-              cardTitle={data.cardTitle}
-              cardSubTitle={data.cardSubTitlte}
-              link={data.link}
-            />
+            <Col lg="3" md="4" sm="6">
+              <ExploreCourseCard
+                key={data.id}
+                cardImage={data.cardImage}
+                cardTitle={data.cardTitle}
+                cardSubTitle={data.cardSubTitlte}
+                link={data.link}
+              />
+            </Col>
           ))}
-        </ExploreCardContainer>
+        </Row>
+        {/* </ExploreCardContainer> */}
       </ExploreCardSection>
     </div>
   );
@@ -187,16 +200,7 @@ const Home = () => {
 export default Home;
 
 const AchievementCardContainer = styled.div`
-  padding: 30px 0px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 25px;
-`;
-
-const PopularCardWrapper = styled.div`
-  display: flex;
-  flex-wrap: no-wrap;
-  gap: 24px;
+  text-align: center;
 `;
 
 const ExploreCardSection = styled.div`
@@ -209,10 +213,10 @@ const TitleContainer = styled.div`
   text-align: center;
 `;
 
-const ExploreCardContainer = styled.div`
-  padding: 20px 0px;
-  display: flex;
-  // justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px;
-`;
+// const ExploreCardContainer = styled.div`
+//   padding: 20px 0px;
+//   display: flex;
+//   justify-content: center;
+//   flex-wrap: wrap;
+//   gap: 20px;
+// `;

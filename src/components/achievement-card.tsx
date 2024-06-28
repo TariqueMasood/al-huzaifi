@@ -22,6 +22,9 @@ const AchievementCard = (props: cardProps) => {
 export default AchievementCard;
 
 const Wrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  margin-left: auto;
   max-width: 300px;
   width: 100%;
   text-align: center;
@@ -29,6 +32,7 @@ const Wrapper = styled.div`
   border: 2px dashed #ccc;
   border-radius: 8px;
   position: relative;
+  margin-bottom: 20px;
 `;
 
 const CardCircle = styled.div`

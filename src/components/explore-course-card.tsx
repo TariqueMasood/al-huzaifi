@@ -24,6 +24,8 @@ const ExploreCourseCard = (props: CardProps) => {
 export default ExploreCourseCard;
 
 const CardWraaper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   max-width: 300px;
   width: 100%;
   border: 1px solid #e3e3e3;
@@ -34,6 +36,7 @@ const CardWraaper = styled.div`
   flex-direction: column;
   align-items: center;
   transition: 0.5s;
+  margin-bottom: 20px;
 
   &:hover {
     border-color: blue;

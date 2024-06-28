@@ -69,10 +69,13 @@ const PopularCourseCard = (props: CardProps) => {
 export default PopularCourseCard;
 
 const Wrapper = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   max-width: 420px;
   width: 100%;
   height: auto;
   box-shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
+  margin-bottom: 20px;
 `;
 
 const ImageContainer = styled.div`
