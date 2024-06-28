@@ -8,6 +8,5 @@ const Footer = () => {
 export default Footer;
 
 const Wrapper = styled.footer`
-  background: ${(props) => props.theme.colors.primary};
   color: red;
 `;

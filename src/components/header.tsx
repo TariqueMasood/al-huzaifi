@@ -1,14 +1,19 @@
-import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
+import { useTheme } from "../contexts/theme-context";
+import { PiMoonLight, PiSunLight } from "react-icons/pi";
+import MyButton from "./button";
+import styled from "styled-components";
+
 const Header: React.FC = () => {
+  const { toggleTheme, theme } = useTheme();
+
   return (
-    <Navbar expand="md" className="bg-body-tertiary mb-3">
+    <NavbarWrapper expand="md" className="bg-body-tertiary mb-3" sticky="top">
       <Container>
         <Navbar.Brand as={Link} to="/">
           Al-Huzaifi
@@ -45,29 +50,23 @@ const Header: React.FC = () => {
                   Something else here
                 </NavDropdown.Item>
               </NavDropdown>
+              <MyButton
+                onClick={toggleTheme}
+                title={theme === "dark" ? "Light mode" : "Dark mode"}
+              >
+                {theme === "dark" ? <PiSunLight /> : <PiMoonLight />}
+              </MyButton>
             </Nav>
-            <Form className="d-flex">
-              <Form.Control
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-              />
-              <Button variant="outline-success">Search</Button>
-            </Form>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
       </Container>
-    </Navbar>
+    </NavbarWrapper>
   );
 };
 
 export default Header;
 
-// import React from "react";
-
-// const Header = () => {
-//   return <div>header</div>;
-// };
-
-// export default Header;
+const NavbarWrapper = styled(Navbar)`
+  background: ${(props) => props.theme.colors.white} !important;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+`;

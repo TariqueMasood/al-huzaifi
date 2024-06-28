@@ -1,16 +1,15 @@
 import { RouterProvider } from "react-router-dom";
 import router from "./router";
-import { ThemeProvider } from "styled-components";
-import theme from "./styles/theme";
+import { ThemeProvider } from "./contexts/theme-context";
 import GlobalStyles from "./styles/global-styles";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider>
       <GlobalStyles />
       <RouterProvider router={router} />
     </ThemeProvider>
   );
-}
+};
 
 export default App;
