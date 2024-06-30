@@ -22,17 +22,20 @@ const AchievementCard = (props: cardProps) => {
 export default AchievementCard;
 
 const Wrapper = styled.div`
-  margin-left: auto;
   margin-right: auto;
   margin-left: auto;
-  max-width: 300px;
+  min-width: 250px;
   width: 100%;
   text-align: center;
   padding: 40px 20px;
   border: 2px dashed #ccc;
   border-radius: 8px;
   position: relative;
-  margin-bottom: 20px;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 `;
 
 const CardCircle = styled.div`
