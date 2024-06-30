@@ -76,8 +76,7 @@ export default Footer;
 
 const Wrapper = styled.footer`
   padding: 40px 0px 20px 0px;
-  background-color: #2c3f46;
-  color: ${(props) => props.theme.colors.white};
+  border-top: 1px solid ${(props) => props.theme.toggleBorder};
 `;
 
 const FooterTitle = styled.h4`
@@ -121,7 +120,7 @@ const ContactIcon = styled.div`
 `;
 
 const CopyRight = styled.div`
-  border-top: 1px solid #ececec;
+  border-top: 1px solid ${(props) => props.theme.toggleBorder};
   text-align: center;
   padding-top: 20px;
   font-size: 18px;

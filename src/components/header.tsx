@@ -9,6 +9,7 @@ import { PiMoonLight, PiSunLight } from "react-icons/pi";
 import MyButton from "./button";
 import styled from "styled-components";
 import { useState } from "react";
+import logo from "../images/al-huzaifi-logo.jpeg";
 
 const Header: React.FC = () => {
   const { toggleTheme, theme } = useTheme();
@@ -23,14 +24,10 @@ const Header: React.FC = () => {
   };
 
   return (
-    <NavbarWrapper
-      expand="md"
-      className={`${theme === "dark" ? "dark" : "light"}`}
-      sticky="top"
-    >
+    <NavbarWrapper expand="md" sticky="top">
       <Container>
         <Navbar.Brand as={NavLink} to="/">
-          Al-Huzaifi
+          <Logo src={logo} alt="logo" />
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls={`offcanvasNavbar-expand-md`}
@@ -60,16 +57,27 @@ const Header: React.FC = () => {
                 About
               </Nav.Link>
               <NavDropdown
-                title="Dropdown"
+                title="Faculty"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
-                <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action3">
+                  Faculty of Quran
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
                 <NavDropdown.Item href="#action4">
-                  Another action
+                  Faculty of Deeniyat
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
-                  Something else here
+                  Faculty of Alimiyat
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Faculty of Fazilat
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Faculty of Languages
                 </NavDropdown.Item>
               </NavDropdown>
               <MyButton
@@ -90,22 +98,46 @@ export default Header;
 
 const NavbarWrapper = styled(Navbar)`
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+  background: ${(props) => props.theme.background} !important;
+  border-bottom: 1px solid ${(props) => props.theme.toggleBorder};
+  min-height: 4rem;
 
-  &.dark {
-    background: ${(props) => props.theme.colors.black} !important;
+  .navbar {
+    min-height: 60px;
+  }
 
-    .nav-link,
-    .navbar-brand {
-      color: ${(props) => props.theme.colors.white};
+  .nav-link {
+    color: ${(props) => props.theme.text};
+    padding: 0.35rem 1rem !important;
+    border-radius: 100px;
+
+    &:hover {
+      background-color: ${(props) => props.theme.secondaryBg};
+    }
+
+    &.active {
+      background-color: ${(props) => props.theme.colors.activeBg};
+      color: ${(props) => props.theme.colors.activeTextColor};
     }
   }
 
-  &.light {
-    background: ${(props) => props.theme.colors.white} !important;
-
-    .nav-link,
-    .navbar-brand {
-      color: ${(props) => props.theme.colors.black};
-    }
+  button {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-radius: 100px;
+    border: 1px solid ${(props) => props.theme.toggleBorder};
+    color: ${(props) => props.theme.text};
+    background-color: ${(props) => props.theme.secondaryBg};
+    font-size: 20px;
   }
+
+  .navbar-nav {
+    gap: 1rem;
+  }
+`;
+
+const Logo = styled.img`
+  width: 130px;
+  height: 50px;
 `;

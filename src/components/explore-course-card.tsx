@@ -1,5 +1,3 @@
-import { link } from "fs";
-import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
@@ -43,7 +41,7 @@ const CardWraaper = styled.div`
 
   min-width: 230px;
   width: 100%;
-  border: 1px solid #e3e3e3;
+  border: 1px solid ${(props) => props.theme.toggleBorder};
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   padding: 30px 20px;
@@ -59,7 +57,7 @@ const CardWraaper = styled.div`
   }
 
   &:hover {
-    border-color: blue;
+    border-color: ${(props) => props.theme.colors.themeColor};
   }
 `;
 
@@ -83,13 +81,13 @@ const CardTitle = styled.a`
   margin-bottom: 0;
   text-transform: capitalize;
   text-decoration: none;
-  color: #000;
+  color: ${(props) => props.theme.themeColor};
   font-size: 24px;
   font-weight: 600;
 `;
 
 const CardSubtitle = styled.span`
   text-transform: capitalize;
-  color: blue;
+  color: ${(props) => props.theme.colors.themeColor};
   text-decoration: underline;
 `;

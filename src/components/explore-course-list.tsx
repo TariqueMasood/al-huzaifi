@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import ExploreCourseCard from "./explore-course-card";
 import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
@@ -30,20 +30,6 @@ const exploreCardData = [
   },
   {
     id: 4,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
-  },
-  {
-    id: 5,
-    cardImage: computerImg,
-    cardTitle: "data science",
-    cardSubTitlte: "4 course",
-    link: "#",
-  },
-  {
-    id: 6,
     cardImage: computerImg,
     cardTitle: "data science",
     cardSubTitlte: "4 course",

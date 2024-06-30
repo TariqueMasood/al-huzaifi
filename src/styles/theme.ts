@@ -1,37 +1,27 @@
-import { DefaultTheme } from 'styled-components';
+import { DefaultTheme } from "styled-components";
 
 const theme: DefaultTheme = {
   colors: {
-    themeColor: '#ce7d00',
-    secondary: '#1c1c1e',
-    white: '#fff',
-    textColor: '#333',
-    black: '#000'
+    themeColor: "#ce7d00",
+    activeBg: "#E6F7FF",
+    activeTextColor: "#124d63",
   },
-  
-  fontSizes: {
-    small: '12px',
-    medium: '16px',
-    large: '20px',
-  },
-}
+};
 
 export default theme;
 
 export const lightTheme: DefaultTheme = {
-  body: '#FFF',
-  text: '#000',
-  toggleBorder: '#FFF',
-  background: '#363537',
+  background: "#fff",
+  secondaryBg: "#f2f2f2",
+  text: "#434343",
+  toggleBorder: "#f3f3f3",
   colors: theme.colors,
-  fontSizes: theme.fontSizes,
 };
 
 export const darkTheme: DefaultTheme = {
-  body: '#363537',
-  text: '#FAFAFA',
-  toggleBorder: '#6B8096',
-  background: '#999',
+  background: "#242831",
+  secondaryBg: "#333944",
+  text: "#798087",
+  toggleBorder: "#394051",
   colors: theme.colors,
-  fontSizes: theme.fontSizes,
 };

@@ -8,15 +8,12 @@ const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.body};
-    color: ${({ theme }) => theme.text};
-    transition: all 0.3s linear;
-  }
-
-  body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background: ${({ theme }) => theme.background};
+    color: ${({ theme }) => theme.text};
+    transition: all 0.3s linear;
   }
 
   h1, h2, h3, h4, h5, h6 {

@@ -86,7 +86,7 @@ const Fee = styled.span`
   position: absolute;
   top: 20px;
   left: 24px;
-  background-color: red;
+  background-color: ${(props) => props.theme.colors.themeColor};
   padding: 7px 18px;
   border-radius: 8px;
   color: #fff;
@@ -109,7 +109,7 @@ const CardHeading = styled.h4`
   line-height: 36px;
 
   &:hover {
-    color: blue;
+    color: ${(props) => props.theme.colors.themeColor};
   }
 `;
 
@@ -122,15 +122,15 @@ const CardDetail = styled.span`
 `;
 
 const UserIcon = styled.span`
-  color: red;
+  color: ${(props) => props.theme.colors.themeColor};
 `;
 
 const NotesIcon = styled.span`
-  color: red;
+  color: ${(props) => props.theme.colors.themeColor};
 `;
 
 const ClockIcon = styled.span`
-  color: red;
+  color: ${(props) => props.theme.colors.themeColor};
 `;
 
 const CardDetailWrapper = styled.div`
@@ -159,7 +159,7 @@ const NameLink = styled.a`
   color: #6b6b6b;
 
   &:hover {
-    color: blue;
+    color: ${(props) => props.theme.colors.themeColor};
   }
 `;
 
