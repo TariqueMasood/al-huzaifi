@@ -4,6 +4,7 @@ import ExploreCourseCard from "./explore-course-card";
 import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
 import Title from "./title";
+import { mq } from "../styles/breakpoints";
 
 const exploreCardData = [
   {
@@ -59,19 +60,17 @@ const ExploreCourseList = () => {
           title="Explore Our"
           colorTitle="Courses"
         />
-        <Row>
+        <CardWrapper>
           {exploreCardData?.map((data) => (
-            <Col lg="3" md="4" sm="6">
-              <ExploreCourseCard
-                key={data.id}
-                cardImage={data.cardImage}
-                cardTitle={data.cardTitle}
-                cardSubTitle={data.cardSubTitlte}
-                link={data.link}
-              />
-            </Col>
+            <ExploreCourseCard
+              key={data.id}
+              cardImage={data.cardImage}
+              cardTitle={data.cardTitle}
+              cardSubTitle={data.cardSubTitlte}
+              link={data.link}
+            />
           ))}
-        </Row>
+        </CardWrapper>
       </Container>
     </Wrapper>
   );
@@ -80,3 +79,14 @@ const ExploreCourseList = () => {
 export default ExploreCourseList;
 
 const Wrapper = styled.div``;
+
+const CardWrapper = styled.div`
+  ${mq("lg")} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+`;

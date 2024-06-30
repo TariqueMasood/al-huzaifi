@@ -37,18 +37,16 @@ const AchievementList = () => {
     <Wrapper>
       <Container>
         <Title title="Trusted by Companies" colorTitle="Achievements" />
-        <Row>
+        <CardWrapper>
           {achievementCardData.map((data) => (
-            <Col lg="3" md="6" xs="12">
-              <AchievementCard
-                key={data.id}
-                counter={data.counter}
-                title={data.title}
-                icon={data.icon}
-              />
-            </Col>
+            <AchievementCard
+              key={data.id}
+              counter={data.counter}
+              title={data.title}
+              icon={data.icon}
+            />
           ))}
-        </Row>
+        </CardWrapper>
       </Container>
     </Wrapper>
   );
@@ -57,3 +55,9 @@ const AchievementList = () => {
 export default AchievementList;
 
 const Wrapper = styled.div``;
+
+const CardWrapper = styled.div`
+  display: flex;
+  overflow-x: scroll;
+  scrollbar-width: none;
+`;

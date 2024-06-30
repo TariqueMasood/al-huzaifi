@@ -1,6 +1,7 @@
 import { link } from "fs";
 import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
+import { mq } from "../styles/breakpoints";
 
 type CardProps = {
   cardImage: string;
@@ -24,19 +25,38 @@ const ExploreCourseCard = (props: CardProps) => {
 export default ExploreCourseCard;
 
 const CardWraaper = styled.div`
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 300px;
+  ${mq("lg")} {
+    max-width: 280px;
+    width: 100%;
+    border: 1px solid #e3e3e3;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+      0 1px 2px -1px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.5s;
+    margin-bottom: 20px;
+    margin-right: 24px;
+  }
+
+  min-width: 230px;
   width: 100%;
   border: 1px solid #e3e3e3;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  padding: 50px 20px;
+  padding: 30px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.5s;
   margin-bottom: 20px;
+  margin-right: 24px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
 
   &:hover {
     border-color: blue;
