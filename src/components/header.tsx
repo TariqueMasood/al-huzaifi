@@ -3,26 +3,45 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useTheme } from "../contexts/theme-context";
 import { PiMoonLight, PiSunLight } from "react-icons/pi";
 import MyButton from "./button";
 import styled from "styled-components";
+import { useState } from "react";
 
 const Header: React.FC = () => {
   const { toggleTheme, theme } = useTheme();
 
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
+  const handleSelect = () => {
+    handleClose();
+  };
+
   return (
-    <NavbarWrapper expand="md" className="bg-body-tertiary mb-3" sticky="top">
+    <NavbarWrapper
+      expand="md"
+      className={`${theme === "dark" ? "dark" : "light"}`}
+      sticky="top"
+    >
       <Container>
-        <Navbar.Brand as={Link} to="/">
+        <Navbar.Brand as={NavLink} to="/">
           Al-Huzaifi
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-md`} />
+        <Navbar.Toggle
+          aria-controls={`offcanvasNavbar-expand-md`}
+          onClick={handleShow}
+        />
         <Navbar.Offcanvas
           id={`offcanvasNavbar-expand-md`}
           aria-labelledby={`offcanvasNavbarLabel-expand-md`}
           placement="end"
+          show={show}
+          onHide={handleClose}
         >
           <Offcanvas.Header closeButton>
             <Offcanvas.Title id={`offcanvasNavbarLabel-expand-md`}>
@@ -30,11 +49,14 @@ const Header: React.FC = () => {
             </Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Nav className="justify-content-end flex-grow-1 pe-3">
-              <Nav.Link as={Link} to="/">
+            <Nav
+              className="justify-content-end flex-grow-1"
+              onSelect={handleSelect}
+            >
+              <Nav.Link as={NavLink} to="/" eventKey="home">
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to="/about">
+              <Nav.Link as={NavLink} to="/about" eventKey="about">
                 About
               </Nav.Link>
               <NavDropdown
@@ -67,6 +89,23 @@ const Header: React.FC = () => {
 export default Header;
 
 const NavbarWrapper = styled(Navbar)`
-  background: ${(props) => props.theme.colors.white} !important;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);
+
+  &.dark {
+    background: ${(props) => props.theme.colors.black} !important;
+
+    .nav-link,
+    .navbar-brand {
+      color: ${(props) => props.theme.colors.white};
+    }
+  }
+
+  &.light {
+    background: ${(props) => props.theme.colors.white} !important;
+
+    .nav-link,
+    .navbar-brand {
+      color: ${(props) => props.theme.colors.black};
+    }
+  }
 `;

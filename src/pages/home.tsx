@@ -7,9 +7,9 @@ const Home = () => {
   return (
     <>
       <HeroCarousel />
-      <AchievementList />
       <PopularCourseList />
       <ExploreCourseList />
+      <AchievementList />
     </>
   );
 };

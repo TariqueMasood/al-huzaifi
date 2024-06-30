@@ -1,28 +1,22 @@
 import Carousel from "react-bootstrap/Carousel";
-
-import slider1 from "../../src/images/cardImage1.jpg";
+import slider2 from "../../src/images/slider-2.webp";
+import slider3 from "../../src/images/slider-3.webp";
+import styled from "styled-components";
 
 function HeroCarousel() {
   return (
     <Carousel>
       <Carousel.Item>
-        <img src={slider1} alt="slider" />
+        <Image src={slider2} alt="slider" />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img src={slider1} alt="slider" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
+          <h3>Second slider</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
-        <img src={slider1} alt="slider" />
+        <Image src={slider3} alt="slider" />
         <Carousel.Caption>
-          <h3>Third slide label</h3>
+          <h3>Third slider</h3>
           <p>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
@@ -33,3 +27,8 @@ function HeroCarousel() {
 }
 
 export default HeroCarousel;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
+`;
