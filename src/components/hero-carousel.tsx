@@ -1,6 +1,6 @@
 import Carousel from "react-bootstrap/Carousel";
-import slider2 from "../../src/images/slider-2.webp";
-import slider3 from "../../src/images/slider-3.webp";
+import slider2 from "../images/slider-2.webp";
+import slider3 from "../images/slider-3.webp";
 import styled from "styled-components";
 
 function HeroCarousel() {
