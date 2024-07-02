@@ -26,7 +26,7 @@ const CardWraaper = styled.div`
   ${mq("lg")} {
     max-width: 280px;
     width: 100%;
-    border: 1px solid #e3e3e3;
+    border: 1px solid #5d5d5d;
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
       0 1px 2px -1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
@@ -81,9 +81,13 @@ const CardTitle = styled.a`
   margin-bottom: 0;
   text-transform: capitalize;
   text-decoration: none;
-  color: ${(props) => props.theme.themeColor};
   font-size: 24px;
   font-weight: 600;
+  transition: all ease 0.5s;
+
+  &:hover {
+    color: ${(props) => props.theme.colors.themeColor};
+  }
 `;
 
 const CardSubtitle = styled.span`

@@ -58,6 +58,8 @@ const Wrapper = styled.div``;
 
 const CardWrapper = styled.div`
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+  // overflow-x: scroll;
   scrollbar-width: none;
+  padding-bottom: 50px;
 `;

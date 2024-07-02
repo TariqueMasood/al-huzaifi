@@ -5,6 +5,8 @@ const theme: DefaultTheme = {
     themeColor: "#ce7d00",
     activeBg: "#E6F7FF",
     activeTextColor: "#124d63",
+    darkBg:"#0D1A36",
+    themeTextColor:"#72819F",
   },
 };
 
@@ -16,6 +18,7 @@ export const lightTheme: DefaultTheme = {
   text: "#434343",
   toggleBorder: "#f3f3f3",
   colors: theme.colors,
+  boxShadow: "0px 3px 6px 0px rgba(140, 149, 159, 0.15)",
 };
 
 export const darkTheme: DefaultTheme = {
@@ -24,4 +27,5 @@ export const darkTheme: DefaultTheme = {
   text: "#798087",
   toggleBorder: "#394051",
   colors: theme.colors,
+  boxShadow: "none",
 };

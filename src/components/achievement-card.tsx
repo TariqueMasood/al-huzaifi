@@ -28,7 +28,7 @@ const Wrapper = styled.div`
   width: 100%;
   text-align: center;
   padding: 40px 20px;
-  border: 2px dashed #ccc;
+  border: 1px dashed #bcbcbc;
   border-radius: 8px;
   position: relative;
   margin-right: 24px;

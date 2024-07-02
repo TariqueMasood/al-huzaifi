@@ -38,7 +38,7 @@ const ScrollButton = styled.button<{ show: boolean }>`
   right: 50px;
   z-index: 1000;
   display: ${(props) => (props.show ? "block" : "none")};
-  background-color: #007bff;
+  background-color: ${(props) => props.theme.colors.themeColor};
   color: white;
   border: none;
   border-radius: 50%;
@@ -47,7 +47,7 @@ const ScrollButton = styled.button<{ show: boolean }>`
   font-size: 24px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: opacity 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 
   &:hover {
     background-color: #0056b3;

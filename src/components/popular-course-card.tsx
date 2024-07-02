@@ -74,7 +74,8 @@ const Wrapper = styled.div`
   max-width: 420px;
   width: 100%;
   height: auto;
-  box-shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
+  // box-shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
+  box-shadow: ${(props) => props.theme.boxShadow}
   margin-bottom: 20px;
 `;
 

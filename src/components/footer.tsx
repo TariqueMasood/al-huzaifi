@@ -64,6 +64,7 @@ const Footer = () => {
             </ContactIcon>
           </Col>
         </Row>
+        <Divider></Divider>
       </Container>
       <CopyRight>
         <p> &copy; 2024 Al-Huzaifi. All rights reserved.</p>
@@ -77,11 +78,15 @@ export default Footer;
 const Wrapper = styled.footer`
   padding: 40px 0px 20px 0px;
   border-top: 1px solid ${(props) => props.theme.toggleBorder};
+  background-color: ${(props) => props.theme.colors.darkBg};
+  color: ${(props) => props.theme.colors.themeTextColor};
+  border-bottom: 1px solid ${(props) => props.theme.toggleBorder};
 `;
 
 const FooterTitle = styled.h4`
   margin-bottom: 20px;
   font-weight: 600;
+  font-family: "Oswald", sans-serif;
 `;
 
 const Tagline = styled.p`
@@ -96,6 +101,11 @@ const SocialIcon = styled.div`
     cursor: pointer;
     font-size: 24px;
     margin-right: 32px;
+    transition: all ease 0.4s;
+
+    &:hover {
+      color: ${(props) => props.theme.colors.themeColor};
+    }
   }
 `;
 
@@ -103,6 +113,12 @@ const List = styled.li`
   list-style: none;
   margin-bottom: 12px;
   font-size: 20px;
+  color: ${(props) => props.theme.colors.themeTextColor};
+
+  a:hover {
+    color: ${(props) => props.theme.colors.themeColor};
+    transition: all ease-in-out 0.4s;
+  }
 `;
 
 const UlList = styled.ul`
@@ -119,8 +135,13 @@ const ContactIcon = styled.div`
   }
 `;
 
+const Divider = styled.div`
+  height: 1px;
+  background-color: ${(props) => props.theme.colors.themeTextColor};
+  opacity: 0.2;
+`;
+
 const CopyRight = styled.div`
-  border-top: 1px solid ${(props) => props.theme.toggleBorder};
   text-align: center;
   padding-top: 20px;
   font-size: 18px;

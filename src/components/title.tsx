@@ -24,7 +24,7 @@ const TitleWrapper = styled.div`
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  padding: 40px 0px;
+  padding: 60px 0px;
   text-align: center;
 `;
 

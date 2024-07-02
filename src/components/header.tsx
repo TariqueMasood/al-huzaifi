@@ -56,7 +56,7 @@ const Header: React.FC = () => {
               <Nav.Link as={NavLink} to="/about" eventKey="about">
                 About
               </Nav.Link>
-              <NavDropdown
+              <CustomDropdown
                 title="Faculty"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
@@ -79,7 +79,55 @@ const Header: React.FC = () => {
                 <NavDropdown.Item href="#action5">
                   Faculty of Languages
                 </NavDropdown.Item>
-              </NavDropdown>
+              </CustomDropdown>
+              <CustomDropdown
+                title="Darul-Ifta"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">Ask Fatwa</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">
+                  Contact to Mufti
+                </NavDropdown.Item>
+              </CustomDropdown>
+              <CustomDropdown
+                title="Publications"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">Booklets</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">Prospectus</NavDropdown.Item>
+                <NavDropdown.Divider />
+              </CustomDropdown>
+              <CustomDropdown
+                title="Admission"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">Enroll Now</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">Tution Fee</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">Scholarship</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">
+                  Acadmic Calender
+                </NavDropdown.Item>
+              </CustomDropdown>
+              <CustomDropdown
+                title="Programs"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">
+                  Lorem, ipsum.
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">Lorem</NavDropdown.Item>
+              </CustomDropdown>
+              <Nav.Link as={NavLink} to="/#" eventKey="contact">
+                Contact
+              </Nav.Link>
               <MyButton
                 onClick={toggleTheme}
                 title={theme === "dark" ? "Light mode" : "Dark mode"}
@@ -140,4 +188,16 @@ const NavbarWrapper = styled(Navbar)`
 const Logo = styled.img`
   width: 130px;
   height: 50px;
+`;
+
+const CustomDropdown = styled(NavDropdown)`
+  .dropdown-menu {
+    border: none;
+    border-top: 1px solid ${(props) => props.theme.colors.darkbg};
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  }
+
+  .dropdown-divider {
+    opacity: 0.3;
+  }
 `;

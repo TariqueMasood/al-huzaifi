@@ -1,4 +1,3 @@
-import React from "react";
 import { Container } from "react-bootstrap";
 import ExploreCourseCard from "./explore-course-card";
 import computerImg from "../../src/images/computer-img.png";
@@ -12,7 +11,7 @@ const exploreCardData = [
     cardImage: computerImg,
     cardTitle: "data science",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "",
   },
   {
     id: 2,
@@ -64,7 +63,11 @@ const ExploreCourseList = () => {
 
 export default ExploreCourseList;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  background-color: ${(props) => props.theme.colors.darkBg};
+  color: ${(props) => props.theme.colors.themeTextColor};
+  padding: 30px 0px;
+`;
 
 const CardWrapper = styled.div`
   ${mq("lg")} {
