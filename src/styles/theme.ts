@@ -19,6 +19,8 @@ export const lightTheme: DefaultTheme = {
   toggleBorder: "#f3f3f3",
   colors: theme.colors,
   boxShadow: "0px 3px 6px 0px rgba(140, 149, 159, 0.15)",
+  border:"none",
+  cardDividerColor: "#f5f5f5", 
 };
 
 export const darkTheme: DefaultTheme = {
@@ -28,4 +30,6 @@ export const darkTheme: DefaultTheme = {
   toggleBorder: "#394051",
   colors: theme.colors,
   boxShadow: "none",
+  border:"1px solid #434343",
+  cardDividerColor: "#434343",
 };

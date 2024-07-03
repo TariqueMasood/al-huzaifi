@@ -77,4 +77,6 @@ const PopularCourseList = () => {
 
 export default PopularCourseList;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding: 10px 0px 40px 0px;
+`;

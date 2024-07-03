@@ -66,7 +66,7 @@ export default ExploreCourseList;
 const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.darkBg};
   color: ${(props) => props.theme.colors.themeTextColor};
-  padding: 30px 0px;
+  padding-bottom: 40px;
 `;
 
 const CardWrapper = styled.div`

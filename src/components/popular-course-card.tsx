@@ -74,9 +74,10 @@ const Wrapper = styled.div`
   max-width: 420px;
   width: 100%;
   height: auto;
-  // box-shadow: 0px 3px 6px 0px rgba(140, 149, 159, 0.15);
-  box-shadow: ${(props) => props.theme.boxShadow}
+  box-shadow: ${(props) => props.theme.boxShadow};
   margin-bottom: 20px;
+  border: ${(props) => props.theme.border};
+  border-radius: 8px;
 `;
 
 const ImageContainer = styled.div`
@@ -142,7 +143,7 @@ const CardDetailWrapper = styled.div`
 const Author = styled.div`
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #f5f5f5;
+  border-top: 1px solid ${(props) => props.theme.cardDividerColor};
   padding-top: 20px;
 `;
 
