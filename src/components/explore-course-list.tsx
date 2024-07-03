@@ -72,6 +72,7 @@ const Wrapper = styled.div`
 const CardWrapper = styled.div`
   ${mq("lg")} {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
   }
 

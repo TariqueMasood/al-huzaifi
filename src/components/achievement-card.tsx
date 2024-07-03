@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { PiUsersThin } from "react-icons/pi";
 
 type cardProps = {
   counter: string;
