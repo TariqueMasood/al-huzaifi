@@ -1,9 +1,8 @@
-import React from "react";
 import styled from "styled-components";
 import AchievementCard from "./achievement-card";
 import { PiUsersThreeThin } from "react-icons/pi";
-import { Col, Container, Row } from "react-bootstrap";
 import Title from "./title";
+import { Container } from "react-bootstrap";
 
 const achievementCardData = [
   {
