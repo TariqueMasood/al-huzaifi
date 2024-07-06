@@ -105,7 +105,9 @@ const Header: React.FC = () => {
                 title="Admission"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
-                <NavDropdown.Item href="#action3">Enroll Now</NavDropdown.Item>
+                <NavDropdown.Item href="/registration">
+                  Registration
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action4">Tution Fee</NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -125,15 +127,15 @@ const Header: React.FC = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action4">Lorem</NavDropdown.Item>
               </CustomDropdown>
-              <Nav.Link as={NavLink} to="/#" eventKey="contact">
+              <Nav.Link as={NavLink} to="/contact" eventKey="contact">
                 Contact
               </Nav.Link>
-              <MyButton
+              {/* <MyButton
                 onClick={toggleTheme}
                 title={theme === "dark" ? "Light mode" : "Dark mode"}
               >
                 {theme === "dark" ? <PiSunLight /> : <PiMoonLight />}
-              </MyButton>
+              </MyButton> */}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
