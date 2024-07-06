@@ -1,6 +1,4 @@
-import React from "react";
-
-const Contact = () => (
+const ContactForm = () => (
   <div>
     <h3>Contact Us:</h3>
     <address>
@@ -13,4 +11,4 @@ const Contact = () => (
   </div>
 );
 
-export default Contact;
+export default ContactForm;
