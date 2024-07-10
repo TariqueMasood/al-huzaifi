@@ -4,15 +4,15 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
-import { useTheme } from "../contexts/theme-context";
-import { PiMoonLight, PiSunLight } from "react-icons/pi";
-import MyButton from "./button";
+// import { useTheme } from "../contexts/theme-context";
+// import { PiMoonLight, PiSunLight } from "react-icons/pi";
+// import MyButton from "./button";
 import styled from "styled-components";
 import { useState } from "react";
-import logo from "../images/al-huzaifi-logo.jpeg";
+import logo from "../images/logo-1.png";
 
 const Header: React.FC = () => {
-  const { toggleTheme, theme } = useTheme();
+  // const { toggleTheme, theme } = useTheme();
 
   const [show, setShow] = useState(false);
 
