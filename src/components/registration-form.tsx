@@ -1,6 +1,7 @@
 import React from "react";
-import { Form, Button, Container, Row, Col } from "react-bootstrap";
+import { Form, Container, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
+import { mq } from "../styles/breakpoints";
 
 const countryOptions = [
   "Afghanistan",
@@ -389,22 +390,13 @@ const RegistrationForm: React.FC = () => {
 
               <TextAreaContainer>
                 <p>Previous Islamic Education</p>
-                <textarea
-                  className="pl-3"
-                  rows={4}
-                  cols={80}
-                  placeholder="Briefly describe your islamic education background..."
-                ></textarea>
+                <textarea placeholder="Briefly describe your islamic education background..."></textarea>
                 <p>Islamic Institutes Attended</p>
-                <textarea
-                  rows={4}
-                  cols={80}
-                  placeholder="Briefly describe your islamic education background..."
-                ></textarea>
+                <textarea placeholder="Briefly describe your islamic education background..."></textarea>
               </TextAreaContainer>
 
-              <div>
-                <label>Your availability</label> <br />
+              <Availability>
+                <p>Your availability</p>
                 <input type="checkbox" id="weekDayM" name="weekDayM" />
                 <label htmlFor="weekDayM">Monday</label>
                 <br />
@@ -425,12 +417,9 @@ const RegistrationForm: React.FC = () => {
                 <br />
                 <input type="checkbox" id="weekEnd" name="weekEnd" />
                 <label htmlFor="weekEnd">Sunday</label>
-              </div>
+              </Availability>
               <Acknowledgment>
-                <label htmlFor="declaration">
-                  Acknowledgment & Declaration
-                </label>
-                <br />
+                <p>Acknowledgment & Declaration</p>
                 <input type="checkbox" id="declaration" name="declaration" />
                 <label htmlFor="declaration">
                   I hereby declare, and confirm that I will abide by the
@@ -438,10 +427,7 @@ const RegistrationForm: React.FC = () => {
                 </label>
               </Acknowledgment>
               <Security>
-                <label htmlFor="securityCheck">
-                  Background & Security Check
-                </label>
-                <br />
+                <p>Background & Security Check</p>
                 <input
                   type="checkbox"
                   id="illegalActivities"
@@ -500,9 +486,7 @@ const RegistrationForm: React.FC = () => {
                   and understood the above terms and obligations.
                 </label>
               </Security>
-              <Button variant="primary" type="submit">
-                Submit Form
-              </Button>
+              <Submit type="submit">Register</Submit>
             </FormWrapper>
           </Col>
         </Row>
@@ -514,12 +498,18 @@ const RegistrationForm: React.FC = () => {
 export default RegistrationForm;
 
 const Wrapper = styled.div`
-  padding: 40px 0px;
+  padding: 30px 0px;
+
+  ${mq("md")} {
+    padding: 60px 0px;
+  }
 `;
 
 const FormHeading = styled.h3`
   font-weight: 600;
-  padding: 30px 0px;
+  ${mq("md")} {
+    padding: 30px 0px;
+  }
 `;
 
 const FormSubTitle = styled.p`
@@ -544,27 +534,35 @@ const FormWrapper = styled(Form)`
 `;
 
 const FormName = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
 `;
 
 const AddressLine = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
 `;
 
 const CityState = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
 `;
 
 const ZipCode = styled.div`
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
 `;
 
 const RadioBtn = styled.div`
@@ -581,8 +579,10 @@ const RadioBtn = styled.div`
 
 const TextAreaContainer = styled.div`
   textarea {
-    padding-left: 12px;
-    padding-top: 12px;
+    max-width: 450px;
+    width: 100%;
+    height: 90px;
+    padding-left: 7px;
   }
 
   p {
@@ -591,14 +591,71 @@ const TextAreaContainer = styled.div`
   }
 `;
 
+const Availability = styled.div`
+  p {
+    margin-top: 16px;
+  }
+
+  label {
+    margin-top: 12px;
+  }
+
+  input {
+    margin-right: 7px;
+  }
+`;
+
 const Acknowledgment = styled.div`
+  margin: 24px 0px;
+
+  p {
+    margin-bottom: 7px;
+  }
+
+  input {
+    margin-right: 7px;
+  }
+
   label {
     display: inline;
   }
 `;
 
 const Security = styled.div`
+  input {
+    margin-top: 12px;
+    margin-right: 7px;
+  }
+
   label {
+    margin-top: 12px;
     display: inline;
+  }
+`;
+
+const Submit = styled.button`
+  padding: 6px 24px;
+  margin: 24px 0px;
+  border: 1px solid ${(props) => props.theme.colors.themeColor};
+  color: ${(props) => props.theme.colors.themeColor};
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: all ease-in 0.4s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.themeColor};
+    color: #fff;
+  }
+
+  ${mq("md")} {
+    padding: 9px 36px;
+    margin: 24px 0px;
+    border: 1px solid ${(props) => props.theme.colors.themeColor};
+    color: ${(props) => props.theme.colors.themeColor};
+    background-color: #ffffff;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all ease-in 0.4s;
   }
 `;
