@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 // import MyButton from "./button";
 import styled from "styled-components";
 import { useState } from "react";
-import logo from "../images/logo-1.png";
+import logo from "../images/al-huzaifi-logo.png";
 
 const Header: React.FC = () => {
   // const { toggleTheme, theme } = useTheme();
