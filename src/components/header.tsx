@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 // import MyButton from "./button";
 import styled from "styled-components";
 import { useState } from "react";
-import logo from "../images/al-huzaifi-logo.png";
+import logo from "../images/logo-2.png";
 
 const Header: React.FC = () => {
   // const { toggleTheme, theme } = useTheme();
@@ -53,9 +53,20 @@ const Header: React.FC = () => {
               <Nav.Link as={NavLink} to="/" eventKey="home">
                 Home
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/about" eventKey="about">
-                About
-              </Nav.Link>
+              <CustomDropdown
+                title="About"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="/our-history">
+                  Our History
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/our-mission">
+                  Our Mission and Vision
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="/our-team">Our Team</NavDropdown.Item>
+              </CustomDropdown>
               <CustomDropdown
                 title="Faculty"
                 id={`offcanvasNavbarDropdown-expand-md`}
@@ -99,7 +110,6 @@ const Header: React.FC = () => {
                 <NavDropdown.Item href="#action4">Booklets</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">Prospectus</NavDropdown.Item>
-                <NavDropdown.Divider />
               </CustomDropdown>
               <CustomDropdown
                 title="Admission"
