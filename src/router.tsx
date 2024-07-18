@@ -7,6 +7,10 @@ import Contact from "./pages/contact";
 import OurTeamPage from "./pages/our-team";
 import { OurMissionPage } from "./pages/our-mission";
 import { OurHistoryPage } from "./pages/our-history";
+import { FacultyOfQuranPage } from "./pages/faculty-of-quran";
+import { FacultyOfDeeniyatPage } from "./pages/faculty-of-deeniyat";
+import { FacultyOfAlimiyatPage } from "./pages/faculty-of-alimiyat";
+import { FacultyOfFazilatPage } from "./pages/faculty-of-fazilat";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +44,22 @@ const router = createBrowserRouter([
       {
         path: "our-history",
         element: <OurHistoryPage />,
+      },
+      {
+        path: "faculty-of-quran",
+        element: <FacultyOfQuranPage />,
+      },
+      {
+        path: "faculty-of-deeniyat",
+        element: <FacultyOfDeeniyatPage />,
+      },
+      {
+        path: "faculty-of-alimiyat",
+        element: <FacultyOfAlimiyatPage />,
+      },
+      {
+        path: "faculty-of-fazilat",
+        element: <FacultyOfFazilatPage />,
       },
     ],
   },

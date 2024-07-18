@@ -337,6 +337,49 @@ const RegistrationForm: React.FC = () => {
                   </Form.Control>
                 </Form.Group>
               </ZipCode>
+
+              <Form.Group controlId="gender">
+                <Form.Label>Course</Form.Label>
+                <Form.Control as="select" name="course">
+                  <option value="">Choose Course...</option>
+                  <option value="male">Noorani Qaedah Course</option>
+                  <option value="female">Quran Recitation Course</option>
+                  <option value="other">Quran Memorization Course</option>
+                  <option value="other">Tajweed Course</option>
+                  <option value="other">Seven Qiraats Course</option>
+                  <option value="other">Quran Ijazah Program</option>
+                  <option value="other">Quran’s Translation Course</option>
+                  <option value="other">Tafseer Course</option>
+                  <option value="other">DEENIYAT FOR KIDS</option>
+                  <option value="other">Deeniyat For Men</option>
+                  <option value="other">Deeniyat For Women</option>
+                  <option value="other">Alimiyat (Dars-e-nizami)</option>
+                  <option value="other">Alimiyat (Modern Curriculum)</option>
+                  <option value="other">Fazilat In Quranic Science</option>
+                  <option value="other">Fazlital In Hadith Science</option>
+                  <option value="other">
+                    Fazilat In Islamic Jurisprudence
+                  </option>
+                  <option value="other">Fazilat In Theology</option>
+                  <option value="other">Fazilat In Islamic Finance</option>
+                  <option value="other">Fazilat In Arabic Language</option>
+                  <option value="other">Foundation Arabic Course</option>
+                  <option value="other">Arabic Speaking Course</option>
+                  <option value="other">Quranic Arabic Course</option>
+                  <option value="other">Classical Arabic Course</option>
+                  <option value="other">Nah & Sarf Course</option>
+                  <option value="other">Balaghat Course</option>
+                  <option value="other">Arooz & Quafiyah Course</option>
+                  <option value="other">Ibaadat Course</option>
+                  <option value="other">Zakat Course</option>
+                  <option value="other">Ramazan Special Course</option>
+                  <option value="other">Hajj & Umrah Course</option>
+                  <option value="other">Seerat Course</option>
+                  <option value="other">Meeras Course</option>
+                  <option value="other">Imamat Course</option>
+                  <option value="other">Other</option>
+                </Form.Control>
+              </Form.Group>
               <RadioBtn>
                 <p>Preferred Language:</p>
                 <input
@@ -354,38 +397,14 @@ const RegistrationForm: React.FC = () => {
                   value="EnUrduglish"
                 ></input>
                 <label htmlFor="urdu">Urdu</label>
-                <p>Course Selection:</p>
-                <input
-                  type="radio"
-                  id="alimiyat"
-                  name="course"
-                  value="Alimiyat"
-                ></input>
-                <label htmlFor="alimiyat">Alimiyat</label>
                 <br />
                 <input
                   type="radio"
-                  id="hifz"
-                  name="course"
-                  value="Quran Hifz Nazirah"
+                  id="arabic"
+                  name="language"
+                  value="EnUrduglish"
                 ></input>
-                <label htmlFor="hifz">Quran Hifz Nazirah</label>
-                <br />
-                <input
-                  type="radio"
-                  id="deeniyat"
-                  name="course"
-                  value="1 Year Deeni Course"
-                ></input>
-                <label htmlFor="deeniyat">1 Year Deeni Course</label>
-                <br />
-                <input
-                  type="radio"
-                  id="course"
-                  name="course"
-                  value="Specialization Courses"
-                ></input>
-                <label htmlFor="course">Specialization Courses</label>
+                <label htmlFor="arabic">Arabic</label>
               </RadioBtn>
 
               <TextAreaContainer>

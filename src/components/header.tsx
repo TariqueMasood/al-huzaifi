@@ -71,19 +71,19 @@ const Header: React.FC = () => {
                 title="Faculty"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
-                <NavDropdown.Item href="#action3">
+                <NavDropdown.Item href="/faculty-of-quran">
                   Faculty of Quran
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">
+                <NavDropdown.Item href="/faculty-of-deeniyat">
                   Faculty of Deeniyat
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item href="/faculty-of-alimiyat">
                   Faculty of Alimiyat
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item href="/faculty-of-fazilat">
                   Faculty of Fazilat
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
