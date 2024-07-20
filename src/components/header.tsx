@@ -87,7 +87,7 @@ const Header: React.FC = () => {
                   Faculty of Fazilat
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item href="/faculty-of-language">
                   Faculty of Languages
                 </NavDropdown.Item>
               </CustomDropdown>

@@ -350,7 +350,7 @@ const RegistrationForm: React.FC = () => {
                   <option value="other">Quran Ijazah Program</option>
                   <option value="other">Quran’s Translation Course</option>
                   <option value="other">Tafseer Course</option>
-                  <option value="other">DEENIYAT FOR KIDS</option>
+                  <option value="other">Deeniyat For Kids</option>
                   <option value="other">Deeniyat For Men</option>
                   <option value="other">Deeniyat For Women</option>
                   <option value="other">Alimiyat (Dars-e-nizami)</option>
