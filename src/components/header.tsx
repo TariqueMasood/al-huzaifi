@@ -4,12 +4,11 @@ import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { NavLink } from "react-router-dom";
-// import { useTheme } from "../contexts/theme-context";
-// import { PiMoonLight, PiSunLight } from "react-icons/pi";
-// import MyButton from "./button";
+
 import styled from "styled-components";
 import { useState } from "react";
 import logo from "../images/logo-2.png";
+import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 
 const Header: React.FC = () => {
   // const { toggleTheme, theme } = useTheme();
@@ -91,6 +90,44 @@ const Header: React.FC = () => {
                   Faculty of Languages
                 </NavDropdown.Item>
               </CustomDropdown>
+              <NavDropdownMenu
+                title="Programs"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <SubMenu title="Quran Courses">
+                  <NavDropdown.Item href="/noorani-qaedah">
+                    Noorani Qa'edah Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Quran Recitation Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Quran Memorization Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">Tajweed Course</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Seven Qiraats Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Quran Ijazah Program
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Quran's Translation Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">Tafseer Course</NavDropdown.Item>
+                </SubMenu>
+                <NavDropdown.Divider />
+                <SubMenu title="Deeniyat Courses">
+                  <NavDropdown.Item href="#">Text</NavDropdown.Item>
+                </SubMenu>
+              </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"
                 id={`offcanvasNavbarDropdown-expand-md`}
@@ -127,16 +164,7 @@ const Header: React.FC = () => {
                   Acadmic Calender
                 </NavDropdown.Item>
               </CustomDropdown>
-              <CustomDropdown
-                title="Programs"
-                id={`offcanvasNavbarDropdown-expand-md`}
-              >
-                <NavDropdown.Item href="#action3">
-                  Lorem, ipsum.
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">Lorem</NavDropdown.Item>
-              </CustomDropdown>
+
               <Nav.Link as={NavLink} to="/contact" eventKey="contact">
                 Contact
               </Nav.Link>
@@ -200,6 +228,10 @@ const NavbarWrapper = styled(Navbar)`
 const Logo = styled.img`
   width: 130px;
   height: 50px;
+`;
+
+const SubMenu = styled(DropdownSubmenu)`
+  cursor: pointer;
 `;
 
 const CustomDropdown = styled(NavDropdown)`

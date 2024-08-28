@@ -12,6 +12,7 @@ import { FacultyOfDeeniyatPage } from "./pages/faculty-of-deeniyat";
 import { FacultyOfAlimiyatPage } from "./pages/faculty-of-alimiyat";
 import { FacultyOfFazilatPage } from "./pages/faculty-of-fazilat";
 import { FacultyOfLanguagePage } from "./pages/faculty-of-language";
+import { NooraniQaedahPage } from "./pages/noorani-qaedah";
 
 const router = createBrowserRouter([
   {
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
       {
         path: "faculty-of-language",
         element: <FacultyOfLanguagePage />,
+      },
+      {
+        path: "noorani-qaedah",
+        element: <NooraniQaedahPage />,
       },
     ],
   },
