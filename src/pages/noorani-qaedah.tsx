@@ -138,7 +138,7 @@ export const NooraniQaedahPage = () => {
               reverence.
             </p>
           </CourseDiscription>
-          <Divider></Divider>
+          {/* <Divider></Divider> */}
           <CourseDetail>
             <h5>
               course name: <span>Noorani Qa'edah Course</span>
@@ -177,31 +177,26 @@ export const NooraniQaedahPage = () => {
   );
 };
 
-const Wrapper = styled.div`
-  max-width: 1000px;
-  padding: 20px 0px;
-  margin: auto;
-`;
+const Wrapper = styled.div``;
 
 const Title = styled.h1`
   text-align: center;
   font-weight: 600;
   color: ${(props) => props.theme.colors.themeColor};
-  padding: 20px 0px;
+  padding: 30px 0px;
 `;
 
 const SubTitle = styled.h4`
   text-align: center;
   font-style: italic;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 const Content = styled.div`
-  padding: 0px 16px;
+  padding: 30px 0px;
   display: flex;
-  gap: 25px;
+  gap: 45px;
   justify-content: space-between;
-  border: 1px solid black;
 `;
 
 const CourseDiscription = styled.div`
@@ -215,19 +210,22 @@ const CourseDiscription = styled.div`
   }
   p {
     padding: 12px 0px;
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 1px;
   }
 
   li {
-    font-size: 16px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 30px;
   }
 `;
 
-const Divider = styled.div`
-  width: 1px;
-  height: auto;
-  background-color: black;
-`;
+// const Divider = styled.div`
+//   width: 1px;
+//   height: auto;
+//   background-color: black;
+// `;
 
 const CourseDetail = styled.div`
   flex: 1;
@@ -238,10 +236,12 @@ const CourseDetail = styled.div`
     font-weight: 600;
     text-transform: capitalize;
     line-height: 28px;
+    line-height: 30px;
 
     span {
       font-weight: normal;
-      font-size: 16px;
+      font-size: 18px;
+      letter-spacing: 1px;
     }
   }
 `;
