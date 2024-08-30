@@ -1,5 +1,6 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
+import { mq } from "../styles/breakpoints";
 
 export const NooraniQaedahPage = () => {
   return (
@@ -183,41 +184,121 @@ const Title = styled.h1`
   text-align: center;
   font-weight: 600;
   color: ${(props) => props.theme.colors.themeColor};
-  padding: 30px 0px;
+  padding: 16px 0px;
+  font-size: 20px;
+
+  ${mq("sm")} {
+    text-align: center;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.themeColor};
+    padding: 24px 0px;
+    font-size: 24px;
+  }
+
+  ${mq("md")} {
+    text-align: center;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.themeColor};
+    padding: 30px 0px;
+    font-size: 36px;
+  }
 `;
 
 const SubTitle = styled.h4`
   text-align: center;
   font-style: italic;
-  margin-bottom: 30px;
+  font-size: 18px;
+
+  ${mq("sm")} {
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+  }
+
+  ${mq("md")} {
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 30px;
+    font-size: 22px;
+  }
 `;
 
 const Content = styled.div`
-  padding: 30px 0px;
+  padding: 7px 0px;
   display: flex;
-  gap: 45px;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  gap: 25px;
+
+  ${mq("md")} {
+    padding: 30px 0px;
+    display: flex;
+    flex-direction: row;
+    gap: 45px;
+    justify-content: space-between;
+  }
 `;
 
 const CourseDiscription = styled.div`
-  flex: 2;
-  margin: 20px 0px;
-
   h5 {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 600;
     text-transform: capitalize;
   }
   p {
     padding: 12px 0px;
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
   }
 
   li {
-    font-size: 18px;
+    font-size: 16px;
     letter-spacing: 1px;
-    line-height: 30px;
+    line-height: 26px;
+  }
+
+  ${mq("sm")} {
+    margin: 12px 0px;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    p {
+      padding: 12px 0px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    li {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 30px;
+    }
+  }
+
+
+  ${mq("md")}{
+  flex: 2;
+    margin: 20px 0px;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+    }
+    p {
+      padding: 12px 0px;
+      font-size: 18px;
+      letter-spacing: 1px;
+    }
+
+    li {
+      font-size: 18px;
+      letter-spacing: 1px;
+      line-height: 30px;
+    }
+  }
   }
 `;
 
@@ -228,35 +309,102 @@ const CourseDiscription = styled.div`
 // `;
 
 const CourseDetail = styled.div`
-  flex: 1;
-  margin: 20px 0px;
+  margin: 12px 0px;
 
   h5 {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: capitalize;
-    line-height: 28px;
-    line-height: 30px;
+    line-height: 26px;
+    padding-bottom: 12px;
 
     span {
       font-weight: normal;
+      font-size: 14px;
+    }
+  }
+
+  ${mq("sm")} {
+    flex: 1;
+    margin: 20px 0px;
+
+    h5 {
       font-size: 18px;
-      letter-spacing: 1px;
+      font-weight: 600;
+      text-transform: capitalize;
+      line-height: 28px;
+      padding-bottom: 16px;
+
+      span {
+        font-weight: normal;
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
     }
   }
 `;
 
 const ButtonContainer = styled.div`
-  margin-top: 30px;
-
+  margin-top: 20px;
   a {
-    padding: 12px 20px;
-    background-color: #eee;
-    border: 1px solid #ccc;
+    display: block;
+    text-align: center;
+    border: 1px solid ${(props) => props.theme.colors.themeColor};
+    background: transparent;
+    padding: 9px 16px;
     border-radius: 6px;
-    transition: all ease-in 0.3s;
+    font-weight: 500;
+    color: ${(props) => props.theme.colors.themeColor};
+    transition: all ease-in-out 0.5s;
+    font-size: 14px;
   }
+
   a:hover {
-    opacity: 0.7;
+    background-color: ${(props) => props.theme.colors.themeColor};
+    color: #fff;
+  }
+
+  ${mq("sm")} {
+    margin-top: 30px;
+    a {
+      display: block;
+      text-align: center;
+      border: 1px solid ${(props) => props.theme.colors.themeColor};
+      background: transparent;
+      padding: 14px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: ${(props) => props.theme.colors.themeColor};
+      transition: all ease-in-out 0.5s;
+      font-size: 16px;
+    }
+
+    a:hover {
+      background-color: ${(props) => props.theme.colors.themeColor};
+      color: #fff;
+    }
+  }
+
+
+  ${mq("md")}{
+  margin-top: 50px;
+    a {
+      display: block;
+      text-align: center;
+      border: 1px solid ${(props) => props.theme.colors.themeColor};
+      background: transparent;
+      padding: 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      color: ${(props) => props.theme.colors.themeColor};
+      transition: all ease-in-out 0.5s;
+      font-size: 18px;
+    }
+
+    a:hover {
+      background-color: ${(props) => props.theme.colors.themeColor};
+      color: #fff;
+    }
+  }
   }
 `;
