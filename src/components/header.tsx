@@ -99,7 +99,7 @@ const Header: React.FC = () => {
                     Noorani Qa'edah Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/recitation-course">
                     Quran Recitation Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
