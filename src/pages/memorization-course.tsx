@@ -2,149 +2,143 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
-export const NooraniQaedahPage = () => {
+export const MemorizationCoursePage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Noorani Qa'edah Course</Title>
+        <Title>Quran Memorization Course</Title>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <Content>
           <CourseDiscription>
             <h5>course objective:</h5>
             <p>
-              The Noorani Qa'edah Course is designed to lay a strong foundation
-              for beginners in reading and reciting the Quran. Utilizing the
-              Noorani Qa'edah method, this course aims to teach students the
-              correct pronunciation of Arabic letters and sounds, enabling them
-              to read the Quran fluently and accurately.
+              The Quran Memorization Course is thoughtfully crafted to guide
+              students through the profound and rewarding journey of memorizing
+              the Holy Quran. Memorization, or Hifz, is a time-honored tradition
+              in Islamic scholarship, and this course aims to equip students
+              with the skills, strategies, and spiritual support necessary to
+              achieve this noble goal.
             </p>
             <h5>Course Content:</h5>
             <p>
-              The Noorani Qa'edah Course provides a structured and systematic
-              curriculum designed to teach students the basics of Arabic reading
-              and Quranic recitation. Key components of the course include:
+              The Quran Memorization Course encompasses a structured curriculum
+              that gradually builds students' memorization skills while
+              reinforcing their understanding and recitation abilities. The key
+              components of the course include:
             </p>
             <ol>
               <li>
-                <strong>Introduction to Arabic Alphabets:</strong>
-                Learning the Arabic alphabet, focusing on the shape, sound, and
-                proper articulation of each letter.
+                <strong>Introduction to Hifz:</strong>
+                Understanding the virtues, significance, and responsibilities of
+                memorizing the Quran.
               </li>
               <li>
-                <strong>Combining Letters:</strong> Understanding how to combine
-                letters to form syllables and words, practicing simple and
-                compound letter combinations.
+                <strong>Effective Memorization Techniques:</strong>Training on
+                various memorization strategies, including chunking, repetition,
+                and visualization.
               </li>
               <li>
-                <strong>Short Vowels (Harakat):</strong> Studying the short
-                vowels (Fatha, Kasra, Damma) and their impact on letter
-                pronunciation.
+                <strong>Daily Memorization Goals:</strong>Developing a robust
+                revision schedule to ensure long-term retention and avoid
+                forgetfulness.
               </li>
               <li>
-                <strong>Long Vowels and Tanween:</strong> Learning long vowels
-                (Madd) and Tanween, and their application in reading.
+                <strong>Integration of Tajweed:</strong>Applying the rules of
+                Tajweed to ensure correct pronunciation and articulation during
+                memorization.
               </li>
               <li>
-                <strong>Sukoon and Shaddah:</strong> Understanding the rules of
-                Sukoon (Jazm) and Shaddah, and how they affect letter
-                pronunciation and word formation.
+                <strong>Supportive Environment:</strong>Creating a nurturing and
+                supportive learning atmosphere, including peer support and
+                regular encouragement from instructors.
               </li>
               <li>
-                <strong>Practice Reading Words:</strong> Regular practice in
-                reading words, sentences, and short passages from the Noorani
-                Qa'edah book.
+                <strong>Spiritual Practices:</strong>Incorporating
+                supplications, reflections, and spiritual exercises to deepen
+                the connection with the Quran.
               </li>
               <li>
-                <strong>Introduction to Tajweed:</strong> Basic introduction to
-                the rules of Tajweed to ensure correct pronunciation and
-                recitation.
-              </li>
-              <li>
-                <strong>Reading Short Surahs:</strong> Gradual progression to
-                reading and reciting short Surahs from the Quran with proper
-                Tajweed.
+                <strong>Assessment and Feedback:</strong>Regular assessments and
+                feedback sessions to track progress, identify areas for
+                improvement, and celebrate milestones.
               </li>
             </ol>
             <h5>Learning Outcomes:</h5>
             <p>
-              Upon successful completion of the Noorani Qa'edah Course, students
-              will achieve the following learning outcomes:
+              Upon successful completion of the Quran Memorization Course,
+              students will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficiency in Arabic Alphabets:</strong> Students will
-                be able to recognize and pronounce all Arabic letters correctly.
+                <strong>Proficient Memorization:</strong>Students will have
+                memorized significant portions of the Quran, adhering to the
+                highest standards of accuracy and retention.
               </li>
               <li>
-                <strong>Basic Reading Skills:</strong> Students will develop the
-                ability to read Arabic words and sentences with proper
-                pronunciation and fluency.
+                <strong>Flawless Recitation:</strong>Students will recite the
+                Quran with correct pronunciation and application of Tajweed
+                rules, enhancing the beauty and accuracy of their recitation.
               </li>
               <li>
-                <strong>Understanding of Basic Tajweed Rules:</strong> Students
-                will have a foundational understanding of Tajweed rules,
-                ensuring accurate recitation.
+                <strong>Enhanced Focus and Discipline:</strong>Students will
+                cultivate a disciplined approach to daily memorization and
+                revision, contributing to their overall personal and spiritual
+                growth.
               </li>
               <li>
-                <strong>Confidence in Recitation:</strong> Students will gain
-                confidence in their ability to read and recite the Quran, paving
-                the way for further Quranic studies.
+                <strong>Spiritual Connection:</strong>Students will experience a
+                deepened spiritual bond with the Quran, reflecting in their
+                daily lives and worship practices.
               </li>
               <li>
-                <strong>Love for Quranic Learning:</strong> Students will
-                develop a love for the Quran and its recitation, fostering a
-                lifelong relationship with the holy text.
+                <strong>Confidence in Recitation and Memorization:</strong>{" "}
+                Students will gain confidence in their ability to recite and
+                recall the Quran, both privately and publicly.
               </li>
             </ol>
             <h5>Who Should Enroll:</h5>
             <p>
-              The Noorani Qa'edah Course is ideal for a wide range of learners
-              who are at the beginning of their Quranic learning journey. This
-              includes:
+              The Quran Memorization Course is designed for a wide range of
+              learners who are dedicated to the goal of memorizing the Quran.
+              This includes:
             </p>
             <ol>
               <li>
-                <strong>Young Children:</strong> Young learners who are starting
-                their Quranic education and need to build a strong foundation in
-                Arabic reading.
+                <strong>Aspiring Huffaz:</strong>Individuals committed to the
+                complete memorization of the Quran, seeking a structured and
+                supportive program to achieve their goal.
               </li>
               <li>
-                <strong>Adult Beginners:</strong> Adults who did not have the
-                opportunity to learn Quranic reading in their childhood and wish
-                to start now.
+                <strong>Students with Basic Quranic Knowledge:</strong>Those who
+                have a foundational understanding of Quranic recitation and wish
+                to embark on the journey of Hifz.
               </li>
               <li>
-                <strong>Parents and Educators:</strong> Parents and educators
-                who want to learn or teach their children or students the basics
-                of Quranic reading using the Noorani Qa'edah method.
+                <strong>Existing Huffaz Seeking Revision:</strong>Individuals
+                who have previously memorized the Quran and want to strengthen
+                their retention and recitation skills.
               </li>
               <li>
-                <strong>Anyone Seeking Basic Quranic Skills:</strong> Anyone who
-                desires to learn the fundamental skills needed to read and
-                recite the Quran accurately.
-              </li>
-              <li>
-                <strong>Anyone Seeking Basic Quranic Skills:</strong> Anyone who
-                desires to learn the fundamental skills needed to read and
-                recite the Quran accurately.
+                <strong>Parents and Guardians:</strong>Adults looking to support
+                and guide their children through the memorization process by
+                gaining firsthand experience.
               </li>
             </ol>
             <p>
-              By enrolling in the Noorani Qa'edah Course, students embark on an
-              essential journey to master the basics of Arabic reading and
-              Quranic recitation. This course provides the foundational
-              knowledge and practical skills needed to progress to more advanced
-              Quranic studies, ensuring that students can read the Quran
-              fluently, accurately, and with a deep sense of connection and
-              reverence.
+              By enrolling in the Quran Memorization Course, students undertake
+              a transformative journey that not only strengthens their memory
+              and recitation skills but also enriches their spiritual lives.
+              This course provides the tools, guidance, and support needed to
+              memorize the Quran, ensuring that this sacred text becomes an
+              integral part of their hearts and minds.
             </p>
           </CourseDiscription>
           <CourseDetail>
             <h5>
-              course name: <span>Noorani Qa'edah Course</span>
+              course name: <span>Quran Memorization Course</span>
             </h5>
             <h5>
-              course code: <span>QRN01</span>
+              course code: <span>QRN03</span>
             </h5>
             <h5>
               Learning Mode: <span>Online</span>
@@ -156,13 +150,14 @@ export const NooraniQaedahPage = () => {
               type: <span>Part Time</span>
             </h5>
             <h5>
-              Duration: <span>4-6 Months</span>
+              Duration: <span>2-4 Years</span>
             </h5>
             {/* <h5>
               Fee: <span>75 USD / Per Month</span>
             </h5> */}
             <h5>
-              Entry Requirement: <span>Open for all</span>
+              Entry Requirement:{" "}
+              <span>Must have proficiency in Quran Recitation</span>
             </h5>
             <h5>
               Application Deadline: <span>Open</span>

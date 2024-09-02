@@ -2,149 +2,150 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
-export const NooraniQaedahPage = () => {
+export const SevenQiraatCoursePage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Noorani Qa'edah Course</Title>
+        <Title>Seven Qira'ats Course</Title>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <Content>
           <CourseDiscription>
             <h5>course objective:</h5>
             <p>
-              The Noorani Qa'edah Course is designed to lay a strong foundation
-              for beginners in reading and reciting the Quran. Utilizing the
-              Noorani Qa'edah method, this course aims to teach students the
-              correct pronunciation of Arabic letters and sounds, enabling them
-              to read the Quran fluently and accurately.
+              The Seven Qira'ats Course is a specialized program aimed at
+              providing students with a comprehensive understanding of the seven
+              canonical modes of Quranic recitation. These Qira'ats, each with
+              its unique set of rules and nuances, offer a profound insight into
+              the diversity and richness of the Quranic text.
             </p>
             <h5>Course Content:</h5>
             <p>
-              The Noorani Qa'edah Course provides a structured and systematic
-              curriculum designed to teach students the basics of Arabic reading
-              and Quranic recitation. Key components of the course include:
+              The Seven Qira'ats Course offers an extensive curriculum designed
+              to cover all aspects of the Qira'ats, from foundational principles
+              to advanced recitation practices. Key topics include:
             </p>
             <ol>
               <li>
-                <strong>Introduction to Arabic Alphabets:</strong>
-                Learning the Arabic alphabet, focusing on the shape, sound, and
-                proper articulation of each letter.
+                <strong>Introduction to the Qira'ats:</strong>
+                Understanding the history, development, and classification of
+                the seven canonical Qira'ats.
               </li>
               <li>
-                <strong>Combining Letters:</strong> Understanding how to combine
-                letters to form syllables and words, practicing simple and
-                compound letter combinations.
+                <strong>Profiles of Renowned Qaris:</strong>Studying the lives
+                and contributions of the prominent Qaris associated with each
+                Qiraat.
               </li>
               <li>
-                <strong>Short Vowels (Harakat):</strong> Studying the short
-                vowels (Fatha, Kasra, Damma) and their impact on letter
-                pronunciation.
+                <strong>Phonetic Characteristics:</strong>Exploring the unique
+                phonetic traits and articulation points specific to each Qiraat.
               </li>
               <li>
-                <strong>Long Vowels and Tanween:</strong> Learning long vowels
-                (Madd) and Tanween, and their application in reading.
+                <strong>Tajweed Rules for Each Qiraat:</strong>Detailed study of
+                the Tajweed rules as they apply to each Qiraat, including
+                variations in pronunciation and elongation.
               </li>
               <li>
-                <strong>Sukoon and Shaddah:</strong> Understanding the rules of
-                Sukoon (Jazm) and Shaddah, and how they affect letter
-                pronunciation and word formation.
+                <strong>Comparative Analysis:</strong>Analyzing the differences
+                and similarities between the Qira'ats, highlighting their unique
+                features.
               </li>
               <li>
-                <strong>Practice Reading Words:</strong> Regular practice in
-                reading words, sentences, and short passages from the Noorani
-                Qa'edah book.
+                <strong>Practical Recitation:</strong>Regular practice sessions
+                to recite the Quran according to the specific rules of each
+                Qiraat, with feedback from experienced instructors.
               </li>
               <li>
-                <strong>Introduction to Tajweed:</strong> Basic introduction to
-                the rules of Tajweed to ensure correct pronunciation and
-                recitation.
-              </li>
-              <li>
-                <strong>Reading Short Surahs:</strong> Gradual progression to
-                reading and reciting short Surahs from the Quran with proper
-                Tajweed.
+                <strong>Memorization and Retention:</strong>Techniques for
+                memorizing verses in multiple Qira'ats and ensuring long-term
+                retention.
               </li>
             </ol>
             <h5>Learning Outcomes:</h5>
             <p>
-              Upon successful completion of the Noorani Qa'edah Course, students
+              Upon successful completion of the Seven Qira'ats Course, students
               will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficiency in Arabic Alphabets:</strong> Students will
-                be able to recognize and pronounce all Arabic letters correctly.
+                <strong>Proficient Recitation:</strong>Students will be able to
+                recite the Quran proficiently according to each of the seven
+                Qira'ats, adhering to their specific rules and characteristics.
               </li>
               <li>
-                <strong>Basic Reading Skills:</strong> Students will develop the
-                ability to read Arabic words and sentences with proper
-                pronunciation and fluency.
+                <strong>In-depth Knowledge of Qira'ats:</strong>Students will
+                have a thorough understanding of the history, development, and
+                significance of the seven canonical Qira'ats.
               </li>
               <li>
-                <strong>Understanding of Basic Tajweed Rules:</strong> Students
-                will have a foundational understanding of Tajweed rules,
-                ensuring accurate recitation.
+                <strong>Mastery of Tajweed:</strong>Students will apply the
+                rules of Tajweed accurately within the context of each Qiraat,
+                ensuring precise and melodious recitation.
               </li>
               <li>
-                <strong>Confidence in Recitation:</strong> Students will gain
-                confidence in their ability to read and recite the Quran, paving
-                the way for further Quranic studies.
+                <strong>Enhanced Analytical Skills:</strong>Students will
+                develop the ability to analyze and appreciate the differences
+                and nuances between the Qira'ats.
               </li>
               <li>
-                <strong>Love for Quranic Learning:</strong> Students will
-                develop a love for the Quran and its recitation, fostering a
-                lifelong relationship with the holy text.
+                <strong>Spiritual Enrichment:</strong>Students will experience a
+                deeper spiritual connection to the Quran, enriched by the
+                understanding and recitation of its diverse forms.
+              </li>
+              <li>
+                <strong>Confidence in Public Recitation:</strong>Students will
+                gain confidence in reciting the Quran in various Qira'ats,
+                whether in private study or public settings.
               </li>
             </ol>
             <h5>Who Should Enroll:</h5>
             <p>
-              The Noorani Qa'edah Course is ideal for a wide range of learners
-              who are at the beginning of their Quranic learning journey. This
-              includes:
+              The Seven Qira'ats Course is ideal for a diverse range of learners
+              who are dedicated to deepening their understanding and recitation
+              of the Quran. This includes:
             </p>
             <ol>
               <li>
-                <strong>Young Children:</strong> Young learners who are starting
-                their Quranic education and need to build a strong foundation in
-                Arabic reading.
+                <strong>Advanced Students of Quranic Studies:</strong>
+                Individuals who have a solid foundation in Quranic recitation
+                and Tajweed, looking to further their expertise.
               </li>
               <li>
-                <strong>Adult Beginners:</strong> Adults who did not have the
-                opportunity to learn Quranic reading in their childhood and wish
-                to start now.
+                <strong>Aspiring Scholars:</strong>Those aiming to become
+                scholars of Quranic studies, with a focus on the canonical
+                Qira'ats.
               </li>
               <li>
-                <strong>Parents and Educators:</strong> Parents and educators
-                who want to learn or teach their children or students the basics
-                of Quranic reading using the Noorani Qa'edah method.
+                <strong>Quran Teachers:</strong>Educators who teach Quranic
+                recitation and wish to expand their knowledge and teaching
+                repertoire to include the seven Qira'ats.
               </li>
               <li>
-                <strong>Anyone Seeking Basic Quranic Skills:</strong> Anyone who
-                desires to learn the fundamental skills needed to read and
-                recite the Quran accurately.
+                <strong>Imams and Qaris:</strong>Religious leaders and reciters
+                who want to perfect their recitation skills and gain a deeper
+                understanding of the Qira'ats.
               </li>
               <li>
-                <strong>Anyone Seeking Basic Quranic Skills:</strong> Anyone who
-                desires to learn the fundamental skills needed to read and
-                recite the Quran accurately.
+                <strong>Enthusiastic Learners:</strong>Anyone with a passion for
+                the Quran and a desire to explore its various recitational forms
+                in greater depth.
               </li>
             </ol>
             <p>
-              By enrolling in the Noorani Qa'edah Course, students embark on an
-              essential journey to master the basics of Arabic reading and
-              Quranic recitation. This course provides the foundational
-              knowledge and practical skills needed to progress to more advanced
-              Quranic studies, ensuring that students can read the Quran
-              fluently, accurately, and with a deep sense of connection and
-              reverence.
+              By enrolling in the Seven Qira'ats Course, students embark on an
+              enriching journey that not only enhances their recitation skills
+              but also deepens their appreciation and understanding of the
+              Quran's multifaceted nature. This course provides the
+              comprehensive knowledge and practical expertise needed to master
+              the seven Qira'ats, ensuring that students can recite the Quran
+              with confidence, accuracy, and profound spiritual insight.
             </p>
           </CourseDiscription>
           <CourseDetail>
             <h5>
-              course name: <span>Noorani Qa'edah Course</span>
+              course name: <span>Seven Qira'ats Course</span>
             </h5>
             <h5>
-              course code: <span>QRN01</span>
+              course code: <span>QRN05</span>
             </h5>
             <h5>
               Learning Mode: <span>Online</span>
@@ -156,16 +157,20 @@ export const NooraniQaedahPage = () => {
               type: <span>Part Time</span>
             </h5>
             <h5>
-              Duration: <span>4-6 Months</span>
+              Duration: <span>1-2 Years</span>
             </h5>
             {/* <h5>
               Fee: <span>75 USD / Per Month</span>
             </h5> */}
             <h5>
-              Entry Requirement: <span>Open for all</span>
+              Entry Requirement:{" "}
+              <span>
+                Must have proficiency in Quran Recitation and application of
+                Basic Arabic Grammer{" "}
+              </span>
             </h5>
             <h5>
-              Application Deadline: <span>Open</span>
+              Application Deadline: <span>Fall & Spring Semester</span>
             </h5>
             <ButtonContainer>
               <a href="/registration">Apply Here</a>

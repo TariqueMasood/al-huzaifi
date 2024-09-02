@@ -177,14 +177,11 @@ export const RecitationCoursePage = () => {
               Duration: <span>1 Year</span>
             </h5>
             <h5>
-              Fee: <span>75 USD / Per Month</span>
-            </h5>
-            <h5>
-              Entry Requirement: <span>Must hold QRN01 </span>
-            </h5>
-            <h5>
-              Certificate or an equivalent that demonstrates proficiency in
-              basic Quranic reading skills.
+              Entry Requirement:{" "}
+              <span>
+                Must hold QRN01 Certificate or an equivalent that demonstrates
+                proficiency in basic Quranic reading skills.{" "}
+              </span>
             </h5>
             <h5>
               Application Deadline: <span>Open</span>

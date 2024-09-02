@@ -103,13 +103,15 @@ const Header: React.FC = () => {
                     Quran Recitation Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/memorization-course">
                     Quran Memorization Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">Tajweed Course</NavDropdown.Item>
+                  <NavDropdown.Item href="/tajweed-course">
+                    Tajweed Course
+                  </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/seven-qiraat">
                     Seven Qiraats Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />

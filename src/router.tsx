@@ -14,6 +14,9 @@ import { FacultyOfFazilatPage } from "./pages/faculty-of-fazilat";
 import { FacultyOfLanguagePage } from "./pages/faculty-of-language";
 import { NooraniQaedahPage } from "./pages/noorani-qaedah";
 import { RecitationCoursePage } from "./pages/recitation-course";
+import { MemorizationCoursePage } from "./pages/memorization-course";
+import { TajweedCoursePage } from "./pages/tajweed-course";
+import { SevenQiraatCoursePage } from "./pages/seven-qiraat";
 
 const router = createBrowserRouter([
   {
@@ -75,6 +78,18 @@ const router = createBrowserRouter([
       {
         path: "recitation-course",
         element: <RecitationCoursePage />,
+      },
+      {
+        path: "memorization-course",
+        element: <MemorizationCoursePage />,
+      },
+      {
+        path: "tajweed-course",
+        element: <TajweedCoursePage />,
+      },
+      {
+        path: "seven-qiraat",
+        element: <SevenQiraatCoursePage />,
       },
     ],
   },
