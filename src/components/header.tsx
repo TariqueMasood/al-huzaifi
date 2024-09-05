@@ -115,15 +115,17 @@ const Header: React.FC = () => {
                     Seven Qiraats Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/ijazah-program">
                     Quran Ijazah Program
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/translation-course">
                     Quran's Translation Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">Tafseer Course</NavDropdown.Item>
+                  <NavDropdown.Item href="/tafseer-course">
+                    Tafseer Course
+                  </NavDropdown.Item>
                 </SubMenu>
                 <NavDropdown.Divider />
                 <SubMenu title="Deeniyat Courses">

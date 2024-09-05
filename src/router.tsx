@@ -17,6 +17,9 @@ import { RecitationCoursePage } from "./pages/recitation-course";
 import { MemorizationCoursePage } from "./pages/memorization-course";
 import { TajweedCoursePage } from "./pages/tajweed-course";
 import { SevenQiraatCoursePage } from "./pages/seven-qiraat";
+import { IjazahProgramPage } from "./pages/ijazah-program";
+import { TranslationCoursePage } from "./pages/translation-course";
+import { TafseerCoursePage } from "./pages/tafseer-course";
 
 const router = createBrowserRouter([
   {
@@ -90,6 +93,18 @@ const router = createBrowserRouter([
       {
         path: "seven-qiraat",
         element: <SevenQiraatCoursePage />,
+      },
+      {
+        path: "ijazah-program",
+        element: <IjazahProgramPage />,
+      },
+      {
+        path: "translation-course",
+        element: <TranslationCoursePage />,
+      },
+      {
+        path: "tafseer-course",
+        element: <TafseerCoursePage />,
       },
     ],
   },
