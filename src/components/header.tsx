@@ -129,7 +129,17 @@ const Header: React.FC = () => {
                 </SubMenu>
                 <NavDropdown.Divider />
                 <SubMenu title="Deeniyat Courses">
-                  <NavDropdown.Item href="#">Text</NavDropdown.Item>
+                  <NavDropdown.Item href="/deeniyat-for-kids">
+                    Deeniyat For Kids
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/deeniyat-for-men">
+                    Deeniyat For Men
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/deeniyat-for-women">
+                    Deeniyat For Women
+                  </NavDropdown.Item>
                 </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown

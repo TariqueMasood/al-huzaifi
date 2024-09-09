@@ -20,6 +20,9 @@ import { SevenQiraatCoursePage } from "./pages/seven-qiraat";
 import { IjazahProgramPage } from "./pages/ijazah-program";
 import { TranslationCoursePage } from "./pages/translation-course";
 import { TafseerCoursePage } from "./pages/tafseer-course";
+import { DeeniyatForKidsPage } from "./pages/deeniyat-for-kids";
+import { DeeniyatForMenPage } from "./pages/deeniyat-for-men";
+import { DeeniyatForWomenPage } from "./pages/deeniyat-for-women";
 
 const router = createBrowserRouter([
   {
@@ -105,6 +108,18 @@ const router = createBrowserRouter([
       {
         path: "tafseer-course",
         element: <TafseerCoursePage />,
+      },
+      {
+        path: "deeniyat-for-kids",
+        element: <DeeniyatForKidsPage />,
+      },
+      {
+        path: "deeniyat-for-men",
+        element: <DeeniyatForMenPage />,
+      },
+      {
+        path: "deeniyat-for-women",
+        element: <DeeniyatForWomenPage />,
       },
     ],
   },

@@ -26,61 +26,61 @@ export const IjazahProgramPage = () => {
             </p>
             <ol>
               <li>
-                <strong>Advanced Tajweed:</strong>
+                <strong>Advanced Tajweed: </strong>
                 Detailed study and application of the advanced rules of Tajweed
                 to ensure perfect recitation.
               </li>
               <li>
-                <strong>Intensive Memorization:</strong>Systematic memorization
+                <strong>Intensive Memorization: </strong>Systematic memorization
                 of the entire Quran, focusing on accuracy and consistency.
               </li>
               <li>
-                <strong>Revision Techniques:</strong>Strategies for effective
+                <strong>Revision Techniques: </strong>Strategies for effective
                 revision and retention of memorized portions.
               </li>
               <li>
-                <strong>Personal Mentorship:</strong>One-on-one guidance from a
+                <strong>Personal Mentorship: </strong>One-on-one guidance from a
                 qualified Egyptian Qari, providing personalized feedback and
                 support.
               </li>
               <li>
-                <strong>Recitation Practice:</strong>Regular recitation sessions
-                to practice and refine skills, including public recitation
-                opportunities.
+                <strong>Recitation Practice: </strong>Regular recitation
+                sessions to practice and refine skills, including public
+                recitation opportunities.
               </li>
               <li>
-                <strong>Assessment and Evaluation:</strong>Continuous assessment
-                of recitation and memorization, culminating in a final
-                evaluation by the Egyptian Qari.
+                <strong>Assessment and Evaluation: </strong>Continuous
+                assessment of recitation and memorization, culminating in a
+                final evaluation by the Egyptian Qari.
               </li>
             </ol>
-            <h5>Learning Outcomes:</h5>
+            <h5>Learning Outcomes: </h5>
             <p>
               Upon successful completion of the Quran Ijazah Program, students
               will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Certified Mastery:</strong>Students will receive an
+                <strong>Certified Mastery: </strong>Students will receive an
                 Ijazah from a renowned Egyptian Qari, certifying their mastery
                 in Quranic recitation and memorization.
               </li>
               <li>
-                <strong>Flawless Recitation:</strong>Students will recite the
+                <strong>Flawless Recitation: </strong>Students will recite the
                 Quran with impeccable pronunciation and application of Tajweed
                 rules.
               </li>
               <li>
-                <strong>Complete Memorization:</strong>Students will have
+                <strong>Complete Memorization: </strong>Students will have
                 memorized the entire Quran accurately and effectively.
               </li>
               <li>
-                <strong>Authorization to Teach:</strong>Students will be
+                <strong>Authorization to Teach: </strong>Students will be
                 authorized to teach Quranic recitation and memorization,
                 continuing the chain of authentic transmission.
               </li>
             </ol>
-            <h5>Who Should Enroll:</h5>
+            <h5>Who Should Enroll: </h5>
             <p>
               The Quran Ijazah Program is designed for a diverse range of
               dedicated learners who aspire to achieve the highest level of
@@ -89,22 +89,22 @@ export const IjazahProgramPage = () => {
             </p>
             <ol>
               <li>
-                <strong>Advanced Students of Quranic Studies:</strong>
+                <strong>Advanced Students of Quranic Studies: </strong>
                 Individuals with a strong foundation in Quranic recitation and
                 memorization, seeking certification.
               </li>
               <li>
-                <strong>Aspiring Quran Teachers:</strong>Those aiming to become
+                <strong>Aspiring Quran Teachers: </strong>Those aiming to become
                 certified Quran teachers, with a focus on both recitation and
                 memorization.
               </li>
               <li>
-                <strong>Imams and Qaris:</strong>Religious leaders and reciters
+                <strong>Imams and Qaris: </strong>Religious leaders and reciters
                 who want to formalize their expertise with an Ijazah.
               </li>
               <li>
-                <strong>Dedicated Huffaz:</strong>Individuals who have memorized
-                the Quran and wish to receive formal certification and
+                <strong>Dedicated Huffaz: </strong>Individuals who have
+                memorized the Quran and wish to receive formal certification and
                 authorization.
               </li>
             </ol>

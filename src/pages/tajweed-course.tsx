@@ -27,85 +27,85 @@ export const TajweedCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Introduction to Tajweed:</strong>
+                <strong>Introduction to Tajweed: </strong>
                 Understanding the importance and history of Tajweed in
                 preserving the Quranic recitation.
               </li>
               <li>
-                <strong>Makharij (Articulation Points):</strong>Identifying and
+                <strong>Makharij (Articulation Points): </strong>Identifying and
                 practicing the points of articulation for each letter.
               </li>
               <li>
-                <strong>Sifat (Characteristics of Letters):</strong>Exploring
+                <strong>Sifat (Characteristics of Letters): </strong>Exploring
                 the intrinsic and relative characteristics of Arabic letters.
               </li>
               <li>
-                <strong>Noon Saakin and Tanween:</strong>Rules for the
+                <strong>Noon Saakin and Tanween: </strong>Rules for the
                 pronunciation of Noon Saakin and Tanween in various contexts.
               </li>
               <li>
-                <strong>Meem Saakin:</strong>Guidelines for the pronunciation of
-                Meem Saakin, including Ikhfaa Shafawee, Idghaam Shafawee, and
+                <strong>Meem Saakin: </strong>Guidelines for the pronunciation
+                of Meem Saakin, including Ikhfaa Shafawee, Idghaam Shafawee, and
                 Izhaar Shafawee.
               </li>
               <li>
-                <strong>Qalqalah:</strong>Understanding and applying the
+                <strong>Qalqalah: </strong>Understanding and applying the
                 Qalqalah rules for specific letters.
               </li>
               <li>
-                <strong>Madd (Prolongation):</strong>Rules for elongation of
+                <strong>Madd (Prolongation): </strong>Rules for elongation of
                 sounds in different scenarios, including Madd Tabee'ee, Madd
                 Munfasil, Madd Mutasil, and Madd Lazim.
               </li>
               <li>
-                <strong>Lahn (Errors in Recitation):</strong>Identifying and
+                <strong>Lahn (Errors in Recitation): </strong>Identifying and
                 correcting common mistakes in Quranic recitation.
               </li>
               <li>
-                <strong>Practical Application:</strong>Regular practice sessions
-                to apply the rules of Tajweed in recitation, with feedback from
-                experienced instructors.
+                <strong>Practical Application: </strong>Regular practice
+                sessions to apply the rules of Tajweed in recitation, with
+                feedback from experienced instructors.
               </li>
             </ol>
-            <h5>Learning Outcomes:</h5>
+            <h5>Learning Outcomes: </h5>
             <p>
               Upon successful completion of the Tajweed course, students will
               achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficient Pronunciation:</strong>Students will be able
+                <strong>Proficient Pronunciation: </strong>Students will be able
                 to pronounce Arabic letters correctly, with a clear
                 understanding of their articulation points and characteristics.
               </li>
               <li>
-                <strong>Application of Tajweed Rules:</strong>Students will
+                <strong>Application of Tajweed Rules: </strong>Students will
                 demonstrate the ability to apply Tajweed rules accurately in
                 their recitation, ensuring correct pronunciation and elongation
                 of sounds.
               </li>
               <li>
-                <strong>Enhanced Recitation Skills:</strong>Students will
+                <strong>Enhanced Recitation Skills: </strong>Students will
                 develop a melodious and aesthetically pleasing recitation style,
                 reflecting the beauty of the Quran.
               </li>
               <li>
-                <strong>Error-Free Recitation:</strong>Students will be capable
+                <strong>Error-Free Recitation: </strong>Students will be capable
                 of identifying and correcting common errors in Quranic
                 recitation, thereby ensuring precision and clarity.
               </li>
               <li>
-                <strong>Deepened Spiritual Connection:</strong>Students will
+                <strong>Deepened Spiritual Connection: </strong>Students will
                 experience an enhanced spiritual connection to the Quran,
                 facilitated by the beauty and correctness of their recitation.
               </li>
               <li>
-                <strong>Confidence in Recitation:</strong>Students will gain
+                <strong>Confidence in Recitation: </strong>Students will gain
                 confidence in their ability to recite the Quran publicly and
                 privately, adhering to the principles of Tajweed.
               </li>
             </ol>
-            <h5>Who Should Enroll:</h5>
+            <h5>Who Should Enroll: </h5>
             <p>
               The Tajweed course is suitable for a diverse range of learners who
               are committed to improving their Quranic recitation. This
@@ -113,29 +113,29 @@ export const TajweedCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Intermediate Learners:</strong>Individuals who can read
+                <strong>Intermediate Learners: </strong>Individuals who can read
                 Arabic and have a basic understanding of Quranic recitation but
                 seek to enhance their proficiency and apply Tajweed rules.
               </li>
               <li>
-                <strong>Hifz Students:</strong>Those who are memorizing the
+                <strong>Hifz Students: </strong>Those who are memorizing the
                 Quran and wish to ensure their recitation adheres to the highest
                 standards of accuracy and beauty.
               </li>
               <li>
-                <strong>Quran Teachers:</strong>Educators who teach Quranic
+                <strong>Quran Teachers: </strong>Educators who teach Quranic
                 recitation and desire to deepen their knowledge of Tajweed to
                 provide more effective instruction to their students.
               </li>
               <li>
-                <strong>Imams and Qaris:</strong>Religious leaders and reciters
+                <strong>Imams and Qaris: </strong>Religious leaders and reciters
                 who aim to perfect their recitation skills for leading prayers
                 and public recitations.
               </li>
               <li>
-                <strong>Enthusiastic Learners:</strong>Anyone with a passion for
-                the Quran and a desire to recite it in the most beautiful and
-                correct manner possible.
+                <strong>Enthusiastic Learners: </strong>Anyone with a passion
+                for the Quran and a desire to recite it in the most beautiful
+                and correct manner possible.
               </li>
             </ol>
             <p>

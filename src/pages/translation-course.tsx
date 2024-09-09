@@ -29,74 +29,75 @@ export const TranslationCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Introduction to Quranic Arabic:</strong>
+                <strong>Introduction to Quranic Arabic: </strong>
                 Detailed study of Quranic Arabic, focusing on vocabulary,
                 grammar, and syntax.
               </li>
               <li>
-                <strong>Principles of Translation:</strong>Exploring fundamental
-                principles and methodologies for translating religious texts,
-                with emphasis on fidelity to the original meaning.
+                <strong>Principles of Translation: </strong>Exploring
+                fundamental principles and methodologies for translating
+                religious texts, with emphasis on fidelity to the original
+                meaning.
               </li>
               <li>
-                <strong>Cultural and Historical Context:</strong>Understanding
+                <strong>Cultural and Historical Context: </strong>Understanding
                 the historical and cultural context of Quranic revelations to
                 ensure accurate interpretation.
               </li>
               <li>
-                <strong>Translation Techniques:</strong>Techniques for handling
+                <strong>Translation Techniques: </strong>Techniques for handling
                 linguistic challenges, idiomatic expressions, and theological
                 concepts in translation.
               </li>
               <li>
-                <strong>Comparative Translation Studies:</strong>Analyzing
+                <strong>Comparative Translation Studies: </strong>Analyzing
                 existing translations to understand different approaches and
                 identify best practices.
               </li>
               <li>
-                <strong>Theological Considerations:</strong>Integrating
+                <strong>Theological Considerations: </strong>Integrating
                 theological insights to ensure the translations convey the
                 intended religious messages accurately.
               </li>
             </ol>
-            <h5>Learning Outcomes:</h5>
+            <h5>Learning Outcomes: </h5>
             <p>
               Upon successful completion of the Quran Translation Course,
               students will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficient in Quranic Arabic:</strong>Students will gain
-                a strong command of Quranic Arabic, enabling them to understand
-                and translate its text accurately.
+                <strong>Proficient in Quranic Arabic: </strong>Students will
+                gain a strong command of Quranic Arabic, enabling them to
+                understand and translate its text accurately.
               </li>
               <li>
-                <strong>Skilled Translators:</strong>Students will develop the
+                <strong>Skilled Translators: </strong>Students will develop the
                 skills necessary to produce clear, accurate, and meaningful
                 translations of the Quran.
               </li>
               <li>
-                <strong>Contextual Sensitivity:</strong>Students will
+                <strong>Contextual Sensitivity: </strong>Students will
                 demonstrate an understanding of the cultural and historical
                 contexts of Quranic verses, essential for effective translation.
               </li>
               <li>
-                <strong>Theological Integrity:</strong>Students will ensure
+                <strong>Theological Integrity: </strong>Students will ensure
                 their translations reflect the theological depth and religious
                 significance of the Quran.
               </li>
               <li>
-                <strong>Practical Experience:</strong>Students will gain
+                <strong>Practical Experience: </strong>Students will gain
                 hands-on experience in translating Quranic text, with a focus on
                 Arabic and English / Urdu.
               </li>
               <li>
-                <strong>Critical Analysis:</strong>Students will be able to
+                <strong>Critical Analysis: </strong>Students will be able to
                 critically analyze existing translations and apply best
                 practices in their work.
               </li>
             </ol>
-            <h5>Who Should Enroll:</h5>
+            <h5>Who Should Enroll: </h5>
             <p>
               The Quran Translation Course is ideal for a wide range of learners
               dedicated to mastering the art of Quranic translation. This
@@ -104,26 +105,26 @@ export const TranslationCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Aspiring Translators:</strong>
+                <strong>Aspiring Translators: </strong>
                 Individuals seeking to become proficient translators of the
                 Quran, starting with English and Arabic.
               </li>
               <li>
-                <strong>Quranic Scholars:</strong>Scholars who wish to deepen
+                <strong>Quranic Scholars: </strong>Scholars who wish to deepen
                 their understanding of Quranic Arabic and enhance their
                 translation skills.
               </li>
               <li>
-                <strong>Religious Educators:</strong>Educators who aim to teach
+                <strong>Religious Educators: </strong>Educators who aim to teach
                 Quranic translation and interpretation in educational settings.
               </li>
               <li>
-                <strong>Linguists and Language Enthusiasts:</strong>Those with a
-                passion for languages who want to apply their skills to
+                <strong>Linguists and Language Enthusiasts: </strong>Those with
+                a passion for languages who want to apply their skills to
                 translating the Quran.
               </li>
               <li>
-                <strong>Imams and Community Leaders:</strong>Religious leaders
+                <strong>Imams and Community Leaders: </strong>Religious leaders
                 who seek to provide accurate translations and explanations of
                 the Quran to their communities.
               </li>

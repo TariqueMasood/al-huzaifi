@@ -2,163 +2,142 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
-export const TafseerCoursePage = () => {
+export const DeeniyatForKidsPage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Tafseer Course Course</Title>
+        <Title>Deeniyat For Kids</Title>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <Content>
           <CourseDiscription>
             <h5>course objective:</h5>
             <p>
-              The Tafseer Course is meticulously crafted to provide students
-              with a profound and comprehensive understanding of Quranic
-              exegesis (Tafseer). This course aims to delve deep into the
-              meanings, contexts, and interpretations of the Quranic verses,
-              equipping students with the knowledge and skills necessary to
-              comprehend and explain the divine messages accurately.
+              The Deeniyat for Kids course is designed to introduce young
+              learners to the foundational teachings of Islam in a simple and
+              engaging way. The course aims to nurture love for Allah, the
+              Quran, and the Prophet Muhammad (ﷺ) in children while helping them
+              develop good manners, a strong moral compass, and a basic
+              understanding of Islamic beliefs and practices. Through
+              interactive lessons, fun activities, and age-appropriate content,
+              children will begin their journey of learning and practicing Islam
+              in their daily lives.
             </p>
             <h5>Course Content:</h5>
             <p>
-              The Tafseer Course offers a detailed and structured curriculum
-              designed to cover all essential aspects of Quranic exegesis. Key
-              components of the course include:
+              The Deeniyat for Kids course follows a structured curriculum
+              tailored to the learning needs of young children, focusing on the
+              basics of Islamic faith and practice. Key topics include:
             </p>
             <ol>
               <li>
-                <strong>Introduction to Tafseer: </strong>
-                Understanding the definition, importance, and history of Tafseer
-                in Islamic scholarship.
+                <strong>Introduction to Allah and Tawheed: </strong>
+                Understanding who Allah is, His attributes, and the concept of
+                Tawheed (oneness of Allah).
               </li>
               <li>
-                <strong>Principles of Tafseer: </strong>Studying the fundamental
-                principles and methodologies used in Quranic exegesis.
+                <strong>Short Duas and Supplications: </strong>Learning simple,
+                everyday Duas that children can easily recite, such as those for
+                eating, sleeping, and traveling.
               </li>
               <li>
-                <strong>Sources of Tafseer: </strong>Identifying and analyzing
-                the primary sources of Tafseer, including the Quran itself,
-                Hadith, statements of the Sahaba, and scholarly works.
+                <strong>Five Pillars of Islam: </strong>Basic explanation of the
+                five pillars—Shahada, Salah, Zakat, Sawm, and Hajj—using fun
+                stories and activities.
               </li>
               <li>
-                <strong>Historical Context: </strong>Exploring the historical
-                events and circumstances surrounding the revelation of specific
-                verses.
+                <strong>Quranic Recitation: </strong>Teaching children to recite
+                short Surahs from the Quran, starting with Surah Al-Fatiha, and
+                other short Surahs like Surah Al-Ikhlas, An-Naas, and Al-Falaq.
               </li>
               <li>
-                <strong>Linguistic Analysis: </strong>Examining the linguistic
-                aspects of the Quran, including grammar, syntax, and rhetorical
-                devices.
+                <strong>Prophetic Stories: </strong>Engaging children with
+                simple stories from the life of Prophet Muhammad (ﷺ) and other
+                Prophets, teaching important moral lessons.
               </li>
               <li>
-                <strong>Thematic Analysis: </strong>Investigating major themes
-                in the Quran, such as monotheism, prophethood, ethics, and
-                eschatology.
+                <strong>Good Manners and Behavior (Adab): </strong>Teaching
+                Islamic etiquettes such as respecting parents, being kind to
+                others, sharing, and showing gratitude.
               </li>
               <li>
-                <strong>Comparative Tafseer: </strong>Studying classical and
-                contemporary Tafseer literature to understand different
-                interpretations and perspectives.
+                {" "}
+                <strong>Learning Salah: </strong>Introduction to the basics of
+                performing Salah, including the importance of prayer, its
+                timings, and basic movements.
               </li>
               <li>
-                <strong>Practical Tafseer Exercises: </strong>Hands-on practice
-                in interpreting and explaining selected Quranic verses.
-              </li>
-              <li>
-                <strong>Modern Challenges and Tafseer: </strong>Addressing
-                contemporary issues and how they are interpreted through
-                Tafseer.
+                <strong>Islamic Festivals: </strong>Learning about the
+                significance of Eid al-Fitr and Eid al-Adha and how Muslims
+                celebrate these joyous occasions.
               </li>
             </ol>
             <h5>Learning Outcomes: </h5>
             <p>
-              Upon successful completion of the Tafseer Course, students will
-              achieve the following learning outcomes:
+              By completing the Deeniyat for Kids course, children will gain:
             </p>
             <ol>
               <li>
-                <strong>In-depth Knowledge of Tafseer: </strong>Students will
-                have a comprehensive understanding of the principles, sources,
-                and methodologies of Quranic exegesis.
+                <strong>Basic Understanding of Islam: </strong>Have a
+                foundational understanding of Islamic beliefs, including who
+                Allah is, the role of the Prophet (ﷺ), and the basics of Islamic
+                worship.
               </li>
               <li>
-                <strong>Contextual and Historical Insight: </strong>Students
-                will gain a deep insight into the historical and contextual
-                background of Quranic revelations.
+                <strong>Memorization of Duas and Surahs: </strong>Memorize key
+                short Duas and Surahs that they can use in daily life and
+                prayer.
               </li>
               <li>
-                <strong>Linguistic Proficiency: </strong>Students will develop
-                proficiency in the linguistic analysis of Quranic text.
+                <strong>Manners and Good Character: </strong>Learn the
+                importance of good manners, kindness, respect, and gratitude as
+                part of their Islamic identity.
               </li>
               <li>
-                <strong>Thematic Understanding: </strong>SStudents will be able
-                to identify and analyze major themes and topics in the Quran.
+                <strong>Introduction to Prayer: </strong>Be familiar with the
+                steps of Salah, understanding its significance and practicing it
+                with guidance.
               </li>
               <li>
-                <strong>Interpretation Skills: </strong>Students will enhance
-                their skills in interpreting and explaining Quranic verses
-                accurately and meaningfully.
-              </li>
-              <li>
-                <strong>Critical Analysis of Tafseer: </strong>Students will be
-                able to critically analyze and compare different Tafseer works,
-                appreciating both classical and contemporary contributions.
-              </li>
-              <li>
-                <strong>Application of Tafseer: </strong>Students will be
-                equipped to apply Tafseer in addressing modern challenges and
-                providing relevant explanations.
+                <strong>Love for Islam: </strong>Develop a love for Allah, the
+                Quran, and the Prophet Muhammad (ﷺ) through stories, fun
+                activities, and interactive learning.
               </li>
             </ol>
             <h5>Who Should Enroll: </h5>
-            <p>
-              The Tafseer Course is designed for a diverse range of learners
-              dedicated to deepening their understanding of the Quran through
-              its exegesis. This includes:
-            </p>
+            <p>The Deeniyat for Kids course is specially designed for: </p>
             <ol>
               <li>
-                <strong>Aspiring Scholars: </strong>
-                Individuals seeking to become proficient scholars in Quranic
-                studies and Tafseer.
+                <strong>Children: </strong>
+                Kids who are just starting their journey of learning about Islam
+                and need age-appropriate guidance.
               </li>
               <li>
-                <strong>Religious Educators: </strong>Educators who aim to teach
-                Quranic exegesis and provide detailed explanations of the
-                Quranic text.
+                <strong>Parents Looking for Islamic Education: </strong>Parents
+                who wish to provide their children with a structured and fun way
+                to learn about their faith.
               </li>
               <li>
-                <strong>Imams and Community Leaders: </strong>Religious leaders
-                who wish to enhance their ability to interpret and explain the
-                Quran to their communities.
-              </li>
-              <li>
-                <strong>Students of Islamic Studies: </strong>Those pursuing
-                academic studies in Islam who wish to gain a thorough
-                understanding of Tafseer.
-              </li>
-              <li>
-                <strong>Researchers and Academics: </strong>Researchers and
-                academics interested in exploring the depths of Quranic exegesis
-                and its applications.
+                <strong>Islamic Schools and Teachers: </strong>Ideal for
+                educators in Islamic schools or those providing Islamic studies
+                at home to guide children in their early Islamic education.
               </li>
             </ol>
             <p>
-              By enrolling in the Tafseer Course, students embark on a scholarly
-              and spiritual journey that enriches their understanding of the
-              Quran. This course provides the foundational knowledge, critical
-              analysis skills, and practical experience needed to interpret and
-              explain the divine messages of the Quran, ensuring that its
-              profound teachings are comprehended and conveyed accurately and
-              meaningfully.
+              The Deeniyat for Kids course lays a strong foundation for
+              children's Islamic education, helping them grow spiritually while
+              learning the basics of their faith. It fosters an early connection
+              with Allah, the Quran, and the Prophet (ﷺ), building a sense of
+              identity and pride in being a Muslim. The interactive and fun
+              approach ensures that learning about Islam is a positive and
+              engaging experience for young minds.
             </p>
           </CourseDiscription>
           <CourseDetail>
             <h5>
-              course name: <span>Tafseer Course</span>
+              course name: <span>Deeniyat For Kids</span>
             </h5>
             <h5>
-              course code: <span>QRN08</span>
+              course code: <span>DNY01</span>
             </h5>
             <h5>
               Learning Mode: <span>Online</span>
@@ -170,14 +149,13 @@ export const TafseerCoursePage = () => {
               type: <span>Part Time</span>
             </h5>
             <h5>
-              Duration: <span>1-2 Years</span>
+              Duration: <span>1 Year</span>
             </h5>
             <h5>
-              Entry Requirement:{" "}
-              <span>Must have proficiency in Arabic Language</span>
+              Entry Requirement: <span>Open for All Children</span>
             </h5>
             <h5>
-              Application Deadline: <span>Fall & Spring Semester</span>
+              Application Deadline: <span>Open</span>
             </h5>
             <ButtonContainer>
               <a href="/registration">Apply Here</a>

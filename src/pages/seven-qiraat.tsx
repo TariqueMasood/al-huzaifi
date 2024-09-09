@@ -26,78 +26,78 @@ export const SevenQiraatCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Introduction to the Qira'ats:</strong>
+                <strong>Introduction to the Qira'ats: </strong>
                 Understanding the history, development, and classification of
                 the seven canonical Qira'ats.
               </li>
               <li>
-                <strong>Profiles of Renowned Qaris:</strong>Studying the lives
+                <strong>Profiles of Renowned Qaris: </strong>Studying the lives
                 and contributions of the prominent Qaris associated with each
                 Qiraat.
               </li>
               <li>
-                <strong>Phonetic Characteristics:</strong>Exploring the unique
+                <strong>Phonetic Characteristics: </strong>Exploring the unique
                 phonetic traits and articulation points specific to each Qiraat.
               </li>
               <li>
-                <strong>Tajweed Rules for Each Qiraat:</strong>Detailed study of
-                the Tajweed rules as they apply to each Qiraat, including
+                <strong>Tajweed Rules for Each Qiraat: </strong>Detailed study
+                of the Tajweed rules as they apply to each Qiraat, including
                 variations in pronunciation and elongation.
               </li>
               <li>
-                <strong>Comparative Analysis:</strong>Analyzing the differences
+                <strong>Comparative Analysis: </strong>Analyzing the differences
                 and similarities between the Qira'ats, highlighting their unique
                 features.
               </li>
               <li>
-                <strong>Practical Recitation:</strong>Regular practice sessions
+                <strong>Practical Recitation: </strong>Regular practice sessions
                 to recite the Quran according to the specific rules of each
                 Qiraat, with feedback from experienced instructors.
               </li>
               <li>
-                <strong>Memorization and Retention:</strong>Techniques for
+                <strong>Memorization and Retention: </strong>Techniques for
                 memorizing verses in multiple Qira'ats and ensuring long-term
                 retention.
               </li>
             </ol>
-            <h5>Learning Outcomes:</h5>
+            <h5>Learning Outcomes: </h5>
             <p>
               Upon successful completion of the Seven Qira'ats Course, students
               will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficient Recitation:</strong>Students will be able to
+                <strong>Proficient Recitation: </strong>Students will be able to
                 recite the Quran proficiently according to each of the seven
                 Qira'ats, adhering to their specific rules and characteristics.
               </li>
               <li>
-                <strong>In-depth Knowledge of Qira'ats:</strong>Students will
+                <strong>In-depth Knowledge of Qira'ats: </strong>Students will
                 have a thorough understanding of the history, development, and
                 significance of the seven canonical Qira'ats.
               </li>
               <li>
-                <strong>Mastery of Tajweed:</strong>Students will apply the
+                <strong>Mastery of Tajweed: </strong>Students will apply the
                 rules of Tajweed accurately within the context of each Qiraat,
                 ensuring precise and melodious recitation.
               </li>
               <li>
-                <strong>Enhanced Analytical Skills:</strong>Students will
+                <strong>Enhanced Analytical Skills: </strong>Students will
                 develop the ability to analyze and appreciate the differences
                 and nuances between the Qira'ats.
               </li>
               <li>
-                <strong>Spiritual Enrichment:</strong>Students will experience a
-                deeper spiritual connection to the Quran, enriched by the
+                <strong>Spiritual Enrichment: </strong>Students will experience
+                a deeper spiritual connection to the Quran, enriched by the
                 understanding and recitation of its diverse forms.
               </li>
               <li>
-                <strong>Confidence in Public Recitation:</strong>Students will
+                <strong>Confidence in Public Recitation: </strong>Students will
                 gain confidence in reciting the Quran in various Qira'ats,
                 whether in private study or public settings.
               </li>
             </ol>
-            <h5>Who Should Enroll:</h5>
+            <h5>Who Should Enroll: </h5>
             <p>
               The Seven Qira'ats Course is ideal for a diverse range of learners
               who are dedicated to deepening their understanding and recitation
@@ -105,29 +105,29 @@ export const SevenQiraatCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Advanced Students of Quranic Studies:</strong>
+                <strong>Advanced Students of Quranic Studies: </strong>
                 Individuals who have a solid foundation in Quranic recitation
                 and Tajweed, looking to further their expertise.
               </li>
               <li>
-                <strong>Aspiring Scholars:</strong>Those aiming to become
+                <strong>Aspiring Scholars: </strong>Those aiming to become
                 scholars of Quranic studies, with a focus on the canonical
                 Qira'ats.
               </li>
               <li>
-                <strong>Quran Teachers:</strong>Educators who teach Quranic
+                <strong>Quran Teachers: </strong>Educators who teach Quranic
                 recitation and wish to expand their knowledge and teaching
                 repertoire to include the seven Qira'ats.
               </li>
               <li>
-                <strong>Imams and Qaris:</strong>Religious leaders and reciters
+                <strong>Imams and Qaris: </strong>Religious leaders and reciters
                 who want to perfect their recitation skills and gain a deeper
                 understanding of the Qira'ats.
               </li>
               <li>
-                <strong>Enthusiastic Learners:</strong>Anyone with a passion for
-                the Quran and a desire to explore its various recitational forms
-                in greater depth.
+                <strong>Enthusiastic Learners: </strong>Anyone with a passion
+                for the Quran and a desire to explore its various recitational
+                forms in greater depth.
               </li>
             </ol>
             <p>

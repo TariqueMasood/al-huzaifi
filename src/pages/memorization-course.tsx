@@ -28,75 +28,75 @@ export const MemorizationCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Introduction to Hifz:</strong>
+                <strong>Introduction to Hifz: </strong>
                 Understanding the virtues, significance, and responsibilities of
                 memorizing the Quran.
               </li>
               <li>
-                <strong>Effective Memorization Techniques:</strong>Training on
+                <strong>Effective Memorization Techniques: </strong>Training on
                 various memorization strategies, including chunking, repetition,
                 and visualization.
               </li>
               <li>
-                <strong>Daily Memorization Goals:</strong>Developing a robust
+                <strong>Daily Memorization Goals: </strong>Developing a robust
                 revision schedule to ensure long-term retention and avoid
                 forgetfulness.
               </li>
               <li>
-                <strong>Integration of Tajweed:</strong>Applying the rules of
+                <strong>Integration of Tajweed: </strong>Applying the rules of
                 Tajweed to ensure correct pronunciation and articulation during
                 memorization.
               </li>
               <li>
-                <strong>Supportive Environment:</strong>Creating a nurturing and
-                supportive learning atmosphere, including peer support and
+                <strong>Supportive Environment: </strong>Creating a nurturing
+                and supportive learning atmosphere, including peer support and
                 regular encouragement from instructors.
               </li>
               <li>
-                <strong>Spiritual Practices:</strong>Incorporating
+                <strong>Spiritual Practices: </strong>Incorporating
                 supplications, reflections, and spiritual exercises to deepen
                 the connection with the Quran.
               </li>
               <li>
-                <strong>Assessment and Feedback:</strong>Regular assessments and
-                feedback sessions to track progress, identify areas for
+                <strong>Assessment and Feedback: </strong>Regular assessments
+                and feedback sessions to track progress, identify areas for
                 improvement, and celebrate milestones.
               </li>
             </ol>
-            <h5>Learning Outcomes:</h5>
+            <h5>Learning Outcomes: </h5>
             <p>
               Upon successful completion of the Quran Memorization Course,
               students will achieve the following learning outcomes:
             </p>
             <ol>
               <li>
-                <strong>Proficient Memorization:</strong>Students will have
+                <strong>Proficient Memorization: </strong>Students will have
                 memorized significant portions of the Quran, adhering to the
                 highest standards of accuracy and retention.
               </li>
               <li>
-                <strong>Flawless Recitation:</strong>Students will recite the
+                <strong>Flawless Recitation: </strong>Students will recite the
                 Quran with correct pronunciation and application of Tajweed
                 rules, enhancing the beauty and accuracy of their recitation.
               </li>
               <li>
-                <strong>Enhanced Focus and Discipline:</strong>Students will
+                <strong>Enhanced Focus and Discipline: </strong>Students will
                 cultivate a disciplined approach to daily memorization and
                 revision, contributing to their overall personal and spiritual
                 growth.
               </li>
               <li>
-                <strong>Spiritual Connection:</strong>Students will experience a
-                deepened spiritual bond with the Quran, reflecting in their
+                <strong>Spiritual Connection: </strong>Students will experience
+                a deepened spiritual bond with the Quran, reflecting in their
                 daily lives and worship practices.
               </li>
               <li>
-                <strong>Confidence in Recitation and Memorization:</strong>{" "}
+                <strong>Confidence in Recitation and Memorization: </strong>{" "}
                 Students will gain confidence in their ability to recite and
                 recall the Quran, both privately and publicly.
               </li>
             </ol>
-            <h5>Who Should Enroll:</h5>
+            <h5>Who Should Enroll: </h5>
             <p>
               The Quran Memorization Course is designed for a wide range of
               learners who are dedicated to the goal of memorizing the Quran.
@@ -104,24 +104,24 @@ export const MemorizationCoursePage = () => {
             </p>
             <ol>
               <li>
-                <strong>Aspiring Huffaz:</strong>Individuals committed to the
+                <strong>Aspiring Huffaz: </strong>Individuals committed to the
                 complete memorization of the Quran, seeking a structured and
                 supportive program to achieve their goal.
               </li>
               <li>
-                <strong>Students with Basic Quranic Knowledge:</strong>Those who
-                have a foundational understanding of Quranic recitation and wish
-                to embark on the journey of Hifz.
+                <strong>Students with Basic Quranic Knowledge: </strong>Those
+                who have a foundational understanding of Quranic recitation and
+                wish to embark on the journey of Hifz.
               </li>
               <li>
-                <strong>Existing Huffaz Seeking Revision:</strong>Individuals
+                <strong>Existing Huffaz Seeking Revision: </strong>Individuals
                 who have previously memorized the Quran and want to strengthen
                 their retention and recitation skills.
               </li>
               <li>
-                <strong>Parents and Guardians:</strong>Adults looking to support
-                and guide their children through the memorization process by
-                gaining firsthand experience.
+                <strong>Parents and Guardians: </strong>Adults looking to
+                support and guide their children through the memorization
+                process by gaining firsthand experience.
               </li>
             </ol>
             <p>

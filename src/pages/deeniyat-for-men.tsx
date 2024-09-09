@@ -2,163 +2,180 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
-export const TafseerCoursePage = () => {
+export const DeeniyatForMenPage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Tafseer Course Course</Title>
+        <Title>Deeniyat For Men</Title>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <Content>
           <CourseDiscription>
             <h5>course objective:</h5>
             <p>
-              The Tafseer Course is meticulously crafted to provide students
-              with a profound and comprehensive understanding of Quranic
-              exegesis (Tafseer). This course aims to delve deep into the
-              meanings, contexts, and interpretations of the Quranic verses,
-              equipping students with the knowledge and skills necessary to
-              comprehend and explain the divine messages accurately.
+              The Deeniyat for men course is designed to provide a comprehensive
+              understanding of Islamic beliefs, practices, and ethics for adults
+              seeking to deepen their knowledge of Islam. This course is ideal
+              for those looking to reconnect with their faith or build a strong
+              foundation in Islamic teachings. The course focuses on helping
+              adults practice Islam with sincerity, understand its relevance in
+              daily life, and strengthen their relationship with Allah through
+              knowledge, worship, and good character.
             </p>
             <h5>Course Content:</h5>
             <p>
-              The Tafseer Course offers a detailed and structured curriculum
-              designed to cover all essential aspects of Quranic exegesis. Key
-              components of the course include:
+              The Deeniyat for men course covers essential aspects of Islamic
+              education through a structured and accessible curriculum. Key
+              topics include:
             </p>
             <ol>
               <li>
-                <strong>Introduction to Tafseer: </strong>
-                Understanding the definition, importance, and history of Tafseer
-                in Islamic scholarship.
+                <strong>Aqeedah (Islamic Beliefs): </strong>A detailed study of
+                the fundamental beliefs of Islam, including belief in Allah, the
+                prophets, angels, divine books, the Day of Judgment, and Qadar
+                (divine decree).
               </li>
               <li>
-                <strong>Principles of Tafseer: </strong>Studying the fundamental
-                principles and methodologies used in Quranic exegesis.
+                <strong>Tawheed and Shirk: </strong>Understanding the concept of
+                Tawheed (oneness of Allah) and avoiding all forms of Shirk
+                (associating partners with Allah).
               </li>
               <li>
-                <strong>Sources of Tafseer: </strong>Identifying and analyzing
-                the primary sources of Tafseer, including the Quran itself,
-                Hadith, statements of the Sahaba, and scholarly works.
+                <strong>Fiqh (Islamic Jurisprudence): </strong>Practical
+                guidance on the rules of purification, Salah (prayer), fasting,
+                Zakat, and Hajj, ensuring correct practice of these obligations.
               </li>
               <li>
-                <strong>Historical Context: </strong>Exploring the historical
-                events and circumstances surrounding the revelation of specific
-                verses.
+                <strong>Quranic Recitation with Tajweed: </strong>Learning the
+                correct pronunciation of Quranic verses with Tajweed rules,
+                improving recitation skills for Salah and personal study.
               </li>
               <li>
-                <strong>Linguistic Analysis: </strong>Examining the linguistic
-                aspects of the Quran, including grammar, syntax, and rhetorical
-                devices.
+                <strong>Hadith Studies: </strong>Exploring selected Hadith from
+                Sahih Bukhari, Sahih Muslim, and other authentic collections to
+                understand the teachings and Sunnah of the Prophet Muhammad (ﷺ).
               </li>
               <li>
-                <strong>Thematic Analysis: </strong>Investigating major themes
-                in the Quran, such as monotheism, prophethood, ethics, and
-                eschatology.
+                <strong>The Life of the Prophet (Seerah): </strong>A study of
+                the life and character of the Prophet Muhammad (ﷺ) to inspire
+                daily conduct and provide examples of ideal Islamic behavior.
               </li>
               <li>
-                <strong>Comparative Tafseer: </strong>Studying classical and
-                contemporary Tafseer literature to understand different
-                interpretations and perspectives.
+                {" "}
+                <strong>Islamic Morality and Ethics (Akhlaq): </strong>
+                Developing a strong moral character, understanding the
+                importance of honesty, patience, humility, and kindness as
+                central Islamic values.
               </li>
               <li>
-                <strong>Practical Tafseer Exercises: </strong>Hands-on practice
-                in interpreting and explaining selected Quranic verses.
+                <strong>Islamic Social Responsibilities: </strong>Learning about
+                the importance of family, community, and social justice in
+                Islam, and how to apply Islamic teachings in social and family
+                life.
               </li>
               <li>
-                <strong>Modern Challenges and Tafseer: </strong>Addressing
-                contemporary issues and how they are interpreted through
-                Tafseer.
+                <strong>Duas and Adhkar: </strong>Memorizing essential daily
+                Duas and Adhkar (remembrances) to strengthen one's connection
+                with Allah and seek His guidance and blessings in every aspect
+                of life.
+              </li>
+              <li>
+                <strong>Islamic History and Civilization: </strong>Gaining an
+                overview of the key historical events in Islamic history,
+                including the lives of the early Muslims and the spread of
+                Islam.
+              </li>
+              <li>
+                <strong>Addressing Modern Challenges: </strong>Understanding how
+                to apply Islamic principles in contemporary issues such as work,
+                family dynamics, and personal growth.
               </li>
             </ol>
             <h5>Learning Outcomes: </h5>
             <p>
-              Upon successful completion of the Tafseer Course, students will
-              achieve the following learning outcomes:
+              Upon completion of the Deeniyat for men course, students will
+              gain:
             </p>
             <ol>
               <li>
-                <strong>In-depth Knowledge of Tafseer: </strong>Students will
-                have a comprehensive understanding of the principles, sources,
-                and methodologies of Quranic exegesis.
+                <strong>Solid Understanding of Islamic Beliefs: </strong>Have a
+                clear and firm understanding of the core beliefs in Islam and
+                how to strengthen their faith.
               </li>
               <li>
-                <strong>Contextual and Historical Insight: </strong>Students
-                will gain a deep insight into the historical and contextual
-                background of Quranic revelations.
+                <strong>Practical Knowledge of Fiqh: </strong>Be equipped with
+                the knowledge to correctly perform daily acts of worship,
+                including Salah, fasting, Zakat, and Hajj.
               </li>
               <li>
-                <strong>Linguistic Proficiency: </strong>Students will develop
-                proficiency in the linguistic analysis of Quranic text.
+                <strong>Improved Quran Recitation: </strong>Recite the Quran
+                with proper Tajweed, enhancing the quality of their worship and
+                personal connection with the Quran.
               </li>
               <li>
-                <strong>Thematic Understanding: </strong>SStudents will be able
-                to identify and analyze major themes and topics in the Quran.
+                <strong>Deepened Knowledge of Hadith and Sunnah: </strong>
+                Understand the wisdom and teachings of the Prophet Muhammad (ﷺ)
+                and apply them in everyday life.
               </li>
               <li>
-                <strong>Interpretation Skills: </strong>Students will enhance
-                their skills in interpreting and explaining Quranic verses
-                accurately and meaningfully.
+                <strong>Moral and Ethical Growth: </strong>Develop a strong
+                sense of Islamic ethics and how to maintain good character in
+                their personal and social lives.
               </li>
               <li>
-                <strong>Critical Analysis of Tafseer: </strong>Students will be
-                able to critically analyze and compare different Tafseer works,
-                appreciating both classical and contemporary contributions.
+                {" "}
+                <strong>Application of Islam in Daily Life: </strong>Gain
+                practical tools to implement Islamic teachings in various
+                aspects of modern life, including family, work, and community.
               </li>
               <li>
-                <strong>Application of Tafseer: </strong>Students will be
-                equipped to apply Tafseer in addressing modern challenges and
-                providing relevant explanations.
+                {" "}
+                <strong>Enhanced Spiritual Connection: </strong>Strengthen their
+                relationship with Allah through regular Duas, Adhkar, and
+                reflection on His signs and guidance.
               </li>
             </ol>
             <h5>Who Should Enroll: </h5>
-            <p>
-              The Tafseer Course is designed for a diverse range of learners
-              dedicated to deepening their understanding of the Quran through
-              its exegesis. This includes:
-            </p>
+            <p>The Deeniyat for men course is perfect for: </p>
             <ol>
               <li>
-                <strong>Aspiring Scholars: </strong>
-                Individuals seeking to become proficient scholars in Quranic
-                studies and Tafseer.
+                <strong>Muslims Reconnecting with Their Faith: </strong>
+                Those seeking to refresh or strengthen their Islamic knowledge
+                and reconnect with their spiritual journey.
               </li>
               <li>
-                <strong>Religious Educators: </strong>Educators who aim to teach
-                Quranic exegesis and provide detailed explanations of the
-                Quranic text.
+                <strong>Busy Professionals: </strong>Adults who need a flexible
+                and structured way to learn about Islam while managing their
+                work and family responsibilities.
               </li>
               <li>
-                <strong>Imams and Community Leaders: </strong>Religious leaders
-                who wish to enhance their ability to interpret and explain the
-                Quran to their communities.
+                <strong>Parents and Educators: </strong>Individuals who want to
+                deepen their understanding of Islam so they can teach and guide
+                their children or students more effectively.
               </li>
               <li>
-                <strong>Students of Islamic Studies: </strong>Those pursuing
-                academic studies in Islam who wish to gain a thorough
-                understanding of Tafseer.
-              </li>
-              <li>
-                <strong>Researchers and Academics: </strong>Researchers and
-                academics interested in exploring the depths of Quranic exegesis
-                and its applications.
+                <strong>General Learners: </strong>Any adult who wish to grow in
+                their knowledge of Islam and improve their practice of faith in
+                daily life.
               </li>
             </ol>
             <p>
-              By enrolling in the Tafseer Course, students embark on a scholarly
-              and spiritual journey that enriches their understanding of the
-              Quran. This course provides the foundational knowledge, critical
-              analysis skills, and practical experience needed to interpret and
-              explain the divine messages of the Quran, ensuring that its
-              profound teachings are comprehended and conveyed accurately and
-              meaningfully.
+              The Deeniyat for men course offers a pathway to enrich your
+              spiritual life, deepen your connection with Allah, and gain
+              practical knowledge of Islamic beliefs and practices. By providing
+              a structured learning experience, this course allows busy adults
+              to enhance their understanding of Islam and apply it meaningfully
+              in their personal, family, and community lives. With a focus on
+              both learning and practice, this course equips students with the
+              tools needed to live an authentic Islamic lifestyle in the modern
+              world.
             </p>
           </CourseDiscription>
           <CourseDetail>
             <h5>
-              course name: <span>Tafseer Course</span>
+              course name: <span>Deeniyat For Men</span>
             </h5>
             <h5>
-              course code: <span>QRN08</span>
+              course code: <span>DNY02</span>
             </h5>
             <h5>
               Learning Mode: <span>Online</span>
@@ -170,14 +187,13 @@ export const TafseerCoursePage = () => {
               type: <span>Part Time</span>
             </h5>
             <h5>
-              Duration: <span>1-2 Years</span>
+              Duration: <span>1 Year</span>
             </h5>
             <h5>
-              Entry Requirement:{" "}
-              <span>Must have proficiency in Arabic Language</span>
+              Entry Requirement: <span>Open for all men</span>
             </h5>
             <h5>
-              Application Deadline: <span>Fall & Spring Semester</span>
+              Application Deadline: <span>Open</span>
             </h5>
             <ButtonContainer>
               <a href="/registration">Apply Here</a>
