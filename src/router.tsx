@@ -23,6 +23,7 @@ import { TafseerCoursePage } from "./pages/tafseer-course";
 import { DeeniyatForKidsPage } from "./pages/deeniyat-for-kids";
 import { DeeniyatForMenPage } from "./pages/deeniyat-for-men";
 import { DeeniyatForWomenPage } from "./pages/deeniyat-for-women";
+import { DarsEnizamiPage } from "./pages/dars-e-nizami";
 
 const router = createBrowserRouter([
   {
@@ -120,6 +121,10 @@ const router = createBrowserRouter([
       {
         path: "deeniyat-for-women",
         element: <DeeniyatForWomenPage />,
+      },
+      {
+        path: "dars-e-nizami",
+        element: <DarsEnizamiPage />,
       },
     ],
   },

@@ -141,6 +141,17 @@ const Header: React.FC = () => {
                     Deeniyat For Women
                   </NavDropdown.Item>
                 </SubMenu>
+                <NavDropdown.Divider />
+                <SubMenu title="Alimiyat Course">
+                  <NavDropdown.Item href="/dars-e-nizami">
+                    Dars-e-Nizami Curriculum
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Modern Curriculum
+                  </NavDropdown.Item>
+                </SubMenu>
+                <NavDropdown.Divider />
               </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"
