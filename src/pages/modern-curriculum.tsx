@@ -316,12 +316,6 @@ const CourseList = styled.ol`
   list-style-type: upper-roman;
 `;
 
-const UnOrderList = styled.ul`
-  li {
-    list-style: none;
-  }
-`;
-
 const CourseDiscription = styled.div`
   h5 {
     font-size: 18px;
