@@ -355,14 +355,14 @@ const RegistrationForm: React.FC = () => {
                   <option value="other">Deeniyat For Women</option>
                   <option value="other">Alimiyat (Dars-e-nizami)</option>
                   <option value="other">Alimiyat (Modern Curriculum)</option>
-                  <option value="other">Fazilat In Quranic Science</option>
-                  <option value="other">Fazlital In Hadith Science</option>
+                  <option value="other">Fazilat in Quranic Science</option>
+                  <option value="other">Fazlital in Hadith Science</option>
                   <option value="other">
-                    Fazilat In Islamic Jurisprudence
+                    Fazilat in Islamic Jurisprudence
                   </option>
-                  <option value="other">Fazilat In Theology</option>
-                  <option value="other">Fazilat In Islamic Finance</option>
-                  <option value="other">Fazilat In Arabic Language</option>
+                  <option value="other">Fazilat in Theology</option>
+                  <option value="other">Fazilat in Islamic Finance</option>
+                  <option value="other">Fazilat in Arabic Language</option>
                   <option value="other">Foundation Arabic Course</option>
                   <option value="other">Arabic Speaking Course</option>
                   <option value="other">Quranic Arabic Course</option>

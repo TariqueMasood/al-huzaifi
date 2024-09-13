@@ -147,11 +147,36 @@ const Header: React.FC = () => {
                     Dars-e-Nizami Curriculum
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/modern-curriculum">
                     Modern Curriculum
                   </NavDropdown.Item>
                 </SubMenu>
                 <NavDropdown.Divider />
+                <SubMenu title="Fazilat Courses">
+                  <NavDropdown.Item href="#">
+                    Fazilat in Quranic Science
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Fazilat in Hadith Science
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Fazilat in Islamic Jurisprudence
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Fazilat in Theology
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Fazilat in Islamic Finance
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Fazilat in Arabic Language
+                  </NavDropdown.Item>
+                </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"

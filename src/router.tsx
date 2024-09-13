@@ -24,6 +24,7 @@ import { DeeniyatForKidsPage } from "./pages/deeniyat-for-kids";
 import { DeeniyatForMenPage } from "./pages/deeniyat-for-men";
 import { DeeniyatForWomenPage } from "./pages/deeniyat-for-women";
 import { DarsEnizamiPage } from "./pages/dars-e-nizami";
+import { ModernCurriculumPage } from "./pages/modern-curriculum";
 
 const router = createBrowserRouter([
   {
@@ -125,6 +126,10 @@ const router = createBrowserRouter([
       {
         path: "dars-e-nizami",
         element: <DarsEnizamiPage />,
+      },
+      {
+        path: "modern-curriculum",
+        element: <ModernCurriculumPage />,
       },
     ],
   },
