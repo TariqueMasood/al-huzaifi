@@ -25,6 +25,11 @@ import { DeeniyatForMenPage } from "./pages/deeniyat-for-men";
 import { DeeniyatForWomenPage } from "./pages/deeniyat-for-women";
 import { DarsEnizamiPage } from "./pages/dars-e-nizami";
 import { ModernCurriculumPage } from "./pages/modern-curriculum";
+import { ArabicLaguageCoursePage } from "./pages/arabic-language-course";
+import { ArabicSpeakingCoursePage } from "./pages/arabic-speaking-course";
+import { QuranicArabicCoursePage } from "./pages/quranic-arabic-course";
+import { ClassicalArabicCoursePage } from "./pages/classical-arabic-course";
+import { ArabicGrammarCoursePage } from "./pages/arabic-grammar-course";
 
 const router = createBrowserRouter([
   {
@@ -130,6 +135,26 @@ const router = createBrowserRouter([
       {
         path: "modern-curriculum",
         element: <ModernCurriculumPage />,
+      },
+      {
+        path: "arabic-language-course",
+        element: <ArabicLaguageCoursePage />,
+      },
+      {
+        path: "arabic-speaking-course",
+        element: <ArabicSpeakingCoursePage />,
+      },
+      {
+        path: "quranic-arabic-course",
+        element: <QuranicArabicCoursePage />,
+      },
+      {
+        path: "classical-arabic-course",
+        element: <ClassicalArabicCoursePage />,
+      },
+      {
+        path: "arabic-grammar-course",
+        element: <ArabicGrammarCoursePage />,
       },
     ],
   },

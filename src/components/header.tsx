@@ -177,6 +177,36 @@ const Header: React.FC = () => {
                     Fazilat in Arabic Language
                   </NavDropdown.Item>
                 </SubMenu>
+                <NavDropdown.Divider />
+                <SubMenu title="Arabic Language Courses">
+                  <NavDropdown.Item href="/arabic-language-course">
+                    Foundation Arabic Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/arabic-speaking-course">
+                    Arabic Speaking Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/quranic-arabic-course">
+                    Quranic Arabic Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/classical-arabic-course">
+                    Classical Arabic Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/arabic-grammar-course">
+                    Arabic Grammar Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Arabic Rhetoric (Balaghat) Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="#">
+                    Arabic Prosody and Rhyme <br /> (Arooz & Qafiyah) Course
+                  </NavDropdown.Item>
+                </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"
