@@ -199,11 +199,11 @@ const Header: React.FC = () => {
                     Arabic Grammar Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/arabic-blaghat-course">
                     Arabic Rhetoric (Balaghat) Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/arabic-arooz-qafiyah-course">
                     Arabic Prosody and Rhyme <br /> (Arooz & Qafiyah) Course
                   </NavDropdown.Item>
                 </SubMenu>
