@@ -11,7 +11,7 @@ export const FacultyOfFazilatPage = () => {
       </div>
       <Wrapper>
         <Container>
-          <Title>Faculty of Fazilat</Title>
+          {/* <Title>Faculty of Fazilat</Title> */}
           <SubTitle>Overview:</SubTitle>
           <Content>
             The Faculty of Fazilat at <BoldText>Al-Huzaifi Academy</BoldText>{" "}
@@ -107,13 +107,13 @@ export const FacultyOfFazilatPage = () => {
 const Wrapper = styled.div`
   max-width: 850px;
   width: 100%;
-  // padding: 20px 0px;
+  padding: 20px 0px;
   margin: auto;
 
   ${mq("sm")} {
     max-width: 850px;
     width: 100%;
-    // padding: 40px 0px;
+    padding: 40px 0px;
     margin: auto;
   }
 `;
@@ -122,19 +122,19 @@ const Image = styled.img`
   width: 100%;
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  padding: 16px 0px;
-  font-weight: 600;
-  color: ${(props) => props.theme.colors.themeColor};
+// const Title = styled.h1`
+//   text-align: center;
+//   padding: 16px 0px;
+//   font-weight: 600;
+//   color: ${(props) => props.theme.colors.themeColor};
 
-  ${mq("sm")} {
-    text-align: center;
-    padding: 30px 0px;
-    font-weight: 600;
-    color: ${(props) => props.theme.colors.themeColor};
-  }
-`;
+//   ${mq("sm")} {
+//     text-align: center;
+//     padding: 30px 0px;
+//     font-weight: 600;
+//     color: ${(props) => props.theme.colors.themeColor};
+//   }
+// `;
 
 const SubTitle = styled.h5`
   font-weight: 600;
