@@ -207,6 +207,20 @@ const Header: React.FC = () => {
                     Arabic Prosody and Rhyme <br /> (Arooz & Qafiyah) Course
                   </NavDropdown.Item>
                 </SubMenu>
+                <NavDropdown.Divider />
+                <SubMenu title="English Language Courses">
+                  <NavDropdown.Item href="/elementary-english-course">
+                    Elementary English Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/arabic-speaking-course">
+                    Arabic Speaking Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/quranic-arabic-course">
+                    Quranic Arabic Course
+                  </NavDropdown.Item>
+                </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"
