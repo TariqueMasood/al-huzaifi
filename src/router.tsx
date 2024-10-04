@@ -33,6 +33,8 @@ import { ArabicGrammarCoursePage } from "./pages/arabic-grammar-course";
 import { ArabicBlaghatCoursePage } from "./pages/arabic-blaghat-course";
 import { ArabicAroozQafiyahCoursePage } from "./pages/arabic-arooz-qafiyah-course";
 import { ElementaryEnglishCoursePage } from "./pages/elementary-english-course";
+import { IntermediateEnglishCoursePage } from "./pages/intermediate-english-course";
+import { AdvancedEnglishCoursePage } from "./pages/advanced-english-course";
 
 const router = createBrowserRouter([
   {
@@ -170,6 +172,14 @@ const router = createBrowserRouter([
       {
         path: "elementary-english-course",
         element: <ElementaryEnglishCoursePage />,
+      },
+      {
+        path: "intermediate-english-course",
+        element: <IntermediateEnglishCoursePage />,
+      },
+      {
+        path: "advanced-english-course",
+        element: <AdvancedEnglishCoursePage />,
       },
     ],
   },

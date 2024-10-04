@@ -287,8 +287,7 @@ export const ArabicAroozQafiyahCoursePage = () => {
               </span>
             </h5>
             <h5>
-              Application Deadline:{" "}
-              <span>Deadline: Fall & Spring Semester</span>
+              Application Deadline: <span>Fall & Spring Semester</span>
             </h5>
             <ButtonContainer>
               <a href="/registration">Apply Here</a>

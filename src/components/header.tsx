@@ -213,12 +213,12 @@ const Header: React.FC = () => {
                     Elementary English Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/arabic-speaking-course">
-                    Arabic Speaking Course
+                  <NavDropdown.Item href="/intermediate-english-course">
+                    Intermediate English Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/quranic-arabic-course">
-                    Quranic Arabic Course
+                  <NavDropdown.Item href="/advanced-english-course">
+                    Advanced English Course
                   </NavDropdown.Item>
                 </SubMenu>
               </NavDropdownMenu>
