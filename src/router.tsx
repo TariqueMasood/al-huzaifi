@@ -35,6 +35,8 @@ import { ArabicAroozQafiyahCoursePage } from "./pages/arabic-arooz-qafiyah-cours
 import { ElementaryEnglishCoursePage } from "./pages/elementary-english-course";
 import { IntermediateEnglishCoursePage } from "./pages/intermediate-english-course";
 import { AdvancedEnglishCoursePage } from "./pages/advanced-english-course";
+import { ElementaryUrduCoursePage } from "./pages/elementary-urdu-course";
+import { IntermediateUrduCoursePage } from "./pages/intermediate-urdu-course";
 
 const router = createBrowserRouter([
   {
@@ -180,6 +182,14 @@ const router = createBrowserRouter([
       {
         path: "advanced-english-course",
         element: <AdvancedEnglishCoursePage />,
+      },
+      {
+        path: "elementary-urdu-course",
+        element: <ElementaryUrduCoursePage />,
+      },
+      {
+        path: "intermediate-urdu-course",
+        element: <IntermediateUrduCoursePage />,
       },
     ],
   },

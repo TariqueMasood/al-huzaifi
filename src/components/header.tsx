@@ -221,6 +221,20 @@ const Header: React.FC = () => {
                     Advanced English Course
                   </NavDropdown.Item>
                 </SubMenu>
+                <NavDropdown.Divider />
+                <SubMenu title="Urdu Language Courses">
+                  <NavDropdown.Item href="/elementary-urdu-course">
+                    Elementary Urdu Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/intermediate-urdu-course">
+                    Intermediate Urdu Course
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/advanced-urdu-course">
+                    Advanced Urdu Course
+                  </NavDropdown.Item>
+                </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown
                 title="Darul-Ifta"
