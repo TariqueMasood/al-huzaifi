@@ -37,6 +37,7 @@ import { IntermediateEnglishCoursePage } from "./pages/intermediate-english-cour
 import { AdvancedEnglishCoursePage } from "./pages/advanced-english-course";
 import { ElementaryUrduCoursePage } from "./pages/elementary-urdu-course";
 import { IntermediateUrduCoursePage } from "./pages/intermediate-urdu-course";
+import { AdvancedUrduCoursePage } from "./pages/advanced-urdu-course";
 
 const router = createBrowserRouter([
   {
@@ -190,6 +191,10 @@ const router = createBrowserRouter([
       {
         path: "intermediate-urdu-course",
         element: <IntermediateUrduCoursePage />,
+      },
+      {
+        path: "advanced-urdu-course",
+        element: <AdvancedUrduCoursePage />,
       },
     ],
   },

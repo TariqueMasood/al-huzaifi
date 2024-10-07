@@ -237,26 +237,6 @@ const Header: React.FC = () => {
                 </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown
-                title="Darul-Ifta"
-                id={`offcanvasNavbarDropdown-expand-md`}
-              >
-                <NavDropdown.Item href="#action3">Ask Fatwa</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">
-                  Contact to Mufti
-                </NavDropdown.Item>
-              </CustomDropdown>
-              <CustomDropdown
-                title="Publications"
-                id={`offcanvasNavbarDropdown-expand-md`}
-              >
-                <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">Booklets</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Prospectus</NavDropdown.Item>
-              </CustomDropdown>
-              <CustomDropdown
                 title="Admission"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
@@ -272,6 +252,26 @@ const Header: React.FC = () => {
                   Acadmic Calender
                 </NavDropdown.Item>
               </CustomDropdown>
+              <CustomDropdown
+                title="Darul-Ifta"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">Ask Fatwa</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">
+                  Contact to Mufti
+                </NavDropdown.Item>
+              </CustomDropdown>
+              {/* <CustomDropdown
+                title="Publications"
+                id={`offcanvasNavbarDropdown-expand-md`}
+              >
+                <NavDropdown.Item href="#action3">Articles</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action4">Booklets</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action5">Prospectus</NavDropdown.Item>
+              </CustomDropdown> */}
 
               <Nav.Link as={NavLink} to="/contact" eventKey="contact">
                 Contact

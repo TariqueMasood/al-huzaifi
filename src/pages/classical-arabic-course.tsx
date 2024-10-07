@@ -12,15 +12,15 @@ export const ClassicalArabicCoursePage = () => {
           <CourseDiscription>
             <h5>course objective:</h5>
             <p>
-              The Classical Arabic Course at Al-Huzaifi Academy is designed to
-              immerse students in the rich language of pre-Islamic and early
-              Islamic eras, focusing on the grammar, vocabulary, and style used
-              in classical texts. This course aims to equip students with the
-              skills necessary to read, understand, and interpret classical
-              Islamic literature, including works of Tafseer (Quranic exegesis),
-              Hadith (Prophetic traditions), Fiqh (Islamic jurisprudence), and
-              poetry. The course emphasizes the linguistic foundations that
-              underpin the Islamic scholarly tradition.
+              The <strong> Classical Arabic Course </strong>at Al-Huzaifi
+              Academy is designed to immerse students in the rich language of
+              pre-Islamic and early Islamic eras, focusing on the grammar,
+              vocabulary, and style used in classical texts. This course aims to
+              equip students with the skills necessary to read, understand, and
+              interpret classical Islamic literature, including works of Tafseer
+              (Quranic exegesis), Hadith (Prophetic traditions), Fiqh (Islamic
+              jurisprudence), and poetry. The course emphasizes the linguistic
+              foundations that underpin the Islamic scholarly tradition.
             </p>
             <h5>Course Content:</h5>
             <p>
