@@ -38,6 +38,11 @@ import { AdvancedEnglishCoursePage } from "./pages/advanced-english-course";
 import { ElementaryUrduCoursePage } from "./pages/elementary-urdu-course";
 import { IntermediateUrduCoursePage } from "./pages/intermediate-urdu-course";
 import { AdvancedUrduCoursePage } from "./pages/advanced-urdu-course";
+import { IbadaatCoursePage } from "./pages/ibadaat-course";
+import { ZakatCoursePage } from "./pages/zakat-course";
+import { RamadanSpecialCoursePage } from "./pages/ramadan-special-course";
+import { HajjAndUmrahCoursePage } from "./pages/hajj-&-umrah-course";
+import { SeeratCoursePage } from "./pages/seerat-course";
 
 const router = createBrowserRouter([
   {
@@ -195,6 +200,26 @@ const router = createBrowserRouter([
       {
         path: "advanced-urdu-course",
         element: <AdvancedUrduCoursePage />,
+      },
+      {
+        path: "ibadaat-course",
+        element: <IbadaatCoursePage />,
+      },
+      {
+        path: "zakat-course",
+        element: <ZakatCoursePage />,
+      },
+      {
+        path: "ramadan-special-course",
+        element: <RamadanSpecialCoursePage />,
+      },
+      {
+        path: "hajj-&-umrah-course",
+        element: <HajjAndUmrahCoursePage />,
+      },
+      {
+        path: "seerat-course",
+        element: <SeeratCoursePage />,
       },
     ],
   },
