@@ -95,37 +95,39 @@ const Header: React.FC = () => {
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
                 <SubMenu title="Quran Courses">
-                  <NavDropdown.Item href="/noorani-qaedah">
-                    Noorani Qa'edah Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/recitation-course">
-                    Quran Recitation Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/memorization-course">
-                    Quran Memorization Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/tajweed-course">
-                    Tajweed Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/seven-qiraat">
-                    Seven Qiraats Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/ijazah-program">
-                    Quran Ijazah Program
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/translation-course">
-                    Quran's Translation Course
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="/tafseer-course">
-                    Tafseer Course
-                  </NavDropdown.Item>
+                  <div>
+                    <NavDropdown.Item href="/noorani-qaedah">
+                      Noorani Qa'edah Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/recitation-course">
+                      Quran Recitation Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/memorization-course">
+                      Quran Memorization Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/tajweed-course">
+                      Tajweed Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/seven-qiraat">
+                      Seven Qiraats Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/ijazah-program">
+                      Quran Ijazah Program
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/translation-course">
+                      Quran's Translation Course
+                    </NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="/tafseer-course">
+                      Tafseer Course
+                    </NavDropdown.Item>
+                  </div>
                 </SubMenu>
                 <NavDropdown.Divider />
                 <SubMenu title="Deeniyat Courses">
@@ -153,27 +155,27 @@ const Header: React.FC = () => {
                 </SubMenu>
                 <NavDropdown.Divider />
                 <SubMenu title="Fazilat Courses">
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-tafsir">
                     Fazilat in Quranic Science
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-hadith">
                     Fazilat in Hadith Science
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-islamic">
                     Fazilat in Islamic Jurisprudence
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-theology">
                     Fazilat in Theology
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-islamic-finance">
                     Fazilat in Islamic Finance
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/fazilat-in-arabic-language">
                     Fazilat in Arabic Language
                   </NavDropdown.Item>
                 </SubMenu>
@@ -368,6 +370,7 @@ const Logo = styled.img`
 
 const SubMenu = styled(DropdownSubmenu)`
   cursor: pointer;
+  position: relative;
 `;
 
 const CustomDropdown = styled(NavDropdown)`

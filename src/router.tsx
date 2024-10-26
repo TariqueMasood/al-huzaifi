@@ -43,6 +43,12 @@ import { ZakatCoursePage } from "./pages/zakat-course";
 import { RamadanSpecialCoursePage } from "./pages/ramadan-special-course";
 import { HajjAndUmrahCoursePage } from "./pages/hajj-&-umrah-course";
 import { SeeratCoursePage } from "./pages/seerat-course";
+import { FazilatInTafsirPage } from "./pages/fazilat-in-tafsir";
+import { FazilatInHadithPage } from "./pages/fazilat-in-hadith";
+import { FazilatInIslamicPage } from "./pages/fazilat-in-islamic";
+import { FazilatInTheologyPage } from "./pages/fazilat-in-theology";
+import { FazilatInIslamicFinancePage } from "./pages/fazilat-in-islamic-finance";
+import { FazilatInArabicLanguagePage } from "./pages/fazilat-in-arabic-language";
 
 const router = createBrowserRouter([
   {
@@ -220,6 +226,30 @@ const router = createBrowserRouter([
       {
         path: "seerat-course",
         element: <SeeratCoursePage />,
+      },
+      {
+        path: "fazilat-in-tafsir",
+        element: <FazilatInTafsirPage />,
+      },
+      {
+        path: "fazilat-in-hadith",
+        element: <FazilatInHadithPage />,
+      },
+      {
+        path: "fazilat-in-islamic",
+        element: <FazilatInIslamicPage />,
+      },
+      {
+        path: "fazilat-in-theology",
+        element: <FazilatInTheologyPage />,
+      },
+      {
+        path: "fazilat-in-islamic-finance",
+        element: <FazilatInIslamicFinancePage />,
+      },
+      {
+        path: "fazilat-in-arabic-language",
+        element: <FazilatInArabicLanguagePage />,
       },
     ],
   },
