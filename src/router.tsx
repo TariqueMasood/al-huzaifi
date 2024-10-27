@@ -49,6 +49,8 @@ import { FazilatInIslamicPage } from "./pages/fazilat-in-islamic";
 import { FazilatInTheologyPage } from "./pages/fazilat-in-theology";
 import { FazilatInIslamicFinancePage } from "./pages/fazilat-in-islamic-finance";
 import { FazilatInArabicLanguagePage } from "./pages/fazilat-in-arabic-language";
+import { IftaCoursePage } from "./pages/ifta-course";
+import { WhyChooseUsPage } from "./pages/why-choose-us";
 
 const router = createBrowserRouter([
   {
@@ -250,6 +252,14 @@ const router = createBrowserRouter([
       {
         path: "fazilat-in-arabic-language",
         element: <FazilatInArabicLanguagePage />,
+      },
+      {
+        path: "ifta-course",
+        element: <IftaCoursePage />,
+      },
+      {
+        path: "why-choose-us",
+        element: <WhyChooseUsPage />,
       },
     ],
   },

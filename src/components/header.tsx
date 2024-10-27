@@ -52,20 +52,13 @@ const Header: React.FC = () => {
               <Nav.Link as={NavLink} to="/" eventKey="home">
                 Home
               </Nav.Link>
-              <CustomDropdown
-                title="About"
-                id={`offcanvasNavbarDropdown-expand-md`}
+              <Nav.Link
+                as={NavLink}
+                to="/why-choose-us"
+                eventKey="why-choose-us"
               >
-                <NavDropdown.Item href="/our-history">
-                  Our History
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/our-mission">
-                  Our Mission and Vision
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="/our-team">Our Team</NavDropdown.Item>
-              </CustomDropdown>
+                About
+              </Nav.Link>
               <CustomDropdown
                 title="Faculty"
                 id={`offcanvasNavbarDropdown-expand-md`}
@@ -286,10 +279,12 @@ const Header: React.FC = () => {
                 title="Darul-Ifta"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
-                <NavDropdown.Item href="#action3">Ask Fatwa</NavDropdown.Item>
+                <NavDropdown.Item href="#action3">
+                  Ask Darul Ifta
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">
-                  Contact to Mufti
+                <NavDropdown.Item href="/ifta-course">
+                  Ifta Course
                 </NavDropdown.Item>
               </CustomDropdown>
               <CustomDropdown
