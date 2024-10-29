@@ -51,6 +51,8 @@ import { FazilatInIslamicFinancePage } from "./pages/fazilat-in-islamic-finance"
 import { FazilatInArabicLanguagePage } from "./pages/fazilat-in-arabic-language";
 import { IftaCoursePage } from "./pages/ifta-course";
 import { WhyChooseUsPage } from "./pages/why-choose-us";
+import { DarulIftaPage } from "./pages/darul-ifta";
+import { ScholarshipProgramPage } from "./pages/scholarship-program";
 
 const router = createBrowserRouter([
   {
@@ -260,6 +262,14 @@ const router = createBrowserRouter([
       {
         path: "why-choose-us",
         element: <WhyChooseUsPage />,
+      },
+      {
+        path: "darul-ifta",
+        element: <DarulIftaPage />,
+      },
+      {
+        path: "scholarship-program",
+        element: <ScholarshipProgramPage />,
       },
     ],
   },

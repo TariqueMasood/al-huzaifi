@@ -269,7 +269,9 @@ const Header: React.FC = () => {
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action4">Tution Fee</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">Scholarship</NavDropdown.Item>
+                <NavDropdown.Item href="/scholarship-program">
+                  Scholarship
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action5">
                   Acadmic Calender
@@ -279,7 +281,7 @@ const Header: React.FC = () => {
                 title="Darul-Ifta"
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
-                <NavDropdown.Item href="#action3">
+                <NavDropdown.Item href="/darul-ifta">
                   Ask Darul Ifta
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
