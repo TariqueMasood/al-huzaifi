@@ -252,11 +252,13 @@ const Header: React.FC = () => {
                     Life of Prophet (Seerat) Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">
+                  <NavDropdown.Item href="/inheritance-course">
                     Inheritance (Meerath) Course
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="#">Imamat Course</NavDropdown.Item>
+                  <NavDropdown.Item href="/imamat-course">
+                    Imamat Course
+                  </NavDropdown.Item>
                 </SubMenu>
               </NavDropdownMenu>
               <CustomDropdown

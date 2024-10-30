@@ -10,7 +10,6 @@ export const DarulIftaPage = () => {
         <SubHeading>A Center for Authentic Islamic Legal Guidance</SubHeading>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <CourseDiscription>
-          <h5>course objective:</h5>
           <p>
             The <strong>Darul Ifta</strong> at{" "}
             <strong>Al-Huzaifi Academy</strong> serves as a beacon of Islamic

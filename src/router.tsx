@@ -53,6 +53,8 @@ import { IftaCoursePage } from "./pages/ifta-course";
 import { WhyChooseUsPage } from "./pages/why-choose-us";
 import { DarulIftaPage } from "./pages/darul-ifta";
 import { ScholarshipProgramPage } from "./pages/scholarship-program";
+import { InheritanceCoursePage } from "./pages/inheritance-course";
+import { ImamatCoursePage } from "./pages/imamat-course";
 
 const router = createBrowserRouter([
   {
@@ -230,6 +232,14 @@ const router = createBrowserRouter([
       {
         path: "seerat-course",
         element: <SeeratCoursePage />,
+      },
+      {
+        path: "inheritance-course",
+        element: <InheritanceCoursePage />,
+      },
+      {
+        path: "imamat-course",
+        element: <ImamatCoursePage />,
       },
       {
         path: "fazilat-in-tafsir",

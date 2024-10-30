@@ -12,7 +12,6 @@ export const ScholarshipProgramPage = () => {
         </SubHeading>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <CourseDiscription>
-          <h5>course objective:</h5>
           <p>
             At <strong>Al-Huzaifi Academy</strong>, our mission is to spread the
             light of Islamic knowledge far and wide, and we firmly believe that
