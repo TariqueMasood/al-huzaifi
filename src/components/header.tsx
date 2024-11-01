@@ -88,7 +88,7 @@ const Header: React.FC = () => {
                 id={`offcanvasNavbarDropdown-expand-md`}
               >
                 <SubMenu title="Quran Courses">
-                  <div>
+                  <SubMenuDropdown>
                     <NavDropdown.Item href="/noorani-qaedah">
                       Noorani Qa'edah Course
                     </NavDropdown.Item>
@@ -120,7 +120,7 @@ const Header: React.FC = () => {
                     <NavDropdown.Item href="/tafseer-course">
                       Tafseer Course
                     </NavDropdown.Item>
-                  </div>
+                  </SubMenuDropdown>
                 </SubMenu>
                 <NavDropdown.Divider />
                 <SubMenu title="Deeniyat Courses">
@@ -370,6 +370,48 @@ const Logo = styled.img`
 const SubMenu = styled(DropdownSubmenu)`
   cursor: pointer;
   position: relative;
+
+  .dropdown-toggle::after {
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+    display: inline-block;
+    margin-left: 0.3em;
+    vertical-align: middle;
+  }
+
+  @media (min-width: 768px) {
+    .dropdown-menu {
+      position: absolute;
+      left: 100%;
+    }
+
+    .dropdown-toggle::after {
+      border-top: 0.3em solid transparent;
+      border-right: 0;
+      border-bottom: 0.3em solid transparent;
+      border-left: 0.3em solid;
+    }
+  }
+
+  .dropdown-submenu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+`;
+
+const SubMenuDropdown = styled.div`
+  .dropdown-submenu-container {
+    position: relative;
+
+    .dropdown-menu {
+      position: absolute;
+      left: 100%;
+    }
+  }
 `;
 
 const CustomDropdown = styled(NavDropdown)`
