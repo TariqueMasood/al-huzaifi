@@ -417,8 +417,18 @@ const SubMenuDropdown = styled.div`
 const CustomDropdown = styled(NavDropdown)`
   .dropdown-menu {
     border: none;
-    border-top: 2px solid ${(props) => props.theme.colors.darkbg};
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    border-top: 0;
+    box-shadow: 0;
+    background-color: #f2f2f2;
+  }
+
+  @media (min-width: 768px) {
+    .dropdown-menu {
+      border: none;
+      border-top: 2px solid ${(props) => props.theme.colors.darkbg};
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+      background-color: #fff;
+    }
   }
 
   .dropdown-divider {
