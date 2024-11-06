@@ -275,7 +275,7 @@ const Header: React.FC = () => {
                   Scholarship
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action5">
+                <NavDropdown.Item href="/acadmic-calendar">
                   Acadmic Calender
                 </NavDropdown.Item>
               </CustomDropdown>
