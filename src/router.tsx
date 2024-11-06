@@ -55,6 +55,7 @@ import { DarulIftaPage } from "./pages/darul-ifta";
 import { ScholarshipProgramPage } from "./pages/scholarship-program";
 import { InheritanceCoursePage } from "./pages/inheritance-course";
 import { ImamatCoursePage } from "./pages/imamat-course";
+import { AcademicCalendarPage } from "./pages/academic-calendar";
 
 const router = createBrowserRouter([
   {
@@ -280,6 +281,10 @@ const router = createBrowserRouter([
       {
         path: "scholarship-program",
         element: <ScholarshipProgramPage />,
+      },
+      {
+        path: "acadmic-calendar",
+        element: <AcademicCalendarPage />,
       },
     ],
   },
