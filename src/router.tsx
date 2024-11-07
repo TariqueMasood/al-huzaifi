@@ -56,6 +56,7 @@ import { ScholarshipProgramPage } from "./pages/scholarship-program";
 import { InheritanceCoursePage } from "./pages/inheritance-course";
 import { ImamatCoursePage } from "./pages/imamat-course";
 import { AcademicCalendarPage } from "./pages/academic-calendar";
+import { TuitionFeePage } from "./pages/tution-fee";
 
 const router = createBrowserRouter([
   {
@@ -285,6 +286,10 @@ const router = createBrowserRouter([
       {
         path: "acadmic-calendar",
         element: <AcademicCalendarPage />,
+      },
+      {
+        path: "tution-fee",
+        element: <TuitionFeePage />,
       },
     ],
   },

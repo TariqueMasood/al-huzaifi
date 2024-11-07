@@ -269,7 +269,9 @@ const Header: React.FC = () => {
                   Registration
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="#action4">Tution Fee</NavDropdown.Item>
+                <NavDropdown.Item href="/tution-fee">
+                  Tution Fee
+                </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/scholarship-program">
                   Scholarship
