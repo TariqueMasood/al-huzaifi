@@ -1,6 +1,8 @@
-import { Container } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export const DarulIftaPage = () => {
   return (
@@ -91,6 +93,168 @@ export const DarulIftaPage = () => {
             clear and detailed information, you allow our scholars to address
             your question accurately and effectively.
           </p>
+
+          <div>
+            <Form>
+              <Row>
+                {/* Name Field */}
+                <Col>
+                  <Form.Group controlId="formName" className="mb-3">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "20px",
+                      }}
+                    >
+                      <Form.Label>Your Name:</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Enter your name"
+                        required
+                      />
+                    </div>
+                  </Form.Group>
+                </Col>
+
+                {/* Age Field */}
+                <Col>
+                  <Form.Group controlId="formAge" className="mb-3">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "20px",
+                      }}
+                    >
+                      <Form.Label>Age:</Form.Label>
+                      <Form.Control
+                        type="number"
+                        placeholder="Enter your age"
+                        required
+                      />
+                    </div>
+                  </Form.Group>
+                </Col>
+              </Row>
+
+              {/* Gender Field */}
+              <Form.Group as={Row} controlId="formGender" className="mb-3">
+                <Form.Label column sm={3}>
+                  Gender:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Select required>
+                    <option value="">Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </Form.Select>
+                </Col>
+              </Form.Group>
+
+              {/* Nationality Field */}
+              <Form.Group as={Row} controlId="formNationality" className="mb-3">
+                <Form.Label column sm={3}>
+                  Nationality:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your nationality"
+                    required
+                  />
+                </Col>
+              </Form.Group>
+
+              {/* Contact Number Field */}
+              <Form.Group
+                as={Row}
+                controlId="formContactNumber"
+                className="mb-3"
+              >
+                <Form.Label column sm={3}>
+                  Contact Number:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Control
+                    type="tel"
+                    placeholder="+Country Code"
+                    required
+                  />
+                </Col>
+              </Form.Group>
+
+              {/* Email Field */}
+              <Form.Group as={Row} controlId="formEmail" className="mb-3">
+                <Form.Label column sm={3}>
+                  Email:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Control
+                    type="email"
+                    placeholder="Enter your email"
+                    required
+                  />
+                </Col>
+              </Form.Group>
+
+              {/* Fiqhi School (Madhhab) */}
+              <Form.Group as={Row} controlId="formMadhhab" className="mb-3">
+                <Form.Label column sm={3}>
+                  Fiqhi School (Madhhab):
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Select required>
+                    <option value="">Select Madhhab</option>
+                    <option value="hanafi">Hanafi</option>
+                    <option value="shafii">Shafi’i</option>
+                    <option value="maliki">Maliki</option>
+                    <option value="hanbali">Hanbali</option>
+                    <option value="salafi">Salafi (Ahl-e-Hadith)</option>
+                  </Form.Select>
+                </Col>
+              </Form.Group>
+
+              {/* Subject of Question */}
+              <Form.Group as={Row} controlId="formSubject" className="mb-3">
+                <Form.Label column sm={3}>
+                  Subject of Your Question:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter the subject"
+                    required
+                  />
+                </Col>
+              </Form.Group>
+
+              {/* Detailed Question */}
+              <Form.Group as={Row} controlId="formQuestion" className="mb-3">
+                <Form.Label column sm={3}>
+                  Explain Your Question in Detail:
+                </Form.Label>
+                <Col sm={9}>
+                  <Form.Control
+                    as="textarea"
+                    rows={5}
+                    placeholder="Explain your question in detail"
+                    required
+                  />
+                </Col>
+              </Form.Group>
+
+              {/* Submit Button */}
+              <Row className="mb-3">
+                <Col sm={{ span: 9, offset: 3 }}>
+                  <Button variant="primary" type="submit">
+                    Submit
+                  </Button>
+                </Col>
+              </Row>
+            </Form>
+          </div>
         </CourseDiscription>
       </Container>
     </Wrapper>
