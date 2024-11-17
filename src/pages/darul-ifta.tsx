@@ -1,7 +1,6 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 export const DarulIftaPage = () => {
