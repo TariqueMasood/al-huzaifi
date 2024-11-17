@@ -94,62 +94,19 @@ export const DarulIftaPage = () => {
             your question accurately and effectively.
           </p>
 
-          <div>
+          <FormContainer>
             <Form>
-              <Row>
-                {/* Name Field */}
-                <Col>
-                  <Form.Group controlId="formName" className="mb-3">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "20px",
-                      }}
-                    >
-                      <Form.Label>Your Name:</Form.Label>
-                      <Form.Control
-                        type="text"
-                        placeholder="Enter your name"
-                        required
-                      />
-                    </div>
-                  </Form.Group>
-                </Col>
-
-                {/* Age Field */}
-                <Col>
-                  <Form.Group controlId="formAge" className="mb-3">
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "20px",
-                      }}
-                    >
-                      <Form.Label>Age:</Form.Label>
-                      <Form.Control
-                        type="number"
-                        placeholder="Enter your age"
-                        required
-                      />
-                    </div>
-                  </Form.Group>
-                </Col>
-              </Row>
-
-              {/* Gender Field */}
-              <Form.Group as={Row} controlId="formGender" className="mb-3">
+              {/* Name Field */}
+              <Form.Group as={Row} controlId="formName" className="mb-3">
                 <Form.Label column sm={3}>
-                  Gender:
+                  Your Name:
                 </Form.Label>
                 <Col sm={9}>
-                  <Form.Select required>
-                    <option value="">Select Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                  </Form.Select>
+                  <Form.Control
+                    type="text"
+                    placeholder="Enter your name"
+                    required
+                  />
                 </Col>
               </Form.Group>
 
@@ -162,24 +119,6 @@ export const DarulIftaPage = () => {
                   <Form.Control
                     type="text"
                     placeholder="Enter your nationality"
-                    required
-                  />
-                </Col>
-              </Form.Group>
-
-              {/* Contact Number Field */}
-              <Form.Group
-                as={Row}
-                controlId="formContactNumber"
-                className="mb-3"
-              >
-                <Form.Label column sm={3}>
-                  Contact Number:
-                </Form.Label>
-                <Col sm={9}>
-                  <Form.Control
-                    type="tel"
-                    placeholder="+Country Code"
                     required
                   />
                 </Col>
@@ -248,13 +187,11 @@ export const DarulIftaPage = () => {
               {/* Submit Button */}
               <Row className="mb-3">
                 <Col sm={{ span: 9, offset: 3 }}>
-                  <Button variant="primary" type="submit">
-                    Submit
-                  </Button>
+                  <SubmitBtn type="submit">Submit</SubmitBtn>
                 </Col>
               </Row>
             </Form>
-          </div>
+          </FormContainer>
         </CourseDiscription>
       </Container>
     </Wrapper>
@@ -394,5 +331,49 @@ const CourseDiscription = styled.div`
       line-height: 30px;
     }
   }
+  }
+`;
+
+const SubmitBtn = styled.button`
+  padding: 6px 24px;
+  margin: 24px 0px;
+  border: 1px solid ${(props) => props.theme.colors.themeColor};
+  color: ${(props) => props.theme.colors.themeColor};
+  background-color: #ffffff;
+  border-radius: 8px;
+  transition: all ease-in 0.4s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.themeColor};
+    color: #fff;
+  }
+`;
+
+const FormContainer = styled.div`
+  padding: 7px;
+
+  input,
+  textarea,
+  select:focus {
+    box-shadow: none !important;
+    border: 1px solid ${(props) => props.theme.colors.themeColor} !important;
+  }
+
+  ${mq("sm")} {
+    max-width: 950px;
+    width: 100%;
+    margin: 20px auto;
+    padding: 35px;
+    border: 2px solid ${(props) => props.theme.colors.themeColor};
+    border-radius: 4px;
+  }
+
+  ${mq("md")} {
+    max-width: 950px;
+    width: 100%;
+    margin: 40px auto;
+    padding: 60px;
+    border: 2px solid ${(props) => props.theme.colors.themeColor};
+    border-radius: 4px;
   }
 `;
