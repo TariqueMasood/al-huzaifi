@@ -14,8 +14,13 @@ const Footer = () => {
           <Col className="mb-4" lg={4} md={6} xs={12}>
             <FooterTitle>AL-Huzaifi</FooterTitle>
             <Tagline>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit varius
-              congue Morb
+              an Online Islamic Education hub, where knowledge and faith
+              converge in a seamless learning exprience. This academy is a
+              pioneering institution, dedicated to offer a comprehensive
+              curriculum......
+              <ReadMore>
+                <a href="/why-choose-us">Read More</a>
+              </ReadMore>
             </Tagline>
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
@@ -32,7 +37,7 @@ const Footer = () => {
                 <Link to="/#">Home</Link>
               </List>
               <List>
-                <Link to="/#">About Us</Link>
+                <Link to="/#">About</Link>
               </List>
               <List>
                 <Link to="/#">Courses</Link>
@@ -132,6 +137,20 @@ const ContactIcon = styled.div`
   svg {
     font-size: 24px;
     margin-right: 18px;
+  }
+`;
+
+const ReadMore = styled.span`
+  background-color: #fff;
+  font-size: 12px;
+  padding: 3px 7px;
+  border-radius: 6px;
+  color: ${(props) => props.theme.colors.themeColor};
+  transition: ease-in 0.4s;
+
+  &:hover {
+    background-color: ${(props) => props.theme.colors.themeColor};
+    color: #fff;
   }
 `;
 
