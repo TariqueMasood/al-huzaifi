@@ -351,11 +351,17 @@ const SubmitBtn = styled.button`
 const FormContainer = styled.div`
   padding: 7px;
 
-  input,
-  textarea,
-  select:focus {
-    box-shadow: none !important;
-    border: 1px solid ${(props) => props.theme.colors.themeColor} !important;
+  // input,
+  // textarea,
+  // select:focus {
+  //   box-shadow: none !important;
+  //   border: 1px solid ${(props) => props.theme.colors.themeColor} !important;
+  // }
+
+  .form-control:focus {
+    // box-shadow: 0 0 0 0.25rem rgba(206, 125, 0, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(250, 190, 96, 0.25);
+    border: 1px solid #dabf95;
   }
 
   ${mq("sm")} {

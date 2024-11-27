@@ -34,22 +34,25 @@ const Footer = () => {
             <FooterTitle>Useful Links</FooterTitle>
             <UlList>
               <List>
-                <Link to="/#">Home</Link>
+                <Link to="/">Home</Link>
               </List>
               <List>
-                <Link to="/#">About</Link>
+                <Link to="/why-choose-us">About</Link>
               </List>
               <List>
-                <Link to="/#">Courses</Link>
+                <Link to="/registration">Registration</Link>
               </List>
               <List>
-                <Link to="/#">Categories</Link>
+                <Link to="/tution-fee">Tution Fee</Link>
               </List>
               <List>
-                <Link to="/#">Pricing</Link>
+                <Link to="/scholarship-program">Scholarship</Link>
               </List>
               <List>
-                <Link to="/#">Contact</Link>
+                <Link to="/acadmic-calendar">Acadmic Calendar</Link>
+              </List>
+              <List>
+                <Link to="/darul-ifta">Ask Fatwa</Link>
               </List>
             </UlList>
           </Col>
@@ -61,7 +64,7 @@ const Footer = () => {
             </ContactIcon>
             <ContactIcon>
               <IoCallOutline />
-              708-210-9101
+              +91 9876543210
             </ContactIcon>
             <ContactIcon>
               <BsEnvelope />
