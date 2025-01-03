@@ -1,5 +1,5 @@
 import React from "react";
-import { Form, Container, Row, Col } from "react-bootstrap";
+import { Container, Form, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 
@@ -203,8 +203,8 @@ const countryOptions = [
 
 const RegistrationForm: React.FC = () => {
   return (
-    <Container>
-      <Wrapper>
+    <Wrapper>
+      <Container>
         <Row>
           <Col lg={12} md={6}>
             <FormHeading>Registeration</FormHeading>
@@ -237,40 +237,45 @@ const RegistrationForm: React.FC = () => {
                   />
                 </Form.Group>
               </FormName>
-              <Form.Group controlId="gender">
-                <Form.Label>Gender</Form.Label>
-                <Form.Control as="select" name="gender">
-                  <option value="">Choose...</option>
-                  <option value="male">Male</option>
-                  <option value="female">Female</option>
-                  <option value="other">Other</option>
-                </Form.Control>
-              </Form.Group>
-
-              <Form.Group controlId="dateOfBirth">
-                <Form.Label>Date of Birth</Form.Label>
-                <Form.Control type="date" name="dateOfBirth" />
-              </Form.Group>
-
-              <Form.Group controlId="age">
-                <Form.Label>Age</Form.Label>
-                <Form.Control type="number" name="age" />
-              </Form.Group>
-
-              <Form.Group controlId="country">
-                <Form.Label>Country</Form.Label>
-                <Form.Control as="select" name="country">
-                  <option value="">Choose...</option>
-                  {countryOptions.map((country, index) => (
-                    <option key={index} value={country}>
-                      {country}
-                    </option>
-                  ))}
-                </Form.Control>
-              </Form.Group>
+              <FormAgeGender>
+                <Form.Group style={{ width: "100%" }} controlId="age">
+                  <Form.Label>Age</Form.Label>
+                  <Form.Control type="number" name="age" />
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Gender</Form.Label>
+                  <Form.Control as="select" name="gender">
+                    <option value="">Choose...</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                  </Form.Control>
+                </Form.Group>
+              </FormAgeGender>
+              <CountryEmail>
+                <Form.Group style={{ width: "100%" }} controlId="country">
+                  <Form.Label>Country</Form.Label>
+                  <Form.Control as="select" name="country">
+                    <option value="">Choose...</option>
+                    {countryOptions.map((country, index) => (
+                      <option key={index} value={country}>
+                        {country}
+                      </option>
+                    ))}
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }} controlId="email">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                  />
+                </Form.Group>
+              </CountryEmail>
 
               <Form.Group controlId="phone">
-                <Form.Label>Phone</Form.Label>
+                <Form.Label>WhatsApp Number</Form.Label>
                 <Form.Control
                   id="phoneInput"
                   type="tel"
@@ -279,35 +284,110 @@ const RegistrationForm: React.FC = () => {
                 />
               </Form.Group>
 
-              <Form.Group controlId="email">
-                <Form.Label>Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  name="email"
-                  placeholder="Email Address"
-                />
-              </Form.Group>
+              <Language>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Religion</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Choose Religion...</option>
+                    <option value="male">Islam</option>
+                    <option value="female">Christian</option>
+                    <option value="female">Other</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Native Language</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Native Language...</option>
+                    <option value="male">Arabic</option>
+                    <option value="female">Urdu</option>
+                    <option value="female">English</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Known Language</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Known Language...</option>
+                    <option value="male">Arabic</option>
+                    <option value="female">Urdu</option>
+                    <option value="female">English</option>
+                  </Form.Control>
+                </Form.Group>
+              </Language>
 
               <AddressLine>
                 <Form.Group style={{ width: "100%" }} controlId="address1">
-                  <Form.Label>Address Line 1</Form.Label>
+                  <Form.Label>Guardian Name</Form.Label>
                   <Form.Control
                     type="text"
                     name="address1"
-                    placeholder="Address Line 1"
+                    placeholder="Guardian Name..."
                   />
                 </Form.Group>
                 <Form.Group style={{ width: "100%" }} controlId="address2">
-                  <Form.Label>Address Line 2</Form.Label>
+                  <Form.Label>Relationship with Student</Form.Label>
                   <Form.Control
                     type="text"
                     name="address2"
-                    placeholder="Address Line 2"
+                    placeholder="Relationship..."
                   />
                 </Form.Group>
               </AddressLine>
 
-              <CityState>
+              <ChooseFaculty>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Choose Faculty</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Choose Faculty...</option>
+                    <option value="male">Lorem ipsum, dolor</option>
+                    <option value="female">consectetur adip</option>
+                    <option value="female">Lorem ipsum dolor si</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Choose Course</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Choose Course...</option>
+                    <option value="male">Noorani Qaedah Course</option>
+                    <option value="female">Quran Recitation Course</option>
+                    <option value="other">Quran Memorization Course</option>
+                    <option value="other">Tajweed Course</option>
+                    <option value="other">Seven Qiraats Course</option>
+                    <option value="other">Quran Ijazah Program</option>
+                    <option value="other">Quran's Translation Course</option>
+                    <option value="other">Tafseer Course</option>
+                    <option value="other">Deeniyat For Kids</option>
+                    <option value="other">Deeniyat For Men</option>
+                    <option value="other">Deeniyat For Women</option>
+                    <option value="other">Alimiyat (Dars-e-nizami)</option>
+                    <option value="other">Alimiyat (Modern Curriculum)</option>
+                    <option value="other">Fazilat in Quranic Science</option>
+                    <option value="other">Fazlital in Hadith Science</option>
+                    <option value="other">
+                      Fazilat in Islamic Jurisprudence
+                    </option>
+                    <option value="other">Fazilat in Theology</option>
+                    <option value="other">Fazilat in Islamic Finance</option>
+                    <option value="other">Fazilat in Arabic Language</option>
+                    <option value="other">Foundation Arabic Course</option>
+                    <option value="other">Arabic Speaking Course</option>
+                    <option value="other">Quranic Arabic Course</option>
+                    <option value="other">Classical Arabic Course</option>
+                    <option value="other">Nah & Sarf Course</option>
+                    <option value="other">Balaghat Course</option>
+                    <option value="other">Arooz & Quafiyah Course</option>
+                    <option value="other">Ibaadat Course</option>
+                    <option value="other">Zakat Course</option>
+                    <option value="other">Ramazan Special Course</option>
+                    <option value="other">Hajj & Umrah Course</option>
+                    <option value="other">Seerat Course</option>
+                    <option value="other">Meeras Course</option>
+                    <option value="other">Imamat Course</option>
+                    <option value="other">Other</option>
+                  </Form.Control>
+                </Form.Group>
+              </ChooseFaculty>
+
+              {/* <CityState>
                 <Form.Group style={{ width: "100%" }} controlId="city">
                   <Form.Label>City</Form.Label>
                   <Form.Control type="text" name="city" placeholder="City" />
@@ -317,9 +397,9 @@ const RegistrationForm: React.FC = () => {
                   <Form.Label>State</Form.Label>
                   <Form.Control type="text" name="state" placeholder="State" />
                 </Form.Group>
-              </CityState>
+              </CityState> */}
 
-              <ZipCode>
+              {/* <ZipCode>
                 <Form.Group style={{ width: "100%" }} controlId="zipCode">
                   <Form.Label>Zip Code</Form.Label>
                   <Form.Control type="text" name="zipCode" placeholder="Zip" />
@@ -336,50 +416,8 @@ const RegistrationForm: React.FC = () => {
                     ))}
                   </Form.Control>
                 </Form.Group>
-              </ZipCode>
+              </ZipCode> */}
 
-              <Form.Group controlId="gender">
-                <Form.Label>Course</Form.Label>
-                <Form.Control as="select" name="course">
-                  <option value="">Choose Course...</option>
-                  <option value="male">Noorani Qaedah Course</option>
-                  <option value="female">Quran Recitation Course</option>
-                  <option value="other">Quran Memorization Course</option>
-                  <option value="other">Tajweed Course</option>
-                  <option value="other">Seven Qiraats Course</option>
-                  <option value="other">Quran Ijazah Program</option>
-                  <option value="other">Quran’s Translation Course</option>
-                  <option value="other">Tafseer Course</option>
-                  <option value="other">Deeniyat For Kids</option>
-                  <option value="other">Deeniyat For Men</option>
-                  <option value="other">Deeniyat For Women</option>
-                  <option value="other">Alimiyat (Dars-e-nizami)</option>
-                  <option value="other">Alimiyat (Modern Curriculum)</option>
-                  <option value="other">Fazilat in Quranic Science</option>
-                  <option value="other">Fazlital in Hadith Science</option>
-                  <option value="other">
-                    Fazilat in Islamic Jurisprudence
-                  </option>
-                  <option value="other">Fazilat in Theology</option>
-                  <option value="other">Fazilat in Islamic Finance</option>
-                  <option value="other">Fazilat in Arabic Language</option>
-                  <option value="other">Foundation Arabic Course</option>
-                  <option value="other">Arabic Speaking Course</option>
-                  <option value="other">Quranic Arabic Course</option>
-                  <option value="other">Classical Arabic Course</option>
-                  <option value="other">Nah & Sarf Course</option>
-                  <option value="other">Balaghat Course</option>
-                  <option value="other">Arooz & Quafiyah Course</option>
-                  <option value="other">Ibaadat Course</option>
-                  <option value="other">Zakat Course</option>
-                  <option value="other">Ramazan Special Course</option>
-                  <option value="other">Hajj & Umrah Course</option>
-                  <option value="other">Seerat Course</option>
-                  <option value="other">Meeras Course</option>
-                  <option value="other">Imamat Course</option>
-                  <option value="other">Other</option>
-                </Form.Control>
-              </Form.Group>
               <RadioBtn>
                 <p>Preferred Language:</p>
                 <input
@@ -407,14 +445,14 @@ const RegistrationForm: React.FC = () => {
                 <label htmlFor="arabic">Arabic</label>
               </RadioBtn>
 
-              <TextAreaContainer>
+              {/* <TextAreaContainer>
                 <p>Previous Islamic Education</p>
                 <textarea placeholder="Briefly describe your islamic education background..."></textarea>
                 <p>Islamic Institutes Attended</p>
                 <textarea placeholder="Briefly describe your islamic education background..."></textarea>
-              </TextAreaContainer>
+              </TextAreaContainer> */}
 
-              <Availability>
+              {/* <Availability>
                 <p>Your availability</p>
                 <input type="checkbox" id="weekDayM" name="weekDayM" />
                 <label htmlFor="weekDayM">Monday</label>
@@ -436,15 +474,15 @@ const RegistrationForm: React.FC = () => {
                 <br />
                 <input type="checkbox" id="weekEnd" name="weekEnd" />
                 <label htmlFor="weekEnd">Sunday</label>
-              </Availability>
-              <Acknowledgment>
+              </Availability> */}
+              {/* <Acknowledgment>
                 <p>Acknowledgment & Declaration</p>
                 <input type="checkbox" id="declaration" name="declaration" />
                 <label htmlFor="declaration">
                   I hereby declare, and confirm that I will abide by the
                   policies of the Shah Maseehullah Academy.
                 </label>
-              </Acknowledgment>
+              </Acknowledgment> */}
               <Security>
                 <p>Background & Security Check</p>
                 <input
@@ -509,15 +547,18 @@ const RegistrationForm: React.FC = () => {
             </FormWrapper>
           </Col>
         </Row>
-      </Wrapper>
-    </Container>
+      </Container>
+    </Wrapper>
   );
 };
 
 export default RegistrationForm;
 
 const Wrapper = styled.div`
+  background-color: #E3E3E3;
   padding: 30px 0px;
+};
+  
 
   ${mq("md")} {
     padding: 60px 0px;
@@ -560,6 +601,30 @@ const FormName = styled.div`
   }
 `;
 
+const FormAgeGender = styled.div`
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+`;
+
+const CountryEmail = styled.div`
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+`;
+
+const Language = styled.div`
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+`;
+
 const AddressLine = styled.div`
   ${mq("md")} {
     display: flex;
@@ -568,7 +633,7 @@ const AddressLine = styled.div`
   }
 `;
 
-const CityState = styled.div`
+const ChooseFaculty = styled.div`
   ${mq("md")} {
     display: flex;
     justify-content: space-between;
@@ -576,13 +641,21 @@ const CityState = styled.div`
   }
 `;
 
-const ZipCode = styled.div`
-  ${mq("md")} {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-  }
-`;
+// const CityState = styled.div`
+//   ${mq("md")} {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 20px;
+//   }
+// `;
+
+// const ZipCode = styled.div`
+//   ${mq("md")} {
+//     display: flex;
+//     justify-content: space-between;
+//     gap: 20px;
+//   }
+// `;
 
 const RadioBtn = styled.div`
   p {
@@ -596,49 +669,49 @@ const RadioBtn = styled.div`
   }
 `;
 
-const TextAreaContainer = styled.div`
-  textarea {
-    max-width: 450px;
-    width: 100%;
-    height: 90px;
-    padding-left: 7px;
-  }
+// const TextAreaContainer = styled.div`
+//   textarea {
+//     max-width: 450px;
+//     width: 100%;
+//     height: 90px;
+//     padding-left: 7px;
+//   }
 
-  p {
-    margin: 16px 0px;
-    font-weight: 500;
-  }
-`;
+//   p {
+//     margin: 16px 0px;
+//     font-weight: 500;
+//   }
+// `;
 
-const Availability = styled.div`
-  p {
-    margin-top: 16px;
-  }
+// const Availability = styled.div`
+//   p {
+//     margin-top: 16px;
+//   }
 
-  label {
-    margin-top: 12px;
-  }
+//   label {
+//     margin-top: 12px;
+//   }
 
-  input {
-    margin-right: 7px;
-  }
-`;
+//   input {
+//     margin-right: 7px;
+//   }
+// `;
 
-const Acknowledgment = styled.div`
-  margin: 24px 0px;
+// const Acknowledgment = styled.div`
+//   margin: 24px 0px;
 
-  p {
-    margin-bottom: 7px;
-  }
+//   p {
+//     margin-bottom: 7px;
+//   }
 
-  input {
-    margin-right: 7px;
-  }
+//   input {
+//     margin-right: 7px;
+//   }
 
-  label {
-    display: inline;
-  }
-`;
+//   label {
+//     display: inline;
+//   }
+// `;
 
 const Security = styled.div`
   input {
