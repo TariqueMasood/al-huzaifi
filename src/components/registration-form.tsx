@@ -289,9 +289,8 @@ const RegistrationForm: React.FC = () => {
                   <Form.Label>Religion</Form.Label>
                   <Form.Control as="select" name="course">
                     <option value="">Choose Religion...</option>
-                    <option value="male">Islam</option>
-                    <option value="female">Christian</option>
-                    <option value="female">Other</option>
+                    <option value="male">Muslim</option>
+                    <option value="female">Non-Muslim</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group style={{ width: "100%" }} controlId="gender">
@@ -338,9 +337,12 @@ const RegistrationForm: React.FC = () => {
                   <Form.Label>Choose Faculty</Form.Label>
                   <Form.Control as="select" name="course">
                     <option value="">Choose Faculty...</option>
-                    <option value="male">Lorem ipsum, dolor</option>
-                    <option value="female">consectetur adip</option>
-                    <option value="female">Lorem ipsum dolor si</option>
+                    <option value="male">Faculty of Quran</option>
+                    <option value="female">Faculty of Deeniyat</option>
+                    <option value="female">Faculty of Alimiyat</option>
+                    <option value="female">Faculty of Fazilat</option>
+                    <option value="female">Faculty of Language</option>
+                    <option value="female">Short Courses</option>
                   </Form.Control>
                 </Form.Group>
                 <Form.Group style={{ width: "100%" }} controlId="gender">
@@ -387,6 +389,95 @@ const RegistrationForm: React.FC = () => {
                 </Form.Group>
               </ChooseFaculty>
 
+              <Availability>
+                <Form.Group style={{ width: "100%" }} controlId="gender">
+                  <Form.Label>Availability</Form.Label>
+                  <Form.Control as="select" name="course">
+                    <option value="">Days...</option>
+                    <option value="male">Weekdays</option>
+                    <option value="female">Weekend</option>
+                  </Form.Control>
+                </Form.Group>
+                <Form.Group style={{ width: "100%" }}>
+                  <div style={{ paddingTop: "20px" }}>
+                    <p style={{ textAlign: "center" }}>Timing:</p>
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-around",
+                      }}
+                    >
+                      <div>
+                        <input
+                          type="radio"
+                          id="time1"
+                          name="timig"
+                          value="1:00 to 13:00"
+                        ></input>
+                        <label htmlFor="time1">1:00 to 13:00</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time2"
+                          name="timig"
+                          value="1:30 to 13:30"
+                        ></input>
+                        <label htmlFor="time2">1:30 to 13:30</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time3"
+                          name="timig"
+                          value="2:00 to 14:00"
+                        ></input>
+                        <label htmlFor="time3">2:00 to 14:00</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time4"
+                          name="timig"
+                          value="2:00 to 14:00"
+                        ></input>
+                        <label htmlFor="time4">2:30 to 14:30</label>
+                      </div>
+                      <div>
+                        <input
+                          type="radio"
+                          id="time5"
+                          name="timig"
+                          value="3:00 to 15:00"
+                        ></input>
+                        <label htmlFor="time5">3:00 to 15:00</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time6"
+                          name="timig"
+                          value="3:30 to 15:30"
+                        ></input>
+                        <label htmlFor="time6">3:30 to 15:30</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time7"
+                          name="timig"
+                          value="4:00 to 16:00"
+                        ></input>
+                        <label htmlFor="time7">4:00 to 16:00</label>
+                        <br />
+                        <input
+                          type="radio"
+                          id="time8"
+                          name="timig"
+                          value="4:30 to 16:30"
+                        ></input>
+                        <label htmlFor="time8">4:30 to 16:30</label>
+                      </div>
+                    </div>
+                  </div>
+                </Form.Group>
+              </Availability>
+
               {/* <CityState>
                 <Form.Group style={{ width: "100%" }} controlId="city">
                   <Form.Label>City</Form.Label>
@@ -418,7 +509,7 @@ const RegistrationForm: React.FC = () => {
                 </Form.Group>
               </ZipCode> */}
 
-              <RadioBtn>
+              {/* <RadioBtn>
                 <p>Preferred Language:</p>
                 <input
                   type="radio"
@@ -443,7 +534,7 @@ const RegistrationForm: React.FC = () => {
                   value="EnUrduglish"
                 ></input>
                 <label htmlFor="arabic">Arabic</label>
-              </RadioBtn>
+              </RadioBtn> */}
 
               {/* <TextAreaContainer>
                 <p>Previous Islamic Education</p>
@@ -483,7 +574,7 @@ const RegistrationForm: React.FC = () => {
                   policies of the Shah Maseehullah Academy.
                 </label>
               </Acknowledgment> */}
-              <Security>
+              {/* <Security>
                 <p>Background & Security Check</p>
                 <input
                   type="checkbox"
@@ -542,7 +633,7 @@ const RegistrationForm: React.FC = () => {
                   Upon submitting my application, I acknowledge that I have read
                   and understood the above terms and obligations.
                 </label>
-              </Security>
+              </Security> */}
               <Submit type="submit">Register</Submit>
             </FormWrapper>
           </Col>
@@ -641,6 +732,14 @@ const ChooseFaculty = styled.div`
   }
 `;
 
+const Availability = styled.div`
+  ${mq("md")} {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+`;
+
 // const CityState = styled.div`
 //   ${mq("md")} {
 //     display: flex;
@@ -657,17 +756,17 @@ const ChooseFaculty = styled.div`
 //   }
 // `;
 
-const RadioBtn = styled.div`
-  p {
-    margin-top: 24px;
-    font-weight: 500;
-  }
+// const RadioBtn = styled.div`
+//   p {
+//     margin-top: 24px;
+//     font-weight: 500;
+//   }
 
-  label {
-    margin-top: 9px;
-    margin-left: 7px;
-  }
-`;
+//   label {
+//     margin-top: 9px;
+//     margin-left: 7px;
+//   }
+// `;
 
 // const TextAreaContainer = styled.div`
 //   textarea {
@@ -713,17 +812,17 @@ const RadioBtn = styled.div`
 //   }
 // `;
 
-const Security = styled.div`
-  input {
-    margin-top: 12px;
-    margin-right: 7px;
-  }
+// const Security = styled.div`
+//   input {
+//     margin-top: 12px;
+//     margin-right: 7px;
+//   }
 
-  label {
-    margin-top: 12px;
-    display: inline;
-  }
-`;
+//   label {
+//     margin-top: 12px;
+//     display: inline;
+//   }
+// `;
 
 const Submit = styled.button`
   padding: 6px 24px;
