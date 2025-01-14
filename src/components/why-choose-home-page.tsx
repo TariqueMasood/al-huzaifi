@@ -8,6 +8,7 @@ import { TfiWrite } from "react-icons/tfi";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { BsCheck2All } from "react-icons/bs";
+import { PiStudent } from "react-icons/pi";
 
 export const WhychooseHomePage = () => {
   return (
@@ -45,6 +46,10 @@ export const WhychooseHomePage = () => {
             <ContentWrapper>
               <TfiWrite />
               <span>affordable tution and inclusive community</span>
+            </ContentWrapper>
+            <ContentWrapper>
+              <PiStudent />
+              <span>Personalized Learning Paths for Each Student</span>
             </ContentWrapper>
           </div>
         </WrapDiv>
