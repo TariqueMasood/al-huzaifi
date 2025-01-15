@@ -9,6 +9,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import styled from "styled-components";
+import { mq } from "../styles/breakpoints";
 
 export const TopHeader = () => {
   return (
@@ -33,17 +34,13 @@ export const TopHeader = () => {
             <LoginBtn
               style={{ display: "flex", gap: "5px", alignItems: "center" }}
             >
-              <span>
-                <FaRegUser />
-              </span>
+              <FaRegUser />
               <div>Login</div>
             </LoginBtn>
             <RegBtn
               style={{ display: "flex", gap: "5px", alignItems: "center" }}
             >
-              <span>
-                <FiUserPlus />
-              </span>
+              <FiUserPlus />
               <div>Register</div>
             </RegBtn>
           </LoginRegister>
@@ -69,13 +66,31 @@ const LoginRegister = styled.div`
   display: flex;
   align-items: center;
   gap: 30px;
+  font-size: 12px;
+
+  ${mq("md")} {
+    font-size: 16px;
+  }
 `;
 
 const SocialIcon = styled.div`
   display: flex;
   align-items: center;
-  gap: 24px;
-  font-size: 24px;
+  gap: 20px;
+  font-size: 20x;
+
+  ${mq("md")} {
+    gap: 24px;
+    font-size: 24px;
+  }
+
+  a {
+    transition: all ease-in-out 0.4s;
+  }
+
+  a:hover {
+    color: #cdad7e;
+  }
 `;
 
 const LoginBtn = styled.button`

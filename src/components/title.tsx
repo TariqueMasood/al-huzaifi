@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mq } from "../styles/breakpoints";
 
 type TitleProps = {
   subTitle?: string;
@@ -24,8 +25,16 @@ const TitleWrapper = styled.div`
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  padding: 60px 0px;
+  padding: 30px 0px;
   text-align: center;
+
+  ${mq("sm")} {
+    padding: 40px 0px;
+  }
+
+  ${mq("md")} {
+    padding: 60px 0px;
+  }
 `;
 
 const Heading = styled.h1``;

@@ -29,6 +29,7 @@ export const OurDetail = () => {
 const Wrapper = styled.div`
   // position: relative;
   padding: 30px 0px;
+  border-bottom: 2px solid #f4f1ec;
 
   ${mq("md")} {
     padding: 60px 0px;
@@ -50,7 +51,7 @@ const ContentWrapper = styled.div`
   h2 {
     color: #cdad7e;
     font-style: italic;
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 0px;
     margin-bottom: 0px;
     font-weight: 500;

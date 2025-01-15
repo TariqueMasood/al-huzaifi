@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { CiClock2, CiStickyNote, CiUser } from "react-icons/ci";
+import { mq } from "../styles/breakpoints";
 
 type CardProps = {
   cardImage: string;
@@ -121,6 +122,11 @@ const CardDetail = styled.span`
   gap: 7px;
   margin: 18px 0px;
   color: #696969;
+  font-size: 12px;
+
+  ${mq("md")} {
+    font-size: 16px;
+  }
 `;
 
 const UserIcon = styled.span`

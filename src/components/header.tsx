@@ -10,6 +10,7 @@ import { useState } from "react";
 import logo from "../images/logo-2.png";
 import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 import { TopHeader } from "./top-header";
+import { mq } from "../styles/breakpoints";
 
 const Header: React.FC = () => {
   // const { toggleTheme, theme } = useTheme();
@@ -25,7 +26,9 @@ const Header: React.FC = () => {
 
   return (
     <div>
-      <TopHeader />
+      <TopHeaderContainer>
+        <TopHeader />
+      </TopHeaderContainer>
       <NavbarWrapper expand="md" sticky="top">
         <Container>
           <Navbar.Brand as={NavLink} to="/">
@@ -328,6 +331,18 @@ const Header: React.FC = () => {
 };
 
 export default Header;
+
+const TopHeaderContainer = styled.div`
+  display: none;
+
+  ${mq("sm")} {
+    display: block;
+  }
+
+  ${mq("md")} {
+    display: block;
+  }
+`;
 
 const NavbarWrapper = styled(Navbar)`
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.05);

@@ -59,16 +59,14 @@ export const WhychooseHomePage = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #f4f1ec;
+  // background-color: #f4f1ec;
   padding: 30px 0px;
 
   ${mq("sm")} {
-    background-color: #f4f1ec;
     padding: 30px 0px;
   }
 
   ${mq("md")} {
-    background-color: #f4f1ec;
     padding: 40px 0px;
   }
 `;
