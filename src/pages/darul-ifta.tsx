@@ -360,8 +360,8 @@ const FormContainer = styled.div`
 
   .form-control:focus {
     // box-shadow: 0 0 0 0.25rem rgba(206, 125, 0, 0.25);
-    box-shadow: 0 0 0 0.25rem rgba(250, 190, 96, 0.25);
-    border: 1px solid #dabf95;
+    box-shadow: 0 0 0 0.25rem rgba(177, 220, 231, 0.25);
+    border: 1px solid #004353;
   }
 
   ${mq("sm")} {

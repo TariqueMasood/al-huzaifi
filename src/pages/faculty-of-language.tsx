@@ -94,7 +94,7 @@ export const FacultyOfLanguagePage = () => {
           </ol>
           <SubTitle>English Programs:</SubTitle>
           <ol>
-            <List>Beginner English Courses</List>
+            <List>Elementary English Courses</List>
             <Content>
               - Designed for those with little to no prior knowledge of English,
               these courses focus on basic vocabulary, grammar, and simple
@@ -113,7 +113,7 @@ export const FacultyOfLanguagePage = () => {
               on advanced grammar structures, academic writing, and
               sophisticated vocabulary.
             </Content>
-            <List>English Pronunciation Course</List>
+            {/* <List>English Pronunciation Course</List>
             <Content>
               - Focuses on improving pronunciation, intonation, and clarity in
               spoken English.
@@ -122,11 +122,11 @@ export const FacultyOfLanguagePage = () => {
             <Content>
               - Emphasizes speaking and listening skills through interactive
               activities, discussions, and role-playing exercises.
-            </Content>
+            </Content> */}
           </ol>
           <SubTitle>Urdu Programs</SubTitle>
           <ol>
-            <List>Beginner Urdu Course:</List>
+            <List>Elementary Urdu Course:</List>
             <Content>
               {" "}
               - Designed for those with little to no prior knowledge of Urdu,

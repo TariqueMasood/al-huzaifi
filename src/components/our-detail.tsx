@@ -92,8 +92,8 @@ const ContentWrapper = styled.div`
 
 const LearnMore = styled.button`
   text-transform: capitalize;
-  background-color: #cdad7e;
-  border: 1px solid #cdad7e;
+  background-color: ${(props) => props.theme.colors.themeColor};
+  border: 1px solid ${(props) => props.theme.colors.themeColor};
   color: #fff;
   border-radius: 4px;
   letter-spacing: 1px;
@@ -105,7 +105,7 @@ const LearnMore = styled.button`
 
   &:hover {
     background: #fff;
-    color: #cdad7e;
+    color: ${(props) => props.theme.colors.themeColor};
   }
 
   ${mq("sm")} {
