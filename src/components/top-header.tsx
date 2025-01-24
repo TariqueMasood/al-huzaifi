@@ -51,7 +51,7 @@ export const TopHeader = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #004353;
+  background-color: ${(props) => props.theme.colors.themeColor};
   color: #f2f2f2;
   padding: 7px 0px;
 `;
@@ -89,7 +89,7 @@ const SocialIcon = styled.div`
   }
 
   a:hover {
-    color: #cdad7e;
+    color: rgb(133, 156, 162);
   }
 `;
 
