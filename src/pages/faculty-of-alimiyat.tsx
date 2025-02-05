@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { Container } from "react-bootstrap";
 import BgImage from "../../src/images/faculty-of-alimiyat.png";
+import { Link } from "react-router-dom";
 
 export const FacultyOfAlimiyatPage = () => {
   return (
@@ -11,7 +12,6 @@ export const FacultyOfAlimiyatPage = () => {
       </div>
       <Wrapper>
         <Container>
-          {/* <Title>Faculty of Alimiyat</Title> */}
           <SubTitle>Overview:</SubTitle>
           <Content>
             The Faculty of Alimiyat at <BoldText>Al-Huzaifi Academy</BoldText>{" "}
@@ -31,7 +31,9 @@ export const FacultyOfAlimiyatPage = () => {
 
           <Space />
           <ol>
-            <List>Alimiyat with Darse Nizami Curriculum</List>
+            <Link to="/dars-e-nizami">
+              <List>Alimiyat with Darse Nizami Curriculum</List>
+            </Link>
             <Content>
               - This traditional method follows the Darse Nizami curriculum,
               which has been the cornerstone of Islamic education in South Asia
@@ -43,7 +45,9 @@ export const FacultyOfAlimiyatPage = () => {
               emphasis on traditional scholarship, preparing students to become
               esteemed Ulama with a profound understanding of Islamic sciences.
             </Content>
-            <List> Alimiyat with Modern Curriculum</List>
+            <Link to="/modern-curriculum">
+              <List> Alimiyat with Modern Curriculum</List>
+            </Link>
             <Content>
               - This contemporary approach integrates modern educational
               methodologies with traditional Islamic studies and is structured

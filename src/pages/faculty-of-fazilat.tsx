@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { Container } from "react-bootstrap";
 import BgImage from "../../src/images/faculty-of-fazilat.png";
+import { Link } from "react-router-dom";
 
 export const FacultyOfFazilatPage = () => {
   return (
@@ -11,7 +12,6 @@ export const FacultyOfFazilatPage = () => {
       </div>
       <Wrapper>
         <Container>
-          {/* <Title>Faculty of Fazilat</Title> */}
           <SubTitle>Overview:</SubTitle>
           <Content>
             The Faculty of Fazilat at <BoldText>Al-Huzaifi Academy</BoldText>{" "}
@@ -35,7 +35,9 @@ export const FacultyOfFazilatPage = () => {
           <SubTitle>Areas of Specialization:</SubTitle>
           <Space />
           <ol>
-            <List>Fazilat in Quranic Science</List>
+            <Link to="/fazilat-in-tafsir">
+              <List>Fazilat in Quranic Science</List>
+            </Link>
             <Content>
               - This specialization focuses on advanced studies in Quranic
               exegesis (Tafseer), the science of the Quran, and the various
@@ -43,7 +45,9 @@ export const FacultyOfFazilatPage = () => {
               engage with classical and contemporary Tafseer works, gaining a
               deep understanding of the Quran's meanings and applications.
             </Content>
-            <List>Fazilat in Hadith Science</List>
+            <Link to="/fazilat-in-hadith">
+              <List>Fazilat in Hadith Science</List>
+            </Link>
             <Content>
               - Students specializing in Hadith Science will delve into the
               collection, authentication, and interpretation of Hadith. This
@@ -51,7 +55,9 @@ export const FacultyOfFazilatPage = () => {
               Hadith criticism, and the methodologies used by classical and
               modern scholars to evaluate and interpret Prophetic traditions.
             </Content>
-            <List>Fazilat in Islamic Jurisprudence</List>
+            <Link to="/fazilat-in-islamic">
+              <List>Fazilat in Islamic Jurisprudence</List>
+            </Link>
             <Content>
               - This specialization provides an in-depth study of Fiqh (Islamic
               jurisprudence) and Usul al-Fiqh (principles of jurisprudence).
@@ -60,7 +66,9 @@ export const FacultyOfFazilatPage = () => {
               Islamic law, equipping them to address modern legal challenges
               with an Islamic perspective.
             </Content>
-            <List>Fazilat in Theology</List>
+            <Link to="/fazilat-in-theology">
+              <List>Fazilat in Theology</List>
+            </Link>
             <Content>
               - This program focuses on advanced theological studies, covering
               the core beliefs of Islam, classical and modern theological
@@ -69,16 +77,19 @@ export const FacultyOfFazilatPage = () => {
               prominent theologians to gain a comprehensive understanding of
               Islamic creed (Aqidah).
             </Content>
-            <List>Fazilat in Islamic Finance</List>
+            <Link to="/fazilat-in-islamic-finance">
+              <List>Fazilat in Islamic Finance</List>
+            </Link>
             <Content>
-              {" "}
               - This specialization focuses on the principles and practices of
               Islamic finance and banking. Students will study Sharia-compliant
               financial instruments, Islamic economic theory, and contemporary
               issues in Islamic finance, preparing them for careers in the
               growing field of Islamic banking and finance.
             </Content>
-            <List>Fazilat in Arabic Language</List>
+            <Link to="/fazilat-in-arabic-language">
+              <List>Fazilat in Arabic Language</List>
+            </Link>
             <Content>
               {" "}
               - Specializing in the Arabic language, this program offers

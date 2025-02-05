@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { Container } from "react-bootstrap";
 import BgImage from "../../src/images/faculty-of-languages.png";
+import { Link } from "react-router-dom";
 
 export const FacultyOfLanguagePage = () => {
   return (
@@ -37,7 +38,9 @@ export const FacultyOfLanguagePage = () => {
           <SubTitle>Academic Programs</SubTitle>
           <SubTitle>Arabic Programs:</SubTitle>
           <ol>
-            <List>Foundation Arabic Course</List>
+            <Link to="/arabic-language-course">
+              <List>Foundation Arabic Course</List>
+            </Link>
             <Content>
               - This introductory course is designed for beginners with little
               or no prior knowledge of Arabic. It covers the basics of the
@@ -48,21 +51,27 @@ export const FacultyOfLanguagePage = () => {
               possess the necessary Arabic language skills to succeed in
               advanced Islamic studies.
             </Content>
-            <List>Arabic Speaking Course</List>
+            <Link to="/arabic-speaking-course">
+              <List>Arabic Speaking Course</List>
+            </Link>
             <Content>
               - Focused on developing conversational skills, this course
               emphasizes speaking and listening practice. Students will engage
               in practical exercises and dialogues to enhance their ability to
               communicate effectively in Arabic in everyday situations.
             </Content>
-            <List>Quranic Arabic Course</List>
+            <Link to="/quranic-arabic-course">
+              <List>Quranic Arabic Course</List>
+            </Link>
             <Content>
               - This course is tailored for those interested in understanding
               the language of the Quran. It covers Quranic vocabulary, grammar,
               and syntax, enabling students to comprehend and appreciate the
               linguistic beauty and depth of the Quranic text.
             </Content>
-            <List>Classical Arabic Course</List>
+            <Link to="/classical-arabic-course">
+              <List>Classical Arabic Course</List>
+            </Link>
             <Content>
               - Aimed at advanced learners, this course delves into classical
               Arabic texts, including historical, literary, and religious works.
@@ -70,21 +79,27 @@ export const FacultyOfLanguagePage = () => {
               of classical Arabic, gaining proficiency in reading and
               interpreting traditional texts.
             </Content>
-            <List>Nahw & Sarf Course</List>
+            <Link to="/arabic-grammar-course">
+              <List>Nahw & Sarf Course</List>
+            </Link>
             <Content>
               - This specialized course focuses on Arabic grammar (Nahw) and
               morphology (Sarf). Students will learn the rules and structures
               that govern Arabic sentence construction and word formation,
               essential for mastering the language at an advanced level.
             </Content>
-            <List>Balaghat Course</List>
+            <Link to="/arabic-blaghat-course">
+              <List>Balaghat Course</List>
+            </Link>
             <Content>
               - Covering the science of Arabic rhetoric, this course explores
               the principles of eloquence and effective communication in Arabic.
               Students will study various rhetorical devices and techniques used
               in classical and modern Arabic literature.
             </Content>
-            <List>Arooz & Qaafiyah Course</List>
+            <Link to="/arabic-arooz-qafiyah-course">
+              <List>Arooz & Qaafiyah Course</List>
+            </Link>
             <Content>
               - This course is dedicated to the study of Arabic prosody (Arooz)
               and rhyme (Qaafiyah). Students will learn the meters and patterns
@@ -94,19 +109,25 @@ export const FacultyOfLanguagePage = () => {
           </ol>
           <SubTitle>English Programs:</SubTitle>
           <ol>
-            <List>Elementary English Courses</List>
+            <Link to="/elementary-english-course">
+              <List>Elementary English Courses</List>
+            </Link>
             <Content>
               - Designed for those with little to no prior knowledge of English,
               these courses focus on basic vocabulary, grammar, and simple
               conversation skills.
             </Content>
-            <List>Intermediate English Course</List>
+            <Link to="/intermediate-english-course">
+              <List>Intermediate English Course</List>
+            </Link>
             <Content>
               - Suitable for want to improve fluency and accuracy in English
               language. These courses often include more complex grammar,
               vocabulary expansion, and practice in real-life scenarios.
             </Content>
-            <List>Advanced English Course</List>
+            <Link to="/advanced-english-course">
+              <List>Advanced English Course</List>
+            </Link>
             <Content>
               - Aimed at learners who already have a good command of English but
               want to refine their skills further. These courses typically focus
@@ -126,22 +147,26 @@ export const FacultyOfLanguagePage = () => {
           </ol>
           <SubTitle>Urdu Programs</SubTitle>
           <ol>
-            <List>Elementary Urdu Course:</List>
+            <Link to="/elementary-urdu-course">
+              <List>Elementary Urdu Course:</List>
+            </Link>
             <Content>
-              {" "}
               - Designed for those with little to no prior knowledge of Urdu,
               these courses focus on basic vocabulary, grammar, and simple
               conversation skills.
             </Content>
-            <List>Intermediate Urdu Course</List>
+            <Link to="/intermediate-urdu-course">
+              <List>Intermediate Urdu Course</List>
+            </Link>
             <Content>
-              {" "}
               - Suitable for learners who want to improve fluency and accuracy
               in Urdu language. These courses often include more complex
               grammar, vocabulary expansion, and practice in real-life
               scenarios.
             </Content>
-            <List>Advanced Urdu Course</List>
+            <Link to="/advanced-urdu-course">
+              <List>Advanced Urdu Course</List>
+            </Link>
             <Content>
               - Aimed at learners who already have a good command of Urdu but
               want to refine their skills further. These courses typically focus

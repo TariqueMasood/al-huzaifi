@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import BgImage from "../../src/images/faculty-of-quran.png";
+import { Link } from "react-router-dom";
 
 export const FacultyOfQuranPage = () => {
   return (
@@ -33,7 +34,7 @@ export const FacultyOfQuranPage = () => {
             that students not only learn to recite the Quran with correct
             pronunciation and Tajweed but also internalize its teachings and
             apply them in their daily lives. We believe that a profound
-            appreciation for the Quran’s teachings can transform individuals,
+            appreciation for the Quran's teachings can transform individuals,
             strengthen communities, and promote a peaceful society.
           </Content>
           <Space />
@@ -54,50 +55,66 @@ export const FacultyOfQuranPage = () => {
           <Space />
           <SubTitle>Academic Programs:</SubTitle>
           <ol>
-            <List>Noorani Qaedah Course</List>
+            <Link to="/noorani-qaedah">
+              <List>Noorani Qaedah Course</List>
+            </Link>
             <Content>
               - This foundational course introduces beginners to the Arabic
               alphabet, pronunciation rules, and basic reading skills, serving
               as the gateway to Quranic literacy.
             </Content>
-            <List>Quran Recitation Course</List>
+            <Link to="/recitation-course">
+              <List>Quran Recitation Course</List>
+            </Link>
             <Content>
               - Designed to improve fluency in reading the Quran, this course
               focuses on correct pronunciation, rhythm, and pacing, enabling
               students to recite with confidence and accuracy.
             </Content>
-            <List>Tajweed Course</List>
+            <Link to="/tajweed-course">
+              <List>Tajweed Course</List>
+            </Link>
             <Content>
               - This course delves into the rules of Tajweed, the art of Quranic
               recitation. Students will learn the intricate regulations
               governing pronunciation, ensuring they recite the Quran with the
               utmost precision and beauty.
             </Content>
-            <List>Quran Memorization Course</List>
+            <Link to="/memorization-course">
+              <List>Quran Memorization Course</List>
+            </Link>
             <Content>
               - Aimed at those aspiring to become Hafiz, this course provides
               structured memorization techniques and guidance to help students
               commit the entire Quran to memory.
             </Content>
-            <List>Seven Qiraats Course</List>
+            <Link to="/seven-qiraat">
+              <List>Seven Qiraats Course</List>
+            </Link>
             <Content>
               - This advanced course explores the seven different methods of
               Quranic recitation, offering students a rich understanding of the
               variations and nuances in recitation traditions.
             </Content>
-            <List>Quran Ijazah Course</List>
+            <Link to="/ijazah-program">
+              <List>Quran Ijazah Course</List>
+            </Link>
             <Content>
               - For those seeking certification in Quranic recitation, this
               course offers rigorous training and assessment to qualify for an
               Ijazah, an authoritative license to teach the Quran.
             </Content>
-            <List>Quran Translation Course</List>
+            <Link to="/translation-course">
+              <List>Quran Translation Course</List>
+            </Link>
             <Content>
               - This course focuses on translating the Quran from Arabic to Urdu
               and English, enabling students to grasp the meanings and convey
               them accurately in their native tongue.
             </Content>
-            <List>Tafseer Course</List>
+            <Link to="/tafseer-course">
+              <List>Tafseer Course</List>
+            </Link>
             <Content>
               - In this course, students engage in an in-depth study of Quranic
               exegesis, exploring the historical, linguistic, and contextual

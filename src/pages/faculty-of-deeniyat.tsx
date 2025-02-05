@@ -2,6 +2,7 @@ import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import BgImage from "../../src/images/faculty-of-deeniyat.png";
+import { Link } from "react-router-dom";
 
 export const FacultyOfDeeniyatPage = () => {
   return (
@@ -37,7 +38,9 @@ export const FacultyOfDeeniyatPage = () => {
           <Space />
           <SubTitle>Academic Programs:</SubTitle>
           <ol>
-            <List>Deeniyat for Kids</List>
+            <Link to="/deeniyat-for-kids">
+              <List>Deeniyat for Kids</List>
+            </Link>
             <Content>
               - This program is tailored for young learners, providing them with
               an engaging and interactive introduction to Islam. It covers basic
@@ -46,7 +49,9 @@ export const FacultyOfDeeniyatPage = () => {
               designed to be age-appropriate, making learning fun and memorable
               for kids.
             </Content>
-            <List>Deeniyat for Men</List>
+            <Link to="/deeniyat-for-men">
+              <List>Deeniyat for Men</List>
+            </Link>
             <Content>
               - Designed for adult male learners, this program offers
               comprehensive instruction in the basics of Islam. It includes
@@ -56,7 +61,9 @@ export const FacultyOfDeeniyatPage = () => {
               spiritual growth of men, enabling them to lead their lives
               according to Islamic teachings.
             </Content>
-            <List>Deeniyat for Women</List>
+            <Link to="/deeniyat-for-women">
+              <List>Deeniyat for Women</List>
+            </Link>
             <Content>
               - This program caters to adult female learners, providing them
               with a thorough grounding in Islamic knowledge. It covers Quranic
