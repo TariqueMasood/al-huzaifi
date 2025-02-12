@@ -1,18 +1,12 @@
 import styled from "styled-components";
-import { CiClock2, CiStickyNote, CiUser } from "react-icons/ci";
-import { mq } from "../styles/breakpoints";
 
 type CardProps = {
   cardImage: string;
   courseFee: string | number;
   cardTitle: string;
-  studentNumber: number;
   student: string;
-  notesNumber: number;
   notes: string;
   hour: string;
-  clock: string;
-  userImage: string;
   userName: string;
   designation: string;
 };
@@ -29,30 +23,17 @@ const PopularCourseCard = (props: CardProps) => {
           <CardHeading>{props.cardTitle}</CardHeading>
           <CardDetailWrapper>
             <CardDetail>
-              <UserIcon>
-                <CiUser />
-              </UserIcon>
-              <span>{props.studentNumber}</span>
               <span>{props.student}</span>
             </CardDetail>
             <CardDetail>
-              <NotesIcon>
-                <CiStickyNote />
-              </NotesIcon>
-              <span>{props.notesNumber}</span>
               <span>{props.notes}</span>
             </CardDetail>
             <CardDetail>
-              <ClockIcon>
-                <CiClock2 />
-              </ClockIcon>
-              <span>{props.clock}</span>
               <span>{props.hour}</span>
             </CardDetail>
           </CardDetailWrapper>
           <Author>
             <AuthorDeatil>
-              <UserImage src={props.userImage} alt="Image" />
               <span>
                 <NameLink href="#">{props.userName}</NameLink>
               </span>
@@ -103,7 +84,7 @@ const Image = styled.img`
 `;
 
 const CardContent = styled.div`
-  padding: 20px;
+  padding: 12px;
 `;
 
 const CardHeading = styled.h4`
@@ -120,25 +101,9 @@ const CardDetail = styled.span`
   display: flex;
   align-items: center;
   gap: 7px;
-  margin: 18px 0px;
+  padding: 18px 0px;
   color: #696969;
   font-size: 12px;
-
-  ${mq("md")} {
-    font-size: 16px;
-  }
-`;
-
-const UserIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
-`;
-
-const NotesIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
-`;
-
-const ClockIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
 `;
 
 const CardDetailWrapper = styled.div`
@@ -175,10 +140,4 @@ const DesignationLink = styled.a`
   text-transform: capitalize;
   text-decoration: none;
   font-weight: 500;
-`;
-
-const UserImage = styled.img`
-  width: 30px;
-  border-radius: 50%;
-  cursor: pointer;
 `;
