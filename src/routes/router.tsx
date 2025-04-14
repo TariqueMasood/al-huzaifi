@@ -1,62 +1,68 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./pages/layout";
-import Home from "./pages/home";
-import About from "./pages/about";
-import Registration from "./pages/registration";
-import Contact from "./pages/contact";
-import OurTeamPage from "./pages/our-team";
-import { OurMissionPage } from "./pages/our-mission";
-import { OurHistoryPage } from "./pages/our-history";
-import { FacultyOfQuranPage } from "./pages/faculty-of-quran";
-import { FacultyOfDeeniyatPage } from "./pages/faculty-of-deeniyat";
-import { FacultyOfAlimiyatPage } from "./pages/faculty-of-alimiyat";
-import { FacultyOfFazilatPage } from "./pages/faculty-of-fazilat";
-import { FacultyOfLanguagePage } from "./pages/faculty-of-language";
-import { NooraniQaedahPage } from "./pages/noorani-qaedah";
-import { RecitationCoursePage } from "./pages/recitation-course";
-import { MemorizationCoursePage } from "./pages/memorization-course";
-import { TajweedCoursePage } from "./pages/tajweed-course";
-import { SevenQiraatCoursePage } from "./pages/seven-qiraat";
-import { IjazahProgramPage } from "./pages/ijazah-program";
-import { TranslationCoursePage } from "./pages/translation-course";
-import { TafseerCoursePage } from "./pages/tafseer-course";
-import { DeeniyatForKidsPage } from "./pages/deeniyat-for-kids";
-import { DeeniyatForMenPage } from "./pages/deeniyat-for-men";
-import { DeeniyatForWomenPage } from "./pages/deeniyat-for-women";
-import { DarsEnizamiPage } from "./pages/dars-e-nizami";
-import { ModernCurriculumPage } from "./pages/modern-curriculum";
-import { ArabicLaguageCoursePage } from "./pages/arabic-language-course";
-import { ArabicSpeakingCoursePage } from "./pages/arabic-speaking-course";
-import { QuranicArabicCoursePage } from "./pages/quranic-arabic-course";
-import { ClassicalArabicCoursePage } from "./pages/classical-arabic-course";
-import { ArabicGrammarCoursePage } from "./pages/arabic-grammar-course";
-import { ArabicBlaghatCoursePage } from "./pages/arabic-blaghat-course";
-import { ArabicAroozQafiyahCoursePage } from "./pages/arabic-arooz-qafiyah-course";
-import { ElementaryEnglishCoursePage } from "./pages/elementary-english-course";
-import { IntermediateEnglishCoursePage } from "./pages/intermediate-english-course";
-import { AdvancedEnglishCoursePage } from "./pages/advanced-english-course";
-import { ElementaryUrduCoursePage } from "./pages/elementary-urdu-course";
-import { IntermediateUrduCoursePage } from "./pages/intermediate-urdu-course";
-import { AdvancedUrduCoursePage } from "./pages/advanced-urdu-course";
-import { IbadaatCoursePage } from "./pages/ibadaat-course";
-import { ZakatCoursePage } from "./pages/zakat-course";
-import { RamadanSpecialCoursePage } from "./pages/ramadan-special-course";
-import { HajjAndUmrahCoursePage } from "./pages/hajj-&-umrah-course";
-import { SeeratCoursePage } from "./pages/seerat-course";
-import { FazilatInTafsirPage } from "./pages/fazilat-in-tafsir";
-import { FazilatInHadithPage } from "./pages/fazilat-in-hadith";
-import { FazilatInIslamicPage } from "./pages/fazilat-in-islamic";
-import { FazilatInTheologyPage } from "./pages/fazilat-in-theology";
-import { FazilatInIslamicFinancePage } from "./pages/fazilat-in-islamic-finance";
-import { FazilatInArabicLanguagePage } from "./pages/fazilat-in-arabic-language";
-import { IftaCoursePage } from "./pages/ifta-course";
-import { WhyChooseUsPage } from "./pages/why-choose-us";
-import { DarulIftaPage } from "./pages/darul-ifta";
-import { ScholarshipProgramPage } from "./pages/scholarship-program";
-import { InheritanceCoursePage } from "./pages/inheritance-course";
-import { ImamatCoursePage } from "./pages/imamat-course";
-import { AcademicCalendarPage } from "./pages/academic-calendar";
-import { TuitionFeePage } from "./pages/tution-fee";
+import Layout from "../layouts/layout";
+import Home from "../pages/home";
+import About from "../pages/about";
+import Registration from "../pages/registration";
+import Contact from "../pages/contact";
+import OurTeamPage from "../pages/our-team";
+import { OurMissionPage } from "../pages/our-mission";
+import { OurHistoryPage } from "../pages/our-history";
+import { FacultyOfQuranPage } from "../pages/faculty-of-quran";
+import { FacultyOfDeeniyatPage } from "../pages/faculty-of-deeniyat";
+import { FacultyOfAlimiyatPage } from "../pages/faculty-of-alimiyat";
+import { FacultyOfFazilatPage } from "../pages/faculty-of-fazilat";
+import { FacultyOfLanguagePage } from "../pages/faculty-of-language";
+import { NooraniQaedahPage } from "../pages/noorani-qaedah";
+import { RecitationCoursePage } from "../pages/recitation-course";
+import { MemorizationCoursePage } from "../pages/memorization-course";
+import { TajweedCoursePage } from "../pages/tajweed-course";
+import { SevenQiraatCoursePage } from "../pages/seven-qiraat";
+import { IjazahProgramPage } from "../pages/ijazah-program";
+import { TranslationCoursePage } from "../pages/translation-course";
+import { TafseerCoursePage } from "../pages/tafseer-course";
+import { DeeniyatForKidsPage } from "../pages/deeniyat-for-kids";
+import { DeeniyatForMenPage } from "../pages/deeniyat-for-men";
+import { DeeniyatForWomenPage } from "../pages/deeniyat-for-women";
+import { DarsEnizamiPage } from "../pages/dars-e-nizami";
+import { ModernCurriculumPage } from "../pages/modern-curriculum";
+import { ArabicLaguageCoursePage } from "../pages/arabic-language-course";
+import { ArabicSpeakingCoursePage } from "../pages/arabic-speaking-course";
+import { QuranicArabicCoursePage } from "../pages/quranic-arabic-course";
+import { ClassicalArabicCoursePage } from "../pages/classical-arabic-course";
+import { ArabicGrammarCoursePage } from "../pages/arabic-grammar-course";
+import { ArabicBlaghatCoursePage } from "../pages/arabic-blaghat-course";
+import { ArabicAroozQafiyahCoursePage } from "../pages/arabic-arooz-qafiyah-course";
+import { ElementaryEnglishCoursePage } from "../pages/elementary-english-course";
+import { IntermediateEnglishCoursePage } from "../pages/intermediate-english-course";
+import { AdvancedEnglishCoursePage } from "../pages/advanced-english-course";
+import { ElementaryUrduCoursePage } from "../pages/elementary-urdu-course";
+import { IntermediateUrduCoursePage } from "../pages/intermediate-urdu-course";
+import { AdvancedUrduCoursePage } from "../pages/advanced-urdu-course";
+import { IbadaatCoursePage } from "../pages/ibadaat-course";
+import { ZakatCoursePage } from "../pages/zakat-course";
+import { RamadanSpecialCoursePage } from "../pages/ramadan-special-course";
+import { HajjAndUmrahCoursePage } from "../pages/hajj-&-umrah-course";
+import { SeeratCoursePage } from "../pages/seerat-course";
+import { FazilatInTafsirPage } from "../pages/fazilat-in-tafsir";
+import { FazilatInHadithPage } from "../pages/fazilat-in-hadith";
+import { FazilatInIslamicPage } from "../pages/fazilat-in-islamic";
+import { FazilatInTheologyPage } from "../pages/fazilat-in-theology";
+import { FazilatInIslamicFinancePage } from "../pages/fazilat-in-islamic-finance";
+import { FazilatInArabicLanguagePage } from "../pages/fazilat-in-arabic-language";
+import { IftaCoursePage } from "../pages/ifta-course";
+import { WhyChooseUsPage } from "../pages/why-choose-us";
+import { DarulIftaPage } from "../pages/darul-ifta";
+import { ScholarshipProgramPage } from "../pages/scholarship-program";
+import { InheritanceCoursePage } from "../pages/inheritance-course";
+import { ImamatCoursePage } from "../pages/imamat-course";
+import { AcademicCalendarPage } from "../pages/academic-calendar";
+import { TuitionFeePage } from "../pages/tution-fee";
+import Login from "../admin/login";
+import ProtectedRoute from "./protected-route";
+import Dashboard from "../admin/dashboard";
+import RegisteredUsers from "../admin/registered-users";
+import AuthLayout from "../layouts/auth-layout";
+import DashboardLayout from "../layouts/dashboard-layout";
 
 const router = createBrowserRouter([
   {
@@ -290,6 +296,24 @@ const router = createBrowserRouter([
       {
         path: "tution-fee",
         element: <TuitionFeePage />,
+      },
+    ],
+  },
+  {
+    path: "/login",
+    element: <AuthLayout />,
+    children: [{ index: true, element: <Login /> }],
+  },
+  {
+    path: "/dashboard",
+    element: <ProtectedRoute />,
+    children: [
+      {
+        element: <DashboardLayout />,
+        children: [
+          { index: true, element: <Dashboard /> },
+          { path: "registered-users", element: <RegisteredUsers /> },
+        ],
       },
     ],
   },
