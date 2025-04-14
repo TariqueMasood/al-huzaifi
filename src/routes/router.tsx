@@ -57,10 +57,10 @@ import { InheritanceCoursePage } from "../pages/inheritance-course";
 import { ImamatCoursePage } from "../pages/imamat-course";
 import { AcademicCalendarPage } from "../pages/academic-calendar";
 import { TuitionFeePage } from "../pages/tution-fee";
-import Login from "../admin/login";
+import Login from "../admin/pages/login";
 import ProtectedRoute from "./protected-route";
-import Dashboard from "../admin/dashboard";
-import RegisteredUsers from "../admin/registered-users";
+import Dashboard from "../admin/pages/dashboard";
+import RegisteredUsers from "../admin/pages/registered-users";
 import AuthLayout from "../layouts/auth-layout";
 import DashboardLayout from "../layouts/dashboard-layout";
 
