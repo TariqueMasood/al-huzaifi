@@ -10,6 +10,7 @@ import {
 } from "react-icons/fa";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import { Link } from "react-router-dom";
 
 export const TopHeader = () => {
   return (
@@ -35,13 +36,13 @@ export const TopHeader = () => {
               style={{ display: "flex", gap: "5px", alignItems: "center" }}
             >
               <FaRegUser />
-              <div>Login</div>
+              <Link to="/login">Login</Link>
             </LoginBtn>
             <RegBtn
               style={{ display: "flex", gap: "5px", alignItems: "center" }}
             >
               <FiUserPlus />
-              <div>Register</div>
+              <Link to="/login">Register</Link>
             </RegBtn>
           </LoginRegister>
         </HeaderWrapper>
