@@ -11,6 +11,10 @@ const SidebarContainer = styled.div`
   position: fixed;
   color: ${({ theme }) => theme.colors.themeTextColor};
   box-shadow: ${({ theme }) => theme.boxShadow};
+  border-radius: 8px 0 0 8px; /* Rounded corners on the left side */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
 const StyledLink = styled(NavLink)`
@@ -21,10 +25,12 @@ const StyledLink = styled(NavLink)`
   text-decoration: none;
   font-weight: bold;
   border-radius: 5px;
+  transition: all 0.3s ease;
 
   &:hover {
     background-color: ${({ theme }) => theme.colors.activeBg};
     color: ${({ theme }) => theme.colors.activeTextColor};
+    transform: translateX(5px); /* Subtle hover animation */
   }
 
   &.active {
@@ -33,13 +39,24 @@ const StyledLink = styled(NavLink)`
   }
 `;
 
+const SidebarFooter = styled.div`
+  text-align: center;
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.colors.themeTextColor2};
+  padding-top: 1rem;
+  border-top: 1px solid ${({ theme }) => theme.colors.themeTextColor};
+`;
+
 const Sidebar = () => (
   <SidebarContainer>
-    <h4>Admin Panel</h4>
-    <Nav className="flex-column">
-      <StyledLink to="/dashboard">Dashboard</StyledLink>
-      <StyledLink to="/dashboard/registered-users">Users</StyledLink>
-    </Nav>
+    <div>
+      <h4>Admin Panel</h4>
+      <Nav className="flex-column">
+        <StyledLink to="/dashboard">Dashboard</StyledLink>
+        <StyledLink to="/dashboard/registered-users">Users</StyledLink>
+      </Nav>
+    </div>
+    <SidebarFooter>&copy; 2025 Admin Dashboard</SidebarFooter>
   </SidebarContainer>
 );
 
