@@ -12,6 +12,12 @@ const HeaderContainer = styled.header`
   color: ${({ theme }) => theme.colors.themeTextColor2};
   box-shadow: ${({ theme }) => theme.boxShadow};
   border-bottom: 1px solid ${({ theme }) => theme.colors.themeTextColor};
+  position: fixed;
+  right: 0;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 60px;
 `;
 
 const DashboardHeader = () => {
@@ -19,14 +25,13 @@ const DashboardHeader = () => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
-    localStorage.removeItem("isLoggedIn");
     navigate("/login");
   };
 
   return (
     <HeaderContainer>
       <h5>Admin Dashboard</h5>
-      <button className="btn btn-danger mt-3" onClick={handleLogout}>
+      <button className="btn btn-danger" onClick={handleLogout}>
         Logout
       </button>
     </HeaderContainer>

@@ -49,8 +49,7 @@ const Login: React.FC = () => {
     } else {
       loginMutation.mutate(payload, {
         onSuccess: (data) => {
-          localStorage.setItem("token", data.token); // ✅ store JWT
-          localStorage.setItem("isLoggedIn", "true");
+          localStorage.setItem("token", data.token);
           navigate("/dashboard");
         },
         onError: (error: any) => {

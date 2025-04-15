@@ -4,10 +4,6 @@ import styled from "styled-components";
 import { useUsers } from "../../hooks/use-users";
 import { User } from "../../@types/registered-user";
 
-const Wrapper = styled.div`
-  padding: 2rem;
-`;
-
 const RegisteredUsers: React.FC = () => {
   const { data: users, isLoading, isError } = useUsers();
 
@@ -21,7 +17,6 @@ const RegisteredUsers: React.FC = () => {
       <Table striped bordered hover responsive>
         <thead>
           <tr>
-            <th>#</th>
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
@@ -42,3 +37,5 @@ const RegisteredUsers: React.FC = () => {
 };
 
 export default RegisteredUsers;
+
+const Wrapper = styled.div``;
