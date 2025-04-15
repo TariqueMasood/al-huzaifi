@@ -2,46 +2,14 @@ import React, { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
-// Styled components using theme colors
-const PageContainer = styled(Container)`
-  min-height: 100vh;
-  background-color: ${(props) => props.theme.background};
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const FormWrapper = styled.div`
-  background-color: ${(props) => props.theme.white || "#fff"};
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 400px;
-`;
-
-const Title = styled.h2`
-  color: ${(props) => props.theme.primary};
-  text-align: center;
-  margin-bottom: 1.5rem;
-`;
-
-const ToggleText = styled.div`
-  margin-top: 1rem;
-  text-align: center;
-  color: ${(props) => props.theme.text || "#333"};
-`;
+import { useLoginMutation, useRegisterMutation } from "../../hooks/use-auth";
 
 const Login: React.FC = () => {
   const [isRegister, setIsRegister] = useState(false);
   const navigate = useNavigate();
 
-  const handleLogin = () => {
-    localStorage.setItem("isLoggedIn", "true"); // simulate login
-    setIsRegister(!isRegister);
-    navigate("/dashboard");
-  };
+  const loginMutation = useLoginMutation();
+  const registerMutation = useRegisterMutation();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -58,14 +26,37 @@ const Login: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      password: formData.password,
+      role: formData.role,
+    };
+
     if (isRegister) {
-      console.log("Register form submission:", formData);
-      // Call your register API
+      registerMutation.mutate(payload, {
+        onSuccess: (data) => {
+          alert("Registration successful!");
+          setIsRegister(false); // Switch to login mode
+        },
+        onError: (error: any) => {
+          alert(error.response?.data?.message || "Registration failed");
+        },
+      });
     } else {
-      console.log("Login form submission:", formData);
-      // Call your login API
+      loginMutation.mutate(payload, {
+        onSuccess: (data) => {
+          localStorage.setItem("token", data.token); // ✅ store JWT
+          localStorage.setItem("isLoggedIn", "true");
+          navigate("/dashboard");
+        },
+        onError: (error: any) => {
+          alert(error.response?.data?.message || "Login failed");
+        },
+      });
     }
   };
 
@@ -126,15 +117,6 @@ const Login: React.FC = () => {
           <Button variant="primary" type="submit" className="w-100">
             {isRegister ? "Register" : "Login"}
           </Button>
-          <Button
-            variant="secondary"
-            type="button"
-            className="w-100"
-            style={{ marginTop: "1rem" }}
-            onClick={handleLogin}
-          >
-            Login
-          </Button>
         </Form>
         <ToggleText>
           {isRegister ? "Already registered? " : "Not registered yet? "}
@@ -148,3 +130,32 @@ const Login: React.FC = () => {
 };
 
 export default Login;
+
+const PageContainer = styled(Container)`
+  min-height: 100vh;
+  background-color: ${(props) => props.theme.background};
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+const FormWrapper = styled.div`
+  background-color: ${(props) => props.theme.white || "#fff"};
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+`;
+
+const Title = styled.h2`
+  color: ${(props) => props.theme.primary};
+  text-align: center;
+  margin-bottom: 1.5rem;
+`;
+
+const ToggleText = styled.div`
+  margin-top: 1rem;
+  text-align: center;
+  color: ${(props) => props.theme.text || "#333"};
+`;
