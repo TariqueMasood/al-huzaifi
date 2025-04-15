@@ -3,9 +3,12 @@ import { Container, Form, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { useLoginMutation, useRegisterMutation } from "../../hooks/use-auth";
+import CustomToast from "../../components/toast";
 
 const Login: React.FC = () => {
   const [isRegister, setIsRegister] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [showToast, setShowToast] = useState(false);
   const navigate = useNavigate();
 
   const loginMutation = useLoginMutation();
@@ -38,12 +41,16 @@ const Login: React.FC = () => {
 
     if (isRegister) {
       registerMutation.mutate(payload, {
-        onSuccess: (data) => {
-          alert("Registration successful!");
+        onSuccess: () => {
+          setToastMessage("Registration successful!");
+          setShowToast(true);
           setIsRegister(false); // Switch to login mode
         },
         onError: (error: any) => {
-          alert(error.response?.data?.message || "Registration failed");
+          setToastMessage(
+            error.response?.data?.message || "Registration failed"
+          );
+          setShowToast(true);
         },
       });
     } else {
@@ -53,7 +60,8 @@ const Login: React.FC = () => {
           navigate("/dashboard");
         },
         onError: (error: any) => {
-          alert(error.response?.data?.message || "Login failed");
+          setToastMessage(error.response?.data?.message || "Login failed");
+          setShowToast(true);
         },
       });
     }
@@ -124,6 +132,11 @@ const Login: React.FC = () => {
           </Button>
         </ToggleText>
       </FormWrapper>
+      <CustomToast
+        message={toastMessage}
+        show={showToast}
+        onClose={() => setShowToast(false)}
+      />
     </PageContainer>
   );
 };
