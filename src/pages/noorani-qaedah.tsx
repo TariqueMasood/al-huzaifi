@@ -1,11 +1,15 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import BgImage from "../../src/images/noorani-qaeda-bg-img.jpeg";
 
 export const NooraniQaedahPage = () => {
   return (
     <Wrapper>
       <Container>
+        <div>
+          <Image src={BgImage} alt="pic"></Image>
+        </div>
         <Title>Noorani Qa'edah Course</Title>
         <SubTitle>Al-Huzaifi Academy</SubTitle>
         <Content>
@@ -178,6 +182,10 @@ export const NooraniQaedahPage = () => {
 };
 
 const Wrapper = styled.div``;
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const Title = styled.h1`
   text-align: center;
