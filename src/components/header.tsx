@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/ijazah-program">
-                        Quran Ijazah Program
+                        Quran Ijazah Course
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/translation-course">
