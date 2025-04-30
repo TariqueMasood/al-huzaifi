@@ -1,156 +1,167 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import bgImg from "../../src/images/ibaadat-course.png";
 
 export const IbadaatCoursePage = () => {
   return (
-    <Wrapper>
-      <Container>
-        <Title>Ibadaat Course</Title>
-        <SubTitle>Al-Huzaifi Academy</SubTitle>
-        <Content>
-          <CourseDiscription>
-            <h5>course objective:</h5>
-            <p>
-              The <strong>Ibadaat Course</strong> is carefully crafted to offer
-              students a comprehensive understanding of the essential acts of
-              worship in Islam. This course aims to provide detailed guidance on
-              performing the core pillars of Islamic worship, helping students
-              fulfill their religious duties in a manner that aligns with the
-              teachings of the Quran and Sunnah. The course is designed to
-              strengthen student's connection with Allah through proper
-              knowledge and practice of these obligations.
-            </p>
-            <h5>Course Content:</h5>
-            <p>
-              The Ibadaat Course offers a structured curriculum that focuses on
-              the correct performance and understanding of the primary acts of
-              worship. Key topics of the course include:
-            </p>
-            <ol>
-              <li>
-                <strong>Salah (Namaz):</strong> In-depth study of the importance
-                of Salah, its obligatory elements, recommended practices, and
-                the correct method of performing daily prayers, along with the
-                spiritual significance behind them.
-              </li>
-              <li>
-                <strong>Zakat: </strong>Understanding the rules and regulations
-                of Zakat, the conditions under which it is obligatory, how to
-                calculate Zakat, and its role in social welfare and wealth
-                purification.
-              </li>
-              <li>
-                <strong>Fasting (Sawm): </strong>Detailed guidance on the
-                spiritual and physical dimensions of fasting, including the
-                rules for Ramadan, voluntary fasts, and the correct way to
-                observe Sawm.
-              </li>
-              <li>
-                <strong>Hajj: </strong>Comprehensive overview of the rites and
-                rituals of Hajj, including the preparation, obligations, and
-                spiritual meaning of each step, along with a brief introduction
-                to Umrah.
-              </li>
-            </ol>
-            <h5>Learning Outcomes: </h5>
-            <p>By the end of the Ibadaat Course, students will:</p>
-            <ol>
-              <li>
-                <strong>Master the Fundamentals of Worship: </strong>Gain a
-                solid understanding of the correct performance of Salah, Zakat,
-                Sawm, and Hajj, in accordance with Islamic law.
-              </li>
-              <li>
-                <strong>Spiritual Growth: </strong>Develop a deeper spiritual
-                connection with Allah through proper knowledge and
-                implementation of these obligatory acts.
-              </li>
-              <li>
-                <strong>Understanding of Zakat and Charity: </strong>Learn how
-                to calculate and distribute Zakat, and understand its
-                significance in promoting social justice.
-              </li>
-              <li>
-                <strong>Comprehensive Knowledge of Hajj and Sawm: </strong>
-                Acquire detailed knowledge of the pillars of Hajj and Sawm, and
-                how to prepare for and fulfill these essential obligations.
-              </li>
-              <li>
-                {" "}
-                <strong>Application in Daily Life: </strong>Be able to
-                confidently apply the teachings from the course to daily
-                religious practices and rituals.
-              </li>
-            </ol>
-            <h5>Who Should Enroll: </h5>
-            <p>
-              The <strong>Ibadaat Course</strong> is suitable for anyone looking
-              to enhance their understanding of Islamic worship. It is designed
-              for:
-            </p>
-            <ol>
-              <li>
-                <strong>Youth and Adults: </strong>
-                Muslims of all ages who want to ensure their worship practices
-                are correct and complete, both in knowledge and performance.
-              </li>
-              <li>
-                <strong>Parents and Educators: </strong>Those who wish to teach
-                their children or students the correct way to fulfill these
-                religious duties.
-              </li>
-              <li>
-                <strong>General Learners: </strong>Anyone interested in
-                solidifying their knowledge and practice of the fundamental acts
-                of Islamic worship.
-              </li>
-            </ol>
-            <p>
-              Enrolling in the Ibadaat Course will allow students to fulfill
-              their religious duties with confidence, develop a closer
-              relationship with Allah, and gain the knowledge needed to practice
-              and teach others the essential pillars of worship. This course
-              offers a well-rounded and detailed understanding of these
-              commands, paving the way for personal and spiritual growth.
-            </p>
-          </CourseDiscription>
-          <CourseDetail>
-            <h5>
-              course name: <span>Ibadaat Course</span>
-            </h5>
-            <h5>
-              course code: <span>SRT01</span>
-            </h5>
-            <h5>
-              Learning Mode: <span>Online</span>
-            </h5>
-            <h5>
-              Language: <span>English, Arabic, Urdu</span>
-            </h5>
-            <h5>
-              type: <span>Part Time</span>
-            </h5>
-            <h5>
-              Duration: <span>3 Months</span>
-            </h5>
-            <h5>
-              Entry Requirement: <span>Open for All</span>
-            </h5>
-            <h5>
-              Application Deadline: <span>Open</span>
-            </h5>
-            <ButtonContainer>
-              <a href="/registration">Apply Here</a>
-            </ButtonContainer>
-          </CourseDetail>
-        </Content>
-      </Container>
-    </Wrapper>
+    <>
+      <div>
+        <Image src={bgImg} alt="pic"></Image>
+      </div>
+      <Wrapper>
+        <Container>
+          <Title>Ibadaat Course</Title>
+          <SubTitle>Al-Huzaifi Academy</SubTitle>
+          <Content>
+            <CourseDiscription>
+              <h5>course objective:</h5>
+              <p>
+                The <strong>Ibadaat Course</strong> is carefully crafted to
+                offer students a comprehensive understanding of the essential
+                acts of worship in Islam. This course aims to provide detailed
+                guidance on performing the core pillars of Islamic worship,
+                helping students fulfill their religious duties in a manner that
+                aligns with the teachings of the Quran and Sunnah. The course is
+                designed to strengthen student's connection with Allah through
+                proper knowledge and practice of these obligations.
+              </p>
+              <h5>Course Content:</h5>
+              <p>
+                The Ibadaat Course offers a structured curriculum that focuses
+                on the correct performance and understanding of the primary acts
+                of worship. Key topics of the course include:
+              </p>
+              <ol>
+                <li>
+                  <strong>Salah (Namaz):</strong> In-depth study of the
+                  importance of Salah, its obligatory elements, recommended
+                  practices, and the correct method of performing daily prayers,
+                  along with the spiritual significance behind them.
+                </li>
+                <li>
+                  <strong>Zakat: </strong>Understanding the rules and
+                  regulations of Zakat, the conditions under which it is
+                  obligatory, how to calculate Zakat, and its role in social
+                  welfare and wealth purification.
+                </li>
+                <li>
+                  <strong>Fasting (Sawm): </strong>Detailed guidance on the
+                  spiritual and physical dimensions of fasting, including the
+                  rules for Ramadan, voluntary fasts, and the correct way to
+                  observe Sawm.
+                </li>
+                <li>
+                  <strong>Hajj: </strong>Comprehensive overview of the rites and
+                  rituals of Hajj, including the preparation, obligations, and
+                  spiritual meaning of each step, along with a brief
+                  introduction to Umrah.
+                </li>
+              </ol>
+              <h5>Learning Outcomes: </h5>
+              <p>By the end of the Ibadaat Course, students will:</p>
+              <ol>
+                <li>
+                  <strong>Master the Fundamentals of Worship: </strong>Gain a
+                  solid understanding of the correct performance of Salah,
+                  Zakat, Sawm, and Hajj, in accordance with Islamic law.
+                </li>
+                <li>
+                  <strong>Spiritual Growth: </strong>Develop a deeper spiritual
+                  connection with Allah through proper knowledge and
+                  implementation of these obligatory acts.
+                </li>
+                <li>
+                  <strong>Understanding of Zakat and Charity: </strong>Learn how
+                  to calculate and distribute Zakat, and understand its
+                  significance in promoting social justice.
+                </li>
+                <li>
+                  <strong>Comprehensive Knowledge of Hajj and Sawm: </strong>
+                  Acquire detailed knowledge of the pillars of Hajj and Sawm,
+                  and how to prepare for and fulfill these essential
+                  obligations.
+                </li>
+                <li>
+                  {" "}
+                  <strong>Application in Daily Life: </strong>Be able to
+                  confidently apply the teachings from the course to daily
+                  religious practices and rituals.
+                </li>
+              </ol>
+              <h5>Who Should Enroll: </h5>
+              <p>
+                The <strong>Ibadaat Course</strong> is suitable for anyone
+                looking to enhance their understanding of Islamic worship. It is
+                designed for:
+              </p>
+              <ol>
+                <li>
+                  <strong>Youth and Adults: </strong>
+                  Muslims of all ages who want to ensure their worship practices
+                  are correct and complete, both in knowledge and performance.
+                </li>
+                <li>
+                  <strong>Parents and Educators: </strong>Those who wish to
+                  teach their children or students the correct way to fulfill
+                  these religious duties.
+                </li>
+                <li>
+                  <strong>General Learners: </strong>Anyone interested in
+                  solidifying their knowledge and practice of the fundamental
+                  acts of Islamic worship.
+                </li>
+              </ol>
+              <p>
+                Enrolling in the Ibadaat Course will allow students to fulfill
+                their religious duties with confidence, develop a closer
+                relationship with Allah, and gain the knowledge needed to
+                practice and teach others the essential pillars of worship. This
+                course offers a well-rounded and detailed understanding of these
+                commands, paving the way for personal and spiritual growth.
+              </p>
+            </CourseDiscription>
+            <CourseDetail>
+              <h5>
+                course name: <span>Ibadaat Course</span>
+              </h5>
+              <h5>
+                course code: <span>SRT01</span>
+              </h5>
+              <h5>
+                Learning Mode: <span>Online</span>
+              </h5>
+              <h5>
+                Language: <span>English, Arabic, Urdu</span>
+              </h5>
+              <h5>
+                type: <span>Part Time</span>
+              </h5>
+              <h5>
+                Duration: <span>3 Months</span>
+              </h5>
+              <h5>
+                Entry Requirement: <span>Open for All</span>
+              </h5>
+              <h5>
+                Application Deadline: <span>Open</span>
+              </h5>
+              <ButtonContainer>
+                <a href="/registration">Apply Here</a>
+              </ButtonContainer>
+            </CourseDetail>
+          </Content>
+        </Container>
+      </Wrapper>
+    </>
   );
 };
 
 const Wrapper = styled.div``;
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const Title = styled.h1`
   text-align: center;
