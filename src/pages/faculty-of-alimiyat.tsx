@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { Container } from "react-bootstrap";
-import BgImage from "../../src/images/faculty-of-alimiyat.png";
+import bgImage from "../../src/images/faculty-of-alimiyat-2.png";
 import { Link } from "react-router-dom";
 
 export const FacultyOfAlimiyatPage = () => {
   return (
     <>
       <div>
-        <Image src={BgImage} alt="pic"></Image>
+        <Image src={bgImage} alt="pic"></Image>
       </div>
       <Wrapper>
         <Container>

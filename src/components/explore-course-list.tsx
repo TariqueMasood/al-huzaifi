@@ -64,7 +64,7 @@ const ExploreCourseList = () => {
 export default ExploreCourseList;
 
 const Wrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.darkBg};
+  background-color: ${(props) => props.theme.colors.themeColor};
   color: ${(props) => props.theme.colors.themeTextColor};
   padding-bottom: 40px;
 `;

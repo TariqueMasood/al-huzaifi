@@ -27,6 +27,7 @@ const TitleWrapper = styled.div`
   font-style: normal;
   padding: 30px 0px;
   text-align: center;
+  color: ${(props) => props.theme.colors.activeBg};
 
   ${mq("sm")} {
     padding: 40px 0px;
@@ -45,5 +46,5 @@ const SubHeading = styled.h5`
 `;
 
 const ColorTitle = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
+  // color: ${(props) => props.theme.colors.activeBg};
 `;

@@ -1,14 +1,14 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
-import BgImage from "../../src/images/faculty-of-quran.png";
+import bgImage from "../../src/images/faculty-of-quran-2.png";
 import { Link } from "react-router-dom";
 
 export const FacultyOfQuranPage = () => {
   return (
     <>
       <div>
-        <Image src={BgImage} alt="pic"></Image>
+        <Image src={bgImage} alt="pic"></Image>
       </div>
       <Wrapper>
         <Container>
