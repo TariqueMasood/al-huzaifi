@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
-import BgImage from "../../src/images/banner-img-1.jpeg";
+import BgImage from "../../src/images/noorani-qaida.png";
 
 export const NooraniQaedahPage = () => {
   return (

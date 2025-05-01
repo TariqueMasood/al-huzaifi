@@ -91,9 +91,11 @@ const CardHeading = styled.h4`
   text-transform: capitalize;
   cursor: pointer;
   line-height: 36px;
+  transition: ease-in-out 0.4s;
 
   &:hover {
-    color: ${(props) => props.theme.colors.themeColor};
+    color: ${(props) => props.theme.colors.themeColor1};
+    transform: scale(1.01);
   }
 `;
 

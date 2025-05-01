@@ -1,13 +1,13 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
-import BgImage from "../../src/images/banner-2.jpeg";
+import bgImage from "../../src/images/quran-recitation.png";
 
 export const RecitationCoursePage = () => {
   return (
     <>
       <div>
-        <Image src={BgImage} alt="pic"></Image>
+        <Image src={bgImage} alt="pic"></Image>
       </div>
       <Wrapper>
         <Container>

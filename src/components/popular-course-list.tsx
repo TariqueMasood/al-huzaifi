@@ -1,7 +1,12 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import PopularCourseCard from "./popular-course-card";
-import cardImg1 from "../../src/images/cardImage1.jpg";
+import cardImg1 from "../../src/images/most-popular-course-4.png";
+import cardImg2 from "../../src/images/most-popular-course-3.png";
+import cardImg3 from "../../src/images/most-popular-course-1.png";
+import cardImg4 from "../../src/images/most-popular-course-2.png";
+import cardImg5 from "../../src/images/most-popular-course-5.png";
+import cardImg6 from "../../src/images/most-popular-course-6.png";
 import userImage from "../../src/images/user-image.jpg";
 import styled from "styled-components";
 import Title from "./title";
@@ -21,7 +26,7 @@ const popularCourseCardData = [
   },
   {
     id: 2,
-    cardImage: cardImg1,
+    cardImage: cardImg2,
     courseFee: "free",
     cardTitle: "Deeniyat for Women",
     student: "Duration: 1 Year",
@@ -33,7 +38,7 @@ const popularCourseCardData = [
   },
   {
     id: 3,
-    cardImage: cardImg1,
+    cardImage: cardImg3,
     courseFee: 1000,
     cardTitle: "Foundation Arabic Course",
     student: "Total Levels: 6",
@@ -45,7 +50,7 @@ const popularCourseCardData = [
   },
   {
     id: 4,
-    cardImage: cardImg1,
+    cardImage: cardImg4,
     courseFee: 1000,
     cardTitle: "Arabic Speaking Course",
     student: "Total Levels: 6",
@@ -57,7 +62,7 @@ const popularCourseCardData = [
   },
   {
     id: 5,
-    cardImage: cardImg1,
+    cardImage: cardImg5,
     courseFee: 1000,
     cardTitle: "Quranic Arabic Course",
     student: "Total Levels: 5",
@@ -69,7 +74,7 @@ const popularCourseCardData = [
   },
   {
     id: 6,
-    cardImage: cardImg1,
+    cardImage: cardImg6,
     courseFee: 1000,
     cardTitle: "Alimiyat Course",
     student: "Curriculum:",
