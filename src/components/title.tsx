@@ -27,7 +27,7 @@ const TitleWrapper = styled.div`
   font-style: normal;
   padding: 30px 0px;
   text-align: center;
-  color: ${(props) => props.theme.colors.activeBg};
+  // color: ${(props) => props.theme.colors.activeBg};
 
   ${mq("sm")} {
     padding: 40px 0px;
