@@ -9,30 +9,30 @@ const exploreCardData = [
   {
     id: 1,
     cardImage: computerImg,
-    cardTitle: "data science",
+    cardTitle: "Faculty of Quran",
     cardSubTitlte: "4 course",
-    link: "",
+    link: "/faculty-of-quran",
   },
   {
     id: 2,
     cardImage: computerImg,
-    cardTitle: "data science",
+    cardTitle: "Facuty of Deeniyat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-deeniyat",
   },
   {
     id: 3,
     cardImage: computerImg,
-    cardTitle: "data science",
+    cardTitle: "Faculty of Alimiyat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-alimiyat",
   },
   {
     id: 4,
     cardImage: computerImg,
-    cardTitle: "data science",
+    cardTitle: "Faculty of Fazilat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-fazilat",
   },
 ];
 

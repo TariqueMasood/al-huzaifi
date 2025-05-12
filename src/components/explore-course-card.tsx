@@ -14,8 +14,8 @@ const ExploreCourseCard = (props: CardProps) => {
       <CardCotainer>
         <CardImage src={props.cardImage} alt="Image1" />
       </CardCotainer>
-      <CardTitle href="link">{props.cardTitle}</CardTitle>
-      <CardSubtitle>{props.cardSubTitle}</CardSubtitle>
+      <CardTitle href={props.link}>{props.cardTitle}</CardTitle>
+      {/* <CardSubtitle>{props.cardSubTitle}</CardSubtitle> */}
     </CardWraaper>
   );
 };
@@ -90,8 +90,8 @@ const CardTitle = styled.a`
   // }
 `;
 
-const CardSubtitle = styled.span`
-  text-transform: capitalize;
-  color: ${(props) => props.theme.colors.themeTextColor3};
-  text-decoration: underline;
-`;
+// const CardSubtitle = styled.span`
+//   text-transform: capitalize;
+//   color: ${(props) => props.theme.colors.themeTextColor3};
+//   text-decoration: underline;
+// `;

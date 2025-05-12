@@ -9,6 +9,7 @@ type CardProps = {
   hour: string;
   userName: string;
   designation: string;
+  link: string;
 };
 
 const PopularCourseCard = (props: CardProps) => {
@@ -17,10 +18,10 @@ const PopularCourseCard = (props: CardProps) => {
       <Wrapper>
         <ImageContainer>
           <Image src={props.cardImage} alt="Card-Image" />
-          <Fee>{props.courseFee}</Fee>
+          {/* <Fee>{props.courseFee}</Fee> */}
         </ImageContainer>
         <CardContent>
-          <CardHeading>{props.cardTitle}</CardHeading>
+          <CardHeading href={props.link}>{props.cardTitle}</CardHeading>
           <CardDetailWrapper>
             <CardDetail>
               <span>{props.student}</span>
@@ -32,7 +33,7 @@ const PopularCourseCard = (props: CardProps) => {
               <span>{props.hour}</span>
             </CardDetail>
           </CardDetailWrapper>
-          <Author>
+          {/* <Author>
             <AuthorDeatil>
               <span>
                 <NameLink href="#">{props.userName}</NameLink>
@@ -41,7 +42,7 @@ const PopularCourseCard = (props: CardProps) => {
             <span>
               <DesignationLink href="#">{props.designation}</DesignationLink>
             </span>
-          </Author>
+          </Author> */}
         </CardContent>
       </Wrapper>
     </div>
@@ -66,15 +67,15 @@ const ImageContainer = styled.div`
   position: relative;
 `;
 
-const Fee = styled.span`
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  background-color: ${(props) => props.theme.colors.themeColor};
-  padding: 7px 18px;
-  border-radius: 8px;
-  color: #fff;
-`;
+// const Fee = styled.span`
+//   position: absolute;
+//   top: 20px;
+//   left: 24px;
+//   background-color: ${(props) => props.theme.colors.themeColor};
+//   padding: 7px 18px;
+//   border-radius: 8px;
+//   color: #fff;
+// `;
 
 const Image = styled.img`
   max-width: 420px;
@@ -87,10 +88,11 @@ const CardContent = styled.div`
   padding: 12px;
 `;
 
-const CardHeading = styled.h4`
+const CardHeading = styled.a`
   text-transform: capitalize;
   cursor: pointer;
-  line-height: 36px;
+  font-weight: 600;
+  line-height: 24px;
   transition: ease-in-out 0.4s;
 
   &:hover {
@@ -113,33 +115,33 @@ const CardDetailWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Author = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid ${(props) => props.theme.cardDividerColor};
-  padding-top: 20px;
-`;
+// const Author = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   border-top: 1px solid ${(props) => props.theme.cardDividerColor};
+//   padding-top: 20px;
+// `;
 
-const AuthorDeatil = styled.span`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`;
+// const AuthorDeatil = styled.span`
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+// `;
 
-const NameLink = styled.a`
-  text-transform: capitalize;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: #6b6b6b;
+// const NameLink = styled.a`
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   font-size: 16px;
+//   font-weight: 500;
+//   color: #6b6b6b;
 
-  &:hover {
-    color: ${(props) => props.theme.colors.themeColor};
-  }
-`;
+//   &:hover {
+//     color: ${(props) => props.theme.colors.themeColor};
+//   }
+// `;
 
-const DesignationLink = styled.a`
-  text-transform: capitalize;
-  text-decoration: none;
-  font-weight: 500;
-`;
+// const DesignationLink = styled.a`
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   font-weight: 500;
+// `;

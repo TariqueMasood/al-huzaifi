@@ -23,6 +23,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "monaim billah",
     designation: "Software Engineer",
+    link: "/noorani-qaedah",
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "masum billah",
     designation: "data science",
+    link: "/deeniyat-for-women",
   },
   {
     id: 3,
@@ -47,6 +49,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "motasim billah",
     designation: "Software Engineer",
+    link: "/arabic-language-course",
   },
   {
     id: 4,
@@ -59,6 +62,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "motasim billah",
     designation: "Software Engineer",
+    link: "/arabic-speaking-course",
   },
   {
     id: 5,
@@ -71,6 +75,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "motasim billah",
     designation: "Software Engineer",
+    link: "/quranic-arabic-course",
   },
   {
     id: 6,
@@ -83,6 +88,7 @@ const popularCourseCardData = [
     userImage: userImage,
     userName: "motasim billah",
     designation: "Software Engineer",
+    link: "/faculty-of-alimiyat",
   },
 ];
 
