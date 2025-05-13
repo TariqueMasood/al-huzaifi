@@ -1,38 +1,52 @@
 import { Container } from "react-bootstrap";
 import ExploreCourseCard from "./explore-course-card";
-import computerImg from "../../src/images/computer-img.png";
+// import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
 import Title from "./title";
 import { mq } from "../styles/breakpoints";
+import {
+  FaQuran,
+  FaBookReader,
+  FaGraduationCap,
+  FaBookOpen,
+  FaLanguage,
+} from "react-icons/fa";
 
 const exploreCardData = [
   {
     id: 1,
-    cardImage: computerImg,
+    cardImage: <FaQuran />,
     cardTitle: "Faculty of Quran",
     cardSubTitlte: "4 course",
     link: "/faculty-of-quran",
   },
   {
     id: 2,
-    cardImage: computerImg,
+    cardImage: <FaBookReader />,
     cardTitle: "Facuty of Deeniyat",
     cardSubTitlte: "4 course",
     link: "/faculty-of-deeniyat",
   },
   {
     id: 3,
-    cardImage: computerImg,
+    cardImage: <FaGraduationCap />,
     cardTitle: "Faculty of Alimiyat",
     cardSubTitlte: "4 course",
     link: "/faculty-of-alimiyat",
   },
   {
     id: 4,
-    cardImage: computerImg,
+    cardImage: <FaBookOpen />,
     cardTitle: "Faculty of Fazilat",
     cardSubTitlte: "4 course",
     link: "/faculty-of-fazilat",
+  },
+  {
+    id: 5,
+    cardImage: <FaLanguage />,
+    cardTitle: "Faculty of Language",
+    cardSubTitlte: "4 course",
+    link: "/faculty-of-language",
   },
 ];
 

@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import { ReactNode } from "react";
 
 type CardProps = {
-  cardImage: string;
+  cardImage: ReactNode;
   cardTitle: string;
   cardSubTitle: string;
   link: string;
@@ -12,7 +13,7 @@ const ExploreCourseCard = (props: CardProps) => {
   return (
     <CardWraaper>
       <CardCotainer>
-        <CardImage src={props.cardImage} alt="Image1" />
+        <CardImage>{props.cardImage}</CardImage>
       </CardCotainer>
       <CardTitle href={props.link}>{props.cardTitle}</CardTitle>
       {/* <CardSubtitle>{props.cardSubTitle}</CardSubtitle> */}
@@ -61,8 +62,19 @@ const CardWraaper = styled.div`
   // }
 `;
 
-const CardImage = styled.img`
-  width: 50px;
+const CardImage = styled.div`
+  max-width: 60px;
+  width: 100%;
+  max-height: 60px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 40px;
+    height: 40px;
+  }
 `;
 
 const CardCotainer = styled.div`
