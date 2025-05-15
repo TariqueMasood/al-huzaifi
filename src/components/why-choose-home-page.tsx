@@ -19,37 +19,61 @@ export const WhychooseHomePage = () => {
           <div>
             <ContentWrapper>
               <GiBlackBook />
-              <span>authentic islamic education with global reach</span>
+              <span>
+                <h3>Global Islamic Education</h3>
+                <span>Authentic Learning for student worldwide.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <CiLocationOn />
-              <span>flexible online learning, anytime, anywhere</span>
+              <span>
+                <h3>Flexible Online Learning</h3>
+                <span>Study anytime, from anywhere.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <CiGlobe />
-              <span>instruction from across the globe</span>
+              <span>
+                <h3>International Faculty</h3>
+                <span>Expert teachers from across the globe.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <SlUserFemale />
-              <span>dedicated female teacher for female students</span>
+              <span>
+                <h3>Female-Foused Support</h3>
+                <span>Female teacher for female students.</span>
+              </span>
             </ContentWrapper>
           </div>
           <div>
             <ContentWrapper>
               <SiFuturelearn />
-              <span>scholarship opportunities to make learning accessible</span>
+              <span>
+                <h3>Scholarship Opportunity</h3>
+                <span>Making education more accessible.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <BsCheck2All />
-              <span>comprehensive curriculum for all levels</span>
+              <span>
+                <h3>Structured Carriculum</h3>
+                <span>Courses for all levels of learners.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <TfiWrite />
-              <span>affordable tution and inclusive community</span>
+              <span>
+                <h3>Affordable & Inclusive</h3>
+                <span>Low-cast learning for everyone.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <PiStudent />
-              <span>Personalized Learning Paths for Each Student</span>
+              <span>
+                <h3>Personalized Learning paths</h3>
+                <span>Custom plans for each student.</span>
+              </span>
             </ContentWrapper>
           </div>
         </WrapDiv>
@@ -59,7 +83,7 @@ export const WhychooseHomePage = () => {
 };
 
 const Wrapper = styled.div`
-  // background-color: #f4f1ec;
+  background-color: #f4f1ec;
   padding: 30px 0px;
 
   ${mq("sm")} {
@@ -78,9 +102,14 @@ const Title = styled.h1`
 `;
 
 const WrapDiv = styled.div`
+  padding: 20px 0px;
+  display: flex;
+  flex-direction: column;
+
   ${mq("sm")} {
     padding: 20px 0px;
     display: flex;
+    gap: 12px;
     flex-direction: column;
   }
 
@@ -88,7 +117,7 @@ const WrapDiv = styled.div`
     padding: 30px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 
@@ -97,13 +126,17 @@ const ContentWrapper = styled.div`
   align-items: center;
   gap: 16px;
 
+  h3 {
+    font-weight: 600;
+  }
+
   margin-bottom: 16px;
   svg {
     font-size: 35px;
     color: ${(props) => props.theme.colors.themeColor};
   }
   span {
-    font-size: 16px;
+    // font-size: 16px;
     text-transform: capitalize;
   }
 
@@ -114,7 +147,7 @@ const ContentWrapper = styled.div`
       color: ${(props) => props.theme.colors.themeColor};
     }
     span {
-      font-size: 20px;
+      // font-size: 20px;
       text-transform: capitalize;
     }
   }
@@ -125,10 +158,14 @@ const ContentWrapper = styled.div`
       font-size: 40px;
       color: ${(props) => props.theme.colors.themeColor};
     }
+
+    h3 {
+      font-weight: 700;
+    }
     span {
       font-style: italic;
       letter-spacing: 1px;
-      font-size: 24px;
+      // font-size: 24px;
       text-transform: capitalize;
     }
   }

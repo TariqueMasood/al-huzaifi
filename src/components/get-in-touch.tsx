@@ -8,9 +8,7 @@ export const GetInTouch = () => {
     <Wrapper>
       <Container>
         <Heading>get in touch</Heading>
-        <SubHeading>
-          Get daily updates & Upcoming Events and Courses!
-        </SubHeading>
+        <SubHeading>Get daily updates, Upcoming Events and Courses!</SubHeading>
         <FormContainer>
           <StyledFormGroup controlId="firstName">
             <LabelField>
@@ -36,7 +34,7 @@ export const GetInTouch = () => {
               />
             </InputField>
           </StyledFormGroup>
-          <Submit type="submit">Register</Submit>
+          <Submit type="submit">Submit</Submit>
         </FormContainer>
       </Container>
     </Wrapper>
