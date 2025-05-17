@@ -102,7 +102,7 @@ const Title = styled.h1`
 `;
 
 const WrapDiv = styled.div`
-  padding: 20px 0px;
+  padding: 12px 0px;
   display: flex;
   flex-direction: column;
 
@@ -127,6 +127,7 @@ const ContentWrapper = styled.div`
   gap: 16px;
 
   h3 {
+    font-size: 16px;
     font-weight: 600;
   }
 
@@ -136,7 +137,7 @@ const ContentWrapper = styled.div`
     color: ${(props) => props.theme.colors.themeColor};
   }
   span {
-    // font-size: 16px;
+    font-size: 14px;
     text-transform: capitalize;
   }
 
@@ -146,8 +147,14 @@ const ContentWrapper = styled.div`
       font-size: 35px;
       color: ${(props) => props.theme.colors.themeColor};
     }
+
+    h3 {
+      font-size: 20px;
+      font-weight: 600;
+    }
+
     span {
-      // font-size: 20px;
+      font-size: 18px;
       text-transform: capitalize;
     }
   }
@@ -160,6 +167,7 @@ const ContentWrapper = styled.div`
     }
 
     h3 {
+      font-size: 28px;
       font-weight: 700;
     }
     span {

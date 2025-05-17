@@ -83,7 +83,7 @@ const ContentWrapper = styled.div`
     }
 
     ${mq("md")} {
-      font-size: 28px;
+      font-size: 32px;
       padding: 0px;
       letter-spacing: 1px;
     }
@@ -117,6 +117,6 @@ const LearnMore = styled.button`
   ${mq("md")} {
     margin-top: 32px;
     padding: 9px 56px;
-    font-size: 20px;
+    font-size: 26px;
   }
 `;

@@ -92,7 +92,8 @@ const CardHeading = styled.a`
   text-transform: capitalize;
   cursor: pointer;
   font-weight: 600;
-  line-height: 24px;
+  // line-height: 24px;
+  font-size: 20px;
   transition: ease-in-out 0.4s;
 
   &:hover {
@@ -105,7 +106,7 @@ const CardDetail = styled.span`
   display: flex;
   align-items: center;
   gap: 7px;
-  padding: 18px 0px;
+  padding: 12px 0px;
   color: #696969;
   font-size: 12px;
 `;
