@@ -97,17 +97,19 @@ const PopularCourseList = () => {
     <Wrapper>
       <Container>
         <Title
-          subTitle="Our Courses List"
+          // subTitle="Our Courses List"
           title="Most Popular"
           colorTitle="Courses"
         />
-        <Row>
-          {popularCourseCardData.map((item) => (
-            <Col lg="4" md="6">
-              <PopularCourseCard key={item.id} {...item} />
-            </Col>
-          ))}
-        </Row>
+        <RowContainer>
+          <Row>
+            {popularCourseCardData.map((item) => (
+              <Col lg="4" md="6">
+                <PopularCourseCard key={item.id} {...item} />
+              </Col>
+            ))}
+          </Row>
+        </RowContainer>
       </Container>
     </Wrapper>
   );
@@ -116,5 +118,9 @@ const PopularCourseList = () => {
 export default PopularCourseList;
 
 const Wrapper = styled.div`
-  padding: 10px 0px 40px 0px;
+  padding: 50px 0px;
+`;
+
+const RowContainer = styled.div`
+  padding: 50px 0px;
 `;

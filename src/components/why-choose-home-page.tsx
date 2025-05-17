@@ -9,12 +9,13 @@ import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { BsCheck2All } from "react-icons/bs";
 import { PiStudent } from "react-icons/pi";
+import Title from "./title";
 
 export const WhychooseHomePage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Why Choose Us?</Title>
+        <Title title="Why Choose Us?" />
         <WrapDiv>
           <div>
             <ContentWrapper>
@@ -95,11 +96,11 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 24px;
-  font-weight: 600;
-`;
+// const Title = styled.h1`
+//   text-align: center;
+//   margin-bottom: 24px;
+//   font-weight: 600;
+// `;
 
 const WrapDiv = styled.div`
   padding: 12px 0px;
@@ -129,6 +130,7 @@ const ContentWrapper = styled.div`
   h3 {
     font-size: 16px;
     font-weight: 600;
+    color: ${(props) => props.theme.colors.themeColor};
   }
 
   margin-bottom: 16px;
@@ -139,6 +141,7 @@ const ContentWrapper = styled.div`
   span {
     font-size: 14px;
     text-transform: capitalize;
+    color: ${(props) => props.theme.colors.yellowColor};
   }
 
   ${mq("sm")} {

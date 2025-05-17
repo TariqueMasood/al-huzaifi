@@ -55,7 +55,7 @@ const ExploreCourseList = () => {
     <Wrapper>
       <Container>
         <Title
-          subTitle="Browse Categories"
+          // subTitle="Browse Categories"
           title="Explore Our"
           colorTitle="Courses"
         />
@@ -84,6 +84,8 @@ const Wrapper = styled.div`
 `;
 
 const CardWrapper = styled.div`
+  padding: 40px 0px;
+
   ${mq("lg")} {
     display: flex;
     justify-content: center;

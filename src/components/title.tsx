@@ -21,21 +21,29 @@ const Title = (props: TitleProps) => {
 export default Title;
 
 const TitleWrapper = styled.div`
+  max-width: 400px;
+  width: 100%;
+  background-color: ${(props) => props.theme.colors.themeColor};
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
-  padding: 30px 0px;
+  padding: 16px 0px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  // color: ${(props) => props.theme.colors.activeBg};
+  border-radius: 50px;
+  color: ${(props) => props.theme.colors.activeBg};
 
-  ${mq("sm")} {
-    padding: 40px 0px;
-  }
+  // ${mq("sm")} {
+  //   padding: 20px 0px;
+  // }
 
-  ${mq("md")} {
-    padding: 60px 0px;
-  }
+  // ${mq("md")} {
+  //   padding: 16px 0px;
+  // }
 `;
 
 const Heading = styled.h1``;
