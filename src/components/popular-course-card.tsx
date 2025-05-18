@@ -94,12 +94,13 @@ const CardHeading = styled.a`
   font-weight: 600;
   // line-height: 24px;
   font-size: 20px;
+  color: ${(props) => props.theme.colors.themeColor};
   transition: ease-in-out 0.4s;
 
-  &:hover {
-    color: ${(props) => props.theme.colors.themeColor1};
-    transform: scale(1.01);
-  }
+  // &:hover {
+  //   color: ${(props) => props.theme.colors.themeColor1};
+  //   transform: scale(1.1);
+  // }
 `;
 
 const CardDetail = styled.span`
@@ -107,7 +108,7 @@ const CardDetail = styled.span`
   align-items: center;
   gap: 7px;
   padding: 12px 0px;
-  color: #696969;
+  color: ${(props) => props.theme.colors.yellowColor};
   font-size: 12px;
 `;
 

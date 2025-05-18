@@ -74,6 +74,7 @@ const CardImage = styled.div`
   svg {
     width: 40px;
     height: 40px;
+    color: ${(props) => props.theme.colors.yellowColor};
   }
 `;
 
@@ -95,7 +96,8 @@ const CardTitle = styled.a`
   text-decoration: none;
   font-size: 24px;
   font-weight: 600;
-  transition: all ease 0.5s;
+  color: ${(props) => props.theme.colors.themeTextColor3};
+  // transition: all ease 0.5s;
 
   // &:hover {
   //   color: ${(props) => props.theme.colors.themeColor};

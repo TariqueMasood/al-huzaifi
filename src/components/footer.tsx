@@ -25,7 +25,7 @@ const Footer = () => {
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
               <FaFacebookF />
-              <FaTwitter />
+              {/* <FaTwitter /> */}
               <FaInstagram />
               <FaYoutube />
             </SocialIcon>

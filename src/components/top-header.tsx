@@ -25,13 +25,13 @@ export const TopHeader = () => {
             >
               <FaInstagram />
             </a>
-            <a
+            {/* <a
               target="_blank"
               rel="noopener noreferrer"
               href="https://www.whatsapp.com/"
             >
               <FaWhatsapp />
-            </a>
+            </a> */}
             <a
               target="_blank"
               rel="noopener noreferrer"

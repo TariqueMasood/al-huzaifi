@@ -35,7 +35,9 @@ const AchievementList = () => {
   return (
     <Wrapper>
       <Container>
-        <Title title="Our" colorTitle="Achievements" />
+        <TitleContainer>
+          <Title title="Our" colorTitle="Achievements" />
+        </TitleContainer>
         <CardWrapper>
           {achievementCardData.map((data) => (
             <AchievementCard
@@ -53,7 +55,13 @@ const AchievementList = () => {
 
 export default AchievementList;
 
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding: 40px 0px;
+`;
+
+const TitleContainer = styled.div`
+  padding: 0 0 40px 0px;
+`;
 
 const CardWrapper = styled.div`
   display: flex;
