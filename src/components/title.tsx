@@ -26,9 +26,7 @@ const TitleWrapper = styled.div`
   background-color: ${(props) => props.theme.colors.themeColor};
   font-family: "Oswald", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 600;
   font-style: normal;
-  padding: 16px 0px;
   margin: auto;
   display: flex;
   justify-content: center;
@@ -36,17 +34,25 @@ const TitleWrapper = styled.div`
   text-align: center;
   border-radius: 50px;
   color: ${(props) => props.theme.colors.activeBg};
-
-  // ${mq("sm")} {
-  //   padding: 20px 0px;
-  // }
-
-  // ${mq("md")} {
-  //   padding: 16px 0px;
-  // }
 `;
 
-const Heading = styled.h1``;
+const Heading = styled.h1`
+  font-size: 18px;
+  font-weight: 500;
+  padding: 12px 0px;
+
+  ${mq("sm")} {
+    font-size: 24px;
+    font-weight: 600;
+    padding: 16px 0px;
+  }
+
+  ${mq("md")} {
+    font-size: 32px;
+    font-weight: 700;
+    padding: 16px 0px;
+  }
+`;
 
 const SubHeading = styled.h5`
   margin-bottom: 0.5rem;

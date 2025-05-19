@@ -1,10 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
+import fLogo from "../../src/images/al-hozaifi-academy-logo-white.png";
 
 const Footer = () => {
   return (
@@ -12,7 +13,8 @@ const Footer = () => {
       <Container>
         <Row className="d-flex justify-content-between">
           <Col className="mb-4" lg={4} md={6} xs={12}>
-            <FooterTitle>AL-Huzaifi</FooterTitle>
+            {/* <FooterTitle>AL-Huzaifi</FooterTitle> */}
+            <FooterLogo src={fLogo} alt="image" />
             <Tagline>
               an Online Islamic Education hub, where knowledge and faith
               converge in a seamless learning exprience. This academy is a
@@ -98,11 +100,17 @@ const FooterTitle = styled.h4`
   font-family: "Oswald", sans-serif;
 `;
 
+const FooterLogo = styled.img`
+  max-width: 250px;
+  width: 100%;
+`;
+
 const Tagline = styled.p`
   font-size: 18px;
   max-width: 300px;
   width: 100%;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  margin: 20px 0px;
 `;
 
 const SocialIcon = styled.div`

@@ -42,12 +42,6 @@ const Wrapper = styled.div`
 // `;
 
 const ContentWrapper = styled.div`
-  // width: 100%;
-  // position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%, -50%);
-
   h2 {
     color: #cdad7e;
     font-style: italic;
@@ -73,7 +67,7 @@ const ContentWrapper = styled.div`
 
   p {
     color: #555d50;
-    font-size: 12px;
+    font-size: 16px;
     padding: 16px 0px;
     letter-spacing: 0px;
 
