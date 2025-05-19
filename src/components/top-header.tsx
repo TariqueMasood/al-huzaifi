@@ -4,7 +4,7 @@ import { FiUserPlus } from "react-icons/fi";
 import {
   FaFacebookF,
   FaInstagram,
-  FaLinkedin,
+  FaYoutube,
   FaRegUser,
   FaWhatsapp,
 } from "react-icons/fa";
@@ -18,17 +18,33 @@ export const TopHeader = () => {
       <Container>
         <HeaderWrapper>
           <SocialIcon>
-            <a href="https://www.instagram.com/">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/"
+            >
               <FaInstagram />
             </a>
-            <a href="https://www.whatsapp.com/">
+            {/* <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.whatsapp.com/"
+            >
               <FaWhatsapp />
-            </a>
-            <a href="https://www.facebook.com/">
+            </a> */}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.facebook.com/"
+            >
               <FaFacebookF />
             </a>
-            <a href="https://www.linkedin.com">
-              <FaLinkedin />
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.youtube.com"
+            >
+              <FaYoutube />
             </a>
           </SocialIcon>
           <LoginRegister>

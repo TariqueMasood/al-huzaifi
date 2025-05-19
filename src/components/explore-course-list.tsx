@@ -1,38 +1,52 @@
 import { Container } from "react-bootstrap";
 import ExploreCourseCard from "./explore-course-card";
-import computerImg from "../../src/images/computer-img.png";
+// import computerImg from "../../src/images/computer-img.png";
 import styled from "styled-components";
 import Title from "./title";
 import { mq } from "../styles/breakpoints";
+import {
+  FaQuran,
+  FaBookReader,
+  FaGraduationCap,
+  FaBookOpen,
+  FaLanguage,
+} from "react-icons/fa";
 
 const exploreCardData = [
   {
     id: 1,
-    cardImage: computerImg,
-    cardTitle: "data science",
+    cardImage: <FaQuran />,
+    cardTitle: "Faculty of Quran",
     cardSubTitlte: "4 course",
-    link: "",
+    link: "/faculty-of-quran",
   },
   {
     id: 2,
-    cardImage: computerImg,
-    cardTitle: "data science",
+    cardImage: <FaBookReader />,
+    cardTitle: "Facuty of Deeniyat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-deeniyat",
   },
   {
     id: 3,
-    cardImage: computerImg,
-    cardTitle: "data science",
+    cardImage: <FaGraduationCap />,
+    cardTitle: "Faculty of Alimiyat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-alimiyat",
   },
   {
     id: 4,
-    cardImage: computerImg,
-    cardTitle: "data science",
+    cardImage: <FaBookOpen />,
+    cardTitle: "Faculty of Fazilat",
     cardSubTitlte: "4 course",
-    link: "#",
+    link: "/faculty-of-fazilat",
+  },
+  {
+    id: 5,
+    cardImage: <FaLanguage />,
+    cardTitle: "Faculty of Language",
+    cardSubTitlte: "4 course",
+    link: "/faculty-of-language",
   },
 ];
 
@@ -41,7 +55,7 @@ const ExploreCourseList = () => {
     <Wrapper>
       <Container>
         <Title
-          subTitle="Browse Categories"
+          // subTitle="Browse Categories"
           title="Explore Our"
           colorTitle="Courses"
         />
@@ -64,12 +78,14 @@ const ExploreCourseList = () => {
 export default ExploreCourseList;
 
 const Wrapper = styled.div`
-  background-color: ${(props) => props.theme.colors.darkBg};
+  background-color: ${(props) => props.theme.colors.themeColor};
   color: ${(props) => props.theme.colors.themeTextColor};
   padding-bottom: 40px;
 `;
 
 const CardWrapper = styled.div`
+  padding: 40px 0px;
+
   ${mq("lg")} {
     display: flex;
     justify-content: center;

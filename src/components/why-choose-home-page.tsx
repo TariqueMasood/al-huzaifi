@@ -9,47 +9,72 @@ import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { BsCheck2All } from "react-icons/bs";
 import { PiStudent } from "react-icons/pi";
+import Title from "./title";
 
 export const WhychooseHomePage = () => {
   return (
     <Wrapper>
       <Container>
-        <Title>Why Choose Us?</Title>
+        <Title title="Why Choose Us?" />
         <WrapDiv>
           <div>
             <ContentWrapper>
               <GiBlackBook />
-              <span>authentic islamic education with global reach</span>
+              <span>
+                <h3>Global Islamic Education</h3>
+                <span>Authentic Learning for student worldwide.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <CiLocationOn />
-              <span>flexible online learning, anytime, anywhere</span>
+              <span>
+                <h3>Flexible Online Learning</h3>
+                <span>Study anytime, from anywhere.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <CiGlobe />
-              <span>instruction from across the globe</span>
+              <span>
+                <h3>International Faculty</h3>
+                <span>Expert teachers from across the globe.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <SlUserFemale />
-              <span>dedicated female teacher for female students</span>
+              <span>
+                <h3>Female-Foused Support</h3>
+                <span>Female teacher for female students.</span>
+              </span>
             </ContentWrapper>
           </div>
           <div>
             <ContentWrapper>
               <SiFuturelearn />
-              <span>scholarship opportunities to make learning accessible</span>
+              <span>
+                <h3>Scholarship Opportunity</h3>
+                <span>Making education more accessible.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <BsCheck2All />
-              <span>comprehensive curriculum for all levels</span>
+              <span>
+                <h3>Structured Carriculum</h3>
+                <span>Courses for all levels of learners.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <TfiWrite />
-              <span>affordable tution and inclusive community</span>
+              <span>
+                <h3>Affordable & Inclusive</h3>
+                <span>Low-cast learning for everyone.</span>
+              </span>
             </ContentWrapper>
             <ContentWrapper>
               <PiStudent />
-              <span>Personalized Learning Paths for Each Student</span>
+              <span>
+                <h3>Personalized Learning paths</h3>
+                <span>Custom plans for each student.</span>
+              </span>
             </ContentWrapper>
           </div>
         </WrapDiv>
@@ -59,7 +84,7 @@ export const WhychooseHomePage = () => {
 };
 
 const Wrapper = styled.div`
-  // background-color: #f4f1ec;
+  background-color: #f4f1ec;
   padding: 30px 0px;
 
   ${mq("sm")} {
@@ -71,16 +96,21 @@ const Wrapper = styled.div`
   }
 `;
 
-const Title = styled.h1`
-  text-align: center;
-  margin-bottom: 24px;
-  font-weight: 600;
-`;
+// const Title = styled.h1`
+//   text-align: center;
+//   margin-bottom: 24px;
+//   font-weight: 600;
+// `;
 
 const WrapDiv = styled.div`
+  padding: 12px 0px;
+  display: flex;
+  flex-direction: column;
+
   ${mq("sm")} {
     padding: 20px 0px;
     display: flex;
+    gap: 12px;
     flex-direction: column;
   }
 
@@ -88,7 +118,7 @@ const WrapDiv = styled.div`
     padding: 30px 0px;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
   }
 `;
 
@@ -97,14 +127,21 @@ const ContentWrapper = styled.div`
   align-items: center;
   gap: 16px;
 
+  h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: ${(props) => props.theme.colors.themeColor};
+  }
+
   margin-bottom: 16px;
   svg {
     font-size: 35px;
     color: ${(props) => props.theme.colors.themeColor};
   }
   span {
-    font-size: 16px;
+    font-size: 14px;
     text-transform: capitalize;
+    color: ${(props) => props.theme.colors.yellowColor};
   }
 
   ${mq("sm")} {
@@ -113,8 +150,14 @@ const ContentWrapper = styled.div`
       font-size: 35px;
       color: ${(props) => props.theme.colors.themeColor};
     }
-    span {
+
+    h3 {
       font-size: 20px;
+      font-weight: 600;
+    }
+
+    span {
+      font-size: 18px;
       text-transform: capitalize;
     }
   }
@@ -125,10 +168,15 @@ const ContentWrapper = styled.div`
       font-size: 40px;
       color: ${(props) => props.theme.colors.themeColor};
     }
+
+    h3 {
+      font-size: 28px;
+      font-weight: 700;
+    }
     span {
       font-style: italic;
       letter-spacing: 1px;
-      font-size: 24px;
+      // font-size: 24px;
       text-transform: capitalize;
     }
   }

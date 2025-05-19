@@ -10,9 +10,12 @@ const theme: DefaultTheme = {
     darkBg:"#0D1A36",
     themeTextColor:"#72819F",
     themeTextColor2:"#4f835b",
+    themeTextColor3: "#f2f2f2",
     sidebarBackground: "#004353",
     headerBackground: "#006778",
     footerBackground: "#00343d",
+    yellowColor:"#cdad7e",
+    
   },
 };
 

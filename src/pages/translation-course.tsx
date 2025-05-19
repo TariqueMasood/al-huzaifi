@@ -1,185 +1,197 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import bgImage from "../../src/images/quran-translation.png";
 
 export const TranslationCoursePage = () => {
   return (
-    <Wrapper>
-      <Container>
-        <Title>Quran Translation Course</Title>
-        <SubTitle>Al-Huzaifi Academy</SubTitle>
-        <Content>
-          <CourseDiscription>
-            <h5>course objective:</h5>
-            <p>
-              The Quran Translation Course is meticulously designed to equip
-              students with the skills and knowledge required to accurately
-              translate the Quran into various languages. Our aim is to run
-              programs for translating the Quran into all major international
-              languages, beginning with English and Urdu. This course will
-              provide students with a deep understanding of the linguistic,
-              cultural, and theological nuances necessary for faithful and
-              effective translation.
-            </p>
-            <h5>Course Content:</h5>
-            <p>
-              The Quran Translation Course covers a comprehensive curriculum
-              that prepares students for the intricate task of Quranic
-              translation. Key components of the course include:
-            </p>
-            <ol>
-              <li>
-                <strong>Introduction to Quranic Arabic: </strong>
-                Detailed study of Quranic Arabic, focusing on vocabulary,
-                grammar, and syntax.
-              </li>
-              <li>
-                <strong>Principles of Translation: </strong>Exploring
-                fundamental principles and methodologies for translating
-                religious texts, with emphasis on fidelity to the original
-                meaning.
-              </li>
-              <li>
-                <strong>Cultural and Historical Context: </strong>Understanding
-                the historical and cultural context of Quranic revelations to
-                ensure accurate interpretation.
-              </li>
-              <li>
-                <strong>Translation Techniques: </strong>Techniques for handling
-                linguistic challenges, idiomatic expressions, and theological
-                concepts in translation.
-              </li>
-              <li>
-                <strong>Comparative Translation Studies: </strong>Analyzing
-                existing translations to understand different approaches and
-                identify best practices.
-              </li>
-              <li>
-                <strong>Theological Considerations: </strong>Integrating
-                theological insights to ensure the translations convey the
-                intended religious messages accurately.
-              </li>
-            </ol>
-            <h5>Learning Outcomes: </h5>
-            <p>
-              Upon successful completion of the Quran Translation Course,
-              students will achieve the following learning outcomes:
-            </p>
-            <ol>
-              <li>
-                <strong>Proficient in Quranic Arabic: </strong>Students will
-                gain a strong command of Quranic Arabic, enabling them to
-                understand and translate its text accurately.
-              </li>
-              <li>
-                <strong>Skilled Translators: </strong>Students will develop the
-                skills necessary to produce clear, accurate, and meaningful
-                translations of the Quran.
-              </li>
-              <li>
-                <strong>Contextual Sensitivity: </strong>Students will
-                demonstrate an understanding of the cultural and historical
-                contexts of Quranic verses, essential for effective translation.
-              </li>
-              <li>
-                <strong>Theological Integrity: </strong>Students will ensure
-                their translations reflect the theological depth and religious
-                significance of the Quran.
-              </li>
-              <li>
-                <strong>Practical Experience: </strong>Students will gain
-                hands-on experience in translating Quranic text, with a focus on
-                Arabic and English / Urdu.
-              </li>
-              <li>
-                <strong>Critical Analysis: </strong>Students will be able to
-                critically analyze existing translations and apply best
-                practices in their work.
-              </li>
-            </ol>
-            <h5>Who Should Enroll: </h5>
-            <p>
-              The Quran Translation Course is ideal for a wide range of learners
-              dedicated to mastering the art of Quranic translation. This
-              includes:
-            </p>
-            <ol>
-              <li>
-                <strong>Aspiring Translators: </strong>
-                Individuals seeking to become proficient translators of the
-                Quran, starting with English and Arabic.
-              </li>
-              <li>
-                <strong>Quranic Scholars: </strong>Scholars who wish to deepen
-                their understanding of Quranic Arabic and enhance their
-                translation skills.
-              </li>
-              <li>
-                <strong>Religious Educators: </strong>Educators who aim to teach
-                Quranic translation and interpretation in educational settings.
-              </li>
-              <li>
-                <strong>Linguists and Language Enthusiasts: </strong>Those with
-                a passion for languages who want to apply their skills to
-                translating the Quran.
-              </li>
-              <li>
-                <strong>Imams and Community Leaders: </strong>Religious leaders
-                who seek to provide accurate translations and explanations of
-                the Quran to their communities.
-              </li>
-            </ol>
-            <p>
-              By enrolling in the Quran Translation Course, students embark on a
-              meaningful journey that not only enhances their linguistic skills
-              but also contributes to making the sacred text of the Quran
-              accessible to people around the world. Starting with translations
-              into English and Arabic, this course provides the foundational
-              knowledge and practical experience needed to produce translations
-              that are both accurate and impactful, preserving the Quran's
-              profound message for diverse audiences.
-            </p>
-          </CourseDiscription>
-          <CourseDetail>
-            <h5>
-              course name: <span>Quran Translation Course</span>
-            </h5>
-            <h5>
-              course code: <span>QRN07</span>
-            </h5>
-            <h5>
-              Learning Mode: <span>Online</span>
-            </h5>
-            <h5>
-              Language: <span>English, Arabic, Urdu</span>
-            </h5>
-            <h5>
-              type: <span>Part Time</span>
-            </h5>
-            <h5>
-              Duration: <span>1-2 Years</span>
-            </h5>
-            <h5>
-              Entry Requirement:{" "}
-              <span>
-                Must have proficiency in Quran Recitation and Basic Arabic
-                Knowledge
-              </span>
-            </h5>
-            <h5>
-              Application Deadline: <span>Fall & Spring Semester</span>
-            </h5>
-            <ButtonContainer>
-              <a href="/registration">Apply Here</a>
-            </ButtonContainer>
-          </CourseDetail>
-        </Content>
-      </Container>
-    </Wrapper>
+    <>
+      <div>
+        <Image src={bgImage} alt="pic"></Image>
+      </div>
+      <Wrapper>
+        <Container>
+          <Title>Quran Translation Course</Title>
+          <SubTitle>Al-Huzaifi Academy</SubTitle>
+          <Content>
+            <CourseDiscription>
+              <h5>course objective:</h5>
+              <p>
+                The Quran Translation Course is meticulously designed to equip
+                students with the skills and knowledge required to accurately
+                translate the Quran into various languages. Our aim is to run
+                programs for translating the Quran into all major international
+                languages, beginning with English and Urdu. This course will
+                provide students with a deep understanding of the linguistic,
+                cultural, and theological nuances necessary for faithful and
+                effective translation.
+              </p>
+              <h5>Course Content:</h5>
+              <p>
+                The Quran Translation Course covers a comprehensive curriculum
+                that prepares students for the intricate task of Quranic
+                translation. Key components of the course include:
+              </p>
+              <ol>
+                <li>
+                  <strong>Introduction to Quranic Arabic: </strong>
+                  Detailed study of Quranic Arabic, focusing on vocabulary,
+                  grammar, and syntax.
+                </li>
+                <li>
+                  <strong>Principles of Translation: </strong>Exploring
+                  fundamental principles and methodologies for translating
+                  religious texts, with emphasis on fidelity to the original
+                  meaning.
+                </li>
+                <li>
+                  <strong>Cultural and Historical Context: </strong>
+                  Understanding the historical and cultural context of Quranic
+                  revelations to ensure accurate interpretation.
+                </li>
+                <li>
+                  <strong>Translation Techniques: </strong>Techniques for
+                  handling linguistic challenges, idiomatic expressions, and
+                  theological concepts in translation.
+                </li>
+                <li>
+                  <strong>Comparative Translation Studies: </strong>Analyzing
+                  existing translations to understand different approaches and
+                  identify best practices.
+                </li>
+                <li>
+                  <strong>Theological Considerations: </strong>Integrating
+                  theological insights to ensure the translations convey the
+                  intended religious messages accurately.
+                </li>
+              </ol>
+              <h5>Learning Outcomes: </h5>
+              <p>
+                Upon successful completion of the Quran Translation Course,
+                students will achieve the following learning outcomes:
+              </p>
+              <ol>
+                <li>
+                  <strong>Proficient in Quranic Arabic: </strong>Students will
+                  gain a strong command of Quranic Arabic, enabling them to
+                  understand and translate its text accurately.
+                </li>
+                <li>
+                  <strong>Skilled Translators: </strong>Students will develop
+                  the skills necessary to produce clear, accurate, and
+                  meaningful translations of the Quran.
+                </li>
+                <li>
+                  <strong>Contextual Sensitivity: </strong>Students will
+                  demonstrate an understanding of the cultural and historical
+                  contexts of Quranic verses, essential for effective
+                  translation.
+                </li>
+                <li>
+                  <strong>Theological Integrity: </strong>Students will ensure
+                  their translations reflect the theological depth and religious
+                  significance of the Quran.
+                </li>
+                <li>
+                  <strong>Practical Experience: </strong>Students will gain
+                  hands-on experience in translating Quranic text, with a focus
+                  on Arabic and English / Urdu.
+                </li>
+                <li>
+                  <strong>Critical Analysis: </strong>Students will be able to
+                  critically analyze existing translations and apply best
+                  practices in their work.
+                </li>
+              </ol>
+              <h5>Who Should Enroll: </h5>
+              <p>
+                The Quran Translation Course is ideal for a wide range of
+                learners dedicated to mastering the art of Quranic translation.
+                This includes:
+              </p>
+              <ol>
+                <li>
+                  <strong>Aspiring Translators: </strong>
+                  Individuals seeking to become proficient translators of the
+                  Quran, starting with English and Arabic.
+                </li>
+                <li>
+                  <strong>Quranic Scholars: </strong>Scholars who wish to deepen
+                  their understanding of Quranic Arabic and enhance their
+                  translation skills.
+                </li>
+                <li>
+                  <strong>Religious Educators: </strong>Educators who aim to
+                  teach Quranic translation and interpretation in educational
+                  settings.
+                </li>
+                <li>
+                  <strong>Linguists and Language Enthusiasts: </strong>Those
+                  with a passion for languages who want to apply their skills to
+                  translating the Quran.
+                </li>
+                <li>
+                  <strong>Imams and Community Leaders: </strong>Religious
+                  leaders who seek to provide accurate translations and
+                  explanations of the Quran to their communities.
+                </li>
+              </ol>
+              <p>
+                By enrolling in the Quran Translation Course, students embark on
+                a meaningful journey that not only enhances their linguistic
+                skills but also contributes to making the sacred text of the
+                Quran accessible to people around the world. Starting with
+                translations into English and Arabic, this course provides the
+                foundational knowledge and practical experience needed to
+                produce translations that are both accurate and impactful,
+                preserving the Quran's profound message for diverse audiences.
+              </p>
+            </CourseDiscription>
+            <CourseDetail>
+              <h5>
+                course name: <span>Quran Translation Course</span>
+              </h5>
+              <h5>
+                course code: <span>QRN07</span>
+              </h5>
+              <h5>
+                Learning Mode: <span>Online</span>
+              </h5>
+              <h5>
+                Language: <span>English, Arabic, Urdu</span>
+              </h5>
+              <h5>
+                type: <span>Part Time</span>
+              </h5>
+              <h5>
+                Duration: <span>1-2 Years</span>
+              </h5>
+              <h5>
+                Entry Requirement:{" "}
+                <span>
+                  Must have proficiency in Quran Recitation and Basic Arabic
+                  Knowledge
+                </span>
+              </h5>
+              <h5>
+                Application Deadline: <span>Fall & Spring Semester</span>
+              </h5>
+              <ButtonContainer>
+                <a href="/registration">Apply Here</a>
+              </ButtonContainer>
+            </CourseDetail>
+          </Content>
+        </Container>
+      </Wrapper>
+    </>
   );
 };
 
 const Wrapper = styled.div``;
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const Title = styled.h1`
   text-align: center;

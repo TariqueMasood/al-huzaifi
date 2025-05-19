@@ -25,7 +25,7 @@ const Footer = () => {
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
               <FaFacebookF />
-              <FaTwitter />
+              {/* <FaTwitter /> */}
               <FaInstagram />
               <FaYoutube />
             </SocialIcon>
@@ -86,8 +86,9 @@ export default Footer;
 const Wrapper = styled.footer`
   padding: 40px 0px 20px 0px;
   border-top: 1px solid ${(props) => props.theme.toggleBorder};
-  background-color: ${(props) => props.theme.colors.darkBg};
-  color: ${(props) => props.theme.colors.themeTextColor};
+  // background-color: ${(props) => props.theme.colors.darkBg};
+  background-color: ${(props) => props.theme.colors.themeColor};
+  color: ${(props) => props.theme.colors.themeTextColor3};
   border-bottom: 1px solid ${(props) => props.theme.toggleBorder};
 `;
 
@@ -121,10 +122,10 @@ const List = styled.li`
   list-style: none;
   margin-bottom: 12px;
   font-size: 20px;
-  color: ${(props) => props.theme.colors.themeTextColor};
+  color: ${(props) => props.theme.colors.themeTextColor3};
 
   a:hover {
-    color: ${(props) => props.theme.colors.themeColor};
+    color: ${(props) => props.theme.colors.themeTextColor};
     transition: all ease-in-out 0.4s;
   }
 `;

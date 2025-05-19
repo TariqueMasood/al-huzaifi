@@ -116,7 +116,7 @@ const Header: React.FC = () => {
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/ijazah-program">
-                        Quran Ijazah Program
+                        Quran Ijazah Course
                       </NavDropdown.Item>
                       <NavDropdown.Divider />
                       <NavDropdown.Item href="/translation-course">
@@ -299,7 +299,7 @@ const Header: React.FC = () => {
                     Ifta Course
                   </NavDropdown.Item>
                 </CustomDropdown>
-                <CustomDropdown
+                {/* <CustomDropdown
                   title="Publications"
                   id={`offcanvasNavbarDropdown-expand-md`}
                 >
@@ -310,7 +310,7 @@ const Header: React.FC = () => {
                   <NavDropdown.Item href="#action5">
                     Prospectus
                   </NavDropdown.Item>
-                </CustomDropdown>
+                </CustomDropdown> */}
 
                 <Nav.Link as={NavLink} to="/contact" eventKey="contact">
                   Contact

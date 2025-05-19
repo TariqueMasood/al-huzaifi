@@ -1,25 +1,30 @@
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import bgImg from "../../src/images/elementary-english-course.png";
 
 export const ElementaryEnglishCoursePage = () => {
   return (
-    <Wrapper>
-      <Container>
-        <Title>Elementary English Course</Title>
-        <SubTitle>Al-Huzaifi Academy</SubTitle>
-        <Content>
-          <CourseDiscription>
-            <h5>course objective:</h5>
-            <p>
-              The Elementary English Course is designed to provide students with
-              a foundational understanding of the English language. It focuses
-              on essential grammar, vocabulary, reading, writing, listening, and
-              speaking skills. By the end of the course, students will be able
-              to communicate effectively in everyday situations, both verbally
-              and in writing.
-            </p>
-            {/* <h5>Course Content:</h5>
+    <>
+      <div>
+        <Image src={bgImg} alt="pic"></Image>
+      </div>
+      <Wrapper>
+        <Container>
+          <Title>Elementary English Course</Title>
+          <SubTitle>Al-Huzaifi Academy</SubTitle>
+          <Content>
+            <CourseDiscription>
+              <h5>course objective:</h5>
+              <p>
+                The Elementary English Course is designed to provide students
+                with a foundational understanding of the English language. It
+                focuses on essential grammar, vocabulary, reading, writing,
+                listening, and speaking skills. By the end of the course,
+                students will be able to communicate effectively in everyday
+                situations, both verbally and in writing.
+              </p>
+              {/* <h5>Course Content:</h5>
             <p>
               The Arabic prosody and rhyme (Arooz & Qafiyah) Course is divided
               into two main areas: Arabic Prosody (Arooz) and Arabic Rhyme
@@ -28,130 +33,137 @@ export const ElementaryEnglishCoursePage = () => {
               poetry.
             </p> */}
 
-            <h5>Levels and Duration: </h5>
-            <br />
-            <ol>
-              <li>
-                <strong>A1.1 (Beginner - Basic Communication)</strong>
-              </li>
-              <Duration>Duration: 40 hours</Duration>
-              <p>
-                <strong>Focus: </strong> Learning basic greetings,
-                self-introductions, and everyday phrases. Understanding simple
-                sentence structures and essential vocabulary for daily use.
-              </p>
-              <li>A1.2 (Elementary - Building Communication)</li>
-              <Duration>Duration: 40 hours </Duration>
-              <p>
-                <strong>Focus:</strong> Expanding on simple interactions,
-                discussing personal details, and talking about routine
-                activities. Focus on building questions and basic conversation
-                patterns.
-              </p>
-              <li>A2.1 (Pre-Intermediate - Improving Interaction)</li>
-              <Duration>Duration: 40 hours</Duration>
-              <p>
-                <strong>Focus:</strong> Emphasis on improving fluency and
-                sentence formation. Describing past and future events, talking
-                about familiar topics, and handling simple transactional
-                conversations.
-              </p>
-              <li>A2.2 (Upper Elementary - Strengthening Language Skills)</li>
-              <Duration>Duration: 40 hours</Duration>
-              <p>
-                Focus: Engaging in more complex conversations about familiar
-                subjects. Developing confidence in written and spoken English
-                for common scenarios such as travel, shopping, and social
-                situations.
-              </p>
-            </ol>
+              <h5>Levels and Duration: </h5>
+              <br />
+              <ol>
+                <li>
+                  <strong>A1.1 (Beginner - Basic Communication)</strong>
+                </li>
+                <Duration>Duration: 40 hours</Duration>
+                <p>
+                  <strong>Focus: </strong> Learning basic greetings,
+                  self-introductions, and everyday phrases. Understanding simple
+                  sentence structures and essential vocabulary for daily use.
+                </p>
+                <li>A1.2 (Elementary - Building Communication)</li>
+                <Duration>Duration: 40 hours </Duration>
+                <p>
+                  <strong>Focus:</strong> Expanding on simple interactions,
+                  discussing personal details, and talking about routine
+                  activities. Focus on building questions and basic conversation
+                  patterns.
+                </p>
+                <li>A2.1 (Pre-Intermediate - Improving Interaction)</li>
+                <Duration>Duration: 40 hours</Duration>
+                <p>
+                  <strong>Focus:</strong> Emphasis on improving fluency and
+                  sentence formation. Describing past and future events, talking
+                  about familiar topics, and handling simple transactional
+                  conversations.
+                </p>
+                <li>A2.2 (Upper Elementary - Strengthening Language Skills)</li>
+                <Duration>Duration: 40 hours</Duration>
+                <p>
+                  Focus: Engaging in more complex conversations about familiar
+                  subjects. Developing confidence in written and spoken English
+                  for common scenarios such as travel, shopping, and social
+                  situations.
+                </p>
+              </ol>
 
-            <h5>Learning Outcomes: </h5>
-            <br />
-            <ol>
-              <li>
-                <strong>Build a Strong Foundation:</strong> Gain a solid grasp
-                of essential English grammar and vocabulary.
-              </li>
-              <li>
-                <strong>Improve Basic Communication:</strong> Engage in simple
-                conversations about everyday topics with confidence.
-              </li>
-              <li>
-                <strong>Enhance Listening Skills:</strong> Understand basic
-                spoken English in real-life situations.
-              </li>
-              <li>
-                <strong>Develop Writing Skills:</strong> Write simple
-                paragraphs, letters, and emails in clear and structured English.
-              </li>
-              <li>
-                <strong>Prepare for the Next Level:</strong> Be ready to
-                progress to more advanced levels of English learning.
-              </li>
-            </ol>
+              <h5>Learning Outcomes: </h5>
+              <br />
+              <ol>
+                <li>
+                  <strong>Build a Strong Foundation:</strong> Gain a solid grasp
+                  of essential English grammar and vocabulary.
+                </li>
+                <li>
+                  <strong>Improve Basic Communication:</strong> Engage in simple
+                  conversations about everyday topics with confidence.
+                </li>
+                <li>
+                  <strong>Enhance Listening Skills:</strong> Understand basic
+                  spoken English in real-life situations.
+                </li>
+                <li>
+                  <strong>Develop Writing Skills:</strong> Write simple
+                  paragraphs, letters, and emails in clear and structured
+                  English.
+                </li>
+                <li>
+                  <strong>Prepare for the Next Level:</strong> Be ready to
+                  progress to more advanced levels of English learning.
+                </li>
+              </ol>
 
-            <h5>Who Should Enroll: </h5>
-            <p>
-              <strong>- Absolute Beginners:</strong> Individuals with little to
-              no prior experience in English who want to start from the basics.
-            </p>
-            <p>
-              <strong>- Students and Professionals: </strong>Those needing
-              foundational English skills for academic, professional, or travel
-              purposes.
-            </p>
-            <p>
-              <strong>- Non-Native Speakers:</strong> Individuals aiming to
-              build their confidence in speaking and writing English.
-            </p>
-            <p>
-              <strong>- Everyday Learners:</strong> People looking to improve
-              their language skills for social and practical interactions.
-            </p>
-            <p>
-              By completing the Elementary English Course, students will have
-              developed the core skills necessary for everyday communication and
-              will be well-prepared to move on to more advanced levels of
-              English learning.
-            </p>
-          </CourseDiscription>
-          <CourseDetail>
-            <h5>
-              course name: <span>Elementary English Course</span>
-            </h5>
-            <h5>
-              course code: <span>ENG01</span>
-            </h5>
-            <h5>
-              Learning Mode: <span>Online</span>
-            </h5>
-            <h5>
-              Language: <span>English, Arabic, Urdu</span>
-            </h5>
-            <h5>
-              type: <span>Part Time</span>
-            </h5>
-            <h5>
-              Duration: <span>4 Levels, each requiring 40 hours</span>
-            </h5>
-            <h5>
-              Entry Requirement: <span>Open for All</span>
-            </h5>
-            <h5>
-              Application Deadline: <span>Open</span>
-            </h5>
-            <ButtonContainer>
-              <a href="/registration">Apply Here</a>
-            </ButtonContainer>
-          </CourseDetail>
-        </Content>
-      </Container>
-    </Wrapper>
+              <h5>Who Should Enroll: </h5>
+              <p>
+                <strong>- Absolute Beginners:</strong> Individuals with little
+                to no prior experience in English who want to start from the
+                basics.
+              </p>
+              <p>
+                <strong>- Students and Professionals: </strong>Those needing
+                foundational English skills for academic, professional, or
+                travel purposes.
+              </p>
+              <p>
+                <strong>- Non-Native Speakers:</strong> Individuals aiming to
+                build their confidence in speaking and writing English.
+              </p>
+              <p>
+                <strong>- Everyday Learners:</strong> People looking to improve
+                their language skills for social and practical interactions.
+              </p>
+              <p>
+                By completing the Elementary English Course, students will have
+                developed the core skills necessary for everyday communication
+                and will be well-prepared to move on to more advanced levels of
+                English learning.
+              </p>
+            </CourseDiscription>
+            <CourseDetail>
+              <h5>
+                course name: <span>Elementary English Course</span>
+              </h5>
+              <h5>
+                course code: <span>ENG01</span>
+              </h5>
+              <h5>
+                Learning Mode: <span>Online</span>
+              </h5>
+              <h5>
+                Language: <span>English, Arabic, Urdu</span>
+              </h5>
+              <h5>
+                type: <span>Part Time</span>
+              </h5>
+              <h5>
+                Duration: <span>4 Levels, each requiring 40 hours</span>
+              </h5>
+              <h5>
+                Entry Requirement: <span>Open for All</span>
+              </h5>
+              <h5>
+                Application Deadline: <span>Open</span>
+              </h5>
+              <ButtonContainer>
+                <a href="/registration">Apply Here</a>
+              </ButtonContainer>
+            </CourseDetail>
+          </Content>
+        </Container>
+      </Wrapper>
+    </>
   );
 };
 
 const Wrapper = styled.div``;
+
+const Image = styled.img`
+  width: 100%;
+`;
 
 const Title = styled.h1`
   text-align: center;

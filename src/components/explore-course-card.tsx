@@ -1,8 +1,9 @@
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
+import { ReactNode } from "react";
 
 type CardProps = {
-  cardImage: string;
+  cardImage: ReactNode;
   cardTitle: string;
   cardSubTitle: string;
   link: string;
@@ -12,10 +13,10 @@ const ExploreCourseCard = (props: CardProps) => {
   return (
     <CardWraaper>
       <CardCotainer>
-        <CardImage src={props.cardImage} alt="Image1" />
+        <CardImage>{props.cardImage}</CardImage>
       </CardCotainer>
-      <CardTitle href="link">{props.cardTitle}</CardTitle>
-      <CardSubtitle>{props.cardSubTitle}</CardSubtitle>
+      <CardTitle href={props.link}>{props.cardTitle}</CardTitle>
+      {/* <CardSubtitle>{props.cardSubTitle}</CardSubtitle> */}
     </CardWraaper>
   );
 };
@@ -26,8 +27,8 @@ const CardWraaper = styled.div`
   ${mq("lg")} {
     max-width: 280px;
     width: 100%;
-    border: 1px solid #5d5d5d;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1),
+    border: 1px solid rgb(200, 200, 200);
+    box-shadow: 0 1px 3px 0 rgba(223, 223, 223, 0.1),
       0 1px 2px -1px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     padding: 30px 20px;
@@ -56,13 +57,25 @@ const CardWraaper = styled.div`
     margin-right: 0px;
   }
 
-  &:hover {
-    border-color: ${(props) => props.theme.colors.themeColor};
-  }
+  // &:hover {
+  //   border-color: ${(props) => props.theme.colors.themeColor};
+  // }
 `;
 
-const CardImage = styled.img`
-  width: 50px;
+const CardImage = styled.div`
+  max-width: 60px;
+  width: 100%;
+  max-height: 60px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    color: ${(props) => props.theme.colors.yellowColor};
+  }
 `;
 
 const CardCotainer = styled.div`
@@ -83,15 +96,16 @@ const CardTitle = styled.a`
   text-decoration: none;
   font-size: 24px;
   font-weight: 600;
-  transition: all ease 0.5s;
+  color: ${(props) => props.theme.colors.themeTextColor3};
+  // transition: all ease 0.5s;
 
-  &:hover {
-    color: ${(props) => props.theme.colors.themeColor};
-  }
+  // &:hover {
+  //   color: ${(props) => props.theme.colors.themeColor};
+  // }
 `;
 
-const CardSubtitle = styled.span`
-  text-transform: capitalize;
-  color: ${(props) => props.theme.colors.themeColor};
-  text-decoration: underline;
-`;
+// const CardSubtitle = styled.span`
+//   text-transform: capitalize;
+//   color: ${(props) => props.theme.colors.themeTextColor3};
+//   text-decoration: underline;
+// `;

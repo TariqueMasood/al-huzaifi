@@ -1,20 +1,15 @@
 import styled from "styled-components";
-import { CiClock2, CiStickyNote, CiUser } from "react-icons/ci";
-import { mq } from "../styles/breakpoints";
 
 type CardProps = {
   cardImage: string;
   courseFee: string | number;
   cardTitle: string;
-  studentNumber: number;
   student: string;
-  notesNumber: number;
   notes: string;
   hour: string;
-  clock: string;
-  userImage: string;
   userName: string;
   designation: string;
+  link: string;
 };
 
 const PopularCourseCard = (props: CardProps) => {
@@ -23,36 +18,23 @@ const PopularCourseCard = (props: CardProps) => {
       <Wrapper>
         <ImageContainer>
           <Image src={props.cardImage} alt="Card-Image" />
-          <Fee>{props.courseFee}</Fee>
+          {/* <Fee>{props.courseFee}</Fee> */}
         </ImageContainer>
         <CardContent>
-          <CardHeading>{props.cardTitle}</CardHeading>
+          <CardHeading href={props.link}>{props.cardTitle}</CardHeading>
           <CardDetailWrapper>
             <CardDetail>
-              <UserIcon>
-                <CiUser />
-              </UserIcon>
-              <span>{props.studentNumber}</span>
               <span>{props.student}</span>
             </CardDetail>
             <CardDetail>
-              <NotesIcon>
-                <CiStickyNote />
-              </NotesIcon>
-              <span>{props.notesNumber}</span>
               <span>{props.notes}</span>
             </CardDetail>
             <CardDetail>
-              <ClockIcon>
-                <CiClock2 />
-              </ClockIcon>
-              <span>{props.clock}</span>
               <span>{props.hour}</span>
             </CardDetail>
           </CardDetailWrapper>
-          <Author>
+          {/* <Author>
             <AuthorDeatil>
-              <UserImage src={props.userImage} alt="Image" />
               <span>
                 <NameLink href="#">{props.userName}</NameLink>
               </span>
@@ -60,7 +42,7 @@ const PopularCourseCard = (props: CardProps) => {
             <span>
               <DesignationLink href="#">{props.designation}</DesignationLink>
             </span>
-          </Author>
+          </Author> */}
         </CardContent>
       </Wrapper>
     </div>
@@ -85,15 +67,15 @@ const ImageContainer = styled.div`
   position: relative;
 `;
 
-const Fee = styled.span`
-  position: absolute;
-  top: 20px;
-  left: 24px;
-  background-color: ${(props) => props.theme.colors.themeColor};
-  padding: 7px 18px;
-  border-radius: 8px;
-  color: #fff;
-`;
+// const Fee = styled.span`
+//   position: absolute;
+//   top: 20px;
+//   left: 24px;
+//   background-color: ${(props) => props.theme.colors.themeColor};
+//   padding: 7px 18px;
+//   border-radius: 8px;
+//   color: #fff;
+// `;
 
 const Image = styled.img`
   max-width: 420px;
@@ -103,42 +85,31 @@ const Image = styled.img`
 `;
 
 const CardContent = styled.div`
-  padding: 20px;
+  padding: 12px;
 `;
 
-const CardHeading = styled.h4`
+const CardHeading = styled.a`
   text-transform: capitalize;
   cursor: pointer;
-  line-height: 36px;
+  font-weight: 600;
+  // line-height: 24px;
+  font-size: 20px;
+  color: ${(props) => props.theme.colors.themeColor};
+  transition: ease-in-out 0.4s;
 
-  &:hover {
-    color: ${(props) => props.theme.colors.themeColor};
-  }
+  // &:hover {
+  //   color: ${(props) => props.theme.colors.themeColor1};
+  //   transform: scale(1.1);
+  // }
 `;
 
 const CardDetail = styled.span`
   display: flex;
   align-items: center;
   gap: 7px;
-  margin: 18px 0px;
-  color: #696969;
+  padding: 12px 0px;
+  color: ${(props) => props.theme.colors.yellowColor};
   font-size: 12px;
-
-  ${mq("md")} {
-    font-size: 16px;
-  }
-`;
-
-const UserIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
-`;
-
-const NotesIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
-`;
-
-const ClockIcon = styled.span`
-  color: ${(props) => props.theme.colors.themeColor};
 `;
 
 const CardDetailWrapper = styled.div`
@@ -146,39 +117,33 @@ const CardDetailWrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Author = styled.div`
-  display: flex;
-  justify-content: space-between;
-  border-top: 1px solid ${(props) => props.theme.cardDividerColor};
-  padding-top: 20px;
-`;
+// const Author = styled.div`
+//   display: flex;
+//   justify-content: space-between;
+//   border-top: 1px solid ${(props) => props.theme.cardDividerColor};
+//   padding-top: 20px;
+// `;
 
-const AuthorDeatil = styled.span`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`;
+// const AuthorDeatil = styled.span`
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+// `;
 
-const NameLink = styled.a`
-  text-transform: capitalize;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  color: #6b6b6b;
+// const NameLink = styled.a`
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   font-size: 16px;
+//   font-weight: 500;
+//   color: #6b6b6b;
 
-  &:hover {
-    color: ${(props) => props.theme.colors.themeColor};
-  }
-`;
+//   &:hover {
+//     color: ${(props) => props.theme.colors.themeColor};
+//   }
+// `;
 
-const DesignationLink = styled.a`
-  text-transform: capitalize;
-  text-decoration: none;
-  font-weight: 500;
-`;
-
-const UserImage = styled.img`
-  width: 30px;
-  border-radius: 50%;
-  cursor: pointer;
-`;
+// const DesignationLink = styled.a`
+//   text-transform: capitalize;
+//   text-decoration: none;
+//   font-weight: 500;
+// `;
