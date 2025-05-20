@@ -67,7 +67,7 @@ const ContentWrapper = styled.div`
 
   p {
     color: #555d50;
-    font-size: 16px;
+    font-size: 18px;
     padding: 16px 0px;
     letter-spacing: 0px;
 

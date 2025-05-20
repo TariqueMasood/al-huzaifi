@@ -80,7 +80,7 @@ const Contact = () => {
                   <FaWhatsapp />
                 </div>
                 <div>WhatsApp:</div>
-                <div>+91 9876543210</div>
+                <div>+91 9535316943</div>
               </ContactContainer>
             </Col>
             <Col lg="6" md="6" sm="6">
@@ -174,6 +174,7 @@ const ContactContainer = styled.div`
   text-align: center;
   border: 3px solid ${(props) => props.theme.colors.themeColor};
   border-radius: 8px;
+  margin-top: 20px;
 
   div {
     padding: 5px 0px;

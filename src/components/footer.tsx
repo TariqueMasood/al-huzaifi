@@ -20,9 +20,9 @@ const Footer = () => {
               converge in a seamless learning exprience. This academy is a
               pioneering institution, dedicated to offer a comprehensive
               curriculum......
-              <ReadMore>
+              {/* <ReadMore>
                 <a href="/why-choose-us">Read More</a>
-              </ReadMore>
+              </ReadMore> */}
             </Tagline>
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
@@ -152,19 +152,19 @@ const ContactIcon = styled.div`
   }
 `;
 
-const ReadMore = styled.span`
-  background-color: #fff;
-  font-size: 12px;
-  padding: 3px 7px;
-  border-radius: 6px;
-  color: ${(props) => props.theme.colors.themeColor};
-  transition: ease-in 0.4s;
+// const ReadMore = styled.span`
+//   background-color: #fff;
+//   font-size: 12px;
+//   padding: 3px 7px;
+//   border-radius: 6px;
+//   color: ${(props) => props.theme.colors.themeColor};
+//   transition: ease-in 0.4s;
 
-  &:hover {
-    background-color: ${(props) => props.theme.colors.themeColor};
-    color: #fff;
-  }
-`;
+//   &:hover {
+//     background-color: ${(props) => props.theme.colors.themeColor};
+//     color: #fff;
+//   }
+// `;
 
 const Divider = styled.div`
   height: 1px;

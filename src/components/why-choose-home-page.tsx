@@ -84,7 +84,7 @@ export const WhychooseHomePage = () => {
 };
 
 const Wrapper = styled.div`
-  background-color: #f4f1ec;
+  // background-color: #f4f1ec;
   padding: 30px 0px;
 
   ${mq("sm")} {
@@ -141,7 +141,8 @@ const ContentWrapper = styled.div`
   span {
     font-size: 14px;
     text-transform: capitalize;
-    color: ${(props) => props.theme.colors.yellowColor};
+    // color: ${(props) => props.theme.colors.yellowColor};
+    color: rgb(199, 132, 38);
   }
 
   ${mq("sm")} {

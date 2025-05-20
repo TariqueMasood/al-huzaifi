@@ -223,10 +223,10 @@ export const AdvancedUrduCoursePage = () => {
             </CourseDiscription>
             <CourseDetail>
               <h5>
-                course name: <span>Elementary Urdu Course</span>
+                course name: <span>Advance Urdu Course</span>
               </h5>
               <h5>
-                course code: <span>URD01</span>
+                course code: <span>URD03</span>
               </h5>
               <h5>
                 Learning Mode: <span>Online</span>
