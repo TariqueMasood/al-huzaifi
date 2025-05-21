@@ -35,6 +35,10 @@ const Wrapper = styled.div`
   &:last-child {
     margin-right: 0px;
   }
+
+  h1 {
+    color: ${(props) => props.theme.colors.themColor};
+  }
 `;
 
 // const CardCircle = styled.div`
@@ -57,4 +61,5 @@ const Wrapper = styled.div`
 
 const Title = styled.span`
   font-size: 18px;
+  color: ${(props) => props.theme.colors.yellowColor2};
 `;

@@ -76,20 +76,32 @@ const Contact = () => {
           <Row>
             <Col lg="6" md="6" sm="6">
               <ContactContainer>
-                <div>
-                  <FaWhatsapp />
-                </div>
-                <div>WhatsApp:</div>
-                <div>+91 9535316943</div>
+                <a
+                  href="https://wa.me/919535316943"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <FaWhatsapp />
+                  </div>
+                  <div>WhatsApp:</div>
+                  <div>+91 9535316943</div>
+                </a>
               </ContactContainer>
             </Col>
             <Col lg="6" md="6" sm="6">
               <ContactContainer>
-                <div>
-                  <CiMail />
-                </div>
-                <div>Email:</div>
-                <div>info@alhuzaifi.com</div>
+                <a
+                  href="mailto:info@alhuzaifi.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <div>
+                    <CiMail />
+                  </div>
+                  <div>Email:</div>
+                  <div>info@alhuzaifi.com</div>
+                </a>
               </ContactContainer>
             </Col>
           </Row>

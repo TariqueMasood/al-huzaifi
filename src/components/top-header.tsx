@@ -1,13 +1,7 @@
 import React from "react";
 import { Container } from "react-bootstrap";
 import { FiUserPlus } from "react-icons/fi";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaYoutube,
-  FaRegUser,
-  FaWhatsapp,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube, FaRegUser } from "react-icons/fa";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import { Link } from "react-router-dom";

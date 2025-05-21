@@ -15,6 +15,7 @@ const theme: DefaultTheme = {
     headerBackground: "#006778",
     footerBackground: "#00343d",
     yellowColor:"#cdad7e",
+    yellowColor2:"#c78426;",
     
   },
 };

@@ -26,10 +26,28 @@ const Footer = () => {
             </Tagline>
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
-              <FaFacebookF />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/"
+              >
+                <FaInstagram />
+              </a>
               {/* <FaTwitter /> */}
-              <FaInstagram />
-              <FaYoutube />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com"
+              >
+                <FaYoutube />
+              </a>
             </SocialIcon>
           </Col>
           <Col className="mb-4" lg={4} md={6} xs={12}>
@@ -121,7 +139,7 @@ const SocialIcon = styled.div`
     transition: all ease 0.4s;
 
     &:hover {
-      color: ${(props) => props.theme.colors.themeColor};
+      color: ${(props) => props.theme.colors.themeTextColor};
     }
   }
 `;

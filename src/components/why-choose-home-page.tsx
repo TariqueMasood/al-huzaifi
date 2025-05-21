@@ -142,7 +142,7 @@ const ContentWrapper = styled.div`
     font-size: 14px;
     text-transform: capitalize;
     // color: ${(props) => props.theme.colors.yellowColor};
-    color: rgb(199, 132, 38);
+    color: #c78426;
   }
 
   ${mq("sm")} {
