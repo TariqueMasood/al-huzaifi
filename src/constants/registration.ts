@@ -7,6 +7,7 @@ export const facultyOptions: {
   "Faculty of Languages(English)": string[];
   "Faculty of Languages(Urdu)": string[];
   "Short Courses": string[];
+  "Darul-Ifta": string[];
 } = {
   "Faculty of Quran": [
     "Noorani Qaedah Course",
@@ -55,10 +56,15 @@ export const facultyOptions: {
     "Advanced Urdu Course",
   ],
   "Short Courses": [
-    "Basic Arabic",
-    "Advanced Quranic Studies",
-    "Islamic Studies for Beginners",
+    "Ibadaat Course",
+    "Zakat Course",
+    "Ramadan Special Course",
+    "Hajj && Umrah Course",
+    "Life of Prophet(Seerat) Course",
+    "inheritance(Meerath) Course",
+    "Imamat Course",
   ],
+  "Darul-Ifta": ["Ifta Course"],
 };
 
 export const timingOptions = [

@@ -16,7 +16,10 @@ export const validationSchema = Yup.object().shape({
     .required("Phone number is required."),
   religion: Yup.string().required("Religion is required."),
   nativeLanguage: Yup.string().required("Native Language is required."),
-  knownLanguage: Yup.string().required("Known Language is required."),
+  knownLanguage: Yup.array()
+    .of(Yup.string())
+    .min(1, "At least one known language must be selected.")
+    .required("Known Language is required."),
   guardianName: Yup.string().required("Guardian Name is required."),
   relationship: Yup.string().required("Relationship is required."),
   faculty: Yup.string().required("Faculty is required."),
@@ -24,4 +27,17 @@ export const validationSchema = Yup.object().shape({
   country: Yup.string().required("Country is required."), // Added validation for country
   availability: Yup.string().required("Availability is required."),
   timing: Yup.string().required("Timing is required."),
+  applyForScholarship: Yup.boolean(),
+  scholarshipOptions: Yup.object().shape({
+    scholarshipType: Yup.string().when("applyForScholarship", {
+      is: true,
+      then: (schema) => schema.required("Please select a scholarship type."),
+      otherwise: (schema) => schema.notRequired(),
+    }),
+    scholarshipReason: Yup.string().when("applyForScholarship", {
+      is: true,
+      then: (schema) => schema.required("Scholarship reason is required when applying for a scholarship.").trim(),
+      otherwise: (schema) => schema.notRequired(),
+    }),
+  }),
 });
