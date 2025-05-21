@@ -16,10 +16,9 @@ const Footer = () => {
             {/* <FooterTitle>AL-Huzaifi</FooterTitle> */}
             <FooterLogo src={fLogo} alt="image" />
             <Tagline>
-              an Online Islamic Education hub, where knowledge and faith
-              converge in a seamless learning exprience. This academy is a
-              pioneering institution, dedicated to offer a comprehensive
-              curriculum......
+              An online hub for authentic Islamic and academic education,
+              serving a global community with a focus on faith, excellence, and
+              holistic development.
               {/* <ReadMore>
                 <a href="/why-choose-us">Read More</a>
               </ReadMore> */}
@@ -29,7 +28,7 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/alhuzaifiacademy/?igsh=MWswMzl6NGM3Z25zcw%3D%3D&utm_source=qr#"
               >
                 <FaInstagram />
               </a>
@@ -37,14 +36,14 @@ const Footer = () => {
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.facebook.com/"
+                href="https://www.facebook.com/alhuzaifiacademy?mibextid=wwXIfr&rdid=QVVmcr6dT9Z3LCEn&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FGoKAA3Pg%2F%3Fmibextid%3DwwXIfr#"
               >
                 <FaFacebookF />
               </a>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
-                href="https://www.youtube.com"
+                href="https://www.youtube.com/@alhuzaifiacademy"
               >
                 <FaYoutube />
               </a>

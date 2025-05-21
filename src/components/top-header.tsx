@@ -15,7 +15,7 @@ export const TopHeader = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.instagram.com/"
+              href="https://www.instagram.com/alhuzaifiacademy/?igsh=MWswMzl6NGM3Z25zcw%3D%3D&utm_source=qr#"
             >
               <FaInstagram />
             </a>
@@ -29,14 +29,14 @@ export const TopHeader = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.facebook.com/"
+              href="https://www.facebook.com/alhuzaifiacademy?mibextid=wwXIfr&rdid=QVVmcr6dT9Z3LCEn&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FGoKAA3Pg%2F%3Fmibextid%3DwwXIfr#"
             >
               <FaFacebookF />
             </a>
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://www.youtube.com"
+              href="https://www.youtube.com/@alhuzaifiacademy"
             >
               <FaYoutube />
             </a>
