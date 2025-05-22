@@ -37,7 +37,7 @@ const Wrapper = styled.div`
   }
 
   h1 {
-    color: ${(props) => props.theme.colors.themColor};
+    color: ${(props) => props.theme.colors.themeColor};
   }
 `;
 

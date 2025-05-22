@@ -440,7 +440,6 @@ const RegistrationForm = () => {
 export default RegistrationForm;
 
 const Wrapper = styled.div`
-  background-color: #E3E3E3;
   padding: 30px 0px;
 };
   

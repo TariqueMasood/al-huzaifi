@@ -2,7 +2,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { CiLocationOn } from "react-icons/ci";
+// import { CiLocationOn } from "react-icons/ci";
 import { IoCallOutline } from "react-icons/io5";
 import { BsEnvelope } from "react-icons/bs";
 import fLogo from "../../src/images/al-hozaifi-academy-logo-white.png";
@@ -77,13 +77,26 @@ const Footer = () => {
           </Col>
           <Col className="mb-4" lg={4} md={6} xs={12}>
             <FooterTitle>Contact Us</FooterTitle>
-            <ContactIcon>
+            {/* <ContactIcon>
               <CiLocationOn />
               15 Rose StreetHarvey, IL 60426 USA
+            </ContactIcon> */}
+            <ContactIcon>
+              <div style={{ marginBottom: "7px", fontWeight: "bold" }}>
+                Our Offices
+              </div>
+              <ul>
+                <li>USA</li>
+                <li>India</li>
+                <li>Egypt</li>
+                <li>Turkiye</li>
+              </ul>
             </ContactIcon>
             <ContactIcon>
-              <IoCallOutline />
-              +91 9876543210
+              <a href="tel:+91 9535316943">
+                <IoCallOutline />
+                +91 9876543210
+              </a>
             </ContactIcon>
             <ContactIcon>
               <BsEnvelope />
