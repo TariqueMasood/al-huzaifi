@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
 // import { CiLocationOn } from "react-icons/ci";
-import { IoCallOutline } from "react-icons/io5";
+import { FaWhatsapp } from "react-icons/fa";
 import { BsEnvelope } from "react-icons/bs";
 import fLogo from "../../src/images/al-hozaifi-academy-logo-white.png";
 
@@ -82,6 +82,26 @@ const Footer = () => {
               15 Rose StreetHarvey, IL 60426 USA
             </ContactIcon> */}
             <ContactIcon>
+              <a
+                href="https://wa.me/919535316943"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+                +91 9535316943
+              </a>
+            </ContactIcon>
+            <ContactIcon>
+              <a
+                href="mailto:info@alhuzaifi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsEnvelope />
+                info@alhuzaifi.com
+              </a>
+            </ContactIcon>
+            <ContactIcon>
               <div style={{ marginBottom: "7px", fontWeight: "bold" }}>
                 Our Offices
               </div>
@@ -91,16 +111,6 @@ const Footer = () => {
                 <li>Egypt</li>
                 <li>Turkiye</li>
               </ul>
-            </ContactIcon>
-            <ContactIcon>
-              <a href="tel:+91 9535316943">
-                <IoCallOutline />
-                +91 9876543210
-              </a>
-            </ContactIcon>
-            <ContactIcon>
-              <BsEnvelope />
-              example@education.com
             </ContactIcon>
           </Col>
         </Row>
@@ -151,7 +161,7 @@ const SocialIcon = styled.div`
     transition: all ease 0.4s;
 
     &:hover {
-      color: ${(props) => props.theme.colors.themeTextColor};
+      color: ${(props) => props.theme.colors.themeColor3};
     }
   }
 `;
@@ -163,7 +173,7 @@ const List = styled.li`
   color: ${(props) => props.theme.colors.themeTextColor3};
 
   a:hover {
-    color: ${(props) => props.theme.colors.themeTextColor};
+    color: ${(props) => props.theme.colors.themeColor3};
     transition: all ease-in-out 0.4s;
   }
 `;
