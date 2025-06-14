@@ -36,18 +36,14 @@ const RegistrationForm = () => {
     availability: "",
     timing: "",
     country: "",
+    scholarshipType: "",
+    scholarshipReason: "",
   });
   const [submittedData, setSubmittedData] = useState<any[]>([]);
   const [errors, setErrors] = useState<{
     [key: string]: string | { scholarshipReason?: string };
   }>({});
   const [applyForScholarship, setApplyForScholarship] = useState(false);
-  const [scholarshipOptions, setScholarshipOptions] = useState({
-    meritBased: false,
-    siblingScholarship: false,
-    specialCircumstances: false,
-    scholarshipReason: "",
-  });
 
   const handleFormValueChange = (
     e: React.ChangeEvent<
@@ -108,36 +104,27 @@ const RegistrationForm = () => {
     }));
   };
 
-  const handleScholarshipChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = e.target;
-    setScholarshipOptions((prev) => ({
-      ...prev,
-      [name]: checked,
-    }));
+  const handleApplyForScholarshipChange = (
+    e: React.ChangeEvent<HTMLInputElement>
+  ) => {
+    setApplyForScholarship(e.target.checked);
+    if (!e.target.checked) {
+      setFormValue((prev) => ({
+        ...prev,
+        scholarshipType: "",
+        scholarshipReason: "",
+      }));
+    }
   };
 
   const handleScholarshipReasonChange = (
     e: React.ChangeEvent<HTMLTextAreaElement>
   ) => {
     const { value } = e.target;
-    setScholarshipOptions((prev) => ({
+    setFormValue((prev) => ({
       ...prev,
       scholarshipReason: value,
     }));
-  };
-
-  const handleApplyForScholarshipChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setApplyForScholarship(e.target.checked);
-    if (!e.target.checked) {
-      setScholarshipOptions({
-        meritBased: false,
-        siblingScholarship: false,
-        specialCircumstances: false,
-        scholarshipReason: "",
-      });
-    }
   };
 
   // Update error handling logic to ensure proper parsing of scholarshipOptions errors
@@ -148,8 +135,8 @@ const RegistrationForm = () => {
       setErrors({}); // Clear errors if validation passes
       setSubmittedData((prevData) => [
         ...prevData,
-        { ...formValue, scholarshipOptions },
-      ]); // Include scholarship options in submitted data
+        { ...formValue }, // Ensure scholarshipType and scholarshipReason are included
+      ]);
       setFormValue({
         firstName: "",
         lastName: "",
@@ -167,6 +154,8 @@ const RegistrationForm = () => {
         availability: "",
         timing: "",
         country: "",
+        scholarshipType: "", // Reset scholarshipType
+        scholarshipReason: "", // Reset scholarshipReason
       }); // Reset form values
       setSelectedFaculty(""); // Reset selectedFaculty
       setSelectedCourse(""); // Reset selectedCourse
@@ -175,15 +164,7 @@ const RegistrationForm = () => {
       if (validationErrors instanceof Yup.ValidationError) {
         validationErrors.inner.forEach((error) => {
           if (error.path) {
-            const pathParts = error.path.split(".");
-            if (pathParts[0] === "scholarshipOptions") {
-              if (!formattedErrors.scholarshipOptions) {
-                formattedErrors.scholarshipOptions = {};
-              }
-              formattedErrors.scholarshipOptions[pathParts[1]] = error.message;
-            } else {
-              formattedErrors[error.path] = error.message;
-            }
+            formattedErrors[error.path] = error.message;
           }
         });
       }
@@ -489,76 +470,47 @@ const RegistrationForm = () => {
               {applyForScholarship && (
                 <>
                   <FlexRow>
-                    <Form.Check
-                      type="radio"
-                      label="Merit-Based"
-                      name="scholarshipType"
-                      id="meritBased"
-                      checked={scholarshipOptions.meritBased}
-                      onChange={() =>
-                        setScholarshipOptions((prev) => ({
-                          ...prev,
-                          meritBased: true,
-                          siblingScholarship: false,
-                          specialCircumstances: false,
-                        }))
-                      }
-                      inline
-                    />
-                    <Form.Check
-                      type="radio"
-                      label="Sibling Scholarship"
-                      name="scholarshipType"
-                      id="siblingScholarship"
-                      checked={scholarshipOptions.siblingScholarship}
-                      onChange={() =>
-                        setScholarshipOptions((prev) => ({
-                          ...prev,
-                          meritBased: false,
-                          siblingScholarship: true,
-                          specialCircumstances: false,
-                        }))
-                      }
-                      inline
-                    />
-                    <Form.Check
-                      type="radio"
-                      label="Special Circumstances"
-                      name="scholarshipType"
-                      id="specialCircumstances"
-                      checked={scholarshipOptions.specialCircumstances}
-                      onChange={() =>
-                        setScholarshipOptions((prev) => ({
-                          ...prev,
-                          meritBased: false,
-                          siblingScholarship: false,
-                          specialCircumstances: true,
-                        }))
-                      }
-                      inline
-                    />
-                  </FlexRow>
-                  {typeof errors.scholarshipOptions === "string" && (
-                    <ErrorText>{errors.scholarshipOptions}</ErrorText>
-                  )}
-                  <StyledFormGroup controlId="scholarshipReason">
-                    <Form.Label>
-                      In your words, explain why you deserve this scholarship?
-                    </Form.Label>
-                    <StyledFormControl
-                      as="textarea"
-                      rows={3}
-                      name="scholarshipReason"
-                      value={scholarshipOptions.scholarshipReason}
-                      onChange={handleScholarshipReasonChange}
-                    />
-                    {typeof errors.scholarshipOptions === "object" &&
-                      errors.scholarshipOptions.scholarshipReason && (
-                        <ErrorText>
-                          {errors.scholarshipOptions.scholarshipReason}
-                        </ErrorText>
+                    <StyledFormGroup controlId="scholarshipType">
+                      <Form.Label>Scholarship Type</Form.Label>
+                      <StyledSelect
+                        name="scholarshipType"
+                        value={formValue.scholarshipType || ""}
+                        onChange={handleFormValueChange}
+                      >
+                        <option value="">-- Select Scholarship Type --</option>
+                        <option value="meritBased">Merit-Based</option>
+                        <option value="siblingScholarship">
+                          Sibling Scholarship
+                        </option>
+                        <option value="specialCircumstances">
+                          Special Circumstances
+                        </option>
+                      </StyledSelect>
+                      {typeof errors.scholarshipType === "string" && (
+                        <ErrorText>{errors.scholarshipType}</ErrorText>
                       )}
-                  </StyledFormGroup>
+                    </StyledFormGroup>
+                  </FlexRow>
+                  <FlexRow>
+                    <StyledFormGroup controlId="scholarshipReason">
+                      <Form.Label>
+                        In your words, explain why you deserve this scholarship?
+                      </Form.Label>
+                      <StyledFormControl
+                        as="textarea"
+                        rows={3}
+                        name="scholarshipReason"
+                        value={formValue.scholarshipReason}
+                        onChange={handleScholarshipReasonChange}
+                      />
+                      {typeof errors.scholarshipOptions === "object" &&
+                        errors.scholarshipOptions.scholarshipReason && (
+                          <ErrorText>
+                            {errors.scholarshipOptions.scholarshipReason}
+                          </ErrorText>
+                        )}
+                    </StyledFormGroup>
+                  </FlexRow>
                 </>
               )}
               <Submit type="submit">Register</Submit>
@@ -583,7 +535,8 @@ const RegistrationForm = () => {
                   <th>Availability</th>
                   <th>Timing</th>
                   <th>Country</th>
-                  <th>Scholarship Options</th>
+                  <th>Scholarship Type</th>
+                  <th>Scholarship Reason</th>
                 </tr>
               </thead>
               <tbody>
@@ -606,19 +559,8 @@ const RegistrationForm = () => {
                     <td>{data.availability}</td>
                     <td>{data.timing}</td>
                     <td>{data.country}</td>
-                    <td>
-                      {data.scholarshipOptions?.meritBased && "Merit-Based "}
-                      {data.scholarshipOptions?.siblingScholarship &&
-                        "Sibling Scholarship "}
-                      {data.scholarshipOptions?.specialCircumstances &&
-                        "Special Circumstances "}
-                      {data.scholarshipOptions?.scholarshipReason && (
-                        <div>
-                          <strong>Reason:</strong>{" "}
-                          {data.scholarshipOptions.scholarshipReason}
-                        </div>
-                      )}
-                    </td>
+                    <td>{data.scholarshipType}</td>
+                    <td>{data.scholarshipReason}</td>
                   </tr>
                 ))}
               </tbody>
