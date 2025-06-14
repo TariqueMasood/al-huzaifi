@@ -1,10 +1,11 @@
 import { Col, Container, Row } from "react-bootstrap";
 import styled from "styled-components";
-import { FaFacebookF, FaInstagram, FaTwitter, FaYoutube } from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaYoutube } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { CiLocationOn } from "react-icons/ci";
-import { IoCallOutline } from "react-icons/io5";
+// import { CiLocationOn } from "react-icons/ci";
+import { FaWhatsapp } from "react-icons/fa";
 import { BsEnvelope } from "react-icons/bs";
+import fLogo from "../../src/images/al-hozaifi-academy-logo-white.png";
 
 const Footer = () => {
   return (
@@ -12,22 +13,40 @@ const Footer = () => {
       <Container>
         <Row className="d-flex justify-content-between">
           <Col className="mb-4" lg={4} md={6} xs={12}>
-            <FooterTitle>AL-Huzaifi</FooterTitle>
+            {/* <FooterTitle>AL-Huzaifi</FooterTitle> */}
+            <FooterLogo src={fLogo} alt="image" />
             <Tagline>
-              an Online Islamic Education hub, where knowledge and faith
-              converge in a seamless learning exprience. This academy is a
-              pioneering institution, dedicated to offer a comprehensive
-              curriculum......
-              <ReadMore>
+              An online hub for authentic Islamic and academic education,
+              serving a global community with a focus on faith, excellence, and
+              holistic development.
+              {/* <ReadMore>
                 <a href="/why-choose-us">Read More</a>
-              </ReadMore>
+              </ReadMore> */}
             </Tagline>
             <FooterTitle>Follow Us On:</FooterTitle>
             <SocialIcon>
-              <FaFacebookF />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.instagram.com/alhuzaifiacademy/?igsh=MWswMzl6NGM3Z25zcw%3D%3D&utm_source=qr#"
+              >
+                <FaInstagram />
+              </a>
               {/* <FaTwitter /> */}
-              <FaInstagram />
-              <FaYoutube />
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.facebook.com/alhuzaifiacademy?mibextid=wwXIfr&rdid=QVVmcr6dT9Z3LCEn&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1FGoKAA3Pg%2F%3Fmibextid%3DwwXIfr#"
+              >
+                <FaFacebookF />
+              </a>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.youtube.com/@alhuzaifiacademy"
+              >
+                <FaYoutube />
+              </a>
             </SocialIcon>
           </Col>
           <Col className="mb-4" lg={4} md={6} xs={12}>
@@ -58,17 +77,40 @@ const Footer = () => {
           </Col>
           <Col className="mb-4" lg={4} md={6} xs={12}>
             <FooterTitle>Contact Us</FooterTitle>
-            <ContactIcon>
+            {/* <ContactIcon>
               <CiLocationOn />
               15 Rose StreetHarvey, IL 60426 USA
+            </ContactIcon> */}
+            <ContactIcon>
+              <a
+                href="https://wa.me/919535316943"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+                +91 9535316943
+              </a>
             </ContactIcon>
             <ContactIcon>
-              <IoCallOutline />
-              +91 9876543210
+              <a
+                href="mailto:info@alhuzaifi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <BsEnvelope />
+                info@alhuzaifi.com
+              </a>
             </ContactIcon>
             <ContactIcon>
-              <BsEnvelope />
-              example@education.com
+              <div style={{ marginBottom: "7px", fontWeight: "bold" }}>
+                Our Offices
+              </div>
+              <ul>
+                <li>USA</li>
+                <li>India</li>
+                <li>Egypt</li>
+                <li>Turkiye</li>
+              </ul>
             </ContactIcon>
           </Col>
         </Row>
@@ -98,11 +140,17 @@ const FooterTitle = styled.h4`
   font-family: "Oswald", sans-serif;
 `;
 
+const FooterLogo = styled.img`
+  max-width: 250px;
+  width: 100%;
+`;
+
 const Tagline = styled.p`
   font-size: 18px;
   max-width: 300px;
   width: 100%;
-  margin-bottom: 20px;
+  // margin-bottom: 20px;
+  margin: 20px 0px;
 `;
 
 const SocialIcon = styled.div`
@@ -113,7 +161,7 @@ const SocialIcon = styled.div`
     transition: all ease 0.4s;
 
     &:hover {
-      color: ${(props) => props.theme.colors.themeColor};
+      color: ${(props) => props.theme.colors.themeColor3};
     }
   }
 `;
@@ -125,7 +173,7 @@ const List = styled.li`
   color: ${(props) => props.theme.colors.themeTextColor3};
 
   a:hover {
-    color: ${(props) => props.theme.colors.themeTextColor};
+    color: ${(props) => props.theme.colors.themeColor3};
     transition: all ease-in-out 0.4s;
   }
 `;
@@ -144,19 +192,19 @@ const ContactIcon = styled.div`
   }
 `;
 
-const ReadMore = styled.span`
-  background-color: #fff;
-  font-size: 12px;
-  padding: 3px 7px;
-  border-radius: 6px;
-  color: ${(props) => props.theme.colors.themeColor};
-  transition: ease-in 0.4s;
+// const ReadMore = styled.span`
+//   background-color: #fff;
+//   font-size: 12px;
+//   padding: 3px 7px;
+//   border-radius: 6px;
+//   color: ${(props) => props.theme.colors.themeColor};
+//   transition: ease-in 0.4s;
 
-  &:hover {
-    background-color: ${(props) => props.theme.colors.themeColor};
-    color: #fff;
-  }
-`;
+//   &:hover {
+//     background-color: ${(props) => props.theme.colors.themeColor};
+//     color: #fff;
+//   }
+// `;
 
 const Divider = styled.div`
   height: 1px;

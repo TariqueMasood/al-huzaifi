@@ -2,8 +2,8 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import styled from "styled-components";
-import ScrollToTop from "../components/scroll-to-top";
 import { GetInTouch } from "../components/get-in-touch";
+import ScrollToTop from "../components/scrollToTop";
 
 const Layout = () => {
   return (

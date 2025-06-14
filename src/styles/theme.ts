@@ -3,8 +3,9 @@ import { DefaultTheme } from "styled-components";
 const theme: DefaultTheme = {
   colors: {
     // themeColor: "#ce7d00",
-    themeColor: "#004353",
+    themeColor3: "#004353",
     themeColor2: "#e2f0d9",
+    themeColor: "#137C8F",
     activeBg: "#E6F7FF",
     activeTextColor: "#124d63",
     darkBg:"#0D1A36",
@@ -15,6 +16,7 @@ const theme: DefaultTheme = {
     headerBackground: "#006778",
     footerBackground: "#00343d",
     yellowColor:"#cdad7e",
+    yellowColor2:"#c78426;",
     
   },
 };

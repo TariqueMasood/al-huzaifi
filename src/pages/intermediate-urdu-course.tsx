@@ -215,10 +215,10 @@ export const IntermediateUrduCoursePage = () => {
             </CourseDiscription>
             <CourseDetail>
               <h5>
-                course name: <span>Elementary Urdu Course</span>
+                course name: <span>Intermediate Urdu Course</span>
               </h5>
               <h5>
-                course code: <span>URD01</span>
+                course code: <span>URD02</span>
               </h5>
               <h5>
                 Learning Mode: <span>Online</span>

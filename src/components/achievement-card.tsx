@@ -11,9 +11,9 @@ const AchievementCard = (props: cardProps) => {
     <Wrapper>
       <h1>{props.counter}</h1>
       <Title>{props.title}</Title>
-      <CardCircle>
+      {/* <CardCircle>
         <CircleIcon>{props.icon}</CircleIcon>
-      </CardCircle>
+      </CardCircle> */}
     </Wrapper>
   );
 };
@@ -35,26 +35,31 @@ const Wrapper = styled.div`
   &:last-child {
     margin-right: 0px;
   }
+
+  h1 {
+    color: ${(props) => props.theme.colors.themeColor};
+  }
 `;
 
-const CardCircle = styled.div`
-  width: 65px;
-  height: 65px;
-  border-radius: 50%;
-  background-color: #e5f8f8;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  top: -22px;
-  left: -20px;
-`;
+// const CardCircle = styled.div`
+//   width: 65px;
+//   height: 65px;
+//   border-radius: 50%;
+//   background-color: #e5f8f8;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: absolute;
+//   top: -22px;
+//   left: -20px;
+// `;
 
-const CircleIcon = styled.span`
-  font-size: 28px;
-  color: blue;
-`;
+// const CircleIcon = styled.span`
+//   font-size: 28px;
+//   color: blue;
+// `;
 
 const Title = styled.span`
   font-size: 18px;
+  color: ${(props) => props.theme.colors.yellowColor2};
 `;

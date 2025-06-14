@@ -80,7 +80,7 @@ export default ExploreCourseList;
 const Wrapper = styled.div`
   background-color: ${(props) => props.theme.colors.themeColor};
   color: ${(props) => props.theme.colors.themeTextColor};
-  padding-bottom: 40px;
+  // padding-bottom: 40px;
 `;
 
 const CardWrapper = styled.div`

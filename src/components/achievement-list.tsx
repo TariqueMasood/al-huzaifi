@@ -3,6 +3,7 @@ import AchievementCard from "./achievement-card";
 import { PiUsersThreeThin } from "react-icons/pi";
 import Title from "./title";
 import { Container } from "react-bootstrap";
+import { mq } from "../styles/breakpoints";
 
 const achievementCardData = [
   {
@@ -56,7 +57,15 @@ const AchievementList = () => {
 export default AchievementList;
 
 const Wrapper = styled.div`
-  padding: 40px 0px;
+  padding: 24px 0px;
+
+  ${mq("sm")} {
+    padding: 30px 0px;
+  }
+
+  ${mq("md")} {
+    padding: 40px 0px;
+  }
 `;
 
 const TitleContainer = styled.div`

@@ -91,7 +91,7 @@ const CardContent = styled.div`
 const CardHeading = styled.a`
   text-transform: capitalize;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 700;
   // line-height: 24px;
   font-size: 20px;
   color: ${(props) => props.theme.colors.themeColor};
@@ -110,6 +110,7 @@ const CardDetail = styled.span`
   padding: 12px 0px;
   color: ${(props) => props.theme.colors.yellowColor};
   font-size: 12px;
+  font-weight: 600;
 `;
 
 const CardDetailWrapper = styled.div`

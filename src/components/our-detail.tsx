@@ -14,10 +14,10 @@ export const OurDetail = () => {
             Academy.
           </h2>
           <p>
-            We offer an array of course designed to make islamic education
-            accessible to everyone,from younge learner to adults.Led by a team
-            of passionate eduactors from around the world, we are committed to
-            supporting each student's unique learnign path.
+            "We offer an array of courses designed to make Islamic education
+            accessible to everyone, from young learners to adults. Led by a team
+            of passionate educators from around the world, we are committed to
+            supporting each student's unique learning path."
           </p>
           <LearnMore>learn more</LearnMore>
         </ContentWrapper>
@@ -42,12 +42,6 @@ const Wrapper = styled.div`
 // `;
 
 const ContentWrapper = styled.div`
-  // width: 100%;
-  // position: absolute;
-  // left: 50%;
-  // top: 50%;
-  // transform: translate(-50%, -50%);
-
   h2 {
     color: #cdad7e;
     font-style: italic;
@@ -73,7 +67,7 @@ const ContentWrapper = styled.div`
 
   p {
     color: #555d50;
-    font-size: 12px;
+    font-size: 18px;
     padding: 16px 0px;
     letter-spacing: 0px;
 

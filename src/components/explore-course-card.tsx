@@ -96,6 +96,7 @@ const CardTitle = styled.a`
   text-decoration: none;
   font-size: 24px;
   font-weight: 600;
+  text-align: center;
   color: ${(props) => props.theme.colors.themeTextColor3};
   // transition: all ease 0.5s;
 

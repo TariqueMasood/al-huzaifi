@@ -50,6 +50,7 @@ const ScrollButton = styled.button<{ show: boolean }>`
   transition: 0.3s ease-in-out;
 
   &:hover {
-    background-color: #0a7d9a;
+    // background-color: #0a7d9a;
+    background-color: ${(props) => props.theme.colors.yellowColor};
   }
 `;
