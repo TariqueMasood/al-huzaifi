@@ -4,6 +4,7 @@ import Footer from "../components/footer";
 import styled from "styled-components";
 import { GetInTouch } from "../components/get-in-touch";
 import ScrollToTop from "../components/scrollToTop";
+import WhatsAppChat from "../components/whatsapp-chat";
 
 const Layout = () => {
   return (
@@ -15,6 +16,7 @@ const Layout = () => {
       </Main>
       <GetInTouch />
       <Footer />
+      <WhatsAppChat />
     </Wrapper>
   );
 };

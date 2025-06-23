@@ -34,8 +34,8 @@ export default ScrollToTop;
 
 const ScrollButton = styled.button<{ show: boolean }>`
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 100px;
+  right: 36px;
   z-index: 1000;
   display: ${(props) => (props.show ? "block" : "none")};
   background-color: ${(props) => props.theme.colors.themeColor};

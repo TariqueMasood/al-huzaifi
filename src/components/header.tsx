@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import { useState } from "react";
-import logo from "../images/logo-2.png";
+import logo from "../images/al-huzaifi-logo.jpeg";
 import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 import { TopHeader } from "./top-header";
 import { mq } from "../styles/breakpoints";
@@ -386,8 +386,24 @@ const NavbarWrapper = styled(Navbar)`
 `;
 
 const Logo = styled.img`
-  width: 130px;
-  height: 50px;
+  max-width: 80px;
+  max-height: 100px;
+  width: 100%;
+  object-fit: contain;
+  position: absolute;
+  // left: 110px;
+  top: 3px;
+  z-index: 10;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 8px;
+
+  @media (min-width: 768px) {
+    max-width: 100px;
+    max-height: 120px;
+    top: -36px;
+  }
 `;
 
 const SubMenu = styled(DropdownSubmenu)`
