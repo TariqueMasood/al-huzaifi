@@ -2,7 +2,7 @@ import styled from "styled-components";
 import whatsappIcon from "../images/whatsapp-icon.webp";
 
 const WhatsAppChat = () => {
-  const phoneNumber = "919044536943";
+  const phoneNumber = "919535316943";
   const message = "Hello, I want to know more about your services!";
   const encodedMessage = encodeURIComponent(message);
   const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
