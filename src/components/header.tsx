@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       </TopHeaderContainer>
       <NavbarWrapper expand="md" sticky="top">
         <Container>
-          <Navbar.Brand as={NavLink} to="/" style={{ padding: "8px 0" }}>
+          <Navbar.Brand as={NavLink} to="/">
             <Logo src={logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle
