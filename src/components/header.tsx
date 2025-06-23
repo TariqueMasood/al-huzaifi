@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom";
 
 import styled from "styled-components";
 import { useState } from "react";
-import logo from "../images/al-huzaifi-logo.jpeg";
+import logo from "../images/al-huzaifi-logo-blue.png";
 import { DropdownSubmenu, NavDropdownMenu } from "react-bootstrap-submenu";
 import { TopHeader } from "./top-header";
 import { mq } from "../styles/breakpoints";
@@ -31,7 +31,7 @@ const Header: React.FC = () => {
       </TopHeaderContainer>
       <NavbarWrapper expand="md" sticky="top">
         <Container>
-          <Navbar.Brand as={NavLink} to="/">
+          <Navbar.Brand as={NavLink} to="/" style={{ padding: "8px 0" }}>
             <Logo src={logo} alt="logo" />
           </Navbar.Brand>
           <Navbar.Toggle
@@ -386,24 +386,10 @@ const NavbarWrapper = styled(Navbar)`
 `;
 
 const Logo = styled.img`
-  max-width: 80px;
-  max-height: 100px;
+  max-width: 60px;
+  max-height: 80px;
   width: 100%;
   object-fit: contain;
-  position: absolute;
-  // left: 110px;
-  top: 3px;
-  z-index: 10;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  padding: 8px;
-
-  @media (min-width: 768px) {
-    max-width: 100px;
-    max-height: 120px;
-    top: -36px;
-  }
 `;
 
 const SubMenu = styled(DropdownSubmenu)`
