@@ -3,19 +3,19 @@ import Header from "../components/header";
 import Footer from "../components/footer";
 import styled from "styled-components";
 import { GetInTouch } from "../components/get-in-touch";
-import ScrollToTop from "../components/scrollToTop";
 import WhatsAppChat from "../components/whatsapp-chat";
+import ScrollToTop from "../components/scroll-to-top";
 
 const Layout = () => {
   return (
     <Wrapper>
-      <ScrollToTop />
       <Header />
       <Main>
         <Outlet />
       </Main>
       <GetInTouch />
       <Footer />
+      <ScrollToTop />
       <WhatsAppChat />
     </Wrapper>
   );
