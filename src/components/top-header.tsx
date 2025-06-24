@@ -93,7 +93,6 @@ const SocialIcon = styled.div`
   ${mq("md")} {
     gap: 24px;
     font-size: 24px;
-    margin-left: 120px;
   }
 
   a {
