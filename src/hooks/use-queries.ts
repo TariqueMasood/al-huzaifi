@@ -10,3 +10,13 @@ export const useUsers = () => {
     },
   });
 };
+
+export const useRegistrations = () => {
+  return useQuery({
+    queryKey: ["registrations"],
+    queryFn: async () => {
+      const response = await axiosInstance.get("/registrations");
+      return response.data;
+    },
+  });
+};

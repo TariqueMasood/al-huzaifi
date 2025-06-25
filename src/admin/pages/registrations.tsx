@@ -11,35 +11,85 @@ import {
 } from "@tanstack/react-table";
 import { Spinner, Alert, Form, Pagination } from "react-bootstrap";
 import styled from "styled-components";
-import { useUsers } from "../../hooks/use-queries";
+import { useRegistrations } from "../../hooks/use-queries";
 import { User } from "../../@types/registered-user";
 
-const RegisteredUsers: React.FC = () => {
-  const { data: users, isLoading, isError } = useUsers();
+const Registrations: React.FC = () => {
+  const { data: registrations, isLoading, isError } = useRegistrations();
   const [globalFilter, setGlobalFilter] = useState("");
   const [sorting, setSorting] = useState<SortingState>([]);
   const [pageSize, setPageSize] = useState(5);
 
-  const columns = useMemo<ColumnDef<User>[]>(
+  const columns: ColumnDef<User, any>[] = useMemo(
     () => [
+      { accessorKey: "firstName", header: "First Name", enableSorting: true },
+      { accessorKey: "lastName", header: "Last Name", enableSorting: true },
+      { accessorKey: "age", header: "Age", enableSorting: true },
+      { accessorKey: "gender", header: "Gender", enableSorting: true },
+      { accessorKey: "email", header: "Email", enableSorting: true },
+      { accessorKey: "phone", header: "Phone", enableSorting: false },
+      { accessorKey: "religion", header: "Religion", enableSorting: false },
       {
-        accessorKey: "name",
-        header: "Name",
+        accessorKey: "nativeLanguage",
+        header: "Native Language",
+        enableSorting: false,
       },
       {
-        accessorKey: "email",
-        header: "Email",
+        accessorKey: "knownLanguage",
+        header: "Known Languages",
+        enableSorting: false,
+        cell: (info) =>
+          Array.isArray(info.getValue())
+            ? (info.getValue() as string[]).join(", ")
+            : String(info.getValue()),
       },
       {
-        accessorKey: "role",
-        header: "Role",
+        accessorKey: "guardianName",
+        header: "Guardian Name",
+        enableSorting: false,
+      },
+      {
+        accessorKey: "relationship",
+        header: "Relationship",
+        enableSorting: false,
+      },
+      { accessorKey: "faculty", header: "Faculty", enableSorting: true },
+      { accessorKey: "course", header: "Course", enableSorting: true },
+      {
+        accessorKey: "availability",
+        header: "Availability",
+        enableSorting: false,
+      },
+      { accessorKey: "timing", header: "Timing", enableSorting: false },
+      { accessorKey: "country", header: "Country", enableSorting: true },
+      {
+        accessorKey: "scholarshipType",
+        header: "Scholarship Type",
+        enableSorting: false,
+      },
+      {
+        accessorKey: "scholarshipReason",
+        header: "Scholarship Reason",
+        enableSorting: false,
+      },
+      {
+        accessorKey: "createdAt",
+        header: "Created At",
+        enableSorting: true,
+        cell: (info) => new Date(info.getValue() as string).toLocaleString(),
+      },
+      {
+        accessorKey: "updatedAt",
+        header: "Updated At",
+        enableSorting: false,
+        cell: (info) => new Date(info.getValue() as string).toLocaleString(),
       },
     ],
     []
   );
 
   const table = useReactTable({
-    data: users || [],
+    data: registrations || [],
     columns,
     state: {
       globalFilter,
@@ -74,38 +124,55 @@ const RegisteredUsers: React.FC = () => {
           className="search-input"
         />
       </Header>
-      <StyledTable>
-        <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
-                <StyledTh
-                  key={header.id}
-                  onClick={header.column.getToggleSortingHandler()}
-                >
-                  {flexRender(
-                    header.column.columnDef.header,
-                    header.getContext()
-                  )}
-                  {header.column.getIsSorted() === "asc" ? " 🔼" : ""}
-                  {header.column.getIsSorted() === "desc" ? " 🔽" : ""}
-                </StyledTh>
-              ))}
-            </tr>
-          ))}
-        </thead>
-        <tbody>
-          {table.getRowModel().rows.map((row) => (
-            <StyledTr key={row.id}>
-              {row.getVisibleCells().map((cell) => (
-                <StyledTd key={cell.id}>
-                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                </StyledTd>
-              ))}
-            </StyledTr>
-          ))}
-        </tbody>
-      </StyledTable>
+      <TableWrapper>
+        <StyledTable>
+          <thead>
+            {table.getHeaderGroups().map((headerGroup) => (
+              <tr key={headerGroup.id}>
+                {headerGroup.headers.map((header) => (
+                  <StyledTh
+                    key={header.id}
+                    onClick={
+                      header.column.getCanSort()
+                        ? header.column.getToggleSortingHandler()
+                        : undefined
+                    }
+                    style={{
+                      cursor: header.column.getCanSort()
+                        ? "pointer"
+                        : "default",
+                    }}
+                  >
+                    {flexRender(
+                      header.column.columnDef.header,
+                      header.getContext()
+                    )}
+                    {header.column.getCanSort() &&
+                    header.column.getIsSorted() === "asc"
+                      ? " 🔼"
+                      : ""}
+                    {header.column.getCanSort() &&
+                    header.column.getIsSorted() === "desc"
+                      ? " 🔽"
+                      : ""}
+                  </StyledTh>
+                ))}
+              </tr>
+            ))}
+          </thead>
+          <tbody>
+            {table.getRowModel().rows.map((row) => (
+              <StyledTr key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <StyledTd key={cell.id}>
+                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                  </StyledTd>
+                ))}
+              </StyledTr>
+            ))}
+          </tbody>
+        </StyledTable>
+      </TableWrapper>
       <PaginationWrapper>
         <Pagination>
           <Pagination.Prev
@@ -146,13 +213,14 @@ const RegisteredUsers: React.FC = () => {
   );
 };
 
-export default RegisteredUsers;
+export default Registrations;
 
 const Wrapper = styled.div`
-  padding: 2rem;
   background-color: ${({ theme }) => theme.colors.secondaryBg};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.boxShadow};
+  max-width: 1200px;
+  width: 100%;
 `;
 
 const Header = styled.div`
@@ -167,6 +235,12 @@ const Header = styled.div`
     border: 1px solid ${({ theme }) => theme.colors.themeTextColor};
     padding: 0.5rem;
   }
+`;
+
+const TableWrapper = styled.div`
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 1rem;
 `;
 
 const StyledTable = styled.table`

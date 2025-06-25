@@ -63,6 +63,7 @@ import Dashboard from "../admin/pages/dashboard";
 import RegisteredUsers from "../admin/pages/registered-users";
 import AuthLayout from "../layouts/auth-layout";
 import DashboardLayout from "../layouts/dashboard-layout";
+import Registrations from "../admin/pages/registrations";
 
 const router = createBrowserRouter([
   {
@@ -313,6 +314,7 @@ const router = createBrowserRouter([
         children: [
           { index: true, element: <Dashboard /> },
           { path: "registered-users", element: <RegisteredUsers /> },
+          { path: "registrations", element: <Registrations /> },
         ],
       },
     ],

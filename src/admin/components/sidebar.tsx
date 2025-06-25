@@ -10,6 +10,7 @@ const Sidebar = () => (
       <Nav className="flex-column">
         <StyledLink to="/dashboard">Dashboard</StyledLink>
         <StyledLink to="/dashboard/registered-users">Users</StyledLink>
+        <StyledLink to="/dashboard/registrations">Registrations</StyledLink>
       </Nav>
     </div>
     <SidebarFooter>&copy; 2025 Admin Dashboard</SidebarFooter>
