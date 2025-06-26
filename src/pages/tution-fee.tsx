@@ -61,9 +61,16 @@ export const TuitionFeePage = () => {
               registration, our team will provide you with all necessary fee
               details based on your selected course. For any questions or
               assistance regarding the fee structure or payment methods, please
-              feel free to reach out to us at [insert contact information]. We
-              are always here to help and ensure that financial concerns do not
-              hinder your journey to gaining Islamic knowledge.
+              feel free to reach out to us at:{" "}
+              <EmailId
+                href="mailto:info@alhuzaifi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@alhuzaifi.com
+              </EmailId>
+              . We are always here to help and ensure that financial concerns do
+              not hinder your journey to gaining Islamic knowledge.
             </p>
             <h5>Refund Policy:</h5>
             <p>
@@ -96,9 +103,16 @@ export const TuitionFeePage = () => {
             <p>
               <strong>- Request Submission: </strong>To initiate a refund,
               students must submit a written request to the academy's
-              administration via email at [email address]. The request should
-              include the student's name, course details, date of enrollment,
-              and reason for withdrawal.
+              administration via email at{" "}
+              <EmailId
+                href="mailto:info@alhuzaifi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@alhuzaifi.com
+              </EmailId>
+              . The request should include the student's name, course details,
+              date of enrollment, and reason for withdrawal.
             </p>
             <p>
               <strong>- Processing Time: </strong>Refund requests will be
@@ -148,8 +162,16 @@ export const TuitionFeePage = () => {
             <h5>Contact for Refund Inquiries:</h5>
             <p>
               For any questions regarding refunds, students can contact the
-              support team at [contact information]. We are here to assist you
-              and ensure transparency in our refund process.
+              support team at{" "}
+              <EmailId
+                href="mailto:info@alhuzaifi.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                info@alhuzaifi.com
+              </EmailId>
+              . We are here to assist you and ensure transparency in our refund
+              process.
             </p>
           </CourseDiscription>
         </Container>
@@ -249,5 +271,16 @@ const CourseDiscription = styled.div`
       line-height: 30px;
     }
   }
+  }
+`;
+
+const EmailId = styled.a`
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out;
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: underline;
   }
 `;
