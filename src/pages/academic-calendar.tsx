@@ -158,8 +158,15 @@ export const AcademicCalendarPage = () => {
               </p>
               <p>
                 For questions regarding enrollment, course schedules, or
-                academic policies, please contact our admissions office at
-                [contact information].
+                academic policies, please contact our admissions office at:{" "}
+                <EmailId
+                  href="mailto:info@alhuzaifi.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  info@alhuzaifi.com
+                </EmailId>
+                .
               </p>
             </CourseDiscription>
           </Content>
@@ -273,5 +280,16 @@ const CourseDiscription = styled.div`
       line-height: 30px;
     }
   }
+  }
+`;
+
+const EmailId = styled.a`
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.4s ease-in-out;
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: underline;
   }
 `;
