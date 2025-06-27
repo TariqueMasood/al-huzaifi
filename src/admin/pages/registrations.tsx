@@ -219,8 +219,6 @@ const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.colors.secondaryBg};
   border-radius: 8px;
   box-shadow: ${({ theme }) => theme.boxShadow};
-  max-width: 1200px;
-  width: 100%;
 `;
 
 const Header = styled.div`

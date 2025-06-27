@@ -12,7 +12,7 @@ const DashboardLayout = () => {
       <DashboardHeader />
       <ContentWrapper>
         <Sidebar />
-        <MainContent fluid>
+        <MainContent>
           <Outlet />
         </MainContent>
       </ContentWrapper>
@@ -38,6 +38,7 @@ const ContentWrapper = styled.div`
 const MainContent = styled(Container)`
   margin-left: 250px;
   padding: 2rem;
+  padding-right: 5rem;
   margin-top: 60px;
   min-height: calc(100vh - 130px);
   background-color: ${({ theme }) => theme.colors.secondaryBg};

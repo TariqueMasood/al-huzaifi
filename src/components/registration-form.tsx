@@ -12,6 +12,9 @@ import {
 import { validationSchema } from "../utils/registration-schema";
 import * as Yup from "yup";
 import Select from "react-select";
+import { RegistrationPayload } from "../@types/registration";
+import { useRegistrationMutation } from "../hooks/use-queries";
+import CustomToast from "./toast";
 
 const RegistrationForm = () => {
   const [selectedFaculty, setSelectedFaculty] = useState<
@@ -28,7 +31,7 @@ const RegistrationForm = () => {
     phone: "",
     religion: "",
     nativeLanguage: "",
-    knownLanguage: [] as string[], // Update to an array for multi-selection
+    knownLanguage: [] as string[],
     guardianName: "",
     relationship: "",
     faculty: "",
@@ -44,6 +47,10 @@ const RegistrationForm = () => {
     [key: string]: string | { scholarshipReason?: string };
   }>({});
   const [applyForScholarship, setApplyForScholarship] = useState(false);
+  const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [showToast, setShowToast] = useState(false);
+
+  const registrationMutation = useRegistrationMutation();
 
   const handleFormValueChange = (
     e: React.ChangeEvent<
@@ -133,32 +140,44 @@ const RegistrationForm = () => {
     try {
       await validationSchema.validate(formValue, { abortEarly: false }); // Validate form values
       setErrors({}); // Clear errors if validation passes
-      setSubmittedData((prevData) => [
-        ...prevData,
-        { ...formValue }, // Ensure scholarshipType and scholarshipReason are included
-      ]);
-      setFormValue({
-        firstName: "",
-        lastName: "",
-        age: "",
-        gender: "",
-        email: "",
-        phone: "",
-        religion: "",
-        nativeLanguage: "",
-        knownLanguage: [] as string[], // Reset knownLanguage
-        guardianName: "",
-        relationship: "",
-        faculty: "",
-        course: "",
-        availability: "",
-        timing: "",
-        country: "",
-        scholarshipType: "", // Reset scholarshipType
-        scholarshipReason: "", // Reset scholarshipReason
-      }); // Reset form values
-      setSelectedFaculty(""); // Reset selectedFaculty
-      setSelectedCourse(""); // Reset selectedCourse
+      // Submit the form using tanstack query mutation
+      registrationMutation.mutate(formValue as RegistrationPayload, {
+        onSuccess: () => {
+          setToastMessage("Registration successful!");
+          setShowToast(true);
+          setSubmittedData((prevData) => [...prevData, { ...formValue }]);
+          setFormValue({
+            firstName: "",
+            lastName: "",
+            age: "",
+            gender: "",
+            email: "",
+            phone: "",
+            religion: "",
+            nativeLanguage: "",
+            knownLanguage: [] as string[], // Reset knownLanguage
+            guardianName: "",
+            relationship: "",
+            faculty: "",
+            course: "",
+            availability: "",
+            timing: "",
+            country: "",
+            scholarshipType: "",
+            scholarshipReason: "",
+          }); // Reset form values
+          setSelectedFaculty(""); // Reset selectedFaculty
+          setSelectedCourse(""); // Reset selectedCourse
+        },
+        onError: (error: any) => {
+          setToastMessage(
+            error?.response?.data?.message ||
+              error?.message ||
+              "Registration failed"
+          );
+          setShowToast(true);
+        },
+      });
     } catch (validationErrors) {
       const formattedErrors: { [key: string]: any } = {};
       if (validationErrors instanceof Yup.ValidationError) {
@@ -184,6 +203,23 @@ const RegistrationForm = () => {
       knownLanguage: selectedValues,
     }));
   };
+
+  // For testing: show a toast message without submitting the form
+  const showTestToast = () => {
+    setToastMessage("This is a test toast message!");
+    setShowToast(true);
+  };
+
+  // Show toast for both success and error, and always reset after a short delay
+  React.useEffect(() => {
+    if (showToast) {
+      const timer = setTimeout(() => {
+        setShowToast(false);
+        setToastMessage(null);
+      }, 3500);
+      return () => clearTimeout(timer);
+    }
+  }, [showToast]);
 
   return (
     <Wrapper>
@@ -515,56 +551,11 @@ const RegistrationForm = () => {
               )}
               <Submit type="submit">Register</Submit>
             </FormWrapper>
-            <Table striped bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Age</th>
-                  <th>Gender</th>
-                  <th>Email</th>
-                  <th>Phone</th>
-                  <th>Religion</th>
-                  <th>Native Language</th>
-                  <th>Known Languages</th>
-                  <th>Guardian Name</th>
-                  <th>Relationship</th>
-                  <th>Faculty</th>
-                  <th>Course</th>
-                  <th>Availability</th>
-                  <th>Timing</th>
-                  <th>Country</th>
-                  <th>Scholarship Type</th>
-                  <th>Scholarship Reason</th>
-                </tr>
-              </thead>
-              <tbody>
-                {submittedData.map((data, index) => (
-                  <tr key={index}>
-                    <td>{index + 1}</td>
-                    <td>{data.firstName}</td>
-                    <td>{data.lastName}</td>
-                    <td>{data.age}</td>
-                    <td>{data.gender}</td>
-                    <td>{data.email}</td>
-                    <td>{data.phone}</td>
-                    <td>{data.religion}</td>
-                    <td>{data.nativeLanguage}</td>
-                    <td>{data.knownLanguage.join(", ")}</td>{" "}
-                    <td>{data.guardianName}</td>
-                    <td>{data.relationship}</td>
-                    <td>{data.faculty}</td>
-                    <td>{data.course}</td>
-                    <td>{data.availability}</td>
-                    <td>{data.timing}</td>
-                    <td>{data.country}</td>
-                    <td>{data.scholarshipType}</td>
-                    <td>{data.scholarshipReason}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </Table>
+            <CustomToast
+              message={toastMessage}
+              show={showToast}
+              onClose={() => setShowToast(false)}
+            />
           </Col>
         </Row>
       </Container>
