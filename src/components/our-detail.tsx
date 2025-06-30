@@ -14,9 +14,9 @@ export const OurDetail = () => {
             Academy.
           </h2>
           <p>
-            "We offer an array of courses designed to make Islamic education
-            accessible to everyone, from young learners to adults. Led by a team
-            of passionate educators from around the world, we are committed to
+            "An array of courses designed to make Islamic education accessible
+            to everyone, from young learners to adults. Led by a team of
+            passionate educators from around the world, we are committed to
             supporting each student's unique learning path."
           </p>
           <LearnMore>learn more</LearnMore>
