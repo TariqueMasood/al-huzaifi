@@ -42,7 +42,7 @@ export const WhychooseHomePage = () => {
             <ContentWrapper>
               <SlUserFemale />
               <span>
-                <h3>Female-Foused Support</h3>
+                <h3>Female-Focused Support</h3>
                 <span>Female teacher for female students.</span>
               </span>
             </ContentWrapper>
@@ -58,7 +58,7 @@ export const WhychooseHomePage = () => {
             <ContentWrapper>
               <BsCheck2All />
               <span>
-                <h3>Structured Carriculum</h3>
+                <h3>Structured Curriculum</h3>
                 <span>Courses for all levels of learners.</span>
               </span>
             </ContentWrapper>
