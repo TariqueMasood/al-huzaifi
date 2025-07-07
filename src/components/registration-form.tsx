@@ -86,11 +86,11 @@ const RegistrationForm = () => {
     const faculty = e.target.value as keyof typeof facultyOptions;
     setSelectedFaculty(faculty);
     setCourses(facultyOptions[faculty] || []);
-    setSelectedCourse(""); // reset course
+    setSelectedCourse("");
     setFormValue((prevValues) => ({
       ...prevValues,
-      faculty, // Update formValue.faculty
-      course: "", // Reset formValue.course
+      faculty,
+      course: "",
     }));
   };
 
@@ -99,7 +99,7 @@ const RegistrationForm = () => {
     setSelectedCourse(course);
     setFormValue((prevValues) => ({
       ...prevValues,
-      course, // Update formValue.course
+      course,
     }));
   };
 
@@ -107,7 +107,7 @@ const RegistrationForm = () => {
     const { value } = e.target;
     setFormValue((prevValues) => ({
       ...prevValues,
-      country: value, // Update formValue.country
+      country: value,
     }));
   };
 
@@ -202,12 +202,6 @@ const RegistrationForm = () => {
       ...prevValues,
       knownLanguage: selectedValues,
     }));
-  };
-
-  // For testing: show a toast message without submitting the form
-  const showTestToast = () => {
-    setToastMessage("This is a test toast message!");
-    setShowToast(true);
   };
 
   // Show toast for both success and error, and always reset after a short delay
