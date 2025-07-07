@@ -42,3 +42,14 @@ export const useDeleteRegistration = () => {
     },
   });
 };
+
+export const useRegistrationDetails = (id?: string) => {
+  return useQuery({
+    queryKey: ["registration", id],
+    queryFn: async () => {
+      const response = await axiosInstance.get(`/registrations/${id}`);
+      return response.data;
+    },
+    enabled: !!id,
+  });
+};

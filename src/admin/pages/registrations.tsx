@@ -24,6 +24,7 @@ import {
 } from "../../hooks/use-queries";
 import { User } from "../../@types/registered-user";
 import { scholarshipTypeLabels } from "../../components/registration-form";
+import { useNavigate, Link } from "react-router-dom";
 
 const Registrations: React.FC = () => {
   const {
@@ -38,6 +39,7 @@ const Registrations: React.FC = () => {
   const [pageSize, setPageSize] = useState(5);
   const [showConfirm, setShowConfirm] = useState(false);
   const [deleteId, setDeleteId] = useState<string | null>(null);
+  const navigate = useNavigate();
 
   const handleDeleteClick = (id: string) => {
     setDeleteId(id);
@@ -68,8 +70,29 @@ const Registrations: React.FC = () => {
 
   const columns: ColumnDef<User, any>[] = useMemo(
     () => [
-      { accessorKey: "firstName", header: "First Name", enableSorting: true },
-      { accessorKey: "lastName", header: "Last Name", enableSorting: true },
+      {
+        id: "fullName",
+        header: "Full Name",
+        enableSorting: true,
+        accessorFn: (row: any) =>
+          `${(row as any).firstName || ""} ${
+            (row as any).lastName || ""
+          }`.trim(),
+        cell: ({ row }) => (
+          <Link
+            to={`/dashboard/registrations/${(row.original as any)._id}`}
+            style={{
+              textDecoration: "underline",
+              color: "#0d6efd",
+              cursor: "pointer",
+            }}
+          >
+            {`${(row.original as any).firstName || ""} ${
+              (row.original as any).lastName || ""
+            }`.trim()}
+          </Link>
+        ),
+      },
       { accessorKey: "age", header: "Age", enableSorting: true },
       { accessorKey: "gender", header: "Gender", enableSorting: true },
       { accessorKey: "email", header: "Email", enableSorting: true },
@@ -144,13 +167,25 @@ const Registrations: React.FC = () => {
         id: "actions",
         header: "Actions",
         cell: ({ row }) => (
-          <Button
-            variant="danger"
-            size="sm"
-            onClick={() => handleDeleteClick(row.original._id)}
-          >
-            Delete
-          </Button>
+          <>
+            <Button
+              variant="primary"
+              size="sm"
+              style={{ marginRight: 8 }}
+              onClick={() =>
+                navigate(`/dashboard/registrations/${row.original._id}`)
+              }
+            >
+              View
+            </Button>
+            <Button
+              variant="danger"
+              size="sm"
+              onClick={() => handleDeleteClick(row.original._id)}
+            >
+              Delete
+            </Button>
+          </>
         ),
         enableSorting: false,
       },
