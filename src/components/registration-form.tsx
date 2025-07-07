@@ -143,8 +143,11 @@ const RegistrationForm = () => {
       // Submit the form using tanstack query mutation
       registrationMutation.mutate(formValue as RegistrationPayload, {
         onSuccess: () => {
-          setToastMessage("Registration successful!");
-          setShowToast(true);
+          setShowToast(false); // Reset before showing again
+          setTimeout(() => {
+            setToastMessage("Registration successful!");
+            setShowToast(true);
+          }, 0);
           setSubmittedData((prevData) => [...prevData, { ...formValue }]);
           setFormValue({
             firstName: "",
@@ -170,12 +173,15 @@ const RegistrationForm = () => {
           setSelectedCourse(""); // Reset selectedCourse
         },
         onError: (error: any) => {
-          setToastMessage(
-            error?.response?.data?.message ||
-              error?.message ||
-              "Registration failed"
-          );
-          setShowToast(true);
+          setShowToast(false); // Reset before showing again
+          setTimeout(() => {
+            setToastMessage(
+              error?.response?.data?.message ||
+                error?.message ||
+                "Registration failed"
+            );
+            setShowToast(true);
+          }, 0);
         },
       });
     } catch (validationErrors) {
@@ -206,14 +212,14 @@ const RegistrationForm = () => {
 
   // Show toast for both success and error, and always reset after a short delay
   React.useEffect(() => {
-    if (showToast) {
+    if (showToast && toastMessage) {
       const timer = setTimeout(() => {
         setShowToast(false);
         setToastMessage(null);
       }, 3500);
       return () => clearTimeout(timer);
     }
-  }, [showToast]);
+  }, [showToast, toastMessage]);
 
   return (
     <Wrapper>
