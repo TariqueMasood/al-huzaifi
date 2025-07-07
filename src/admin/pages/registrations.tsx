@@ -97,60 +97,9 @@ const Registrations: React.FC = () => {
       { accessorKey: "gender", header: "Gender", enableSorting: true },
       { accessorKey: "email", header: "Email", enableSorting: true },
       { accessorKey: "phone", header: "Phone", enableSorting: false },
-      { accessorKey: "religion", header: "Religion", enableSorting: false },
-      {
-        accessorKey: "nativeLanguage",
-        header: "Native Language",
-        enableSorting: false,
-      },
-      {
-        accessorKey: "knownLanguage",
-        header: "Known Languages",
-        enableSorting: false,
-        cell: (info) =>
-          Array.isArray(info.getValue())
-            ? (info.getValue() as string[]).join(", ")
-            : String(info.getValue()),
-      },
-      {
-        accessorKey: "guardianName",
-        header: "Guardian Name",
-        enableSorting: false,
-      },
-      {
-        accessorKey: "relationship",
-        header: "Relationship",
-        enableSorting: false,
-      },
       { accessorKey: "faculty", header: "Faculty", enableSorting: true },
       { accessorKey: "course", header: "Course", enableSorting: true },
-      {
-        accessorKey: "availability",
-        header: "Availability",
-        enableSorting: false,
-      },
-      { accessorKey: "timing", header: "Timing", enableSorting: false },
       { accessorKey: "country", header: "Country", enableSorting: true },
-      {
-        accessorKey: "scholarshipType",
-        header: "Scholarship Type",
-        enableSorting: false,
-        cell: (info) => {
-          const value = info.getValue();
-          return value
-            ? scholarshipTypeLabels[value as string] || String(value)
-            : "-";
-        },
-      },
-      {
-        accessorKey: "scholarshipReason",
-        header: "Scholarship Reason",
-        enableSorting: false,
-        cell: (info) => {
-          const value = info.getValue();
-          return value ? String(value) : "-";
-        },
-      },
       {
         accessorKey: "createdAt",
         header: "Created At",
