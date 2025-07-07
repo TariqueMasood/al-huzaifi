@@ -90,8 +90,8 @@ export const timingOptions = [
   "20:00 to 21:00",
   "21:00 to 22:00",
   "22:00 to 23:00",
-  "23:00 to 24:00",
-  "24:00 to 01:00",
+  "23:00 to 00:00",
+  "00:00 to 01:00",
 ];
 
 export const languageOptions = ["Arabic", "Urdu", "English"];
