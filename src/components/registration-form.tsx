@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Container, Form, Row, Col, Table } from "react-bootstrap";
+import React, { useState, useEffect } from "react";
+import { Container, Form, Row, Col } from "react-bootstrap";
 import styled from "styled-components";
 import { mq } from "../styles/breakpoints";
 import CountryList from "./country-list";
@@ -16,164 +16,131 @@ import { RegistrationPayload } from "../@types/registration";
 import { useRegistrationMutation } from "../hooks/use-queries";
 import CustomToast from "./toast";
 
+// --- Types ---
+type FormState = {
+  firstName: string;
+  lastName: string;
+  age: string;
+  gender: string;
+  email: string;
+  phone: string;
+  religion: string;
+  nativeLanguage: string;
+  knownLanguage: string[];
+  guardianName: string;
+  relationship: string;
+  faculty: string;
+  course: string;
+  availability: string;
+  timing: string;
+  country: string;
+  scholarshipType: string;
+  scholarshipReason: string;
+  applyForScholarship: boolean;
+};
+
+type FormErrors = Partial<Record<keyof FormState, string>>;
+
+// --- Initial State ---
+const initialFormState: FormState = {
+  firstName: "",
+  lastName: "",
+  age: "",
+  gender: "",
+  email: "",
+  phone: "",
+  religion: "",
+  nativeLanguage: "",
+  knownLanguage: [],
+  guardianName: "",
+  relationship: "",
+  faculty: "",
+  course: "",
+  availability: "",
+  timing: "",
+  country: "",
+  scholarshipType: "",
+  scholarshipReason: "",
+  applyForScholarship: false,
+};
+
 const RegistrationForm = () => {
-  const [selectedFaculty, setSelectedFaculty] = useState<
-    keyof typeof facultyOptions | ""
-  >("");
+  // --- State ---
+  const [formValue, setFormValue] = useState<FormState>(initialFormState);
   const [courses, setCourses] = useState<string[]>([]);
-  const [selectedCourse, setSelectedCourse] = useState("");
-  const [formValue, setFormValue] = useState({
-    firstName: "",
-    lastName: "",
-    age: "",
-    gender: "",
-    email: "",
-    phone: "",
-    religion: "",
-    nativeLanguage: "",
-    knownLanguage: [] as string[],
-    guardianName: "",
-    relationship: "",
-    faculty: "",
-    course: "",
-    availability: "",
-    timing: "",
-    country: "",
-    scholarshipType: "",
-    scholarshipReason: "",
-  });
-  const [submittedData, setSubmittedData] = useState<any[]>([]);
-  const [errors, setErrors] = useState<{
-    [key: string]: string | { scholarshipReason?: string };
-  }>({});
-  const [applyForScholarship, setApplyForScholarship] = useState(false);
+  const [errors, setErrors] = useState<FormErrors>({});
   const [toastMessage, setToastMessage] = useState<string | null>(null);
   const [showToast, setShowToast] = useState(false);
+  const [submittedData, setSubmittedData] = useState<FormState[]>([]);
 
   const registrationMutation = useRegistrationMutation();
 
-  const handleFormValueChange = (
-    e: React.ChangeEvent<
-      HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-    >
+  // --- Handlers ---
+  // For input and textarea (including checkbox)
+  const handleInputChange = (
+    e:
+      | React.ChangeEvent<HTMLInputElement>
+      | React.ChangeEvent<HTMLTextAreaElement>
   ) => {
-    const { name, value, multiple, options } = e.target as HTMLSelectElement;
-    if (multiple) {
-      const selectedValues = Array.from(options)
-        .filter((option) => option.selected)
-        .map((option) => option.value);
-      setFormValue((prevValues) => ({
-        ...prevValues,
-        [name]: selectedValues,
+    const { name, value } = e.target;
+    if (e.target instanceof HTMLInputElement && e.target.type === "checkbox") {
+      setFormValue((prev) => ({
+        ...prev,
+        [name]: (e.target as HTMLInputElement).checked,
       }));
     } else {
-      setFormValue((prevValues) => ({
-        ...prevValues,
-        [name]: value,
-      }));
+      setFormValue((prev) => ({ ...prev, [name]: value }));
     }
   };
 
+  // For select elements
   const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { name, value } = e.target;
-    setFormValue((prevValues) => ({
-      ...prevValues,
-      [name]: value,
-    }));
+    setFormValue((prev) => ({ ...prev, [name]: value }));
   };
 
+  // For react-select multi-select (knownLanguage)
+  const handleKnownLanguageChange = (selectedOptions: any) => {
+    const selectedValues = selectedOptions.map((option: any) => option.value);
+    setFormValue((prev) => ({ ...prev, knownLanguage: selectedValues }));
+  };
+
+  // Faculty/course logic
   const handleFacultyChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const faculty = e.target.value as keyof typeof facultyOptions;
-    setSelectedFaculty(faculty);
     setCourses(facultyOptions[faculty] || []);
-    setSelectedCourse("");
-    setFormValue((prevValues) => ({
-      ...prevValues,
-      faculty,
-      course: "",
-    }));
+    setFormValue((prev) => ({ ...prev, faculty, course: "" }));
   };
 
   const handleCourseChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const course = e.target.value;
-    setSelectedCourse(course);
-    setFormValue((prevValues) => ({
-      ...prevValues,
-      course,
-    }));
+    setFormValue((prev) => ({ ...prev, course: e.target.value }));
   };
 
+  // Update handleCountryChange to accept the event
   const handleCountryChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
-    setFormValue((prevValues) => ({
-      ...prevValues,
-      country: value,
-    }));
+    setFormValue((prev) => ({ ...prev, country: value }));
   };
 
-  const handleApplyForScholarshipChange = (
-    e: React.ChangeEvent<HTMLInputElement>
-  ) => {
-    setApplyForScholarship(e.target.checked);
-    if (!e.target.checked) {
-      setFormValue((prev) => ({
-        ...prev,
-        scholarshipType: "",
-        scholarshipReason: "",
-      }));
-    }
-  };
-
-  const handleScholarshipReasonChange = (
-    e: React.ChangeEvent<HTMLTextAreaElement>
-  ) => {
-    const { value } = e.target;
-    setFormValue((prev) => ({
-      ...prev,
-      scholarshipReason: value,
-    }));
-  };
-
-  // Update error handling logic to ensure proper parsing of scholarshipOptions errors
+  // --- Form Submission ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      await validationSchema.validate(formValue, { abortEarly: false }); // Validate form values
-      setErrors({}); // Clear errors if validation passes
-      // Submit the form using tanstack query mutation
+      await validationSchema.validate(formValue, { abortEarly: false });
+      setErrors({});
       registrationMutation.mutate(formValue as RegistrationPayload, {
         onSuccess: () => {
-          setShowToast(false); // Reset before showing again
+          setShowToast(false);
           setTimeout(() => {
             setToastMessage("Registration successful!");
             setShowToast(true);
           }, 0);
-          setSubmittedData((prevData) => [...prevData, { ...formValue }]);
-          setFormValue({
-            firstName: "",
-            lastName: "",
-            age: "",
-            gender: "",
-            email: "",
-            phone: "",
-            religion: "",
-            nativeLanguage: "",
-            knownLanguage: [] as string[], // Reset knownLanguage
-            guardianName: "",
-            relationship: "",
-            faculty: "",
-            course: "",
-            availability: "",
-            timing: "",
-            country: "",
-            scholarshipType: "",
-            scholarshipReason: "",
-          }); // Reset form values
-          setSelectedFaculty(""); // Reset selectedFaculty
-          setSelectedCourse(""); // Reset selectedCourse
+          setSubmittedData((prev) => [...prev, { ...formValue }]);
+          setFormValue(initialFormState);
+          setCourses([]);
         },
         onError: (error: any) => {
-          setShowToast(false); // Reset before showing again
+          setShowToast(false);
           setTimeout(() => {
             setToastMessage(
               error?.response?.data?.message ||
@@ -185,33 +152,20 @@ const RegistrationForm = () => {
         },
       });
     } catch (validationErrors) {
-      const formattedErrors: { [key: string]: any } = {};
+      const formattedErrors: FormErrors = {};
       if (validationErrors instanceof Yup.ValidationError) {
         validationErrors.inner.forEach((error) => {
           if (error.path) {
-            formattedErrors[error.path] = error.message;
+            formattedErrors[error.path as keyof FormState] = error.message;
           }
         });
       }
-      setErrors(formattedErrors); // Set validation errors
+      setErrors(formattedErrors);
     }
   };
 
-  const languageOptionsDropdown = languageOptions.map((language) => ({
-    value: language,
-    label: language,
-  }));
-
-  const handleKnownLanguageChange = (selectedOptions: any) => {
-    const selectedValues = selectedOptions.map((option: any) => option.value);
-    setFormValue((prevValues) => ({
-      ...prevValues,
-      knownLanguage: selectedValues,
-    }));
-  };
-
-  // Show toast for both success and error, and always reset after a short delay
-  React.useEffect(() => {
+  // --- Toast auto-hide ---
+  useEffect(() => {
     if (showToast && toastMessage) {
       const timer = setTimeout(() => {
         setShowToast(false);
@@ -221,6 +175,13 @@ const RegistrationForm = () => {
     }
   }, [showToast, toastMessage]);
 
+  // --- Dropdown options ---
+  const languageOptionsDropdown = languageOptions.map((language) => ({
+    value: language,
+    label: language,
+  }));
+
+  // --- Render ---
   return (
     <Wrapper>
       <Container>
@@ -237,6 +198,7 @@ const RegistrationForm = () => {
               <li>Write the best available time for your local time zone.</li>
             </OrderList>
             <FormWrapper onSubmit={handleSubmit}>
+              {/* Name fields */}
               <FlexRow>
                 <StyledFormGroup controlId="firstName">
                   <Form.Label>First Name</Form.Label>
@@ -245,13 +207,12 @@ const RegistrationForm = () => {
                     name="firstName"
                     placeholder="First Name"
                     value={formValue.firstName}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.firstName === "string" && (
+                  {errors.firstName && (
                     <ErrorText>{errors.firstName}</ErrorText>
                   )}
                 </StyledFormGroup>
-
                 <StyledFormGroup controlId="lastName">
                   <Form.Label>Last Name</Form.Label>
                   <StyledFormControl
@@ -259,13 +220,12 @@ const RegistrationForm = () => {
                     name="lastName"
                     placeholder="Last Name"
                     value={formValue.lastName}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.lastName === "string" && (
-                    <ErrorText>{errors.lastName}</ErrorText>
-                  )}
+                  {errors.lastName && <ErrorText>{errors.lastName}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
+              {/* Age & Gender */}
               <FlexRow>
                 <StyledFormGroup controlId="age">
                   <Form.Label>Age</Form.Label>
@@ -274,18 +234,16 @@ const RegistrationForm = () => {
                     name="age"
                     placeholder="Age"
                     value={formValue.age}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.age === "string" && (
-                    <ErrorText>{errors.age}</ErrorText>
-                  )}
+                  {errors.age && <ErrorText>{errors.age}</ErrorText>}
                 </StyledFormGroup>
                 <StyledFormGroup controlId="gender">
                   <Form.Label>Gender</Form.Label>
                   <StyledSelect
                     name="gender"
-                    value={formValue.gender} // Bind the value to formValue.gender
-                    onChange={handleSelectChange} // Use the new handler for <select>
+                    value={formValue.gender}
+                    onChange={handleSelectChange}
                   >
                     <option value="">Choose...</option>
                     {genderOptions.map((gender) => (
@@ -294,11 +252,10 @@ const RegistrationForm = () => {
                       </option>
                     ))}
                   </StyledSelect>
-                  {typeof errors.gender === "string" && (
-                    <ErrorText>{errors.gender}</ErrorText>
-                  )}
+                  {errors.gender && <ErrorText>{errors.gender}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
+              {/* Country & Email */}
               <FlexRow>
                 <StyledFormGroup controlId="country">
                   <CountryList
@@ -306,9 +263,7 @@ const RegistrationForm = () => {
                     value={formValue.country || ""}
                     onChange={handleCountryChange}
                   />
-                  {typeof errors.country === "string" && (
-                    <ErrorText>{errors.country}</ErrorText>
-                  )}
+                  {errors.country && <ErrorText>{errors.country}</ErrorText>}
                 </StyledFormGroup>
                 <StyledFormGroup controlId="email">
                   <Form.Label>Email</Form.Label>
@@ -317,14 +272,12 @@ const RegistrationForm = () => {
                     name="email"
                     placeholder="Email Address"
                     value={formValue.email}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.email === "string" && (
-                    <ErrorText>{errors.email}</ErrorText>
-                  )}
+                  {errors.email && <ErrorText>{errors.email}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
-
+              {/* Phone */}
               <StyledFormGroup controlId="phone">
                 <Form.Label>WhatsApp Number</Form.Label>
                 <StyledFormControl
@@ -333,35 +286,31 @@ const RegistrationForm = () => {
                   placeholder="Enter phone number"
                   name="phone"
                   value={formValue.phone}
-                  onChange={handleFormValueChange}
+                  onChange={handleInputChange}
                 />
-                {typeof errors.phone === "string" && (
-                  <ErrorText>{errors.phone}</ErrorText>
-                )}
+                {errors.phone && <ErrorText>{errors.phone}</ErrorText>}
               </StyledFormGroup>
-
+              {/* Religion, Native Language, Known Languages */}
               <FlexRow>
-                <StyledFormGroup controlId="gender">
+                <StyledFormGroup controlId="religion">
                   <Form.Label>Religion</Form.Label>
                   <StyledSelect
                     name="religion"
                     value={formValue.religion}
-                    onChange={handleFormValueChange}
+                    onChange={handleSelectChange}
                   >
                     <option value="">Choose Religion...</option>
                     <option value="Muslim">Muslim</option>
                     <option value="Non-Muslim">Non-Muslim</option>
                   </StyledSelect>
-                  {typeof errors.religion === "string" && (
-                    <ErrorText>{errors.religion}</ErrorText>
-                  )}
+                  {errors.religion && <ErrorText>{errors.religion}</ErrorText>}
                 </StyledFormGroup>
-                <StyledFormGroup controlId="gender">
+                <StyledFormGroup controlId="nativeLanguage">
                   <Form.Label>Native Language</Form.Label>
                   <StyledSelect
                     name="nativeLanguage"
                     value={formValue.nativeLanguage}
-                    onChange={handleFormValueChange}
+                    onChange={handleSelectChange}
                   >
                     <option value="">Native Language...</option>
                     {languageOptions.map((language) => (
@@ -370,11 +319,11 @@ const RegistrationForm = () => {
                       </option>
                     ))}
                   </StyledSelect>
-                  {typeof errors.nativeLanguage === "string" && (
+                  {errors.nativeLanguage && (
                     <ErrorText>{errors.nativeLanguage}</ErrorText>
                   )}
                 </StyledFormGroup>
-                <StyledFormGroup controlId="gender">
+                <StyledFormGroup controlId="knownLanguage">
                   <Form.Label>Known Languages</Form.Label>
                   <Select
                     isMulti
@@ -382,48 +331,48 @@ const RegistrationForm = () => {
                     options={languageOptionsDropdown}
                     value={languageOptionsDropdown.filter((option) =>
                       formValue.knownLanguage.includes(option.value)
-                    )} // Bind selected values
-                    onChange={handleKnownLanguageChange} // Handle changes
+                    )}
+                    onChange={handleKnownLanguageChange}
                     className="basic-multi-select"
                     classNamePrefix="select"
                   />
-                  {typeof errors.knownLanguage === "string" && (
+                  {errors.knownLanguage && (
                     <ErrorText>{errors.knownLanguage}</ErrorText>
                   )}
                 </StyledFormGroup>
               </FlexRow>
-
+              {/* Guardian & Relationship */}
               <FlexRow>
-                <StyledFormGroup controlId="address1">
+                <StyledFormGroup controlId="guardianName">
                   <Form.Label>Guardian Name</Form.Label>
                   <StyledFormControl
                     type="text"
                     name="guardianName"
                     placeholder="Guardian Name..."
                     value={formValue.guardianName}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.guardianName === "string" && (
+                  {errors.guardianName && (
                     <ErrorText>{errors.guardianName}</ErrorText>
                   )}
                 </StyledFormGroup>
-                <StyledFormGroup controlId="address2">
+                <StyledFormGroup controlId="relationship">
                   <Form.Label>Relationship with Student</Form.Label>
                   <StyledFormControl
                     type="text"
                     name="relationship"
                     placeholder="Relationship..."
                     value={formValue.relationship}
-                    onChange={handleFormValueChange}
+                    onChange={handleInputChange}
                   />
-                  {typeof errors.relationship === "string" && (
+                  {errors.relationship && (
                     <ErrorText>{errors.relationship}</ErrorText>
                   )}
                 </StyledFormGroup>
               </FlexRow>
-
+              {/* Faculty & Course */}
               <FlexRow>
-                <StyledFormGroup controlId="facultySelect">
+                <StyledFormGroup controlId="faculty">
                   <Form.Label>Choose Faculty</Form.Label>
                   <StyledSelect
                     name="faculty"
@@ -437,11 +386,9 @@ const RegistrationForm = () => {
                       </option>
                     ))}
                   </StyledSelect>
-                  {typeof errors.faculty === "string" && (
-                    <ErrorText>{errors.faculty}</ErrorText>
-                  )}
+                  {errors.faculty && <ErrorText>{errors.faculty}</ErrorText>}
                 </StyledFormGroup>
-                <StyledFormGroup controlId="courseSelect">
+                <StyledFormGroup controlId="course">
                   <Form.Label>Select Course</Form.Label>
                   <StyledSelect
                     name="course"
@@ -455,33 +402,32 @@ const RegistrationForm = () => {
                       </option>
                     ))}
                   </StyledSelect>
-                  {typeof errors.course === "string" && (
-                    <ErrorText>{errors.course}</ErrorText>
-                  )}
+                  {errors.course && <ErrorText>{errors.course}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
+              {/* Availability & Timing */}
               <FlexRow>
-                <StyledFormGroup controlId="gender">
+                <StyledFormGroup controlId="availability">
                   <Form.Label>Availability</Form.Label>
                   <StyledSelect
                     name="availability"
                     value={formValue.availability}
-                    onChange={handleFormValueChange}
+                    onChange={handleSelectChange}
                   >
                     <option value="">Days...</option>
                     <option value="Weekdays">Weekdays</option>
                     <option value="Weekend">Weekend</option>
                   </StyledSelect>
-                  {typeof errors.availability === "string" && (
+                  {errors.availability && (
                     <ErrorText>{errors.availability}</ErrorText>
                   )}
                 </StyledFormGroup>
-                <StyledFormGroup controlId="timingSelect">
+                <StyledFormGroup controlId="timing">
                   <Form.Label>Timing</Form.Label>
                   <StyledSelect
                     name="timing"
                     value={formValue.timing}
-                    onChange={handleFormValueChange}
+                    onChange={handleSelectChange}
                   >
                     <option value="">Select Timing...</option>
                     {timingOptions.map((timing) => (
@@ -490,28 +436,29 @@ const RegistrationForm = () => {
                       </option>
                     ))}
                   </StyledSelect>
-                  {typeof errors.timing === "string" && (
-                    <ErrorText>{errors.timing}</ErrorText>
-                  )}
+                  {errors.timing && <ErrorText>{errors.timing}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
+              {/* Scholarship Checkbox */}
               <StyledFormGroup controlId="applyForScholarship">
                 <Form.Check
                   type="checkbox"
                   label="Do you want to apply for a scholarship?"
-                  checked={applyForScholarship}
-                  onChange={handleApplyForScholarshipChange}
+                  name="applyForScholarship"
+                  checked={formValue.applyForScholarship}
+                  onChange={handleInputChange}
                 />
               </StyledFormGroup>
-              {applyForScholarship && (
+              {/* Scholarship Fields (conditional) */}
+              {formValue.applyForScholarship && (
                 <>
                   <FlexRow>
                     <StyledFormGroup controlId="scholarshipType">
                       <Form.Label>Scholarship Type</Form.Label>
                       <StyledSelect
                         name="scholarshipType"
-                        value={formValue.scholarshipType || ""}
-                        onChange={handleFormValueChange}
+                        value={formValue.scholarshipType}
+                        onChange={handleSelectChange}
                       >
                         <option value="">-- Select Scholarship Type --</option>
                         <option value="meritBased">Merit-Based</option>
@@ -522,7 +469,7 @@ const RegistrationForm = () => {
                           Special Circumstances
                         </option>
                       </StyledSelect>
-                      {typeof errors.scholarshipType === "string" && (
+                      {errors.scholarshipType && (
                         <ErrorText>{errors.scholarshipType}</ErrorText>
                       )}
                     </StyledFormGroup>
@@ -537,14 +484,11 @@ const RegistrationForm = () => {
                         rows={3}
                         name="scholarshipReason"
                         value={formValue.scholarshipReason}
-                        onChange={handleScholarshipReasonChange}
+                        onChange={handleInputChange}
                       />
-                      {typeof errors.scholarshipOptions === "object" &&
-                        errors.scholarshipOptions.scholarshipReason && (
-                          <ErrorText>
-                            {errors.scholarshipOptions.scholarshipReason}
-                          </ErrorText>
-                        )}
+                      {errors.scholarshipReason && (
+                        <ErrorText>{errors.scholarshipReason}</ErrorText>
+                      )}
                     </StyledFormGroup>
                   </FlexRow>
                 </>
@@ -565,10 +509,9 @@ const RegistrationForm = () => {
 
 export default RegistrationForm;
 
+// --- Styled Components ---
 const Wrapper = styled.div`
   padding: 30px 0px;
-};
-
   ${mq("md")} {
     padding: 60px 0px;
   }

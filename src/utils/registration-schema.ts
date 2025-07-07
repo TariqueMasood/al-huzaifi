@@ -24,20 +24,18 @@ export const validationSchema = Yup.object().shape({
   relationship: Yup.string().required("Relationship is required."),
   faculty: Yup.string().required("Faculty is required."),
   course: Yup.string().required("Course is required."),
-  country: Yup.string().required("Country is required."), // Added validation for country
+  country: Yup.string().required("Country is required."),
   availability: Yup.string().required("Availability is required."),
   timing: Yup.string().required("Timing is required."),
   applyForScholarship: Yup.boolean(),
-  scholarshipOptions: Yup.object().shape({
-    scholarshipType: Yup.string().when("applyForScholarship", {
-      is: true,
-      then: (schema) => schema.required("Please select a scholarship type."),
-      otherwise: (schema) => schema.notRequired(),
-    }),
-    scholarshipReason: Yup.string().when("applyForScholarship", {
-      is: true,
-      then: (schema) => schema.required("Scholarship reason is required when applying for a scholarship.").trim(),
-      otherwise: (schema) => schema.notRequired(),
-    }),
+  scholarshipType: Yup.string().when("applyForScholarship", {
+    is: true,
+    then: (schema) => schema.required("Please select a scholarship type."),
+    otherwise: (schema) => schema.notRequired(),
+  }),
+  scholarshipReason: Yup.string().when("applyForScholarship", {
+    is: true,
+    then: (schema) => schema.required("Scholarship reason is required when applying for a scholarship.").trim(),
+    otherwise: (schema) => schema.notRequired(),
   }),
 });
