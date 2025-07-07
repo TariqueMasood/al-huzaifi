@@ -31,3 +31,14 @@ export const useRegistrationMutation = () => {
     },
   });
 };
+
+// Delete registration by ID
+export const useDeleteRegistration = () => {
+  return useMutation({
+    mutationKey: ["delete-registration"],
+    mutationFn: async (id: string) => {
+      const response = await axiosInstance.delete(`/registrations/${id}`);
+      return response.data;
+    },
+  });
+};

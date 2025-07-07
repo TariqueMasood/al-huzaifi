@@ -9,17 +9,62 @@ import {
   flexRender,
   SortingState,
 } from "@tanstack/react-table";
-import { Spinner, Alert, Form, Pagination } from "react-bootstrap";
+import {
+  Spinner,
+  Alert,
+  Form,
+  Pagination,
+  Button,
+  Modal,
+} from "react-bootstrap";
 import styled from "styled-components";
-import { useRegistrations } from "../../hooks/use-queries";
+import {
+  useRegistrations,
+  useDeleteRegistration,
+} from "../../hooks/use-queries";
 import { User } from "../../@types/registered-user";
 import { scholarshipTypeLabels } from "../../components/registration-form";
 
 const Registrations: React.FC = () => {
-  const { data: registrations, isLoading, isError } = useRegistrations();
+  const {
+    data: registrations,
+    isLoading,
+    isError,
+    refetch,
+  } = useRegistrations();
+  const deleteRegistration = useDeleteRegistration();
   const [globalFilter, setGlobalFilter] = useState("");
   const [sorting, setSorting] = useState<SortingState>([]);
   const [pageSize, setPageSize] = useState(5);
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [deleteId, setDeleteId] = useState<string | null>(null);
+
+  const handleDeleteClick = (id: string) => {
+    setDeleteId(id);
+    setShowConfirm(true);
+  };
+
+  const handleConfirmDelete = () => {
+    if (deleteId) {
+      deleteRegistration.mutate(deleteId, {
+        onSuccess: () => {
+          refetch();
+          setShowConfirm(false);
+          setDeleteId(null);
+        },
+        onError: () => {
+          alert("Failed to delete registration.");
+          setShowConfirm(false);
+          setDeleteId(null);
+        },
+      });
+    }
+  };
+
+  const handleCancelDelete = () => {
+    setShowConfirm(false);
+    setDeleteId(null);
+  };
 
   const columns: ColumnDef<User, any>[] = useMemo(
     () => [
@@ -94,6 +139,20 @@ const Registrations: React.FC = () => {
         header: "Updated At",
         enableSorting: false,
         cell: (info) => new Date(info.getValue() as string).toLocaleString(),
+      },
+      {
+        id: "actions",
+        header: "Actions",
+        cell: ({ row }) => (
+          <Button
+            variant="danger"
+            size="sm"
+            onClick={() => handleDeleteClick(row.original._id)}
+          >
+            Delete
+          </Button>
+        ),
+        enableSorting: false,
       },
     ],
     []
@@ -172,15 +231,29 @@ const Registrations: React.FC = () => {
             ))}
           </thead>
           <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <StyledTr key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <StyledTd key={cell.id}>
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </StyledTd>
-                ))}
-              </StyledTr>
-            ))}
+            {table.getRowModel().rows.length === 0 ? (
+              <tr>
+                <StyledTd
+                  colSpan={columns.length}
+                  style={{ textAlign: "center" }}
+                >
+                  No registered users found.
+                </StyledTd>
+              </tr>
+            ) : (
+              table.getRowModel().rows.map((row) => (
+                <StyledTr key={row.id}>
+                  {row.getVisibleCells().map((cell) => (
+                    <StyledTd key={cell.id}>
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </StyledTd>
+                  ))}
+                </StyledTr>
+              ))
+            )}
           </tbody>
         </StyledTable>
       </TableWrapper>
@@ -220,6 +293,22 @@ const Registrations: React.FC = () => {
           ))}
         </Form.Select>
       </PaginationWrapper>
+      <Modal show={showConfirm} onHide={handleCancelDelete} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Confirm Delete</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          Are you sure you want to delete this registration?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleCancelDelete}>
+            Cancel
+          </Button>
+          <Button variant="danger" onClick={handleConfirmDelete}>
+            Delete
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </Wrapper>
   );
 };
