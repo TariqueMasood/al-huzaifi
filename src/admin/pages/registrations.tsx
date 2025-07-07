@@ -13,6 +13,7 @@ import { Spinner, Alert, Form, Pagination } from "react-bootstrap";
 import styled from "styled-components";
 import { useRegistrations } from "../../hooks/use-queries";
 import { User } from "../../@types/registered-user";
+import { scholarshipTypeLabels } from "../../components/registration-form";
 
 const Registrations: React.FC = () => {
   const { data: registrations, isLoading, isError } = useRegistrations();
@@ -66,11 +67,21 @@ const Registrations: React.FC = () => {
         accessorKey: "scholarshipType",
         header: "Scholarship Type",
         enableSorting: false,
+        cell: (info) => {
+          const value = info.getValue();
+          return value
+            ? scholarshipTypeLabels[value as string] || String(value)
+            : "-";
+        },
       },
       {
         accessorKey: "scholarshipReason",
         header: "Scholarship Reason",
         enableSorting: false,
+        cell: (info) => {
+          const value = info.getValue();
+          return value ? String(value) : "-";
+        },
       },
       {
         accessorKey: "createdAt",

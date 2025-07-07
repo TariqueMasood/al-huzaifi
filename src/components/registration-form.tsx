@@ -156,7 +156,16 @@ const RegistrationForm = () => {
       if (validationErrors instanceof Yup.ValidationError) {
         validationErrors.inner.forEach((error) => {
           if (error.path) {
-            formattedErrors[error.path as keyof FormState] = error.message;
+            // Patch for age NaN error message
+            if (
+              error.path === "age" &&
+              error.message.includes("must be a `number` type")
+            ) {
+              formattedErrors[error.path as keyof FormState] =
+                "Please enter a valid age";
+            } else {
+              formattedErrors[error.path as keyof FormState] = error.message;
+            }
           }
         });
       }
@@ -595,3 +604,10 @@ const ErrorText = styled.p`
   font-size: 12px;
   margin-top: 5px;
 `;
+
+// --- Scholarship Type Labels Mapping ---
+export const scholarshipTypeLabels: Record<string, string> = {
+  meritBased: "Merit-Based",
+  siblingScholarship: "Sibling Scholarship",
+  specialCircumstances: "Special Circumstances",
+};
