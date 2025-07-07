@@ -5,6 +5,28 @@ import styled from "styled-components";
 import { useRegistrationDetails } from "../../hooks/use-queries";
 import { scholarshipTypeLabels } from "../../components/registration-form";
 
+// Reusable function to format phone number with country code
+export function formatPhoneWithCountryCode(phone: string): string {
+  let display = phone;
+  if (!phone) return "";
+  if (phone.startsWith("00")) {
+    display = "+" + phone.slice(2);
+  } else if (phone.startsWith("+")) {
+    display = phone;
+  } else if (/^\d+$/.test(phone)) {
+    let code = "";
+    let number = "";
+    if (phone.length > 10) {
+      code = phone.slice(0, phone.length - 10);
+      number = phone.slice(phone.length - 10);
+    } else {
+      number = phone;
+    }
+    display = code ? `+${code} ${number}` : number;
+  }
+  return display;
+}
+
 const RegistrationDetails: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const { data, isLoading, isError, error } = useRegistrationDetails(id);
@@ -49,7 +71,8 @@ const RegistrationDetails: React.FC = () => {
               <strong>Email:</strong> {data.email}
             </li>
             <li>
-              <strong>Phone:</strong> {data.phone}
+              <strong>Phone:</strong>{" "}
+              {formatPhoneWithCountryCode(data.phone || "")}
             </li>
             <li>
               <strong>Religion:</strong> {data.religion}

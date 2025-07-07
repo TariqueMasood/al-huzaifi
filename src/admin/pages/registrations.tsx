@@ -25,6 +25,7 @@ import {
 import { User } from "../../@types/registered-user";
 import { scholarshipTypeLabels } from "../../components/registration-form";
 import { useNavigate, Link } from "react-router-dom";
+import { formatPhoneWithCountryCode } from "./registration-details";
 
 const Registrations: React.FC = () => {
   const {
@@ -96,22 +97,18 @@ const Registrations: React.FC = () => {
       { accessorKey: "age", header: "Age", enableSorting: true },
       { accessorKey: "gender", header: "Gender", enableSorting: true },
       { accessorKey: "email", header: "Email", enableSorting: true },
-      { accessorKey: "phone", header: "Phone", enableSorting: false },
+      {
+        accessorKey: "phone",
+        header: "Phone",
+        enableSorting: false,
+        cell: ({ row }) => {
+          const phone = (row.original as any).phone || "";
+          return formatPhoneWithCountryCode(phone);
+        },
+      },
       { accessorKey: "faculty", header: "Faculty", enableSorting: true },
       { accessorKey: "course", header: "Course", enableSorting: true },
       { accessorKey: "country", header: "Country", enableSorting: true },
-      {
-        accessorKey: "createdAt",
-        header: "Created At",
-        enableSorting: true,
-        cell: (info) => new Date(info.getValue() as string).toLocaleString(),
-      },
-      {
-        accessorKey: "updatedAt",
-        header: "Updated At",
-        enableSorting: false,
-        cell: (info) => new Date(info.getValue() as string).toLocaleString(),
-      },
       {
         id: "actions",
         header: "Actions",

@@ -15,6 +15,8 @@ import Select from "react-select";
 import { RegistrationPayload } from "../@types/registration";
 import { useRegistrationMutation } from "../hooks/use-queries";
 import CustomToast from "./toast";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/bootstrap.css";
 
 // --- Types ---
 type FormState = {
@@ -128,29 +130,34 @@ const RegistrationForm = () => {
     try {
       await validationSchema.validate(formValue, { abortEarly: false });
       setErrors({});
-      registrationMutation.mutate(formValue as RegistrationPayload, {
-        onSuccess: () => {
-          setShowToast(false);
-          setTimeout(() => {
-            setToastMessage("Registration successful!");
-            setShowToast(true);
-          }, 0);
-          setSubmittedData((prev) => [...prev, { ...formValue }]);
-          setFormValue(initialFormState);
-          setCourses([]);
-        },
-        onError: (error: any) => {
-          setShowToast(false);
-          setTimeout(() => {
-            setToastMessage(
-              error?.response?.data?.message ||
-                error?.message ||
-                "Registration failed"
-            );
-            setShowToast(true);
-          }, 0);
-        },
-      });
+      registrationMutation.mutate(
+        {
+          ...formValue,
+        } as RegistrationPayload,
+        {
+          onSuccess: () => {
+            setShowToast(false);
+            setTimeout(() => {
+              setToastMessage("Registration successful!");
+              setShowToast(true);
+            }, 0);
+            setSubmittedData((prev) => [...prev, { ...formValue }]);
+            setFormValue(initialFormState);
+            setCourses([]);
+          },
+          onError: (error: any) => {
+            setShowToast(false);
+            setTimeout(() => {
+              setToastMessage(
+                error?.response?.data?.message ||
+                  error?.message ||
+                  "Registration failed"
+              );
+              setShowToast(true);
+            }, 0);
+          },
+        }
+      );
     } catch (validationErrors) {
       const formattedErrors: FormErrors = {};
       if (validationErrors instanceof Yup.ValidationError) {
@@ -286,16 +293,34 @@ const RegistrationForm = () => {
                   {errors.email && <ErrorText>{errors.email}</ErrorText>}
                 </StyledFormGroup>
               </FlexRow>
-              {/* Phone */}
+              {/* Phone with country code and flag */}
               <StyledFormGroup controlId="phone">
                 <Form.Label>WhatsApp Number</Form.Label>
-                <StyledFormControl
-                  id="phoneInput"
-                  type="tel"
-                  placeholder="Enter phone number"
-                  name="phone"
+                <PhoneInput
+                  country={"in"}
                   value={formValue.phone}
-                  onChange={handleInputChange}
+                  onChange={(
+                    value: string,
+                    countryData: any,
+                    event: React.ChangeEvent<HTMLInputElement>,
+                    formattedValue: string
+                  ) => {
+                    setFormValue((prev) => ({
+                      ...prev,
+                      phone: value,
+                    }));
+                  }}
+                  inputProps={{
+                    name: "phone",
+                    required: true,
+                    id: "phoneInput",
+                    autoComplete: "off",
+                  }}
+                  inputStyle={{ width: "100%" }}
+                  containerStyle={{ width: "100%" }}
+                  specialLabel=""
+                  enableSearch
+                  countryCodeEditable={false}
                 />
                 {errors.phone && <ErrorText>{errors.phone}</ErrorText>}
               </StyledFormGroup>
